@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  poi_id: 
+  url: MyString
+
+two:
+  poi_id: 
+  url: MyString

@@ -1,0 +1,45 @@
+<div id="map"></div>
+
+<!-- Map UI -->
+<div id="map-ui-container">
+	<div id="panel-title">
+		Port Details
+	</div>
+	<div id="search-container" class="panel-sub">
+		<input id="search-box" type="text" placeholder="Search for Ports"/>
+	</div>
+	<div id="images-container" class="panel-sub" style="display:none">
+		<div class="navigation left-nav">
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		</div>
+		<div class="port-image">
+			<img class="img-responsive">
+		</div>
+		<div class="navigation right-nav">
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		</div>
+	</div>
+	<div id="name-container" class="panel-sub">
+		<div class="bold">
+			Jose Panganiban Port
+		</div>
+		<div class="small-desc">
+		Camarines Norte
+		</div>
+	</div>
+	<!-- <div id="address-container" class="panel-desc">
+		Camarines Norte
+	</div> -->
+	<div class="expander">
+		<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+	</div>
+
+	<!-- <div id="details-container" class="panel-sub">
+		
+	</div> -->
+</div>
+
+<script>
+	var ports = <%= raw @ports.to_json %>
+	var images = <%= raw @images.to_json %>
+</script>

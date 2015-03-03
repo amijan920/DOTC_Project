@@ -1,0 +1,27 @@
+rails g model category name:string image:string
+
+category
+name:string
+image:string
+
+rails g model poi name:string description:text category:references lat_deg:decimal lat_min:decimal lat_sec:decimal lat_dir:string lon_deg:decimal lon_min:decimal lon_sec:decimal lon_dir:string
+
+poi
+name:string
+description:text
+category:references
+lat_deg:decimal
+lat_min:decimal
+lat_sec:decimal
+lat_dir:string
+lon_deg:decimal
+lon_min:decimal
+lon_sec:decimal
+lon_dir:decimal
+
+
+rails g model image poi:references url:string
+
+image
+poi:references
+url:string

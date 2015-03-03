@@ -1,0 +1,120 @@
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+}
+
+#map-ui-container {
+	position:fixed;
+	top:10px;
+	left:10px;
+	width:350px;
+	/*height:600px;*/
+	background: rgba(255, 255, 255, .9);
+	border-radius: 3px;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+#map {
+	width:100%;
+	height: 100%;
+	background: #DDDDDD;
+}
+
+#search-box {
+	width:100%;
+}
+
+#panel-title {
+	padding:10px;
+	background: #046380;
+	color:#EFECCA;
+	font-weight: 700;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	/*box-shadow: 0 2px 6px rgba(0,0,0,0.3);*/
+}
+
+#search-container {
+}
+
+#images-container {
+	height:200px;
+}
+
+#name-container {
+	-webkit-transition: height .5s; /* For Safari 3.1 to 6.0 */
+  transition: height .5s;
+}
+
+.port-image {
+	float:left;
+	height:100%;
+	width: 100%;
+	background:#046380;
+	overflow: hidden;
+}
+
+.navigation {
+	vertical-align: middle;
+	float:left;
+	height:180px;
+	width:20px;
+	padding:2px;
+	opacity:.3;
+	background:rgba(255, 255, 255, 1);
+	
+	-webkit-transition: opacity .5s; /* For Safari 3.1 to 6.0 */
+  transition: opacity .5s;
+}
+
+.navigation:hover {
+	cursor:pointer;
+	opacity:.5;
+	background:rgba(255, 255, 255, 1);
+}
+
+.navigation > span {
+	line-height: 176px;
+}
+
+.left-nav {
+	position:absolute;
+	left:10px;
+}
+
+.right-nav {
+	position:absolute;
+	right:10px;
+}
+
+.panel-sub {
+	padding:10px;
+	border-bottom:1px solid #E5E5E5;
+}
+
+.panel-desc {
+	padding:10px;
+	padding-top:2px;
+	border-bottom:1px solid #E5E5E5;
+}
+
+.bold {
+	font-weight: 700;
+}
+
+.small-desc {
+	font-size:.8em;
+}
+
+.expander {
+	text-align: center;
+	color:#888888;
+}
+
+.expander:hover {
+	cursor:pointer;
+	color:#AAAAAA;
+}

@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  category_id: 
+  lat_deg: 9.99
+  lat_min: 9.99
+  lat_sec: 9.99
+  lat_dir: MyString
+  lon_deg: 9.99
+  lon_min: 9.99
+  lon_sec: 9.99
+  lon_dir: MyString
+
+two:
+  name: MyString
+  description: MyText
+  category_id: 
+  lat_deg: 9.99
+  lat_min: 9.99
+  lat_sec: 9.99
+  lat_dir: MyString
+  lon_deg: 9.99
+  lon_min: 9.99
+  lon_sec: 9.99
+  lon_dir: MyString
