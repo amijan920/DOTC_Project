@@ -1,0 +1,31 @@
+<div id="images-container" class="panel-sub carousel slide" data-ride="carousel" style="display:none">
+	
+	<!-- <div class="port-image">
+		<img class="img-responsive">
+	</div> -->
+	<div class="carousel-inner port-image" role="listbox">
+	  <div class="item active port-image">
+	    <img class="img-responsive">
+	  </div>
+
+	  <div class="item port-image">
+	    <img class="img-responsive">
+	  </div>
+	</div>
+
+	<div class="navigation left-nav" href="#images-container" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	</div>
+
+	<div class="navigation right-nav" href="#images-container" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	</div>
+</div>
+
+<script id="carousel-inner-template" type="text/x-handlebars-template">
+	{{#each image_list}}
+	  <div class="item port-image {{#if @first}}active{{/if}}">
+	    <img class="img-responsive" src="assets/poi_images/{{url}}">
+	  </div>
+  {{/each}}
+</script>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150303153200) do
+ActiveRecord::Schema.define(version: 20150304100546) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -19,6 +19,17 @@ ActiveRecord::Schema.define(version: 20150303153200) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "details", force: true do |t|
+    t.integer  "poi_id"
+    t.string   "name"
+    t.string   "detail_type"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "details", ["poi_id"], name: "index_details_on_poi_id"
 
   create_table "images", force: true do |t|
     t.integer  "poi_id"

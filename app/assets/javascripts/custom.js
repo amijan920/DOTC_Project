@@ -1,3 +1,5 @@
+var templates = {};
+
 function initialize_leaflet() {
 	L.mapbox.accessToken = 'pk.eyJ1IjoiYW1pamFuOTIwIiwiYSI6ImxUWmVoQkkifQ.hoqH_4ot2ErBS7cWveZTXg';
 	
@@ -14,17 +16,55 @@ function initialize_leaflet() {
 	new L.Control.Zoom({ position: 'topright' }).addTo(map);
 }
 
-function set_active_port(port, image_list) {
-	console.log(image_list);
+function set_active_port(index) {
+	var port = ports[index];
+	var image_list = images[index];
+	var info_list = infos[index];
+
+	// map.setCenter(get_latlng(port));
+
   $("#name-container .bold").html(port.name);
   $("#name-container .small-desc").html(port.description);
+  
   if(image_list.length > 0) {
-  	$("#images-container img").attr("src", "assets/poi_images/"+image_list[0].url);
-  	$("#images-container").slideDown();
+  	var data = {};
+  	data.image_list = image_list;
+
+  	var string = templates["carousel-inner"](data);
+  	$("#images-container .carousel-inner").html(string);
+
+  	$("#images-container").slideDown(400);
+  	$(".navigation").each(function() {
+			$(this).fadeIn(400);
+		});
+
+		$('#images-container').carousel()
   }
   else {
-  	$("#images-container").slideUp();
+  	$(".navigation").each(function() {
+			$(this).fadeOut(400);
+		})
+  	$("#images-container").slideUp(400);
+  	$("#images-container .carousel-inner").html();
   }
+
+  if(info_list.length > 0) {
+  	var data = {};
+  	data.info_list = info_list;
+
+  	var string = templates["additional-info"](data);
+  	$("#info-container .scroll-container").html(string);
+
+  	$("#info-container").slideDown(400);
+  }
+  else {
+  	$("#info-container").slideUp(400);
+  	$("#info-container .scroll-container").html("");
+  }
+}
+
+function expand_info() {
+	$("#additional-info").slideDown();
 }
 
 function compute_latitude(port) {
@@ -44,19 +84,37 @@ function get_latlng(port) {
 	return latlng;
 }
 
+function compile_templates() {
+	var source   = $("#carousel-inner-template").html();
+	templates["carousel-inner"] = Handlebars.compile(source);
+
+	source   = $("#additional-info-template").html();
+	templates["additional-info"] = Handlebars.compile(source);
+
+	source   = $("#info-window-template").html();
+	templates["info-window"] = Handlebars.compile(source);
+}
+
 function ready() {
 	// console.log(ports);
 	console.log(images);
 
-  set_active_port(ports[3], images[3]);
+	compile_templates();
+
+  set_active_port(3);
 
 	var mapOptions = {
     center: { lat: 14, lng: 121},
     zoom: 10,
     disableDefaultUI: true
   };
+
   var map = new google.maps.Map(document.getElementById('map'),
       mapOptions);
+
+  var infowindow = new google.maps.InfoWindow({
+      content: ""
+  });
 
   var ports_markers = [];
 
@@ -72,7 +130,13 @@ function ready() {
 
 		google.maps.event.addListener(marker, 'click', (function(_marker) {
 			return function() {
-		    set_active_port(ports[_marker.index], images[_marker.index]);
+		    set_active_port(_marker.index);
+		    map.panTo(_marker.position);
+
+		    var string = templates["info-window"](ports[_marker.index]);
+		    console.log(string);
+		    infowindow.setContent(string);
+		    infowindow.open(map, _marker);
 		  }
 		})(marker));
   }

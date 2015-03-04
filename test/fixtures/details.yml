@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  poi_id: 
+  name: MyString
+  detail_type: MyString
+  body: MyText
+
+two:
+  poi_id: 
+  name: MyString
+  detail_type: MyString
+  body: MyText

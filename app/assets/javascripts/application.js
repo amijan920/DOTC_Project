@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.cookie
+//= require handlebars-v3.0.0
 //= require d3.min
 //= require bootstrap
 //= require owl.carousel.min
