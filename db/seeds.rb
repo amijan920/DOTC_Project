@@ -111,3 +111,10 @@ Poi.create(name:"Ipil", description:"Ipil, Zamboanga Sibugay", category_id:1, la
 
 Image.create(poi_id:4 , url:"img_000.jpg")
 Image.create(poi_id:4 , url:"img_001.jpg")
+Image.create(poi_id:3 , url:"img_002.jpg")
+Image.create(poi_id:3 , url:"img_003.jpg")
+
+Details.create(name:"Sample additional info 1" , detail_type:"text", body:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fermentum sollicitudin quam eget sagittis. Vivamus nisl orci, interdum in lobortis sit amet, condimentum a nibh.", poi_id:4)
+Details.create(name:"Sample additional info 2" , detail_type:"text", body:"In congue, ante at varius cursus, arcu felis varius elit, vel varius mauris sapien sed nulla. Maecenas vel magna pellentesque, porta tellus sed, tincidunt justo. Morbi quis dolor tincidunt est interdum imperdiet ullamcorper nec ipsum.", poi_id:4)
+Details.create(name:"Sample additional info 3" , detail_type:"text", body:"Vestibulum urna massa, aliquet sit amet pharetra ac, sollicitudin ac massa. Donec malesuada dolor non nisi ornare, pretium pellentesque mi consectetur.", poi_id:4)
+Details.create(name:"Sample additional info 4" , detail_type:"text", body:"Proin varius mattis tortor in venenatis. Vestibulum eleifend fringilla tellus. Duis rhoncus sed lorem vitae cursus. Integer vitae lectus quis nunc semper facilisis. Fusce scelerisque commodo odio, sed ullamcorper erat hendrerit nec. Duis elementum lacus a odio vulputate, sit amet placerat quam tristique. Vestibulum eget lectus egestas, sollicitudin velit id, tempus dui. Aliquam malesuada, augue a accumsan ullamcorper, mauris diam euismod diam, sed vestibulum ex turpis a sem.", poi_id:1)

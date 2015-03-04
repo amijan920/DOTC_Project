@@ -1,0 +1,22 @@
+<div id="info-container" style="display:none">
+	<div id="additional-info">
+		<div class="section-title">
+			Additional Information
+		</div>
+		<div class="scroll-container">
+		</div>
+	</div>
+</div>
+
+<script id="additional-info-template" type="text/x-handlebars-template">
+	{{#each info_list}}
+	  <div class="add-info panel-sub">
+			<div class="bold">
+				{{name}}
+			</div>
+			<div class="small-desc">
+				{{body}}
+			</div>
+		</div>
+  {{/each}}
+</script>

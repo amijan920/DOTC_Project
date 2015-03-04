@@ -25,3 +25,16 @@ rails g model image poi:references url:string
 image
 poi:references
 url:string
+
+
+rails g model details poi:references name:string detail_type:string body:text
+
+details
+poi:references
+name:string
+type:string
+content:text
+
+
+
+rails g migration AddPOIToDetails poi:references
