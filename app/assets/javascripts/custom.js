@@ -185,6 +185,7 @@ var MapDisplay = (function() {
 		for(var i = 0; i < this.ports_markers.length; i++) {
 			if(this.ports_markers[i].data_id == id) {
 				this.map.panTo(this.ports_markers[i].position);
+				this.ports_markers[i].setMap(this.map);
 
 				var string = templates["info-window"](ports[i]);
 			  this.infowindow.setContent(string);
@@ -303,6 +304,8 @@ var MapDisplay = (function() {
 	}
 
 	MapDisplay.prototype.hide_layer = function(id) {
+		if(this.cat_vis[i] == false)
+			return;
 		this.cat_vis[id] = false;
 		for(var i = 0; i < this.ports_markers.length; i++) {
 			if(this.ports_markers[i].data_category == id) {
@@ -313,6 +316,8 @@ var MapDisplay = (function() {
 	}
 
 	MapDisplay.prototype.show_layer = function(id) {
+		if(this.cat_vis[i] == true)
+			return;
 		this.cat_vis[id] = true;
 		for(var i = 0; i < this.ports_markers.length; i++) {
 			if(this.ports_markers[i].data_category == id) {
@@ -413,12 +418,22 @@ function createRouteVisualization(selector, data) {
 		.on('click', function(d) {
 			var id = d.id;
 			mapDisplay.panToMarker(id);
+			var port = getPortViaId(id);
+			// mapDisplay.show_layer(port.category_id);
+			console.log(port.category_id);
 		})
 
 
 	vis.call(tip);
 }
 
+function getPortViaId(id) {
+	for(var i = 0; i < ports.length; i++) {
+		if(ports[i].id == id) {
+			return ports[i];
+		}
+	}
+}
 
 
 function ready() {
