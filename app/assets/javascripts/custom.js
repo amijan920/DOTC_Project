@@ -137,15 +137,15 @@ var MapDisplay = (function() {
 	  }
 
 	  for(var i = 0; i < ports.length; i++) {
-	  	var iconImage = {
-		  	url: category_markers[ports[i].category_id]
-		  	// anchor: new google.maps.Point(16,16)
-		  }
+	  	// var iconImage = {
+		  // 	url: category_markers[ports[i].category_id]
+		  // 	// anchor: new google.maps.Point(16,16)
+		  // }
 	  	var marker = new google.maps.Marker({
 			  map: this.map,
 			  position: get_latlng(ports[i]),
 			  title: ports[i].name,
-			  icon: iconImage,
+			  icon: category_markers[ports[i].category_id],//iconImage,
 			  data_category: ports[i].category_id,
 			  data_hidden: false,
 			  data_id: ports[i].id,
