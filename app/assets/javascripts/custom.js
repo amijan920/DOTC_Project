@@ -138,8 +138,8 @@ var MapDisplay = (function() {
 
 	  for(var i = 0; i < ports.length; i++) {
 	  	var iconImage = {
-		  	url: category_markers[ports[i].category_id],
-		  	anchor: new google.maps.Point(16,16)
+		  	url: category_markers[ports[i].category_id]
+		  	// anchor: new google.maps.Point(16,16)
 		  }
 	  	var marker = new google.maps.Marker({
 			  map: this.map,
