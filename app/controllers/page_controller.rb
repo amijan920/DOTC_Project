@@ -14,7 +14,7 @@ class PageController < ApplicationController
 
 		@categories.each do |category|
 			if category.image != nil
-				@category_markers[category.id] = asset_url("assets/category_markers/filter_" + category.image)
+				@category_markers[category.id] = asset_url("assets/category_markers/" + category.image)
 				@category_filters[category.id] = asset_url("assets/category_markers/filter_" + category.image)
 			else
 				@category_markers[category.id] = asset_url("assets/category_markers/default.png")
