@@ -11,6 +11,7 @@
  * file per style scope.
  *
  *= require bootstrap
+ *= require jquery.dynatable
  *= require owl.carousel
  *= require owl.theme
  *= require_tree .

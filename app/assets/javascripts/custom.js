@@ -1,4 +1,5 @@
 var templates = {};
+var mapDisplay;
 
 function initialize_leaflet() {
 	L.mapbox.accessToken = 'pk.eyJ1IjoiYW1pamFuOTIwIiwiYSI6ImxUWmVoQkkifQ.hoqH_4ot2ErBS7cWveZTXg';
@@ -23,6 +24,8 @@ function set_active_port(index) {
 
 	// map.setCenter(get_latlng(port));
 
+
+  // $("#panel-title").html(port.name);
   $("#name-container .bold").html(port.name);
   $("#name-container .small-desc").html(port.description);
   
@@ -95,52 +98,134 @@ function compile_templates() {
 	templates["info-window"] = Handlebars.compile(source);
 }
 
+function portsViewScript() {
+ var ports_table = $('#points').dynatable({
+	  features: {
+	    paginate: false,
+	    recordCount: false,
+	    sorting: false,
+	    search:false
+	  }
+	}).data('dynatable');
+ console.log(ports_table);
+
+	$("#filter-ports").keyup(function() {
+		var value = $(this).val();
+	  ports_table.queries.runSearch(value);//add("name",value);
+
+	});
+}
+
+var MapDisplay = (function() {
+	function MapDisplay() {
+	  set_active_port(3);
+
+		var mapOptions = {
+	    center: { lat: 14, lng: 121},
+	    zoom: 10,
+	    disableDefaultUI: true
+	  };
+
+	  this.map = new google.maps.Map(document.getElementById('map'), mapOptions);
+	  this.ports_markers = [];
+	  this.infowindow = new google.maps.InfoWindow({
+	      content: ""
+	  });
+	  this.cat_vis = {};
+
+	  for(var i = 0; i < categories.length; i++) {
+	  	this.cat_vis[categories[i].id] = true;
+	  }
+
+	  for(var i = 0; i < ports.length; i++) {
+	  	var marker = new google.maps.Marker({
+			  map: this.map,
+			  position: get_latlng(ports[i]),
+			  title: ports[i].name,
+			  icon: category_markers[ports[i].category_id],
+			  data_category: ports[i].category_id,
+			  data_hidden: false,
+			  index: i
+			})
+
+	  	this.ports_markers.push(marker);
+
+			google.maps.event.addListener(marker, 'click', (function(_marker, _this) {
+				return function() {
+			    set_active_port(_marker.index);
+			    _this.map.panTo(_marker.position);
+
+			    var string = templates["info-window"](ports[_marker.index]);
+			    _this.infowindow.setContent(string);
+			    _this.infowindow.open(_this.map, _marker);
+			  }
+			})(marker, this));
+	  }
+	}
+
+	MapDisplay.prototype.toggle_layer = function(id) {
+		if(this.cat_vis[id] == true) {
+			this.hide_layer(id);
+			return false;
+		}
+		else {
+			this.show_layer(id);
+			return true;
+		}
+	}
+
+	MapDisplay.prototype.hide_layer = function(id) {
+		this.cat_vis[id] = false;
+		for(var i = 0; i < this.ports_markers.length; i++) {
+			if(this.ports_markers[i].data_category == id) {
+				this.ports_markers[i].setMap(null);
+				this.ports_markers[i].data_hidden = true;
+			}
+		}
+	}
+
+	MapDisplay.prototype.show_layer = function(id) {
+		this.cat_vis[id] = true;
+		for(var i = 0; i < this.ports_markers.length; i++) {
+			if(this.ports_markers[i].data_category == id) {
+				this.ports_markers[i].setMap(this.map);
+				this.ports_markers[i].data_hidden = false;
+			}
+		}
+	}
+
+	return MapDisplay;
+})();
+
 function ready() {
 	// console.log(ports);
-	console.log(images);
+	// console.log(view);
+	
+	if(view === "ports") {
+		portsViewScript();
+		return;
+	}
 
 	compile_templates();
+	mapDisplay = new MapDisplay();
+	$(".filter-image").click(function(e) {
+		var visible = mapDisplay.toggle_layer($(this).data("category"));
+		$(this).toggleClass("gray", !visible);
 
-  set_active_port(3);
+	});
 
-	var mapOptions = {
-    center: { lat: 14, lng: 121},
-    zoom: 10,
-    disableDefaultUI: true
-  };
-
-  var map = new google.maps.Map(document.getElementById('map'),
-      mapOptions);
-
-  var infowindow = new google.maps.InfoWindow({
-      content: ""
-  });
-
-  var ports_markers = [];
-
-  for(var i = 0; i < ports.length; i++) {
-  	var marker = new google.maps.Marker({
-		  map: map,
-		  position: get_latlng(ports[i]),
-		  title: ports[i].name,
-		  index: i
-		})
-
-  	ports_markers.push(marker);
-
-		google.maps.event.addListener(marker, 'click', (function(_marker) {
-			return function() {
-		    set_active_port(_marker.index);
-		    map.panTo(_marker.position);
-
-		    var string = templates["info-window"](ports[_marker.index]);
-		    console.log(string);
-		    infowindow.setContent(string);
-		    infowindow.open(map, _marker);
-		  }
-		})(marker));
-  }
 }
 
 $(document).ready(ready)
 $(document).on('page:load', ready)
+
+
+// var overlay = new google.maps.OverlayView();
+
+// overlay.onAdd = function() {
+
+//     var layer = d3.select(this.getPanes().overlayMouseTarget)
+//         .append("div")
+//         .attr("class", "providers");
+//              ...
+// }

@@ -6,6 +6,15 @@ body {
 	height: 100%;
 }
 
+#contents {
+	margin-top:66px;
+}
+
+#navbar li a.active {
+	background:#AAAAAA;
+	color:#FFFFFF;
+}
+
 #map-ui-container {
 	position:fixed;
 	top:10px;
@@ -15,6 +24,35 @@ body {
 	background: rgba(255, 255, 255, .9);
 	border-radius: 3px;
 	box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+#layer-ui-container {
+	position:fixed;
+	top:10px;
+	left:368px;
+	background: rgba(255, 255, 255, .9);
+	border-radius: 3px;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+	opacity:.5;
+	-webkit-transition: opacity .3s; /* For Safari 3.1 to 6.0 */
+  transition: opacity .3s;
+}
+
+#layer-ui-container:hover {
+	opacity:1;
+}
+
+.filter-button {
+	padding:4px;
+}
+
+.filter-image:hover {
+	cursor:pointer;
+}
+
+.filter-image.gray {
+	-webkit-filter: grayscale(100%);
+	opacity: .3;
 }
 
 #map {
@@ -53,6 +91,16 @@ body {
 #info-container .scroll-container {
 	max-height:200px;
 	overflow-y:auto;
+}
+
+.table > tbody > tr > th {
+	color:#FFFFFF;
+	background:#046380;
+}
+
+.td-button {
+	width: 100%;
+	text-align: center;
 }
 
 .port-image {
@@ -154,4 +202,18 @@ body {
 	-webkit-margin-start: 0px;
 	-webkit-margin-end: 0px;
 	font-weight: bold;
+}
+
+.form-horizontal .control-label{
+/* text-align:right; */
+	text-align:left;
+}
+
+.edit-port-form {
+	margin-top:16px;
+}
+
+.port-table {
+	height:300px;
+	overflow:auto;
 }

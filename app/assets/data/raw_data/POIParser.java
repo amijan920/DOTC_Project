@@ -12,13 +12,8 @@ public class POIParser {
 
 	  csv.read("ports_v00.csv", new CSVReadProc() {
 		    public void procRow(int rowIndex, String[] params) {
-		       
-		       boolean check = false;
 						try {
 							String name = params[0];
-							check = false;
-							if(name.equals("Port of Bauan"))
-								check = true;
 							String desc = params[1];
 							int category = 1;
 							double lat_deg = Double.parseDouble(params[3]);
@@ -30,13 +25,12 @@ public class POIParser {
 							double lon_min = Double.parseDouble(params[8]);
 							double lon_sec = Double.parseDouble(params[9]);
 							String lon_dir = params[10];
-
-							System.out.printf("Poi.create(name:\"%s\", description:\"%s\", category_id:%d, lat_deg:%f, lat_min:%f, lat_sec:%f, lat_dir:\"%s\", lon_deg:%f, lon_min:%f, lon_sec:%f, lon_dir:\"%s\")\n",
-								name, desc, category, lat_deg, lat_min, lat_sec, lat_dir, lon_deg, lon_min, lon_sec, lon_dir);
+							System.out.printf("\"%s\",\"%s\",\"%s\",%f,%f,%f,%s,%f,%f,%f,%s\n",name, desc, "Sea Port", lat_deg, lat_min, lat_sec, lat_dir, lon_deg, lon_min, lon_sec, lon_dir);
+							//System.out.printf("Poi.create(name:\"%s\", description:\"%s\", category_id:%d, lat_deg:%f, lat_min:%f, lat_sec:%f, lat_dir:\"%s\", lon_deg:%f, lon_min:%f, lon_sec:%f, lon_dir:\"%s\")\n",
+								//name, desc, category, lat_deg, lat_min, lat_sec, lat_dir, lon_deg, lon_min, lon_sec, lon_dir);
 						}
 						catch(Exception e) {
-							if(check)
-								e.printStackTrace();
+							
 						}
 		    }
 		});
