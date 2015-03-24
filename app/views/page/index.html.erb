@@ -9,22 +9,24 @@
 	<div id="panel-title">
 		Port Details
 	</div>
-	<div id="search-container" class="panel-sub">
+	<!-- <div id="search-container" class="panel-sub">
 		<input id="search-box" type="text" placeholder="Search for Ports"/>
-	</div>
-
-	<%= render "page/image_carousel" %>
-	
-	<div id="name-container" class="panel-sub">
-		<div class="bold">
-			Jose Panganiban Port
+	</div> -->
+	<div id="port-details">
+		<%= render "page/image_carousel" %>
+		<div id="name-container" class="panel-sub">
+			<div class="bold">
+				Jose Panganiban Port
+			</div>
+			<div class="small-desc">
+			Camarines Norte
+			</div>
 		</div>
-		<div class="small-desc">
-		Camarines Norte
-		</div>
+		<%= render "page/additional_info" %>
 	</div>
-
-	<%= render "page/additional_info" %>
+	<div id="routes-display" style="display:none">
+		<%= render "page/routes_view" %>
+	</div>
 </div>
 
 <div id="layer-ui-container">

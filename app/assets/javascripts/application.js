@@ -16,6 +16,7 @@
 //= require jquery.dynatable
 //= require handlebars-v3.0.0
 //= require d3.min
+//= require d3-tip
 //= require bootstrap
 //= require owl.carousel.min
 //= require turbolinks
