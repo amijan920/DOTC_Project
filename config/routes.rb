@@ -4,6 +4,15 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'page#index'
+  get 'listPorts' => 'admin#list_ports'
+  get 'editPort(/:id)', :action => 'edit_port', :controller => 'admin', :id => /[0-9]+/i, :as => :edit_port
+
+  # resources :page do
+  #   member do
+  #     get 'edit_port'
+  #     get 'list_ports'
+  #   end
+  # end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

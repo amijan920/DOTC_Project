@@ -1,5 +1,8 @@
-<div id="map"></div>
+<script>
+	var view = "maps";
+</script>
 
+<div id="map"></div>
 
 <!-- Map UI -->
 <div id="map-ui-container">
@@ -22,13 +25,22 @@
 	</div>
 
 	<%= render "page/additional_info" %>
+</div>
 
+<div id="layer-ui-container">
+	<% @categories.each do |category| %>
+	<div class="filter-button active">
+		<image class="image-responsive filter-image" src="<%= @category_filters[category.id] %>" data-category="<%= category.id %>">
+	</div>
+	<% end %>
 </div>
 
 <script>
 	var ports = <%= raw @ports.to_json %>
 	var images = <%= raw @images.to_json %>
 	var infos = <%= raw @infos.to_json %>
+	var category_markers = <%= raw @category_markers.to_json %>
+	var categories = <%= raw @categories.to_json %>
 </script>
 
 <script id="info-window-template" type="text/x-handlebars-template">

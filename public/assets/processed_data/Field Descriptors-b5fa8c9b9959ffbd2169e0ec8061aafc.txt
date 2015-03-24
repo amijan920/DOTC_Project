@@ -1,0 +1,22 @@
+Name
+	- Name of the point of interest (required)
+Description
+	- Short description of the POI
+Category
+	- Category (e.g. School, Airport, Sea Port) (required)
+Lat-Deg
+	- Degree component of latitude (required)
+Lat-Min
+	- Minute component of latitude (defaults to 0)
+Lat-Sec
+	- Second component of latitude (defaults to 0)
+Lat-Dir
+	- Direction component of latitude (defaults to N)
+Lon-Deg
+	- Degree component of longitude (required)
+Lon-Min
+	- Minute component of longitude (defaults to 0)
+Lon-Sec
+	- Second component of longitude (defaults to 0)
+Lon-Dir
+	- Direction component of longitude (defaults to E)
