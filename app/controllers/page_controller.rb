@@ -4,7 +4,7 @@ class PageController < ApplicationController
 
 	def index
 
-
+		@sub_uri = "ports/"
 		@ports = Poi.order("id").all()
 		@images = Array.new(@ports.length)
 		@infos = Array.new(@ports.length)
@@ -14,11 +14,11 @@ class PageController < ApplicationController
 
 		@categories.each do |category|
 			if category.image != nil
-				@category_markers[category.id] = asset_url("assets/category_markers/" + category.image)
-				@category_filters[category.id] = asset_url("assets/category_markers/filter_" + category.image)
+				@category_markers[category.id] = asset_url("assets/" + @sub_uri + "category_markers/" + category.image)
+				@category_filters[category.id] = asset_url("assets/" + @sub_uri + "category_markers/filter_" + category.image)
 			else
-				@category_markers[category.id] = asset_url("assets/category_markers/default.png")
-				@category_filters[category.id] = asset_url("assets/category_markers/filter_default.png")
+				@category_markers[category.id] = asset_url("assets/" + @sub_uri + "category_markers/default.png")
+				@category_filters[category.id] = asset_url("assets/" + @sub_uri + "category_markers/filter_default.png")
 			end
 		end
 
