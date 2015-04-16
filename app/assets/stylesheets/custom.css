@@ -21,8 +21,12 @@ body {
 	left:10px;
 	width:350px;
 	/*height:600px;*/
-	background: rgba(255, 255, 255, .9);
+	background: none;/*rgba(255, 255, 255, .9);*/
 	border-radius: 3px;
+}
+
+.ui-container {
+	background: rgba(255, 255, 255, .9);
 	box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 
@@ -88,6 +92,7 @@ body {
 }
 
 #name-container {
+	border:none;
 	-webkit-transition: height .5s; /* For Safari 3.1 to 6.0 */
   transition: height .5s;
 }
@@ -95,6 +100,23 @@ body {
 #info-container .scroll-container {
 	max-height:200px;
 	overflow-y:auto;
+}
+
+#info-container {
+	margin-top:4px;
+}
+
+#view-routes {
+	display:none;
+}
+
+#view-routes:hover {
+	cursor:pointer;
+}
+
+#routes-container {
+	display:none;
+	margin-top:4px;
 }
 
 .table > tbody > tr > th {
@@ -235,14 +257,28 @@ body {
 	cursor:pointer;
 }
 
+.blend {
+	background: none;
+	outline: none;
+	border: none;
+	padding: none;
+	width:100%;
+}
+
+.blend:focus {
+	outline:none;
+	border-bottom:1px solid #77AAFF;
+	padding-bottom:0px;
+}
+
 .d3-tip {
   line-height: 1;
-  font-weight: bold;
   text-align: center;
   padding: 12px;
   background: rgba(255, 255, 255, 1);
   color: #222222;
   border-radius: 2px;
+  font-size: .9em;
   border: 1px #D5D5D5 solid;
   -webkit-transition: opacity 0.25s linear;
 	-moz-transition: opacity 0.25s linear;

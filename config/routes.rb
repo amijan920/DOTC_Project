@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   get 'listPorts' => 'admin#list_ports'
   get 'editPort(/:id)', :action => 'edit_port', :controller => 'admin', :id => /[0-9]+/i, :as => :edit_port
 
+  post 'getRoutes' => 'page#getRoutes'
+  get 'getRoutes' => 'page#getRoutes'
+
   # resources :page do
   #   member do
   #     get 'edit_port'

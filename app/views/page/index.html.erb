@@ -6,24 +6,38 @@
 
 <!-- Map UI -->
 <div id="map-ui-container">
-	<div id="panel-title">
+	<div id="panel-title" class="ui-container">
 		Port Details
 	</div>
 	<!-- <div id="search-container" class="panel-sub">
 		<input id="search-box" type="text" placeholder="Search for Ports"/>
 	</div> -->
 	<div id="port-details">
-		<%= render "page/image_carousel" %>
-		<div id="name-container" class="panel-sub">
-			<div class="bold">
-				Jose Panganiban Port
-			</div>
-			<div class="small-desc">
-			Camarines Norte
+		<div class="ui-container">
+			<%= render "page/image_carousel" %>
+			<div id="name-container" class="panel-sub row">
+				<div class="col-xs-9">
+					<div class="bold">
+						Jose Panganiban Port
+					</div>
+					<div id="description" class="small-desc">
+					Camarines Norte
+					</div>
+				</div>
+				<div id="view-routes" class="col-xs-3">
+					<div style="width:20px;height:20px;margin-left:auto;margin-right:auto">
+						<img class="img-responsive" src="assets/icon_routes.png"/>
+					</div>
+					<div class="small-desc" style="text-align:center;">
+						<a>Routes</a>
+					</div>
+				</div>
 			</div>
 		</div>
+
 		<%= render "page/additional_info" %>
 	</div>
+
 	<div id="routes-display" style="display:none">
 		<%= render "page/routes_view" %>
 	</div>
@@ -41,7 +55,7 @@
 	var ports = <%= raw @ports.to_json %>
 	var images = <%= raw @images.to_json %>
 	var infos = <%= raw @infos.to_json %>
-	var category_markers = <%= raw @category_markers.to_json %>
+	var categoryMarkers = <%= raw @category_markers.to_json %>
 	var categories = <%= raw @categories.to_json %>
 </script>
 
