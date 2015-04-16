@@ -23,9 +23,9 @@
 </div>
 
 <script id="carousel-inner-template" type="text/x-handlebars-template">
-	{{#each image_list}}
+	{{#each imageList}}
 	  <div class="item port-image {{#if @first}}active{{/if}}">
-	    <img class="img-responsive" src="assets<%= @sub_uri %>/poi_images/{{url}}">
+	    <img class="img-responsive" src="assets/poi_images/{{url}}">
 	  </div>
   {{/each}}
 </script>
