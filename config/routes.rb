@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'page#index'
   get 'listPorts' => 'admin#list_ports'
-  get 'editPort(/:id)', :action => 'edit_port', :controller => 'admin', :id => /[0-9]+/i, :as => :edit_port
+  get 'showPort(/:id)', :action => 'show_port', :controller => 'admin', :id => /[0-9]+/i, :as => :show_port
+
+  post 'savePort', :action => 'save_port', :controller => 'admin', :as => :save_port
 
   post 'getRoutes' => 'page#getRoutes'
   get 'getRoutes' => 'page#getRoutes'

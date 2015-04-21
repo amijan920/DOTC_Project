@@ -1,0 +1,94 @@
+<%= render "admin/admin_navbar" %>
+
+<script>
+	var view = "edit_port";
+</script>
+
+<div id="contents" class="container">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<h3>Edit Point of Interest</h3>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2 edit-port-form">
+			<%= form_for @port, :url => save_port_path, :method => "post", :html => {:class => "form-horizontal"} do |f| %>
+
+				<%= f.hidden_field(:id, :id => "id") %>
+				<%= hidden_field_tag(:id, @port.id) %>
+
+				<div class="form-group">
+					<%= label_tag(:label_name, "Name:", :class => "control-label col-md-3") %>
+					<div class="col-md-9">
+					 <%= f.text_field(:name, :id => "name", :class => "form-control")  %>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<%= label_tag(:label_category, "Category:", :class => "control-label col-md-3") %>
+					<div class="col-md-9">
+						<%= f.select :category_id, options_for_select(@categories_options, @port.category_id), {}, {:class => "form-control"} %>
+					<!-- 	<select name="category" class="form-control">
+							<% @categories.each do |cat| %>
+								<% if cat.id == @port.category_id %>
+									<option value="<%= cat.id %>" selected="true"><%= cat.name %></option>
+								<% elsif %>
+									<option value="<%= cat.id %>" ><%= cat.name %></option>
+								<% end %>
+							<% end %>
+						</select> -->
+					 
+					</div>
+				</div>
+
+				<div class="form-group">
+					<%= label_tag(:label_lat, "Latitude:", :class => "control-label col-md-3") %>
+					<div class="col-md-5">
+					 <%= f.text_field(:lat_deg, :id => "lat_deg", :class => "form-control")  %>
+					</div>
+					<div class="col-md-2">
+					 <%= f.text_field(:lat_min, :id => "lat_min", :class => "form-control")  %>
+					</div>
+					<div class="col-md-2">
+					 <%= f.text_field(:lat_sec, :id => "lat_sec", :class => "form-control")  %>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<%= label_tag(:label_lon, "Longitude:", :class => "control-label col-md-3") %>
+					<div class="col-md-5">
+					 <%= f.text_field(:lon_deg, :id => "lon_deg", :class => "form-control")  %>
+					</div>
+					<div class="col-md-2">
+					 <%= f.text_field(:lon_min, :id => "lon_min", :class => "form-control")  %>
+					</div>
+					<div class="col-md-2">
+					 <%= f.text_field(:lon_sec, :id => "lon_sec", :class => "form-control")  %>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<%= label_tag(:label_description, "Description:", :class => "control-label col-md-3") %>
+					<div class="col-md-9">
+						<%= f.text_area :description, :id => "description", :class => "form-control", :rows => 5  %>
+					</div>
+				</div>
+				<div class="form-group">
+			    <div class="col-sm-offset-3 col-sm-9">
+			      <button type="submit" class="btn btn-primary">Save Changes</button>
+			    </div>
+			  </div>
+
+			  <% if @notice != nil %>
+				  <div class="form-group">
+				    <div class="col-sm-offset-3 col-sm-9">
+				      <%= @notice %>
+				    </div>
+				  </div>
+			  <% end %>
+
+
+			<% end %>
+		</div>
+	</div>
+</div>
