@@ -28,7 +28,7 @@ class PageController < ApplicationController
 		end
 	end
 
-	def getRoutes
+	def get_routes
 		@routeData = Hash.new
 		@routeData["params"] = params
 		@routeData["routeList"] = Array.new(1)
