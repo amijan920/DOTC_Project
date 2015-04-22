@@ -43,10 +43,15 @@ class PageController < ApplicationController
 		@routeData["routeList"][0] = @route1
 
 		render json: @routeData
-		# respond_to do |format|
+	# 	respond_to do |format|
   #     format.html 
   #     format.json { render json: @routeData }
   #   end
+	end
+
+	def get_ports
+		@ports = Poi.order("id").all()
+		render json: @ports
 	end
 	
 end
