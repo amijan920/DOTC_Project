@@ -3,29 +3,37 @@ class AdminController < ApplicationController
 	before_action :set_port, only: [:show_port, :save_port, :destroy_port]
 
 	def list_ports
-		@ports = Poi.all()
+		load_uri
+		@ports = Poi.order("id").all()
 	end
 
 	def show_port
+		load_uri
 		load_data
 	end
 
 	def save_port
+		load_uri
 		load_data
 
 		@port.update(port_params)
 		@notice = "Changes saved"
+    # render json: @port_infos
 		render :show_port
 		# render json: params
 	end
 
 	def destroy_port
+		load_uri
     @port.destroy
-    @ports = Poi.all()
 		render :list_ports
   end
 
 	private
+		def load_uri
+			@sub_uri = ""
+		end
+
 		def load_data
 			@categories = Category.all()
 			@categories_options = Array.new(@categories.length)
@@ -44,6 +52,7 @@ class AdminController < ApplicationController
 				@orig = Poi.find(1).id
 			end
 			@port = Poi.find(@orig)
+			@port_infos = Details.order("id").where(:poi_id => @port.id)
     end
 
     def port_params

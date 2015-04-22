@@ -11,13 +11,19 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li><a href="/listPorts" class="active">Manage Areas of Interests</a><li>
-        <li><a>Manage Flights</a><li>
+       <!--  <%if @sub_uri == ""%>
+        <li><a href="/admin/listPorts" class="active">Manage Areas of Interests</a><li>
+          <% elsif %>
+          <li><a href="/<%= @sub_uri %>/admin/listPorts" class="active">Manage Areas of Interests</a><li>
+        <% end %> -->
+
+        <li><%= link_to "Manage Areas of Interests", list_ports_path, :class=> "active" %><li>
+        <!-- <li><a>Manage Flights</a><li> -->
         <li><a href="/">View Site</a><li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
+      <!-- <ul class="nav navbar-nav navbar-right">
         <li><a>Log out</a><li>
-      </ul>
+      </ul> -->
     </div><!--/.nav-collapse -->
   </div>
 </nav>
