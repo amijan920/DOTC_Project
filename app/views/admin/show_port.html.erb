@@ -1,7 +1,10 @@
 <%= render "admin/admin_navbar" %>
 
 <script>
-	var view = "edit_port";
+	var view = "edit_port"
+	var save_info_path = "<%= save_info_path%>"
+	var save_port_path = "<%= save_port_path%>"
+	var port_data = <%= raw @port.to_json %>
 </script>
 
 <div id="contents" class="container">
@@ -10,9 +13,10 @@
 			<h3>Edit Point of Interest</h3>
 		</div>
 	</div>
+
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2 edit-port-form">
-			<%= form_for @port, :url => save_port_path, :method => "post", :html => {:class => "form-horizontal"} do |f| %>
+			<%= form_for @port, :url => save_port_path, :method => "post", remote: true, :html => {:class => "form-horizontal", :id => "edit_port"} do |f| %>
 
 				<%= f.hidden_field(:id, :id => "id") %>
 				<%= hidden_field_tag(:id, @port.id) %>
@@ -28,16 +32,6 @@
 					<%= label_tag(:label_category, "Category:", :class => "control-label col-md-3") %>
 					<div class="col-md-9">
 						<%= f.select :category_id, options_for_select(@categories_options, @port.category_id), {}, {:class => "form-control"} %>
-					<!-- 	<select name="category" class="form-control">
-							<% @categories.each do |cat| %>
-								<% if cat.id == @port.category_id %>
-									<option value="<%= cat.id %>" selected="true"><%= cat.name %></option>
-								<% elsif %>
-									<option value="<%= cat.id %>" ><%= cat.name %></option>
-								<% end %>
-							<% end %>
-						</select> -->
-					 
 					</div>
 				</div>
 
@@ -73,9 +67,18 @@
 						<%= f.text_area :description, :id => "description", :class => "form-control", :rows => 5  %>
 					</div>
 				</div>
+
 				<div class="form-group">
 			    <div class="col-sm-offset-3 col-sm-9">
-			      <button type="submit" class="btn btn-primary">Save Changes</button>
+			    	<% if @new %> 
+			    		<%= f.submit("Create", :id => "save", :class => "btn btn-primary", :name => "commit") %>
+			    	<% else %>
+			    		<%= f.submit("Save Changes", :id => "save", :class => "btn btn-primary", :name => "commit") %>
+			    	<% end %>
+			    	
+			    <!-- 
+			      <%= f.submit("Delete", :id => "delete", :class => "btn btn-default", :onclick => "return confirm('Delete Port?')") %>
+ 					-->
 			    </div>
 			  </div>
 
@@ -87,25 +90,118 @@
 				  </div>
 			  <% end %>
 
-
 			<% end %>
 		</div>
+	</div>
 
-	<!-- 	<div class="row">
-		<div class="col-md-8 col-md-offset-2">
-			<h4>Additional Information</h4>
-		</div>
-	</div> -->
-
+	<div id="additional-info-section" <%if @new %> style="display:none" <% end %>>
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
-				<%= link_to "Back to List", list_ports_path %>
-		<!-- 		<%if @sub_uri == ""%>
-        	<a href="/admin/listPorts">Back to List</a>
-         <% elsif %>
-          <a href="/<%= @sub_uri %>/admin/listPorts">Back to List</a>
-        <% end %> -->
+				<h3>Additional Information</h3>
+			</div>
+		</div>
+
+		<div id="additional-info-list" class="row">
+			<% @port_infos.each do |info| %>
+				<div class="col-md-8 col-md-offset-2 edit-port-form">
+					<%= form_for info, :url => save_info_path, :method => "post", remote: true, :html => {:class => "form-horizontal edit-detail"} do |f| %>
+						
+
+						<%= f.hidden_field(:id, :id => "id") %>
+						<%= f.hidden_field(:poi_id, :id => "poi_id") %>
+						<%= f.hidden_field(:detail_type, :id => "detail_type") %>
+
+						<div class="form-group">
+							<%= label_tag(:label_name, "Name:", :class => "control-label col-md-3") %>
+							<div class="col-md-9">
+							 <%= f.text_field(:name, :id => "name", :class => "form-control")  %>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<%= label_tag(:label_body, "Body:", :class => "control-label col-md-3") %>
+							<div class="col-md-9">
+							 <%= f.text_area(:body, :id => "body", :class => "form-control", :rows => 5)  %>
+							</div>
+						</div>
+
+						<div class="form-group">
+					    <div class="col-sm-offset-3 col-sm-9">
+					      <%= f.submit("Save Changes", :id => "save",  :class => "btn btn-primary") %>
+					      <%= f.submit("Delete", :id => "delete", :class => "btn btn-default", :onclick => "return confirm('Delete info?')") %>
+					    </div>
+					  </div>
+
+					<% end %>
+				</div>
+			<% end %>
+
+			<div class="col-md-8 col-md-offset-2 edit-port-form">
+				<%= form_tag create_info_path, :method => "post", remote: true, :class => "form-horizontal create-detail" do %>
+						<input id="id" name="details[id]" type="hidden" value="-1" />
+						<input id="poi_id" name="details[poi_id]" type="hidden" value="<%= @port[:id]%>" />
+						<input id="detail_type" name="details[detail_type]" type="hidden" value="text" />
+
+						<div class="form-group">
+							<label class="control-label col-md-3" for="label_name">Name:</label>
+							<div class="col-md-9">
+							 <input class="form-control" id="name" name="details[name]" type="text" />
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="control-label col-md-3" for="label_body">Body:</label>
+							<div class="col-md-9">
+							 <textarea class="form-control" id="body" name="details[body]" rows="5"></textarea>
+							</div>
+						</div>
+
+						<div class="form-group">
+					    <div class="col-sm-offset-3 col-sm-9 buttons">
+					      <input class="btn btn-primary" name="commit" type="submit" value="Save" />
+					    </div>
+					  </div>
+				<% end %>
 			</div>
 		</div>
 	</div>
+
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1">
+			<%= link_to "Back to List", list_ports_path %>
+		</div>
+	</div>
+
+	<div class="bottom-filler"></div>
+
 </div>
+
+<script id="additional-info-template" type="text/x-handlebars-template">
+  <div class="col-md-8 col-md-offset-2 edit-port-form">
+		<%= form_tag create_info_path, :method => "post", remote: true, :class => "form-horizontal create-detail" do %>
+				<input id="id" name="details[id]" type="hidden" value="-1" />
+				<input id="poi_id" name="details[poi_id]" type="hidden" value="{{id}}" />
+				<input id="detail_type" name="details[detail_type]" type="hidden" value="text" />
+
+				<div class="form-group">
+					<label class="control-label col-md-3" for="label_name">Name:</label>
+					<div class="col-md-9">
+					 <input class="form-control" id="name" name="details[name]" type="text" />
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="control-label col-md-3" for="label_body">Body:</label>
+					<div class="col-md-9">
+					 <textarea class="form-control" id="body" name="details[body]" rows="5"></textarea>
+					</div>
+				</div>
+
+				<div class="form-group">
+			    <div class="col-sm-offset-3 col-sm-9 buttons">
+			      <input class="btn btn-primary" name="commit" type="submit" value="Save" />
+			    </div>
+			  </div>
+		<% end %>
+	</div>
+</script>
