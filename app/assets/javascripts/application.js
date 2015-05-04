@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.cookie
-//= require jquery.dynatable
 //= require handlebars-v3.0.0
 //= require d3.min
 //= require d3-tip

@@ -4,7 +4,7 @@ class PageController < ApplicationController
 
 	def index
 
-		@sub_uri = ""
+		@sub_uri = "ports"
 		@ports = Poi.order("id").all()
 		@images = Array.new(@ports.length)
 		@infos = Array.new(@ports.length)
@@ -14,11 +14,11 @@ class PageController < ApplicationController
 
 		@categories.each do |category|
 			if category.image != nil
-				@category_markers[category.id] = asset_url(@sub_uri + "assets/category_markers/" + category.image)
-				@category_filters[category.id] = asset_url(@sub_uri + "assets/category_markers/filter_" + category.image)
+				@category_markers[category.id] = asset_path("assets/category_markers/" + category.image)
+				@category_filters[category.id] = asset_path("assets/category_markers/filter_" + category.image)
 			else
-				@category_markers[category.id] = asset_url(@sub_uri + "assets/category_markers/default.png")
-				@category_filters[category.id] = asset_url(@sub_uri + "assets/category_markers/filter_default.png")
+				@category_markers[category.id] = asset_path("assets/category_markers/default.png")
+				@category_filters[category.id] = asset_path("assets/category_markers/filter_default.png")
 			end
 		end
 
@@ -52,6 +52,11 @@ class PageController < ApplicationController
 	def get_ports
 		@ports = Poi.order("id").all()
 		render json: @ports
+	end
+
+	def get_port_data
+		@port_image = Image.where(poi_id: params[:id])
+		@port_info = Details.where(poi_id: params[:id])
 	end
 	
 end

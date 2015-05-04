@@ -7,40 +7,58 @@
 <div id="contents" class="container">
 	<div class="row">
 		<div class="col-md-12">
-			<h3>Areas of Interests</h3>
+			<h3>Points of Interest</h3>
 		</div>
 	</div>
+
 	<div class="row" style="margin-bottom:8px">
 		<div class="col-sm-6">
-			<input id="filter-ports" type="text" placeholder="Filter"/>
+			<%= link_to "Create New Point", create_new_port_path%>
 		</div>
 	</div>
+
 	<div class="row">
 		<div class="col-md-12">
-			<table id="points" class="table table-bordered">
+			<table id="points" class="display">
 				<thead>
 					<tr>
-						<th class="col-md-6">Name</th>
-						<th class="col-md-2">Category</th>
-						<th class="col-md-1">Latitude</th>
-						<th class="col-md-1">Longitude</th>
-						<th class="col-md-1" class="td-button">Edit</th>
-						<!-- <th class="col-md-1" class="td-button">Delete</th> -->
+						<th>Id</th>
+						<th>Name</th>
+						<th>Category</th>
+						<th>Latitude</th>
+						<th>Longitude</th>
+						<th>Edit</th>
+						<th>Delete</th>
 					</tr>
 				</thead>
 				<tbody>
 					<% @ports.each_with_index do |port, i| %>
 						<tr>
+							<td><%= port.id %></td>
 							<td><%= port.name%></td>
 							<td><%= port.category.name %></td>
 							<td><%= sprintf('%.2f', (port.lat_deg + port.lat_min/60 + port.lat_sec/3600)) %></td>
 							<td><%= sprintf('%.2f', (port.lon_deg + port.lon_min/60 + port.lon_sec/3600)) %></td>
 							<td><%= link_to "Edit", show_port_path(id: port.id) %></td>
-							<!-- <td><a class="td-button">Delete</a></td> -->
+							<td>
+								<%= form_tag destroy_port_path, :method => "post", remote: true, :class => "form-horizontal delete-port" do %>
+									<input id="id" name="id" type="hidden" value="<%= port.id%>" />
+									<input name="commit" type="submit" value="Delete" onclick="return confirm(&#39;Delete <%= port.name%>?&#39;)"/>
+								<% end %>
+							</td>
 						</tr>
 					<% end %>
 				</tbody>
 			</table>
 		</div>
 	</div>
+
+	<div class="row" style="margin-bottom:8px">
+		<div class="col-sm-6">
+			<%= link_to "Create New Point", create_new_port_path%>
+		</div>
+	</div>
+
+	<div class="bottom-filler"></div>
+
 </div>

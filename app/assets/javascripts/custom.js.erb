@@ -476,25 +476,179 @@ var MapDisplay = (function() {
 })();
 
 function portsViewScript() {
- var ports_table = $('#points').dynatable({
-	  features: {
-	    paginate: false,
-	    recordCount: false,
-	    sorting: false,
-	    search:false
-	  }
-	}).data('dynatable');
- console.log(ports_table);
+ var ports_table = $('#points').DataTable({
+    "bPaginate": false,
+    "columnDefs": [
+      {
+          "targets": [ 0 ],
+          "visible": false,
+          "searchable": true
+      },
+      {
+          "targets": [ 5, 6 ],
+          "searchable": false,
+          "orderable": false
+      }
+    ]
+  });
 
-	$("#filter-ports").keyup(function() {
-		var value = $(this).val();
-	  ports_table.queries.runSearch(value);//add("name",value);
-	});
+ // $('#points').dynatable({
+	//   features: {
+	//     paginate: false,
+	//     recordCount: false,
+	//     sorting: false,
+	//     search:false
+	//   }
+	// }).data('dynatable');
+
+	// $("#filter-ports").keyup(function() {
+	// 	var value = $(this).val();
+	//   ports_table.queries.runSearch(value);//add("name",value);
+	// });
+
+
+ 	$(".delete-port").on("ajax:success", 
+ 		function(e, data, status, xhr) {
+ 			ports_table.row(function(index, _data) {
+ 				return (data["poi_id"] == _data[0])
+ 			}).remove().draw(false);
+
+ 			toastr.options = {
+			  "positionClass": "toast-bottom-right"
+			}
+ 			if(data["result"] == "ok")
+ 				toastr["success"](data["poi"].name + " was successfully deleted", "Deletion Successful");
+ 			else
+ 				toastr["error"]("Failed to delete " + data["poi"].name, "Deletion Failed");
+ 		}
+ 	).on("ajax:error",
+ 		function(e, xhr, status, error) {
+			toastr.options = {
+			  "positionClass": "toast-bottom-right"
+			}
+ 			toastr["error"]("Failed to delete " + data["poi"].name, "Deletion Failed");
+ 		}
+ 	);
+}
+
+
+
+function editPortViewScript() {
+	var source   = $("#additional-info-template").html();
+	var form_template = Handlebars.compile(source);
+
+	var errorCallback = function(e, xhr, status, error) {
+		toastr["error"]("There is either connection issues or server issues", "Communication Error");
+	};
+
+	var editDetailCallback = function(e, data, status, xhr) {
+		if(data["action"] == "delete") {
+			toastr.options = {
+		  "positionClass": "toast-bottom-right"
+		}
+		if(data["result"] == "ok") {
+			toastr["success"](data["info"].name + " was successfully deleted", "Deletion Successful");
+			$(e.target).parent().slideUp(500, function() {
+				$(e.target).parent().remove();
+			});
+		}
+		else
+			toastr["error"]("Failed to delete " + data["info"].name, "Deletion Failed");
+		}
+		else {
+			toastr.options = {
+	  "positionClass": "toast-bottom-right"
+		}
+		if(data["result"] == "ok")
+			toastr["success"]("Changes to " + data["info"].name + " were successfully saved", "Save Successful");
+		else
+			toastr["error"]("Failed to save changes to " + data["info"].name, "Save Failed");
+		}
+	}
+
+	var createDetailCallback = function(e, data, status, xhr) {
+		toastr.options = {
+	  	"positionClass": "toast-bottom-right"
+		}
+		if(data["result"] == "ok") {
+			toastr["success"](data["info"].name + " was successfully saved", "Save Successful");
+			$(e.target).toggleClass("create-detail", false)
+			$(e.target).toggleClass("edit-detail", false)
+			$(e.target).attr("action", save_info_path);
+			$(e.target).find("[name='details[id]']").val(data["info"].id);
+			$(e.target).find("[name='commit']").val("Save Changes");
+			$(e.target).find(".buttons").append("<input class=\"btn btn-default\" name=\"commit\" type=\"submit\" value=\"Delete\" onclick=\"return confirm('Delete info?')\" />");
+			$(e.target).off("ajax:success");
+			$(e.target).on("ajax:success", editDetailCallback);
+
+
+			var string = form_template(port_data);
+			$("#additional-info-list").append(string);
+			$(".create-detail")
+		 		.on("ajax:success", createDetailCallback)
+		 		.on("ajax:error", errorCallback);
+		}
+		else
+			toastr["error"]("Failed to save " + data["info"].name, "Save Failed");
+	}
+
+ 	var editPortCallback = function(e, data, status, xhr) {
+ 		console.log(data);
+		if(data["action"] == "delete") {
+			toastr.options = { "positionClass": "toast-bottom-right" };
+
+			if(data["result"] == "ok") {
+				toastr["success"]("\"" + data["poi"].name + "\" was successfully deleted", "Deletion Successful");
+			}
+			else
+				toastr["error"]("Failed to delete \"" + data["poi"].name + "\"", "Deletion Failed");
+		}
+		else if(data["action"] == "save"){
+			toastr.options = { "positionClass": "toast-bottom-right" };
+
+			if(data["result"] == "ok")
+				toastr["success"]("Changes to \"" + data["poi"].name + "\" were successfully saved", "Save Successful");
+			else
+				toastr["error"]("Failed to save changes to \"" + data["poi"].name + "\"", "Save Failed");
+		}
+		else {
+			toastr.options = { "positionClass": "toast-bottom-right" };
+
+			if(data["result"] == "ok") {
+				toastr["success"]("\"" + data["poi"].name + "\" was successfully saved", "Save Successful");
+				$(e.target).find("[name='commit']").val("Save Changes");
+				$(e.target).find("[name='poi[id]']").val(data["poi"].id);
+				$("#additional-info-section").slideDown(500, function() {
+					$("#additional-info-section").find("[name='details[poi_id]']").val(data["poi"].id);
+				});
+				port_data.id = data["poi"].id;
+			}
+			else
+				toastr["error"]("Failed to save \"" + data["poi"].name + "\"", "Save Failed");
+		}
+	}
+
+	$(".edit-detail")
+ 		.on("ajax:success", editDetailCallback)
+ 		.on("ajax:error", errorCallback);
+
+ 	$(".create-detail")
+ 		.on("ajax:success", createDetailCallback)
+ 		.on("ajax:error", errorCallback);
+
+ 	$("#edit_port")
+ 		.on("ajax:success", editPortCallback)
+ 		.on("ajax:error", errorCallback);
 }
 
 function ready() {
 	if(view === "ports") {
 		portsViewScript();
+		return;
+	}
+
+	if(view === "edit_port") {
+		editPortViewScript();
 		return;
 	}
 
