@@ -38,3 +38,26 @@ content:text
 
 
 rails g migration AddPOIToDetails poi:references
+
+route_provider
+name:string
+image:string
+
+
+rails g model route_provider name:string image:string
+
+route
+route_provider:references
+flight_id:string
+type:string
+departure_time:time
+arrival_time:time
+days:integer
+origin_poi:references
+destination_poi:references
+active:boolean
+
+rails g model route route_provider:references route_id:string type:string departure_time:time arrival_time:time days:integer active:boolean origin_poi:references destination_poi:references 
+
+
+rails g migration AddTravelTypeToRoute travel_type:string

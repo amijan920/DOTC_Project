@@ -1,17 +1,19 @@
 class AdminController < ApplicationController
 
 	before_action :set_port, only: [:show_port, :save_port, :destroy_port]
-
+  before_action :set_route, only: [:show_route, :save_route, :destroy_route]
+	
 	def list_ports
+		@page = "ports"
 		@ports = Poi.order("id").all()
 	end
 
 	def show_port
+		@page = "ports"
 		load_data
 	end
 
 	def save_port
-
 		response = Hash.new
 		response["params"] = params
 
@@ -25,7 +27,16 @@ class AdminController < ApplicationController
 			response["poi"] = @port
 		elsif params[:commit] == "Create"
 			response["action"] = "create"
-			if @port = Poi.create(port_params)
+			@p_params = port_params
+			response["params"] = port_params
+
+			if @p_params[:category_id] == "-1"
+				response["inside"] = true
+				@new_category = Category.create(name:params[:poi][:category_name], image:nil)
+				@p_params[:category_id] = @new_category.id
+			end
+
+			if @port = Poi.create(@p_params)
 				response["result"] = "ok"
 			else
 				response["result"] = "error"
@@ -49,20 +60,6 @@ class AdminController < ApplicationController
 		# render json: params
 	end
 
-	def create_port
-		response = Hash.new
-		response["action"] = "create"
-
-		if Poi.create(port_params)
-			response["result"] = "ok"
-		else
-			response["result"] = "error"
-		end
-
-		response["poi"] = @port
-		render json: response
-	end
-
 	def destroy_port
     response = Hash.new
 		response["poi_id"] = @port.id
@@ -82,6 +79,75 @@ class AdminController < ApplicationController
 
 		render json: response
   end
+
+
+  def list_routes
+		@page = "routes"
+		@routes = Route.order("id").all()
+	end
+
+  def show_route
+		@page = "routes"
+		load_route_data
+	end
+
+	def save_route
+		response = Hash.new
+		response["params"] = params
+
+		if params[:commit] == "Delete"
+			response["action"] = "delete"
+			if @route.destroy
+				response["result"] = "ok"
+			else
+				response["result"] = "error"
+			end
+			response["route"] = @route
+		elsif params[:commit] == "Create"
+			response["action"] = "create"
+			@r_params = route_params
+
+			if @r_params[:route_provider_id] == "-1"
+				response["inside"] = true
+				@new_route_provider = RouteProvider.create(name:params[:route][:route_provider_name], image:nil)
+				@r_params[:route_provider_id] = @new_route_provider.id
+			end
+
+			if @route = Route.create(@r_params)
+				response["result"] = "ok"
+			else
+				response["result"] = "error"
+			end
+			response["route"] = @route
+		else
+			response["action"] = "save"
+			if @route.update(route_params)
+				@route.save
+				response["result"] = "ok"
+			else
+				response["result"] = "error"
+			end
+			response["route"] = @route
+		end
+
+		render json: response	
+	end
+
+	def destroy_route
+		response = Hash.new
+		response["route_id"] = @route.id
+		response["action"] = "delete"
+    
+    if @route.destroy
+			response["result"] = "ok"
+		else
+			response["result"] = "error"
+		end
+
+		response["route"] = @route
+
+		render json: response
+	end
 
   def save_info
 		@port_info = Details.find(params[:details][:id])
@@ -118,15 +184,43 @@ class AdminController < ApplicationController
 	end
 
 	private
-
 		def load_data
-			@categories = Category.all()
-			@categories_options = Array.new(@categories.length)
+			@categories = Category.order("id").all()
+			@categories_options = Array.new(@categories.length + 1)
 			@categories.each_with_index do |cat, i|
 				@option = Array.new(2)
 				@option[0] = cat.name
 				@option[1] = cat.id
 				@categories_options[i] = @option
+			end
+			@option = Array.new(2)
+			@option[0] = "New Category"
+			@option[1] = -1
+			@categories_options[@categories.length] = @option 
+		end
+
+		def load_route_data
+			@providers = RouteProvider.order("id").all()
+			@providers_options = Array.new(@providers.length + 1)
+			@providers.each_with_index do |provider, i|
+				@option = Array.new(2)
+				@option[0] = provider.name
+				@option[1] = provider.id
+				@providers_options[i] = @option
+			end
+			@option = Array.new(2)
+			@option[0] = "New Provider"
+			@option[1] = -1
+			@providers_options[@providers.length] = @option 
+
+
+			@pois = Poi.order("id").all()
+			@poi_options = Array.new(@pois.length)
+			@pois.each_with_index do |poi, i|
+				@option = Array.new(2)
+				@option[0] = poi.name
+				@option[1] = poi.id
+				@poi_options[i] = @option
 			end
 		end
 
@@ -141,6 +235,21 @@ class AdminController < ApplicationController
 				@port_infos = Details.order("id").where(:poi_id => @port.id)
 				@new = false
 			end
+    end
+
+    def set_route
+    	@orig = params[:id]
+			if @orig == nil || @orig == ""
+				@route = Route.new
+				@new = true
+			else
+				@route = Route.find(@orig)
+				@new = false
+			end
+    end
+
+    def route_params
+      params.require(:route).permit(:route_id, :route_provider_id, :travel_type, :destination_poi_id, :origin_poi_id, :days, :arrival_time, :departure_time, :active)
     end
 
     def port_params

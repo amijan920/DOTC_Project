@@ -1,0 +1,200 @@
+<%= render "admin/admin_navbar" %>
+
+<script>
+	var view = "edit_route"
+	var save_route_path = "<%= save_route_path%>"
+	var route_data = <%= raw @route.to_json %>
+</script>
+
+<div id="contents" class="container">
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1">
+			<h3>Edit Route</h3>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2 edit-port-form">
+			<%= form_for @route, :url => save_route_path, :method => "post", remote: true, :html => {:class => "form-horizontal", :id => "edit_route"} do |f| %>
+
+				<%= f.hidden_field(:id, :id => "id") %>
+				<%= hidden_field_tag(:id, @route.id) %>
+
+				<div class="form-group">
+					<%= label_tag(:label_route_id, "Route Id:", :class => "control-label col-md-3") %>
+					<div class="col-md-9">
+					 <%= f.text_field(:route_id, :id => "route-id", :required => true, :class => "form-control")  %>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<%= label_tag(:label_travel_type, "Travel Type:", :class => "control-label col-md-3") %>
+					<div class="col-md-9">
+						<%= f.text_field(:travel_type, :id => "travel-type", :required => true, :class => "form-control")  %>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<%= label_tag(:label_provider, "Provider:", :class => "control-label col-md-3") %>
+					<div class="col-md-9">
+						<%= f.select :route_provider_id, options_for_select(@providers_options, @route.route_provider_id), {}, {:class => "form-control", :id => "provider-id-select"} %>
+					</div>
+				</div>
+
+				<div class="form-group" id="new-provider" style="display:none">
+					<%= label_tag(:label_provider, "New Provider Name:", :class => "control-label col-md-3") %>
+					<div class="col-md-9">
+						<input class="form-control" id="name" name="route[route_provider_name]" type="text" />
+					</div>
+				</div>
+
+				<div class="form-group">
+					<%= label_tag(:label_origin_poi_id, "Origin:", :class => "control-label col-md-3") %>
+					<div class="col-md-9">
+						<%= f.select :origin_poi_id, options_for_select(@poi_options, @route.origin_poi_id), {}, {:class => "form-control"} %>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<%= label_tag(:label_destination_poi_id, "Destination:", :class => "control-label col-md-3") %>
+					<div class="col-md-9">
+						<%= f.select :destination_poi_id, options_for_select(@poi_options, @route.destination_poi_id), {}, {:class => "form-control"} %>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<%= label_tag(:label_departure_time, "Departure Time:", :class => "control-label col-md-3") %>
+					<div class="col-md-9">
+						<%= f.time_field(:departure_time, :id => "departure-time", :required => true, :class => "form-control")  %>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<%= label_tag(:label_arrival_time, "Arrival Time:", :class => "control-label col-md-3") %>
+					<div class="col-md-9">
+						<%= f.time_field(:arrival_time, :id => "arrival-time", :required => true, :class => "form-control")  %>
+					</div>
+				</div>
+
+				<% 
+					if @route.days == nil
+						@route.days = 0
+					end 
+				%>
+				<% 
+					if @route.active == nil
+						@route.active = true
+					end 
+				%>
+				<%= f.hidden_field(:days, :id => "days") %>
+
+				<div class="form-group">
+					<%= label_tag(:label_frequency, "Frequency:", :class => "control-label col-md-3") %>
+					<div class="col-md-9">
+						<div class="row">
+							<div class="checkbox col-sm-3">
+							  <label>
+							    <input type="checkbox" id="cb-monday" class="day-cb" data-off=6 value="" 
+							    <% if ((1<<6) & @route.days) > 0%>
+							    	checked
+							    <% end %>>
+							    Monday
+							  </label>
+							</div>
+							<div class="checkbox col-sm-3">
+							  <label>
+							    <input type="checkbox" id="cb-tuesday" class="day-cb" data-off=5 value=""
+							    <% if ((1<<5) & @route.days) > 0%>
+							    	checked
+							    <% end %>>
+							    Tuesday
+							  </label>
+							</div>
+							<div class="checkbox col-sm-3">
+							  <label>
+							    <input type="checkbox" id="cb-wednesday" class="day-cb" data-off=4 value=""
+							    <% if ((1<<4) & @route.days) > 0%>
+							    	checked
+							    <% end %>>
+							    Wednesday
+							  </label>
+							</div>
+							<div class="checkbox col-sm-3">
+							  <label>
+							    <input type="checkbox" id="cb-thursday" class="day-cb" data-off=3 value=""
+							    <% if ((1<<3) & @route.days) > 0%>
+							    	checked
+							    <% end %>>
+							    Thursday
+							  </label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="checkbox col-sm-3">
+							  <label>
+							    <input type="checkbox" id="cb-friday" class="day-cb" data-off=2 value=""
+							    <% if ((1<<2) & @route.days) > 0%>
+							    	checked
+							    <% end %>>
+							    Friday
+							  </label>
+							</div>
+							<div class="checkbox col-sm-3">
+							  <label>
+							    <input type="checkbox" id="cb-saturday" class="day-cb" data-off=1 value=""
+							    <% if ((1<<1) & @route.days) > 0%>
+							    	checked
+							    <% end %>>
+							    Saturday
+							  </label>
+							</div>
+							<div class="checkbox col-sm-3">
+							  <label>
+							    <input type="checkbox" id="cb-sunday" class="day-cb" data-off=0 value=""
+							    <% if ((1<<0) & @route.days) > 0%>
+							    	checked
+							    <% end %>>
+							    Sunday
+							  </label>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="form-group">
+					<%= label_tag(:label_arrival_time, "Availability:", :class => "control-label col-md-3") %>
+					<div class="col-md-9">
+						<div class="checkbox">
+						  <label>
+						    <%= f.check_box(:active, :id => "active-route") %>
+						    Active
+						  </label>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+			    <div class="col-sm-offset-3 col-sm-9">
+			    	<% if @new %> 
+			    		<%= f.submit("Create", :id => "save", :class => "btn btn-primary", :name => "commit") %>
+			    	<% else %>
+			    		<%= f.submit("Save Changes", :id => "save", :class => "btn btn-primary", :name => "commit") %>
+			    	<% end %>
+			    </div>
+			  </div>
+
+
+			<% end %>
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1">
+			<%= link_to "Back to List", list_routes_path %>
+		</div>
+	</div>
+
+	<div class="bottom-filler"></div>
+</div>

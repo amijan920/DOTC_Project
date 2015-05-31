@@ -19,6 +19,39 @@ function getLatLng(port) {
 }
 
 function compileTemplates() {
+	Handlebars.registerHelper('breaklines', function(text) {
+	    text = Handlebars.Utils.escapeExpression(text);
+	    text = text.replace(/(\r\n|\n|\r)/gm, '<br>');
+	    return new Handlebars.SafeString(text);
+	});
+
+	Handlebars.registerHelper('format_time', function(text) {
+	    return text.substring(text.indexOf("T") + 1, text.indexOf("T") + 9);
+	});
+
+	Handlebars.registerHelper('get_days', function(days) {
+			if(days == 127)
+				return "Daily";
+			var str = "";
+			if (((1<<6) & days) > 0)
+				str += "Mo | ";
+			if (((1<<5) & days) > 0)
+				str += "Tu | ";
+			if (((1<<4) & days) > 0)
+				str += "We | ";
+			if (((1<<3) & days) > 0)
+				str += "Th | ";
+			if (((1<<2) & days) > 0)
+				str += "Fr | ";
+			if (((1<<1) & days) > 0)
+				str += "Sa | ";
+			if (((1<<0) & days) > 0)
+				str += "Su | ";
+
+			if(str.length > 0)
+				return str.substring(0, str.length - 3);
+	});
+
 	var source   = $("#carousel-inner-template").html();
 	templates["carousel-inner"] = Handlebars.compile(source);
 
@@ -30,6 +63,12 @@ function compileTemplates() {
 
 	source   = $("#routes-info-template").html();
 	templates["routes-info"] = Handlebars.compile(source);
+
+	source   = $("#routes-options-template").html();
+	templates["routes-options"] = Handlebars.compile(source);
+
+	source   = $("#no-routes-template").html();
+	templates["no-routes"] = Handlebars.compile(source);
 }
 
 // mapUI
@@ -42,6 +81,9 @@ var MapUI = (function() {
 		this.uiView = "details";
 		this.mapDisplay = null;
 		this.mapState = "none";
+		this.currentRouteList = null;
+		this.activeRoute = -1;
+		this.visualizations = null;
 
 		this.originPort = null;
 		this.destinationPort = null;
@@ -51,7 +93,21 @@ var MapUI = (function() {
 				_this.setOriginPort(null);
 				_this.setDestinationPort(_this.activePort);
 				_this.switchView();
-				_this.mapState="origin";
+				_this.mapState = "origin";
+			}
+		})(this));
+
+		$("#origin-text").click((function(_this) {
+			return function(e) {
+				this.select();
+				_this.mapState = "origin";
+			}
+		})(this));
+
+		$("#destination-text").click((function(_this) {
+			return function(e) {
+				this.select();
+				_this.mapState = "destination";
 			}
 		})(this));
 	}
@@ -62,6 +118,13 @@ var MapUI = (function() {
 			$("#origin-text").val("");
 		else
 			$("#origin-text").val(this.originPort.name);
+		if(origin != null)
+			this.setActivePort(origin.id);
+
+		$("#routes-options-container").slideUp(400, function(c) {
+			$("#routes-options .scroll-container").html("");
+		});
+
 		this.getRoute();
 	}
 
@@ -71,6 +134,13 @@ var MapUI = (function() {
 			$("#destination-text").val("");
 		else
 			$("#destination-text").val(this.destinationPort.name);
+		if(destination != null)
+			this.setActivePort(destination.id);
+
+		$("#routes-options-container").slideUp(400, function(c) {
+			$("#routes-options .scroll-container").html("");
+		});
+
 		this.getRoute();
 	}
 
@@ -79,84 +149,121 @@ var MapUI = (function() {
 			$("#routes-container").slideUp();
 			return;
 		}
-		routeData = {
-			routeList: [ 
-			{
-				id: 1,
-				name: "Direct",
-				departure: "4:00",
-				arrival:"5:30",
-				flightPath: [
-					{
-						flightId: 1,
-						origin: this.ports[115],
-						destination: this.ports[142],
-						departure: "4:00",
-						arrival: "5:30"
-					}
-				]
-			},
-			{
-				id: 2,
-				name: "With Stop Over",
-				departure: "4:00",
-				arrival:"7:30",
-				flightPath: [
-					{
-						flightId: 2,
-						origin: this.ports[115],
-						destination: this.ports[174],
-						departure: "4:00",
-						arrival: "6:00"
-					},
-					{
-						flightId: 1,
-						origin: this.ports[174],
-						destination: this.ports[142],
-						departure: "6:00",
-						arrival: "7:30"
-					}
-				]
-			}
-		] };
 
 		$.ajax({
       type: "POST",
       url: "getRoutes",
-      data: { origin_id: 0, destination_id: 1 },
-      success: function(data) {
-        console.log(data);
-        return false;
-      },
+      data: { origin_id: this.originPort.id, destination_id: this.destinationPort.id },
+      success: (function(_this){
+				return function(data) {
+	        console.log(data);
+	        _this.currentRouteList = data.data;
+	        _this.showRoute(data.data);
+					// _this.mapDisplay.showRoute(data.data.routeList[0]);
+	        return false;
+	      }
+			})(this),
       error: function(data) {
       	return false;
       }
     })
 
-		this.showRoute(routeData);
+		// this.showRoute(routeData);
+		// this.mapDisplay.showRoute(routeData);
 	}
 
 	MapUI.prototype.showRoute = function(data) {
 		$("#routes-container").slideDown();
 		$("#routes-info > .scroll-container").html("");
-
+		this.activeRoute = -1;
 
 	  var string = templates["routes-info"](data);
 	  $("#routes-info > .scroll-container").html(string);
 
+	  this.visualizations = {};
 		for(var i = 0; i < data.routeList.length; i++) {
-			var flightPath = [];
-			flightPath.push(data.routeList[i].flightPath[0].origin);
-			flightPath.push(data.routeList[i].flightPath[0].destination);
-			for(var j = 1; j < data.routeList[i].flightPath.length; j++) {
-				flightPath.push(data.routeList[i].flightPath[i].destination);
+			this.visualizations[data.routeList[i].id] = this.createRouteVisualization("#route-"+ data.routeList[i].id +" .route-visualization", data.routeList[i]);
+		}
+
+	  $(".route-info").click((function(_this) {
+	  	return function(e) {
+	  		if(_this.activeRoute == $(this).data("rid")) {
+	  			return;
+	  		}
+
+	  		_this.activeRoute = $(this).data("rid");
+	  		_this.mapDisplay.showRoute(_this.currentRouteList.routeList[$(this).data("id")]);
+
+	  		for(var i = 0; i < _this.currentRouteList.routeList.length; i++) {
+					if(_this.currentRouteList.routeList[i].id == $(this).data("rid")) {
+						$("#route-"+_this.currentRouteList.routeList[i].id).slideDown();
+					}
+					else {
+						$("#route-"+_this.currentRouteList.routeList[i].id).slideUp();
+					}
+				}
+	  		// _this.showRouteOptions($(this).data("rid"), 0);
+
+				// var lines = _this.visualizations[$(this).data("rid")].lines;
+
+				// lines.each(function(d, i) {
+				// 	if(i == 0) {
+				// 		d.active = true;
+				// 		$(this).attr("stroke", "#F16521");
+				// 	}
+				// 	else {
+				// 		d.active = false;
+				// 		$(this).attr("stroke", "#444444");
+				// 	}
+				// })
 			}
-			this.createRouteVisualization("#route-"+ data.routeList[i].id +" .route-visualization", flightPath);
+	  })(this));
+
+		if(data.routeList.length == 0) {
+			string = templates["no-routes"](data);
+	  	$("#routes-info > .scroll-container").html(string);
 		}
 
 		// this.createRouteVisualization("#route-1 .route-visualization", [this.ports[115], this.ports[142]]);
 		// this.createRouteVisualization("#route-2 .route-visualization", [this.ports[115], this.ports[174], this.ports[142]]);
 		// this.mapDisplay.showRoute([this.ports[115], this.ports[174], this.ports[142]]);
+	}
+
+	MapUI.prototype.showRouteOptions = function(routeListId, routeIndex) {
+		for(var i = 0; i < this.currentRouteList.routeList.length; i++) {
+			console.log(this.currentRouteList.routeList[i].id)
+			if(this.currentRouteList.routeList[i].id == routeListId) {
+				// $("#route-options").remove();
+				// $("#route-"+routeListId).after("<div id=\"route-options\"></div>");
+				
+				var tempData = {}
+				tempData.routeList = this.currentRouteList.routeList[i].routes[routeIndex];
+
+				var string = templates["routes-options"](tempData);
+				// string = "<div class=\"panel-sub\"><div class=\"bold\">Options</div>" + string +"</div>"; 
+				// $("#route-options").html(string);
+
+
+				$("#routes-options .scroll-container").html(string);
+				$("#routes-options-container").slideDown();
+			}
+			else {
+				$("#route-"+this.currentRouteList.routeList[i].id).slideUp();
+			}
+		}
+	}
+
+	MapUI.prototype.showAllRoutes = function() {
+		for(var i = 0; i < this.currentRouteList.routeList.length; i++) {
+			$("#route-"+this.currentRouteList.routeList[i].id).slideDown();
+
+			this.visualizations[this.currentRouteList.routeList[i].id].lines
+				.each(function(d, i) {
+					d.active = false;
+					$(this).attr("stroke", "#444444");
+				})
+		}
+
 	}
 
 	MapUI.prototype.setMapDisplay = function(mapDisplay) {
@@ -173,7 +280,7 @@ var MapUI = (function() {
 
 	  // $("#panel-title").html(port.name);
 	  $("#name-container .bold").html(port.name);
-	  $("#name-container #description.small-desc").html(port.description);
+	  $("#name-container #description.small-desc").html(port.description.replace(/(?:\r\n|\r|\n)/g, '<br />'));
 
 	  // if(port.category_id == 2)
 	  	$("#view-routes").show();
@@ -235,18 +342,33 @@ var MapUI = (function() {
 		}
 	}
 
-	MapUI.prototype.switchView = function() {
-		if(this.uiView == "flights") {
-			$("#port-details").slideDown();
-			$("#routes-display").slideUp();
-			$("#panel-title").html("Port Details");
-			this.uiView = "details";
+	MapUI.prototype.switchView = function(spec) {
+		if(spec == null) {
+			if(this.uiView == "flights") {
+				$("#port-details").slideDown();
+				$("#routes-display").slideUp(400, function(d) {
+					$("#routes-info .scroll-container").html("");
+				});
+				$("#routes-options-container").slideUp(400, function(c) {
+					$("#routes-options .scroll-container").html("");
+				});
+				$("#panel-title").html("Port Details");
+				this.mapState = "none";
+				this.mapDisplay.removePath();
+				this.mapDisplay.showAllLayers();
+				this.uiView = "details";
+			}
+			else {
+				$("#routes-display").slideDown();
+				$("#port-details").slideUp();
+				$("#panel-title").html("Routes <span class=\"glyphicon glyphicon-remove\" style=\"padding-top:2px;float:right;\" aria-hidden=\"true\"></span>");
+				this.uiView = "flights";
+			}
 		}
 		else {
-			$("#routes-display").slideDown();
-			$("#port-details").slideUp();
-			$("#panel-title").html("Routes");
-			this.uiView = "flights";
+			if(spec != this.uiView) {
+				this.switchView();
+			}
 		}
 	}
 
@@ -266,22 +388,67 @@ var MapUI = (function() {
 
 		// console.log(data);
 
-		var circles = vis.selectAll("circle")
-			.data(data, function(d) {
-					return d.id;
-				});
+		portPath = data.portPath
 
 		// console.log(circles);
 		var padding = 10;
-		var interval = (width-padding*2)/(data.length-1);
+		var interval = (width-padding*2)/(portPath.length-1);
 
-		vis.append("line")
-			.attr("x1", padding)
+		var lines = vis.selectAll("line")
+			.data(data.routes);
+
+		for(var i = 0; i < data.routes.length; i++) {
+			data.routes[i].active = false;
+		}
+
+		var normalColor = "#444444";
+		var highlightColor = "#F16521";
+
+		lines
+			.enter()
+			.append("line")
+			.attr("x1", function(d, i) {
+				return padding + i*interval;
+			})
 			.attr("y1", height/2)
-			.attr("x2", (width-padding))
+			.attr("x2", function(d, i) {
+				return padding + (i+1)*interval;
+			})
 			.attr("y2", height/2)
 			.attr("stroke-width", 4)
-			.attr("stroke", "#444444");
+			.attr("stroke", function(d, i) {
+				if(d.active == true)
+					return highlightColor;
+				return normalColor;
+			})
+			.on("click", (function(_this) {
+				return function(d, i) {
+					_this.showRouteOptions(data.id, i);
+
+					lines.each(function(d) {
+						d.active = false;
+						$(this).attr("stroke", normalColor);
+					})
+
+					if(d.active == false) {
+						$(this).attr("stroke", highlightColor);
+						d.active = true;
+					}
+				}
+			})(this))
+			.on("mouseover", function(d, i) {
+				if(d.active == false)
+					$(this).attr("stroke", highlightColor);
+			})
+			.on("mouseout", function(d, i) {
+				if(d.active == false)
+					$(this).attr("stroke", normalColor);
+			})
+
+		var circles = vis.selectAll("circle")
+			.data(portPath, function(d) {
+					return d.id;
+				});
 
 		var tip = d3.tip()
 		  .offset([-10, 0])
@@ -295,8 +462,15 @@ var MapUI = (function() {
 		circles
 			.enter()
 			.append("circle")
-			.attr("r", 8)
-			.attr("fill", "#444444")
+			.attr("r", 6)
+			.attr("fill", function(d, i) {
+					if (i == portPath.length-1)
+						return normalColor;
+					else
+						return "#FFFFFF";
+				})
+			.attr("stroke-width", 4)
+			.attr("stroke", normalColor)
 			.attr("class", "airport-circle")
 			.attr("cx", function(d, i) {
 				return padding + i*interval;
@@ -305,16 +479,19 @@ var MapUI = (function() {
 				return height/2;
 			})
 			.on('mouseover', (function(_this){
-				return function(d) {
+				return function(d, i) {
 					tip.attr("class", "d3-tip");
 					tip.show(d);
-					$(this).attr("fill", "#44AA44");
+					$(this).attr("fill", "#F16521");
 				}
 			})(this))
 	    .on('mouseout', (function(_this){
-				return function(d) {
+				return function(d, i) {
 					tip.hide(d);
-					$(this).attr("fill", "#444444");
+					if (i == portPath.length-1)
+						$(this).attr("fill", normalColor);
+					else
+						$(this).attr("fill", "#FFFFFF");
 				}
 			})(this))
 			.on('click', (function(_this) {
@@ -327,6 +504,8 @@ var MapUI = (function() {
 			})(this))
 
 		vis.call(tip);
+
+		return {"lines":lines, "circles":circles};
 	}
 
 	return MapUI;
@@ -338,8 +517,7 @@ var MapDisplay = (function() {
 	function MapDisplay(ports, mapUI) {
 	  this.ports = ports;
 	  this.mapUI = mapUI;
-
-	  mapUI.setActivePort(4);
+	  this.currentPath = null;
 
 		var mapOptions = {
 	    center: { lat: 14, lng: 121},
@@ -381,6 +559,7 @@ var MapDisplay = (function() {
 			  data_hidden: false,
 			  data_id: this.ports[i].id,
 			  index: i,
+		    optimized: false,
 			  opacity:1
 			})
 
@@ -403,6 +582,9 @@ var MapDisplay = (function() {
 			    _this.infowindow.open(_this.map, _marker);
 			  }
 			})(marker, this));
+
+
+	  	mapUI.setActivePort(1);
 	  }
 	}
 
@@ -438,9 +620,24 @@ var MapDisplay = (function() {
 		this.cat_vis[id] = false;
 		for(var i = 0; i < this.portMarkers.length; i++) {
 			if(this.portMarkers[i].data_category == id) {
-				this.portMarkers[i].setMap(null);
+				if(this.portMarkers[i].data_hidden == false)
+					this.portMarkers[i].setMap(null);
 				this.portMarkers[i].data_hidden = true;
 			}
+		}
+
+		$(".filter-image[data-category="+id+"]").toggleClass("gray", true);
+	}
+
+	MapDisplay.prototype.hideAllLayers = function() {
+		for (var key in this.cat_vis) {
+		  this.hideLayer(key);
+		}
+	}
+
+	MapDisplay.prototype.showAllLayers = function() {
+		for (var key in this.cat_vis) {
+		  this.showLayer(key);
 		}
 	}
 
@@ -450,30 +647,154 @@ var MapDisplay = (function() {
 		this.cat_vis[id] = true;
 		for(var i = 0; i < this.portMarkers.length; i++) {
 			if(this.portMarkers[i].data_category == id) {
-				this.portMarkers[i].setMap(this.map);
+				if(this.portMarkers[i].data_hidden == true)
+					this.portMarkers[i].setMap(this.map);
 				this.portMarkers[i].data_hidden = false;
+			}
+		}
+
+
+		$(".filter-image[data-category="+id+"]").toggleClass("gray", false);
+	}
+
+	MapDisplay.prototype.showPoi = function(id) {
+		for(var i = 0; i < this.portMarkers.length; i++) {
+			if(this.portMarkers[i].data_id == id) {
+				if(this.portMarkers[i].data_hidden == true)
+					this.portMarkers[i].setMap(this.map);
+				this.portMarkers[i].data_hidden = false;
+				return;
 			}
 		}
 	}
 
-	MapDisplay.prototype.showRoute = function(path) {
+	MapDisplay.prototype.focusPorts = function(portList) {
+		this.hideAllLayers();
+		for(var i = 0; i < portList.length; i++) {
+			this.showPoi(portList[i].id);
+		}
+	}
+
+	MapDisplay.prototype.removePath = function() {
+		if(this.currentPath != null) {
+			this.currentPath.flightPath.setMap(null);
+			for(var i = 0; i < this.currentPath.poiCircles.length; i++) {
+				this.currentPath.poiCircles[i].setMap(null);
+			}
+		}
+	}
+
+	MapDisplay.prototype.showRoute = function(routeData) {
+		this.removePath();
+		if(this.currentPath == null) {
+			this.currentPath = {};
+		}
+
+		var path = routeData.portPath;
+
 		var flightPathCoordinates = [];
 		for(var i = 0; i < path.length; i++) {
 			flightPathCoordinates.push(getLatLng(path[i]));
 		}
 
-		var flightPath = new google.maps.Polyline({
+		this.currentPath.flightPath = new google.maps.Polyline({
 	    path: flightPathCoordinates,
 	    geodesic: true,
-	    strokeColor: '#FF0000',
+	    strokeColor: '#F16521',
 	    strokeOpacity: 1.0,
-	    strokeWeight: 4
+	    strokeWeight: 4,
+	    map: this.map
 	  });
 
-	  flightPath.setMap(this.map);
+		this.currentPath.poiCircles = [];
+	  for (var i = 0; i < path.length; i++) {
+	  	var color = '#FFFFFF';
+	  	if(i == path.length-1) {
+	  		color = '#F16521';
+	  	}
+	    var poiOptions = {
+		    path: google.maps.SymbolPath.CIRCLE,
+	      strokeColor: '#F16521',
+		    strokeOpacity: 1,
+	      strokeWeight: 2,
+	      fillColor: color,
+	      fillOpacity: 1,
+		    scale: 5 //pixels
+		  }
+
+	    // Add the circle for this city to the map.
+	    this.currentPath.poiCircles.push(new google.maps.Marker({
+			  	position: getLatLng(path[i]),
+			  	icon: poiOptions,
+		      optimized: false,
+		      zIndex: 1,
+			  	map: this.map
+				})
+			);
+	  }
+
+	  this.focusPorts(path);
 	}
 	return MapDisplay;
 })();
+
+function initializeAutocomplete() {
+	var substringMatcher = function(strs) {
+	  return function findMatches(q, cb) {
+	    var matches, substringRegex;
+	 
+	    // an array that will be populated with substring matches
+	    matches = [];
+	 
+	    // regex used to determine if a string contains the substring `q`
+	    substrRegex = new RegExp(q, 'i');
+	 
+	    // iterate through the pool of strings and for any string that
+	    // contains the substring `q`, add it to the `matches` array
+	    $.each(strs, function(i, port) {
+	      if (substrRegex.test(port.name)) {
+	        matches.push(port);
+	      }
+	    });
+	 
+	    cb(matches);
+	  };
+	};
+
+	$('#origin-text').typeahead({
+	  hint: true,
+	  highlight: true,
+	  minLength: 1
+	},
+	{
+	  name: 'ports',
+	  source: substringMatcher(ports),
+	  display: function(data) {
+	  	return data.name;
+	  }
+	});
+
+	$('#origin-text').bind('typeahead:select', function(ev, suggestion) {
+	  mapUI.setOriginPort(suggestion);
+	});
+
+	$('#destination-text').typeahead({
+	  hint: true,
+	  highlight: true,
+	  minLength: 1
+	},
+	{
+	  name: 'ports',
+	  source: substringMatcher(ports),
+	  display: function(data) {
+	  	return data.name;
+	  }
+	});
+
+	$('#destination-text').bind('typeahead:select', function(ev, suggestion) {
+	  mapUI.setDestinationPort(suggestion);
+	});
+}
 
 function portsViewScript() {
  var ports_table = $('#points').DataTable({
@@ -491,21 +812,6 @@ function portsViewScript() {
       }
     ]
   });
-
- // $('#points').dynatable({
-	//   features: {
-	//     paginate: false,
-	//     recordCount: false,
-	//     sorting: false,
-	//     search:false
-	//   }
-	// }).data('dynatable');
-
-	// $("#filter-ports").keyup(function() {
-	// 	var value = $(this).val();
-	//   ports_table.queries.runSearch(value);//add("name",value);
-	// });
-
 
  	$(".delete-port").on("ajax:success", 
  		function(e, data, status, xhr) {
@@ -639,6 +945,91 @@ function editPortViewScript() {
  	$("#edit_port")
  		.on("ajax:success", editPortCallback)
  		.on("ajax:error", errorCallback);
+
+ 	$("#category-id-select").change(function() {
+ 			if($(this).val() == "-1") {
+ 				$("#new-category").slideDown();
+ 			}
+ 			else {
+ 				$("#new-category").slideUp();
+ 			}
+ 	});
+
+}
+
+function editRouteViewScript() {
+	$("#provider-id-select").change(function() {
+ 			if($(this).val() == "-1") {
+ 				$("#new-provider").slideDown();
+ 			}
+ 			else {
+ 				$("#new-provider").slideUp();
+ 			}
+ 	});
+
+ 	$('.day-cb').change(function() {
+ 		var mask = 1 << $(this).data("off");
+ 		var curr_days = $("#days").val();
+ 		
+    if(this.checked)
+      curr_days = curr_days | mask;
+    else
+    	curr_days = curr_days & (mask^127);
+    $("#days").val(curr_days); 
+  });
+
+  var editRouteCallback = function(e, data, status, xhr) {
+  	console.log(data);
+  }
+
+  var errorCallback = function(e, xhr, status, error) {
+		toastr["error"]("There is either connection issues or server issues", "Communication Error");
+	};
+
+  $("#edit_route")
+ 		.on("ajax:success", editRouteCallback)
+ 		.on("ajax:error", errorCallback);
+}
+
+function routesViewScript() {
+ var routes_table = $('#points').DataTable({
+    "bPaginate": false,
+    "columnDefs": [
+      {
+          "targets": [ 0 ],
+          "visible": false,
+          "searchable": true
+      },
+      {
+          "targets": [ 8, 9 ],
+          "searchable": false,
+          "orderable": false
+      }
+    ]
+  });
+
+ 	$(".delete-port").on("ajax:success", 
+ 		function(e, data, status, xhr) {
+ 			routes_table.row(function(index, _data) {
+ 				return (data["route_id"] == _data[0])
+ 			}).remove().draw(false);
+
+ 			toastr.options = {
+			  "positionClass": "toast-bottom-right"
+			}
+ 			if(data["result"] == "ok")
+ 				toastr["success"](data["route"].route_id + " was successfully deleted", "Deletion Successful");
+ 			else
+ 				toastr["error"]("Failed to delete " + data["route"].route_id, "Deletion Failed");
+ 		}
+ 	).on("ajax:error",
+ 		function(e, xhr, status, error) {
+			toastr.options = {
+			  "positionClass": "toast-bottom-right"
+			}
+ 			toastr["error"]("Failed to delete " + data["route"].route_id, "Deletion Failed");
+ 		}
+ 	);
 }
 
 function ready() {
@@ -647,8 +1038,18 @@ function ready() {
 		return;
 	}
 
+	if(view === "routes") {
+		routesViewScript();
+		return;
+	}
+
 	if(view === "edit_port") {
 		editPortViewScript();
+		return;
+	}
+
+	if(view === "edit_route") {
+		editRouteViewScript();
 		return;
 	}
 
@@ -658,13 +1059,22 @@ function ready() {
 	mapDisplay = new MapDisplay(ports, mapUI);
 	mapUI.setMapDisplay(mapDisplay);
 
+	initializeAutocomplete();
+
 	$(".filter-image").click(function(e) {
 		var visible = mapDisplay.toggleLayer($(this).data("category"));
-		$(this).toggleClass("gray", !visible);
+		// $(this).toggleClass("gray", !visible);
 	});
 	
 	$("#panel-title").click(function() {
-		mapUI.switchView();
+		mapUI.switchView("details");
+	});
+
+	$("#routes-options .section-title").click(function(e) {
+		$("#routes-options-container").slideUp(400, function(c) {
+			$("#routes-options .scroll-container").html("");
+		});
+		mapUI.showAllRoutes();
 	});
 }
 

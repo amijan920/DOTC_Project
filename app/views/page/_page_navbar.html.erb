@@ -1,23 +1,29 @@
-<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
+<nav id="page-navigation" class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
     <div class="navbar-header">
-      <%= link_to 'Admin', root_url, class: 'navbar-brand' %>
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+      <a href="#" class="navbar-brand" id="logo-nav" style="padding: 10px 15px; padding-right:5px"><img src="<%= asset_path("assets/logos.png")%>"></a>
+      <a href="#" class="navbar-brand" id="logo-nav">OPEN TRANSPORT</a>
+
+      <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-      </button>
+      </button> -->
     </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
+    
+  </div>
+</nav>
+
+<!-- <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav"> -->
        <!--  <%if @sub_uri == ""%>
         <li><a href="/admin/listPorts" class="active">Manage Areas of Interests</a><li>
           <% elsif %>
           <li><a href="/<%= @sub_uri %>/admin/listPorts" class="active">Manage Areas of Interests</a><li>
         <% end %> -->
 
-        <li>
+        <!-- <li>
           <% if @page == "ports"%>
             <%= link_to "Manage Points of Interest", list_ports_path, :class=> "active" %>
           <% else %>
@@ -33,11 +39,10 @@
         </li>
         <li>
           <%= link_to "View Site", root_path %>
-        </li>
-      </ul>
+        </li> -->
+      <!-- </ul> -->
       <!-- <ul class="nav navbar-nav navbar-right">
         <li><a>Log out</a><li>
       </ul> -->
-    </div><!--/.nav-collapse -->
-  </div>
-</nav>
+    <!-- </div> -->
+    <!--/.nav-collapse -->

@@ -17,7 +17,7 @@ body {
 
 #map-ui-container {
 	position:fixed;
-	top:10px;
+	top:60px;
 	left:10px;
 	width:350px;
 	/*height:600px;*/
@@ -32,7 +32,7 @@ body {
 
 #layer-ui-container {
 	position:fixed;
-	top:10px;
+	top:60px;
 	left:368px;
 	background: rgba(255, 255, 255, .9);
 	border-radius: 3px;
@@ -44,6 +44,17 @@ body {
 
 #layer-ui-container:hover {
 	opacity:1;
+}
+
+#page-navigation {
+	background-color: #212121;
+	background-image: url(bg1.png);
+	color:#FFFFFF;
+}
+
+#logo-nav {
+	color:#FFFFFF;
+	font-weight: 700;
 }
 
 .filter-button {
@@ -102,6 +113,7 @@ body {
 	overflow-y:auto;
 }
 
+
 #info-container {
 	margin-top:4px;
 }
@@ -117,6 +129,17 @@ body {
 #routes-container {
 	display:none;
 	margin-top:4px;
+}
+
+
+#routes-options-container {
+	display:none;
+	margin-top:4px;
+}
+
+#routes-options-container .scroll-container {
+	max-height: 200px;
+	overflow-y:auto;
 }
 
 .table > tbody > tr > th {
@@ -253,6 +276,11 @@ body {
 	height:30px;
 }
 
+.route-info:hover {
+	background:#F0F0F0;
+	cursor:pointer;
+}
+
 .airport-circle:hover {
 	cursor:pointer;
 }
@@ -337,3 +365,86 @@ body {
   stroke-width: 1.5px;
 }
 
+.twitter-typeahead {
+  width:100%;
+}
+
+/* scaffolding */
+/* ----------- */
+
+
+.tt-menu,
+.gist {
+  text-align: left;
+}
+
+.typeahead,
+.tt-query,
+.tt-hint {
+  width: 100%;
+  outline: none;
+}
+
+.typeahead {
+  background-color: #fff;
+}
+
+.typeahead:focus {
+  border: 2px solid #0097cf;
+}
+
+.tt-query {
+  -webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+     -moz-box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+          box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.tt-hint {
+  color: #999
+}
+
+.tt-menu {
+  width: 100%;
+  margin: 4px 0;
+  padding: 8px 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+     -moz-box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+          box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.tt-suggestion {
+  padding: 3px 20px;
+  line-height: 24px;
+}
+
+.tt-suggestion:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #0097cf;
+}
+
+.tt-suggestion.tt-cursor {
+  color: #fff;
+  background-color: #0097cf;
+
+}
+
+.tt-suggestion p {
+  margin: 0;
+}
+
+
+#no-route-available {
+	height:50px;
+	color:#888888;
+	background: #EEEEEE;
+}
+
+#no-route-available p {
+	text-align: center;
+	line-height: 30px;
+	width:100%;
+}
