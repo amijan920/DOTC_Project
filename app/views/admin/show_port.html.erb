@@ -24,40 +24,47 @@
 				<div class="form-group">
 					<%= label_tag(:label_name, "Name:", :class => "control-label col-md-3") %>
 					<div class="col-md-9">
-					 <%= f.text_field(:name, :id => "name", :class => "form-control")  %>
+					 <%= f.text_field(:name, :id => "name", :required => true, :class => "form-control")  %>
 					</div>
 				</div>
 
 				<div class="form-group">
 					<%= label_tag(:label_category, "Category:", :class => "control-label col-md-3") %>
 					<div class="col-md-9">
-						<%= f.select :category_id, options_for_select(@categories_options, @port.category_id), {}, {:class => "form-control"} %>
+						<%= f.select :category_id, options_for_select(@categories_options, @port.category_id), {}, {:class => "form-control", :id => "category-id-select"} %>
+					</div>
+				</div>
+
+				<div class="form-group" id="new-category" style="display:none">
+					<%= label_tag(:label_category, "New Category Name:", :class => "control-label col-md-3") %>
+					<div class="col-md-9">
+						<input class="form-control" id="name" name="poi[category_name]" type="text" />
 					</div>
 				</div>
 
 				<div class="form-group">
 					<%= label_tag(:label_lat, "Latitude:", :class => "control-label col-md-3") %>
 					<div class="col-md-5">
-					 <%= f.text_field(:lat_deg, :id => "lat_deg", :class => "form-control")  %>
+					 <%= f.number_field(:lat_deg, :id => "lat_deg", :required => true, :class => "form-control")  %>
 					</div>
 					<div class="col-md-2">
-					 <%= f.text_field(:lat_min, :id => "lat_min", :class => "form-control")  %>
+					 <%= f.number_field(:lat_min, :id => "lat_min", :required => true, :class => "form-control")  %>
 					</div>
 					<div class="col-md-2">
-					 <%= f.text_field(:lat_sec, :id => "lat_sec", :class => "form-control")  %>
+					 <%= f.number_field(:lat_sec, :id => "lat_sec", :required => true, :class => "form-control")  %>
 					</div>
 				</div>
 
 				<div class="form-group">
 					<%= label_tag(:label_lon, "Longitude:", :class => "control-label col-md-3") %>
 					<div class="col-md-5">
-					 <%= f.text_field(:lon_deg, :id => "lon_deg", :class => "form-control")  %>
+					 <%= f.number_field(:lon_deg, :id => "lon_deg", :required => true, :class => "form-control")  %>
 					</div>
 					<div class="col-md-2">
-					 <%= f.text_field(:lon_min, :id => "lon_min", :class => "form-control")  %>
+					 <%= f.number_field(:lon_min, :id => "lon_min", :required => true, :class => "form-control")  %>
 					</div>
 					<div class="col-md-2">
-					 <%= f.text_field(:lon_sec, :id => "lon_sec", :class => "form-control")  %>
+					 <%= f.number_field(:lon_sec, :id => "lon_sec", :required => true, :class => "form-control")  %>
 					</div>
 				</div>
 

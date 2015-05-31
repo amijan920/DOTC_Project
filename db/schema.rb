@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150304100546) do
+ActiveRecord::Schema.define(version: 20150509113347) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -57,5 +57,31 @@ ActiveRecord::Schema.define(version: 20150304100546) do
   end
 
   add_index "pois", ["category_id"], name: "index_pois_on_category_id"
+
+  create_table "route_providers", force: true do |t|
+    t.string   "name"
+    t.string   "image"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "routes", force: true do |t|
+    t.integer  "route_provider_id"
+    t.string   "route_id"
+    t.string   "type"
+    t.time     "departure_time"
+    t.time     "arrival_time"
+    t.integer  "days"
+    t.boolean  "active"
+    t.integer  "origin_poi_id"
+    t.integer  "destination_poi_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "travel_type"
+  end
+
+  add_index "routes", ["destination_poi_id"], name: "index_routes_on_destination_poi_id"
+  add_index "routes", ["origin_poi_id"], name: "index_routes_on_origin_poi_id"
+  add_index "routes", ["route_provider_id"], name: "index_routes_on_route_provider_id"
 
 end

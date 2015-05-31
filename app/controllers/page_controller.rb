@@ -29,24 +29,37 @@ class PageController < ApplicationController
 	end
 
 	def get_routes
-		@routeData = Hash.new
-		@routeData["params"] = params
-		@routeData["routeList"] = Array.new(1)
+		response = Hash.new
 
-		@route1 = Hash.new
-		@route1["id"] = 1
-		@route1["name"] = "Direct"
-		@route1["departure"] = "4:00"
-		@route1["arrival"] = "5:30"
-		@route1["flightPath"]
+		routeData = Hash.new
 
-		@routeData["routeList"][0] = @route1
+		origin_id = params[:origin_id]
+		destination_id = params[:destination_id]
 
-		render json: @routeData
-	# 	respond_to do |format|
-  #     format.html 
-  #     format.json { render json: @routeData }
-  #   end
+		routeList = Route.where(origin_poi_id: origin_id, destination_poi_id: destination_id, active: true)
+
+		if routeList.length > 0
+			routeData["routeList"] = Array.new(0)
+
+			route1 = Hash.new
+			route1["id"] = 1
+			route1["name"] = "Direct Path"
+			route1["departure"] = "4:00"
+			route1["arrival"] = "5:30"
+			route1["portPath"] = Array.new(2)
+			route1["portPath"][0] = Poi.find(origin_id)
+			route1["portPath"][1] = Poi.find(destination_id)
+			route1["routes"] = Array.new(1)
+			route1["routes"][0] = routeList
+			routeData["routeList"][0] = route1
+		else
+			routeData["routeList"] = Array.new(0)
+		end
+
+		response["data"] = routeData;
+		response["params"] = params;
+		response["result"] = "ok"
+		render json: response
 	end
 
 	def get_ports

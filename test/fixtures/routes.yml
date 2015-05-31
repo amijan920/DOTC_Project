@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  route_provider_id: 
+  route_id: MyString
+  type: 
+  departure_time: 2015-05-09 00:22:55
+  arrival_time: 2015-05-09 00:22:55
+  days: 1
+  active: false
+  origin_poi_id: 
+  destination_poi_id: 
+
+two:
+  route_provider_id: 
+  route_id: MyString
+  type: 
+  departure_time: 2015-05-09 00:22:55
+  arrival_time: 2015-05-09 00:22:55
+  days: 1
+  active: false
+  origin_poi_id: 
+  destination_poi_id: 

@@ -1,3 +1,5 @@
+<%= render "page/page_navbar" %>
+
 <script>
 	var view = "maps";
 </script>
@@ -46,7 +48,7 @@
 <div id="layer-ui-container">
 	<% @categories.each do |category| %>
 	<div class="filter-button active">
-		<image class="image-responsive filter-image" src="<%= @category_filters[category.id] %>" data-category="<%= category.id %>">
+		<image class="image-responsive filter-image" src="<%= @category_filters[category.id] %>" data-category="<%= category.id %>" title="<%= category.name%>">
 	</div>
 	<% end %>
 </div>
