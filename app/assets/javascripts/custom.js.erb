@@ -152,7 +152,7 @@ var MapUI = (function() {
 
 		$.ajax({
       type: "POST",
-      url: "getRoutes",
+      url: get_routes,
       data: { origin_id: this.originPort.id, destination_id: this.destinationPort.id },
       success: (function(_this){
 				return function(data) {
@@ -300,7 +300,25 @@ var MapUI = (function() {
 				$(this).fadeIn(400);
 			});
 
-			$('#images-container').carousel()
+			
+			$('#images-container').carousel();
+
+			$(".item.port-image img").each(function(e) {
+				var parent = $(this).parent();
+				$("<img/>")
+			    .attr("src", $(this).attr("src"))
+			    .load((function(_this) {
+			    	return function() {
+			        var pic_real_width = this.width; 
+			        var pic_real_height = this.height;
+			        if(pic_real_width/parent.width() > pic_real_height/parent.height()) {
+				        $(_this).css("max-height", "100%")
+				        $(_this).css("max-width", "none")
+			        }
+				    }
+			    })(this));
+
+			});
 	  }
 	  else {
 	  	$(".navigation").each(function() {
@@ -582,10 +600,9 @@ var MapDisplay = (function() {
 			    _this.infowindow.open(_this.map, _marker);
 			  }
 			})(marker, this));
-
-
-	  	mapUI.setActivePort(1);
 	  }
+
+	  mapUI.setActivePort(219);
 	}
 
 	MapDisplay.prototype.panToMarker = function(id) {
@@ -798,7 +815,6 @@ function initializeAutocomplete() {
 
 function portsViewScript() {
  var ports_table = $('#points').DataTable({
-    "bPaginate": false,
     "columnDefs": [
       {
           "targets": [ 0 ],
@@ -993,7 +1009,6 @@ function editRouteViewScript() {
 
 function routesViewScript() {
  var routes_table = $('#points').DataTable({
-    "bPaginate": false,
     "columnDefs": [
       {
           "targets": [ 0 ],

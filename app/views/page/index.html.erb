@@ -2,6 +2,7 @@
 
 <script>
 	var view = "maps";
+	var get_routes = "<%= get_routes_path %>";
 </script>
 
 <div id="map"></div>
@@ -28,7 +29,7 @@
 				</div>
 				<div id="view-routes" class="col-xs-3">
 					<div style="width:20px;height:20px;margin-left:auto;margin-right:auto">
-						<img class="img-responsive" src="assets/icon_routes.png"/>
+						<img class="img-responsive" src="<%= asset_path("icon_routes.png")%>"/>
 					</div>
 					<div class="small-desc" style="text-align:center;">
 						<a>Routes</a>

@@ -326,6 +326,27 @@ Image.create(poi_id:277 , url:"img_005.jpg")
 Image.create(poi_id:219 , url:"img_006.jpg")
 Image.create(poi_id:219 , url:"img_007.jpg")
 
+Image.create(poi_id:217 , url:"Clark_001.jpg")
+Image.create(poi_id:217 , url:"Clark_002.jpg")
+Image.create(poi_id:217 , url:"Clark_003.jpg")
+Image.create(poi_id:217 , url:"Clark_004.jpg")
+
+Image.create(poi_id:219 , url:"NAIA T1_001.jpg")
+Image.create(poi_id:219 , url:"NAIA T1_002.jpg")
+Image.create(poi_id:219 , url:"NAIA T1_003.jpg")
+Image.create(poi_id:219 , url:"NAIA T3_001.jpg")
+Image.create(poi_id:219 , url:"NAIA T3_002.jpg")
+
+
+
+
+# Image.create(poi_id:219 , url:"Laguindingan_001.jpg")
+# Image.create(poi_id:219 , url:"Laguindingan_002.jpg")
+# Image.create(poi_id:219 , url:"Laguindingan_003.jpg")
+
+
+
+
 # Details.create(name:"Sample additional info 1" , detail_type:"text", body:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fermentum sollicitudin quam eget sagittis. Vivamus nisl orci, interdum in lobortis sit amet, condimentum a nibh.", poi_id:14)
 # Details.create(name:"Sample additional info 2" , detail_type:"text", body:"In congue, ante at varius cursus, arcu felis varius elit, vel varius mauris sapien sed nulla. Maecenas vel magna pellentesque, porta tellus sed, tincidunt justo. Morbi quis dolor tincidunt est interdum imperdiet ullamcorper nec ipsum.", poi_id:14)
 # Details.create(name:"Sample additional info 3" , detail_type:"text", body:"Vestibulum urna massa, aliquet sit amet pharetra ac, sollicitudin ac massa. Donec malesuada dolor non nisi ornare, pretium pellentesque mi consectetur.", poi_id:14)

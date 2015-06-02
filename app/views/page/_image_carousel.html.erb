@@ -4,13 +4,6 @@
 		<img class="img-responsive">
 	</div> -->
 	<div class="carousel-inner port-image" role="listbox">
-	  <div class="item active port-image">
-	    <img class="img-responsive">
-	  </div>
-
-	  <div class="item port-image">
-	    <img class="img-responsive">
-	  </div>
 	</div>
 
 	<div class="navigation left-nav" href="#images-container" data-slide="prev">
@@ -25,7 +18,7 @@
 <script id="carousel-inner-template" type="text/x-handlebars-template">
 	{{#each imageList}}
 	  <div class="item port-image {{#if @first}}active{{/if}}">
-	    <img class="img-responsive" src="assets/poi_images/{{url}}">
+	    <img class="img-responsive" src="{{url}}">
 	  </div>
   {{/each}}
 </script>
