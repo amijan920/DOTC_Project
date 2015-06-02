@@ -23,7 +23,15 @@ class PageController < ApplicationController
 		end
 
 		@ports.each_with_index do |port, i|
-			@images[i] = Image.where(poi_id: port.id)
+			tempImages = Image.where(poi_id: port.id)
+
+			@images[i] = Array.new(tempImages.length)
+			
+			tempImages.each_with_index do |img, j|
+				@images[i][j] = Hash.new
+				@images[i][j]["url"] = asset_path("assets/poi_images/" + img.url)
+			end
+
 			@infos[i] = Details.where(poi_id: port.id)
 		end
 	end
