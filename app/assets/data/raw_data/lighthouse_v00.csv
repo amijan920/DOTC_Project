@@ -1,0 +1,632 @@
+ LIGHTHOUSE,C,LOCATION,LATITUDE,LONGITUDE,CHARAC,LANTERN,TOWER,PROJECT
+NATIONAL CAPITAL REGION-CENTRAL LUZON ,,,,,,,,
+CGS MANILA,,,,,,,,
+LS Bulacan,T,"Bulacan, Bulacan","14 42' 54""N","120 52' 12"" E",Flashing W every 5 secs,FA-250,Steel,Existing 
+LS CBB,T,"Sangley Pt, Cavite City","14 29' 07""N","120 54' 08"" E",Flashing R every 5 secs,ZL-LS2219,Steel,Existing
+LS Cavite City,T,Cavite city,"14 28' 45"" N","120 53' 20"" E",Flashing G every 5 secs,FA-250,Steel,Existing
+LS Corregidor,P,"Corregidor Is., Cavite",14 22' 54' N,"120 54' 32"" E",Flashing 3 W every 20 secs,ZL-HP,Concrete,MSIP I
+LS Hagonoy,T,"Hagonoy, Bulacan","14 46' 16""N","120 41' 03""E",Flashing W every 5 secs,ZL-HP,Concrete,Existing
+LS El Fraile,T,"El Fraile, Ternate, Cavite","14 18' 24"" N","120 37' 48"" E",Flashing W every 5 secs,ZL-300,Aluminum,MSIP I
+LS La Monja,T,"Mariveles, Bataan","14 22' 38"" N","120 31' 15"" E",Flashing W every 5 secs,ML-300,Concrete,MSIP I
+LS Mariveles,T,"Mariveles, Bataan","14 25' 54"" N","120 29' 04"" E",Flashing 2 G every 10 secs,NW-20,Concrete,Existing 
+LS NH Entrance,T,"N Entrance, NH, Manila","14 37' 31"" N","120 56' 30"" E",Flashing R every 5 secs,ML-300,Concrete ,Existing 
+LS Pto Azul,T,"Pto Azul, Ternate, Cavite","14 09' 00"" N","120 04' 36"" E",Flashing G every 5 secs,ML-300,Concrete,Existing 
+LS Pamarawan,T,"Pamarawan, Malolos, Bulacan","14 45 32"" N","120 48' 56""E",Flashing 2 W every 8 secs,ML-300,Steel,Existing 
+LS Pugad,T,"Pugad, Hagonoy, Bulacan","14 45' 43""N","120 44' 31""E",Flashing W every 5 secs,FA-250,Concrete,Existing 
+LS Sangley Point,S,"Sangley Pt., Cavite City","14 29' 55"" N","120 55' 02"" E",Flashing 2 W every 10 secs,FA-250,Steel,Existing 
+LS S Nicolas Shoal,T,"Rosario, Cavite","14 26' 17"" N","120 45' 47"" E",Flashing R every 5 secs,Zl-300,Aluminum,MSIP I
+LS Sisiman Cove,T,"Mariveles, Bataan","14 25' 24"" N","120 31' 09"" E",Flashing W every 5 secs,ML-155,Concrete,Existing 
+LS Ternate,T,"Ternate, Cavite","14 16' 25"" N","120 37' 48""E",Flashing G every 5 secs,ML-300,Concrete,Existing 
+LS NBHA Officer's Landing,T,"Sangley Point, Cavite City","14 29' 26"" N","120 54' 23.9"" E",Flashing 2 R every 3 secs,ML-155,Wooden Pile,PCG
+LS NBHA,T,"NBHA, Sangley Point, Cavite City","14 29' 51.36"" N","120 55' 11.64"" E",Flashing 2 Red 5 secs,ML-155,Concrete Pile,PCG
+LS Fort San Felipe 1,T,Fort San Felipe Cavite City,"14 28' 51.35"" N","120 55' 17.71"" E",Flashing 2 Red 5 secs,ML-155,Concrete Pile,PCG
+LS HPCG Wharf,P,"HPCG, Port Area, SH, Mla","14 34' 57"" N","120 58' 18"" E",Flashing W 10 secs,APRB-288,Steel ,PCG
+CGS SUBIC,,,,,,,,
+LS Botolan,T,"Botolan, Zambales","15 14' 06"" N","120 00' 36"" E",Flashing 3 W every 15 secs,FA-250,GRP,MSIP II
+LS Capones,P,"San Antonio, Zambales","14 55' 09"" N","120 00' 12"" E",Flashing 3 W every 15 secs,ZL-HP8,Concrete,MSIP I-B
+LS Hermana Mayor,S,"Sta Cruz, Zambales","15 47' 42"" N","119 47' 42"" E",Flashing W every 5 secs,ML-300,Concrete,Existing 
+LS Ilanin Dir Light,T,"Subic, Zambales","14 46' 57"" N","120 15' 09"" E",Iso W every 6 secs,,Concrete,Existing 
+LS Kalaklan,T,Olongapo City,14 49' 32' N,"120 16' 00"" E",Flashing G every 6 secs,,Concrete,Existing 
+LS Mayanga,T,"Subic Bay, Zambales","14 50' 14"" N","120 14' 06"" E",Flashing W every 5 secs,FA-250,Concrete,Existing 
+LS Morong,T,"Morong, Bataan","14 41’ 47"" N",120 15’36” E,Flashing W every 5 secs,FA-250,Concrete,Existing 
+LS Palauig,S,"Palauig, Zambales","15 23' 54"" N","119 53' 52"" E",Flashing 2 W every 10 sec,PBB,Steel,Existing 
+LS Sueste Point,P,"Subic, Zambales","14 45' 09"" N","120 11' 18"" E",Flashing W every 5 secs,ML-300,GRP,MSIP II
+CGS LAGUNA,,,,,,,,
+LS Wawa,T,"Wawa, Tanay, Rizal","14 29' 30"" N","121 16' 54"" E",Flashing W every 3 secs,ML-300,Concrete,Existing 
+LS Tanay,T,"Tanay, Rizal","14 30' 00"" N","121 16' 45"" E",Flashing W every 5 secs,FA-249,Concrete,Existing 
+LS Calamba,T,"Palingon, Calamba, Laguna",14 12’ 45” N,121 11’09” E,Flashing W every 5 secs,BGC-300,GRP,MSIP III
+PSC MANILA,,,,,,,,
+LS Custom Tower,T,"Custom Bldg, SH, Mla","14 35' 13"" N","120 57' 59"" E",Flashing R every 5 secs,ML-300,Building,Existing 
+LS Mla Jetty Nr 1,T,"South Harbor, Manila","14 34' 26"" N","120 57' 15"" E",Flashing G every 5 secs,LED,STEEL,Existing 
+LS Mla Jetty Nr 2,T,"South Harbor, Manila","14 34' 20"" N","120 57' 20"" E",Flashing R every 5 secs,ML-300,Concrete,Existing 
+LS Mla Jetty Nr 4,T,"South Harbor, Manila","14 33' 51"" N","120 55' 42"" E",Flashing R every 5 secs,LBEA-85,Concrete,Existing 
+LS Mla Jetty Nr 5,T,"South Harbor, Manila","14 33' 51"" N","120 58' 50"" E",Flashing 3 G every 10 secs,ML-300,Concrete,Existing 
+CGS PASIG,,,,,,,,
+LS Pasig River,T,"Farola Com, Binondo, Mla","14 35' 53"" N","120 57' 34"" E",Flashing W every 5 secs,PBB,Concrete,Existing 
+LS Napindan,T,"Taguig, Rizal","14 31' 19"" N","121 06' 53"" E",Flashing R every 5 secs,ML-155,Concrete,Existing 
+NORTH EASTERN LUZON,,,,,,,,
+CGS BASCO,,,,,,,,
+LS Balintang,S,"Balintang Island, Batanes","19 57' 35"" N","122 08' 30"" E",Flashing W every 10 secs,Ml-155,Concrete,Existing 
+LS Basco,T,"Apurawan, Aborlan, Palawan","20 27' 30"" N","121 57' 52"" E",Flashing R every 4 secs,ML-300,Concrete,Existing 
+LS Mahatao,T,"Mahatao, Batanes",,,,FA-250,Concrete,Existing
+LS Sabtang S,S,"Sabtang, Batanes","20 17' 35"" N","121 52' 54"" E",Flashing W every 5 secs,FA-250,Concrete,Existing 
+CGS APPARI,,,,,,,,
+LS Aparri,T,"Aparri, Cagayan","18 21' 50"" N","121 37' 43"" E",Flashing W every 5 secs,FA-250,GRP,MSIP II
+LS Cape Engano,P,"Sta Ana, Cagayan","18 35' 00"" N","122 08' 05"" E",Flashing Wevery 5 secs,FA-250,Concrete,Existing
+LS Linao,S,"Aparri, Cagayan","18  22' 39"" N","121 35' 33"" E",Flashing W every 5 secs,ML-300,Steel,Existing
+LS Maconacon,T,"Maconacon, Isabela","17 23' 5.34""N","122 14' 10"" E",Flashing W every 5 secs,FA-250,GRP,MSIP II
+LS Palanan,S,"Palanan, Isabela","17 08' 30"" N","122 30' 24"" E",Flashing W every5 secs,PRB-46,GRP,MSIP II
+LS Palauig,T,"Sta Ana, Cagayan","18 28' 15"" N","122 08' 30"" E",Flashing W every 5 secs,ML-155,Concrete,Existing 
+LS Pata Point,P,"Claveria, Cagayan","18 37' 30"" N","121 09' 15"" E",Flashing W every 5 secs,BBT,Concrete,Existing 
+LS Port Irene,T,"Sta Ana, Cagayan","18 24' 00"" N","122 07' 35"" E",Flashing G every 5 secs,ML-300,Concrete,Existing 
+LS San Vicente,T,"Sta Ana, Cagayan","18 30' 45"" N","122 08' 30"" E",Flashing R every 5 secs,ML-155,Concrete,Existing 
+LS Dinapigue,T,"Dinapigui, Isabela","16 30' 30"" N","122 14' 40"" E",Flashing W every 5 secs,ML-300,Steel,Existing 
+LS Baler,S,"Baler, Quezon","15 45' 25"" N","121 34' 30"" E",Flashing R every 5 secs,ZP-20,Concrete,Existing 
+NORTH WESTERN LUZON,,,,,,,,
+CGS SAN FERNANDO,,,,,,,,
+LS Darigayos,S,"Darigayos, La Union","16 49' 09"" N","120 19' 42"" E",Flashing G every 5 secs,ML-300,Concrete,Existing 
+LS Damortis,S,"Apurawan, Aborlan, Palawan","16 16' 18"" N","120 23' 36"" E",Flashing R every 5 secs,ML-300,Concrete,Existing 
+LS Sn Fdo Point,S,"San Fernando, La Union","16 36' 59"" N","120 16' 45"" E",Flashing 2 W every 10 secs,FA-250,Concrete,Existing 
+"LS Sn Fdo, R F",T,"San Fernando, La Union","16 37' 06"" N","120 18' 40"" E",Fixed Green,RL-125,Steel,Existing 
+LS Sn Fdo R R,T,"San Fernando, La Union","16 36' 48"" N","120 18' 53"" E",Fixed Green,RL-125,Steel,Existing 
+LS Sta Rita,T,"Sta Rita, Agoo, La Union","16 21' 42"" N","120 20' 36"" E",Flashing R every 5 secs,Ml-300,Concrete,Existing 
+CGS CURRIMAO,,,,,,,,
+LS Arboledan,S,"Currimao, Ilocos Norte","18 01' 16"" N","120 28' 48"" E",Flashing W every 5 secs,BGC-600,AL/GRP,Ex / MSIP III
+LS Apatot,T,"Sn Esteban, Ilocos Norte","17 20' 00"" N","120 27' 30"" E",Iso R every 5 secs,FA-250`,GRP,MSIP II
+LS Cabangtalan,T,"Magsingal, Ilocos Norte","17 51' 24"" N","120 26' 42"" E",Flashing W every 5 secs,FA-250,GRP,MSIP II
+LS Cape Bojeador,P,"Burgos, Ilocos Norte","18 30' 57"" N","120 35' 45"" E",Flashing 3 W every 5 secs,FA-250,Concrete,Existing 
+LS Candon,S,"Candon, Ilocos Sur","17 12' 20"" N","120 24' 57"" E",Flashing R every 5 secs,ML-300,Concrete,Existing 
+LS Diliao Pt,T,"Pagudpod, Ilocos Norte","18 37' 48"" N","120 47' 19"" E",Flashing 4 W every 20 secs ,FA-250,GRP,MSIP II
+LS Puropingit,T,"Sinait, Ilocos Sur","17 41' 24"" N","120 21' 12"" E",Flashing W every 10 secs,FA-250,GRP,MSIP II
+LS Tagudin,T,"Tagudin, Ilocos Sur","16 57' 27"" N","120 26' 08"" E",Flashing 2 R every 5 secs,ML-300,Concrete,Existing 
+LS Pandan,S,"Pandan, Ilocos sur","17 32' 06"" N","120 22' 05"" E",Flashing G every 5 secs,ML-155,Concrete,Existing 
+LS Salomague,S,"Cabugao, Ilocos Sur","17 46' 28"" N","120 25' 27"" E",Flashing R every 5 secs ,ML-300,Concrete,Existing 
+CGS SUAL,,,,,,,,
+LS Anda,T,"Anda, Pangasinan","16 18' 50"" N","120 00' 49"" E",Flashing G every 5 secs,FA-250,GRP,Existing
+LS Cabaoangan,P,"Burgos, Pangasinan","16 00' 30"" N","119 45' 46"" E",Flashing 3 W every 15 secs,PRB46,GRP,MSIP II
+LS Cape Bolinao,P,"Bolinao, Pangasinan","16 18' 32"" N","119 47' 05"" E",Flashing 2 W every 10 secs,ZL-HP8,Concrete,MSIP I-B
+LS Dagupan,S,Dagupan City,"16 04' 24"" N","120 20' 06"" E",Flashing W every 5 secs,ML-300,Concrete,Existing 
+LS Lucap ,T,"Alaminos, Pangsinan","16 11' 42"" N","120 00' 12"" E",Flashing G every 5 secs,ML-300,Concrete,Existing 
+LS Port Bolinao,T,"Bolinao, Pangasinan","16 22' 51"" N","119 54' 48"" E",Flashing W every 5 secs,ML-155,Concrete,Existing 
+LS Sual,T,"Sual, Pangasinan","16 04' 32"" N","120 06' 42"" E",Flashing R every 5secs,ML-300,Concrete,Existing 
+LS Sabangan Pt/Agno,S,"Agno, Pangasinan","16 08' 00"" N","119 46' 34"" E",Flashing G every 5 secs,ML-300,Concrete,Existing 
+LS Silaque,T,"Bolinao,Pangasinan","16 26' 36"" N","119 55' 18"" E",Flashing 2 W every 10 secs,FA-250,GRP,MSIP II
+SOUTHERN TAGALOG,,,,,,,,
+CGS BATANGAS,,,,,,,,
+LS Arenas,T,"Apurawan, Aborlan, Palawan","13 37' 21"" N","120 04' 42"" E",Flashing W every 5 secs,ZL-300,Concrete,MSIP I
+LS Batangas,T,Batangas City,"13 45' 30"" N","121 02' 30"" E",Flashing 3 W every 5 secs,FA-249,PPA Bldg,Existing
+LS Cape Santiago,P,"Calatagan, Batangas","13 46' 24"" N","120 38' 06"" E",Flashing 2 W every10 secs,ZL-HP (ML-300),Masonry,MSIP I
+LS Fortune Is,S,"Nasugbu, Batangas","14 03' 26"" N","120 29' 27"" E",Flashing W every 10 secs,ZL-RBG,Aluminun,MSIP I
+LS Lemery,T,"Lemery, Batangas","13 52' 36"" N","120 54' 42"" E",Flashing W every 5 secs,FA-249,Concrete,Existing
+LS Locoloco,P,"San Juan, Batangas","13 39' 18"" N","121 25' 10"" E",Flashing 3 W every10 secs,PRB46,GRP,MSIP II
+LS Mabini,T,"Mabini, Batangas",13 45’ 52” N,120 51’ 18” E,Flashing W every 5 secs,BCG-300,GRP,Ex / MSIP III
+LS Mainaga,S," Mabini, Batangas","13 45' 51"" N","120 57' 18"" E",Flashing G every 5 secs,ZP-20(FA-250),Concrete,Existing
+LS Malabrigo,P,"Lobo, Batangas","13 35' 59"" N","121 15' 39"" E",Flashing 3 W every15 secs,ZL-HP,Masonry,MSIP I
+LS Malajibomanoc,T,Batangas City,"13 37' 43"" N","120 57' 50"" E",Flashing W every 5 secs,ZL-300,Aluminum,MSIP I
+LS Matuko Point,T,Batangas City,"13 38' 30"" N","121 05' 06"" E",Flashing W every 8 secs,ML-140,Aluminum,MSIP I
+LS Nasugbu,T,"Nasugbu, Batangas","14 05' 06"" N","120 37' 04"" E",Flashing G every 5 secs,FA-250,Concrete,Existing
+LS Balitoc,T,"Calatagan, Batangas","13 50'30"" N","120 36'14"" E",Flashing W every 5 secs,ML-300,Concrete,Existing
+LS Verde,T,"Verde Island, Batangas","13 34' 30"" N","121 05' 06"" E",Flashing W every 3 secs,ZL-300,Concrete,MSIP I
+LS Balumbato,T,"Calatagan, Batangas",13 49' 22.5'' N,120 37' 40.2'' E,Flashing R every 4 secs,SL -125,Steel,Existing
+CGS LUCENA,,,,,,,,
+LS Alabat,S,"Alabat, Quezon","14 06' 15"" N","122 00' 30"" E",Flashing R every 2 secs,SF-30,Concrete,Existing 
+LS Baliscan,S,"Baliscan, Quezon","14 14' 45""N","121 54' 00"" E",Flashing W every 5 secs,ML-300,Concrete,Existing 
+LS Boac,T,"Boac, Marinduque","13 26' 15"" N","121 49' 07"" E",Flashing R every 5 secs,BBT,Concrete,Existing 
+LS Catanuan,T,"Catanuan, Quezon","13 55' 30"" N","122 19' 15"" E",Flashing R every 5 secs,ML-300,Concrete,Existing 
+LS Gasan,S,"Gasan, Marinduque","13 19' 37"" N","122 50' 38"" E",Flashing W every 10 secs,ML-300,Concrete,Existing 
+LS Gen Luna,S,"General Luna, Quezon","13 41' 08"" N","122 10' 14"" E",Flashing W every 5 secs,ZP-20,Concrete,Existing 
+LS Guinayangan,T,"Guinayangan, Quezon","13 53' 55"" N","126 27' 00"" E",Iso G every 3 secs,FA-250,GRP,MSIP II
+LS Macalelon,S,"Macalelon, Quezon","13 44' 57"" N","122 07' 57"" E",Flashing R every 4 secs,ML-300,Concrete,Existing 
+LS Mauban,S,"Mauban, Quezon","14 12' 30"" N","121 45' 08"" E",Flashing R every 5 secs,ML-300,Concrete,Existing 
+"LS Perez,",S,"Perez, Quezon","14 11' 37"" N","121 55' 22"" E",Flashing R every 5 secs,FA-250,Concrete,Existing 
+LS Pisngi,S,"Pisngi, Lucena City","13 53' 45"" N","121 36' 00"" E",Flashing W every 5 secs,ML-300,Concrete,Existing 
+LS Pitogo,S,"Pitogo, Quezon","13 47' 00"" N","122 05' 15"" E",Flashing R every 5 secs,ML-300,Concrete,Existing 
+LS Plaridel,S,"Plaridel, Quezon","13 57' 30"" N","122 01' 24"" E",Flashing W every 5 secs,ML-300,Concrete,Existing 
+LS Port Balanacan,T,"Balanacan, Marinduque","13 32' 00"" N","121 51' 55"" E",Flashing 3G every 15 secs,ZF-30,Concrete,Existing 
+LS San Francisco,T,"San Francisco, Quezon","13 20' 45"" N","122 30' 50"" E",Flashing W every 5 secs,FA-250,Concrete,Existing 
+LS Sta Cruz,S,"Sta Cruz, Marinduque","13 30' 05"" N","122 02' 58"" E",Flashing W every 5 secs,ZP-20,Concrete,Existing 
+LS Silangan Pass,S,"Alabat, Quezon","13 59' 54"" N","122 10' 55"" E",Flashing W every 5 secs,ML-300,Concrete,Existing 
+LS Tawig,T,"Perez, Quezon","14 11' 18 "" N","121 54' 36"" E",Flashing W every 5 secs,FA-250,Concrete,Existing 
+LS Tres Reyes,P,"Gasan, Marinduque","13 13' 32"" N","121 48' 46"" E",Flashing W every 6 secs,ZL-HP,Aluminum,MSIP I
+LS Villa Norte,T,"Alabat, Quezon","14 08' 15"" N","122 02' 46"" E",Flashing W every 3 secs,Zl-300,Concrete,Existing
+CGS CALAPAN,,,,,,,,
+LS Bansud,T,"Bansud, Mindoro Or","12 51' 30""N","124 29' 15""E",Flashing R every 5 secs,ML-155,Concrete,Existing
+LS Bongabong,T,"Bongabong, Mindoro Or","12 44' 53"" N","121 29' 22"" E",Flashing 2 W every 10 sec,Zl-300,GRP,MSIP I-B
+LS Calapan,T,"Calapan, Mindoro Oriental","13 25' 53"" N","121 11' 37"" E",Flashing W every 5 secs,ZL-300,Steel,MSIP I
+LS Dumali Point,P,"Pinamalayan, Mindoro Orl","13 07' 16"" N","121 33' 10"" E",Flashing 2 W every10 secs,ZL-HP,Aluminum,MSIP I
+LS Duyugan,P,"Bangay, Roxas, Mindoro Or","12 36' 30"" N","121 33' 15"" E",Flashing 3 W every15 secs,PRB46,GRP,MSIP II
+LS Escarceo,S,"Pto Galera, Mindoro Orl","13 31' 23"" N","120 59' 28"" E",Flashing W every 10 secs,ZL-RBG,Aluminum,MSIP I
+LS Guimbunan,T,"Bansud, Mindoro Or","12 54'35""N","121 20' 45""E",Flashing R every 3 secs,ML-155,Steel,Existing 
+LS Herrera,T,"Naujan, Mindoro Or","13 14' 20""N","121 25' 25""E",Flashing W every 5 secs,FA-250,Steel,Existing 
+LS Pili,T,Pinamalayan Mindoro Or ,"13 04' 00"" N","121 31' 30"" E",Flashing W every 5 secs,FA-249,Steel,Existing 
+LS Pinamalayan,S,"Pinamlayan, Mindoro Orl","13 02' 22"" N","121 29' 35"" E",Flashing R every 5 secs,BGC-300,AL/GRP,Ex / MSIP III
+LS Concepcion,T,"Mstre de Campo, Romblon","12 54' 40"" N","121 43' 23"" E",Flashing R every 5 secs,ML-140,Concrete,Existing 
+LS Port Galera,T,"Port Galera, Mindoro Or","13 30' 52"" N","120 57' 35"" E",Flashing R every 3 secs,ML-155,Concrete,Existing 
+LS Sta Cruz/Naujan,T,"S Cruz, Naujan, Mindoro Or","13 18 45"" N","121 20' 00"" E",Iso R every 10 secs,FA-250,GRP,MSIP II
+LS Tunggo Pt,T,"Concepcion, Romblon","12 54' 15"" N","121 43' 16"" E",Flashing W every 10 secs,Zl-300,Concrete,Existing 
+LS Varadero,T,"Pto Galera, Mindoro Or","13 30' 13"" N","120 57' 13"" E",Flashing G every secs,FA-249,Concrete,Existing 
+LS Tungtung Pt,T,"Pola, Mindoro Orient","13 09' 15"" N","121 26' 15"" E",Flashing 2 W every 5 sec,FA-250,Steel,Existing 
+CGS SAN JOSE,,,,,,,,
+LS Ambulong,S,"San Jose, Mindoro Occ","12 12' 40"" N","121 00' 32"" E",Flashing W every 5 secs,ML-300,Steel,Existing
+LS Apo Reef,P,"Sablayan, Mindoro Occ","12 39' 42"" N","120 24' 52"" E",Flashing W every 10 secs,ZL-RBG,Aluminum,MSIP I-B
+LS Cabra,P,"Lubang, Occ Mindoro","13 53' 24"" N","120 01' 19"" E",Flashing W every 10 secs,BGC-1000,AL/GRP,Ex / MSIP III
+LS Cape Calavite,P,"Paluan, Occ Mindoro","13 26' 42"" N","120 18' 00"" e",Flashing W every 5 secs,BGC-300,GRP,Ex / MSIP III
+LS Caminauit,T,"San Jose, Mindoro Occ","12 19' 50"" N","121 05' 12"" E",Flashing R every 5 secs,ML-300,Concrete,Existing
+LS Golo,S,"Looc, Mindoro Occ","13 37' 41"" N","120 25' 04"" E",Flashing W every 7 secs,ZL-RBG,Aluminum,MSIP I
+LS Sablayan,S,"Sablayan, Mindoro Occ.","12 49' 54"" N","120 45' 52"" E",Flashing 3 W every10 secs,BGC-600,GRP,Ex / MSIP III
+LS Tilik,T,"Lubang, Occ. Mindoro","13 49' 09"" N","120 11' 59"" E",Flashing R every 5 secs,NW-20,Concrete,Existing
+LS Tubili Pt,P,"Mamburao, Mindoro Occ.","13 13' 40"" N","120 31' 30"" E",Flashing 4 W every20 secs,PRB46,GRP,MSIP II
+LS Wawa,T,"Abra de Ilog, Mindoro Orl","13 27' 58"" N","120 45' 00"" E",Flashing W every 5 secs,ML-300,Concrete,Existing
+LS Dongon Point,T,"San Nicolas, Sablayan, Mindoro",12 43’ 36” N,120 47’ 96” E,Flashing W every 7 secs,BGC-300,GRP,MSIP III
+CGS ROMBLON,,,,,,,,
+LS Apunan,S,Romblon,"12 28' 48"" N ","122 19' 09"" E",Flashing W every 10 secs,ZL-RBG,Aluminum,MSIP I
+LS Biaringan,T,"San Agustin, Romblon","12 37' 40"" N","122 09' 48"" E",Flashing 2 W every10 secs,FA-250,GRP,MSIP II
+LS Cabalian,T,"Sta Fe, Romblon",12 06' 13' N,"122 00' 42"" E",Flashing W every 5 secs,Zl-300,Concrete,MSIP I-B
+LS Cajidiocan,T,"Cajidiocan, Romblon","12 21' 48"" N","122 41' 00"" E",Flashing 2 W every 5 secs,FA-250,GRP,MSIP II
+LS Calaton Hill,T,"Tablas, Romblon","12 10' 50"" N","122 09' 50"" E",Flashing W every 10 secs,FA-250,GRP,MSIP II
+LS Carmen,T,San Agustin,"12 37' 12"" N","122 07' 13"" E",Flashing W every 3 secs,ZL-300,Concrete,MSIP I
+LS Corcuera,S,"Corcuera, Romblon","12 47' 46"" N","122 01' 12"" E",Flashing W every 10 secs,ZL-RBG,Aluminum,MSIP I
+LS Cresta de Gallo,T,"San Fdo, Romblon","12 11' 13"" N","122 41' 42"" E",Flashing W every 5 secs,BGC-300,AL/GRP,Ex / MSIP III
+LS Gorda,P,"Romblon, Romblon","12 39' 36"" N","122 09' 16"" E",Flashing 3 W every15 secs,ZL-HP,Aluminum,MSIP I
+LS Looc,T,"Looc, Romblon","12 14' 48"" N","121 58' 54"" E",Flashing G every 5 secs,ML-300,Concrete,Existing 
+LS Magdiwang,T,"Magdiwang, Romblon","11 29' 40"" N","122 30' 00"" E",Flashing W every 5 secs,LBEA85,Concrete,Existing 
+LS Poctoy,S,"Odiongan, Romblon","12 24' 18"" N","121 58' 49"" E",Flashing R every 5 secs,FA-250,Concrete,Existing 
+LS Port Malbog,T,"Looc, Romblon","12 13' 24"" N","122 00' 14"" E",Flashing R every 5 secs,LBEA85,Concrete,Existing 
+LS Romblon J G,T,"Romblon, Romblon","12 34' 55"" N","122 15' 48"" E",Flashing G every 5 secs,FA-250,Concrete,Existing 
+LS Romblon J R,T,"Romblon, Romblon","12 35' 06"" N","122 15' 48"" E",Flashing R every 5 secs,FA-250,Concrete,Existing 
+LS Sabang Pt,S,"Romblon, Romblon","12 35' 42"" N","122 15' 54"" E",Flashing W every 5 secs,BBT,Concrete,Existing 
+LS San Agustin,T,"San Agustin, Romblon","12 37' 10"" N","122 08' 05"" E",Flashing W every 5 secs,ZL-300,Aluminum,MSIP I
+LS San Fernando,P,"Azagra, Romblon","12 17' 01"" N ","122 37' 35"" E",Flashing 2 W every10 secs,ZL-HP,Aluminum,Existing
+LS Calabago Point,T,"Calabago, Romblon, Romblon",12 23’ 10” N,122 18’ 18” E,Flashing W every 7 secs,BGC-300,GRP,MSIP III
+LS Guinawayan (R)/Ferrol,T,"Bunsoran, Ferrol, Romblon",12 17’ 42” N,121 55’ 25” E,Flashing W every 7 secs,BGC-300,GRP,MSIP III
+LS Mahaba Pt/Masadya,T," Concepcion, Romblon","12 55' 54"" N","121 40' 55"" E",Flashing W every 7 secs,BGC-300,AL/GRP,Ex / MSIP III
+LS Azagra/Cauit,P,"Azagra,Romblon",12 16’ 08” N,122 08’ 15” E,Flashing W every 5 secs,ZL-HP,Aluminum,MSIP I
+CGS PUERTO REAL,,,,,,,,
+LS Burdeous,S,"Polillo, Quezon","14 51' 09.5"" N","121 58' 41.5"" E",Flashing W every 5 secs,ML-155,Concrete,Existing 
+LS Dinahican,S,"Infanta, Quezon","14 41' 54"" N","121 43' 45"" E",Flashing W every 5 secs,ML-300,Concrete,Existing 
+LS Jomalig,T,"Jomalig, Quezon","14 41' 55"" N","122 18' 53"" E",Flashing W every 5 secs,FA-250,Concrete,Existing 
+LS Panukulan,P," Polillo Is., Quezon","14 55' 54"" N","121 48' 35"" E",Flashing 3 W every10 secs,PRB46,GRP,MSIP II
+LS Patnanongan,T,"Patnanongan Is., Quezon","14 45' 04"" N","122 13' 49"" E",Flashing G every 5 secs,FA-250,Concrete,Existing 
+LS Polillo R (F),T,"Polillo, Quezon","14 42' 58"" N","121 56' 15"" E",Fixed Red,RL-125,Concrete,Existing 
+LS Polillo R (R),T,Polillo Quezon,"14 43' 08"" N","121 56' 07"" E",Fixed Red,RL-125,Concrete,Existing 
+LS Real,T,"Real, Quezon","14 40' 21"" N","121 36' 30"" E",Fixed Red,ML-300,Concrete,Existing 
+LS Infanta,T,"Infanta, Quezon","14 46' 30"" N","121 39' 29"" E",Flashing 2 W every10 secs,ML-300,Concrete,Existing 
+LS Buguitay,T,"Burdeous, Quezon","14 57' 09""N","122 03'44""E",Flashing W every 5 secs,FA-250,Concrete,Existing 
+LS Bon-bon,T,"Panukulan, Quezon","15 01' 45""N","121 52' 02""E",Flashing W every 5 secs,ML-300,Concrete,Existing 
+LS Bukal,T,"Jomalig, Quezon","14 41' 12"" N","122 23' 00"" E",Flashing 3 W every10 secs,ML-300,Concrete,Existing 
+LS Balubo ,T,"Infanta, Quezon","14 41' 42"" N",121 40' 173 N,Flashing W every 7 secs,Ml-300,Concrete,Existing 
+LS Rizal(balubalic),T,"Ribuyunan, Burdeos, Quezon","15 02' 31""N","121 58' 24"" E",Flashing R every 5 secs,Led Red,Concrete,Existing 
+LS Bonifacio,T,"Bonifacio, Burdeos,Qu","15 02' 45"" N","121 58' 45"" E",Flashing G every 5 secs,Led Green,Concrete,Existing 
+LS Bongliw,T,"Rizal, Burdeos,Quezo","15 03' 30"" N","121 55' 48"" E",Flashing W every 5 secs,FA-250,Concrete,Existing 
+BICOL,,,,,,,,
+CGS LEGASPI,,,,,,,,
+LS Bacacay,T,"Apurawan, Aborlan, Palawan",13 17' 57”N,"123 47'30""",Flashing W every 5 secs,BGC-300,GRP,Ex / MSIP III
+LS Baras,S,"Baras, Catanduanes","13 38' 24"" N","124 24' 31"" E",Flashing 2 R every 10 secs,ML-300,Concrete,Existing
+LS Cabarian Pt,T,"Ligao, Albay","13 00' 34"" N","123 19' 11"" E",Flashing 2 W every 10 secs,ZL-300,Aluninum,MSIP I-B
+LS Calolbon,S,"Calolbon, Catanduanes","13 36' 00"" N","124 05' 42"" E",Flashing R every 10 secs,ML-300,Concrete,Existing
+LS Labcan,T,"Rapu-Rapu, Albay","13 17' 30"" N","123 58' 45"" E",Iso W every 4 secs,FA-250,GRP,MSIP II
+LS Legaspi,T,"San Roque, Legaspi City","13 09' 30"" N","123 45' 12"" E",Flashing R every 5 secs,ML-300,GRP,MSIP II
+LS Lolong Pt,P,"Lolong, Catanduanes","13 56' 54"" N","124 21' 12"" E",Flashing W every 5 secs,ZL-HP8,Aluninum,MSIP I-B
+LS Malinao R (R),T,"Malinao, Albay","13 23' 12"" N","123 42' 12"" E",Fixed Red,RL-125,Concrete,Existing 
+LS Malinao R (F),T,"Malinao, Albay","13 24' 18"" N","123 42' 48"" E",Fixed Red,RL-125,Concrete,Existing 
+LS Pandan Point,S,"Pandan, Catanduanes","14 03' 07"" N ","124 10' 08"" E",Flashing R every 5 secs,ML-300,Concrete,Existing 
+LS Port Sula,T,"Bacacay, Albay","13 13' 32"" N","123 52' 15"" E",Flashing R every 5 secs,ML-300,Concrete,Existing 
+LS Rawis,T,"Tabaco, Albay","13 24' 20"" N","123 45' 45"" E",Flashing 2 G every 4 secs,FA-250,GRP,MSIP II
+LS Sialat,S,"Calolbon, Catanduanes","13 59' 48"" N","124 01' 30"" E",Flashing W every 4 secs,NW-20,Concrete,Existing
+LS Tabugoc,T,"Tabugoc, Catanduanes","14 03' 31"" N","124 14' 02"" E",Flashing 2 W every 10 secs,FA-250,GRP,MSIP II
+LS Ungay,S,"Rapu-Rapu, Albay","13 10' 44"" N","124 12' 50"" E",Flashing W every 7 secs,ZL-RBG,Aluninum,MSIP I-B
+LS Virac,T,"Virac, Catanduanes","13 335' 03"" N","124 14' 02"" E",Flashing R every 5 secs,FA-250,GRP,MSIP II
+CGS (MERCEDES) LEGASPI,,,,,,,,
+LS Cabusao,S,"Cabusao, Camarines Sur","13 25' 03"" N","123 06' 48"" E",Flashing W every 5 secs,ML-300,Concrete,Existing 
+LS Canimo,S,"Mercedes, Cam Norte","14 19' 32"" N","123 03' 03"" E",Flashing 2 W every 10 secs,FA-250,Concrete,Existing 
+LS Capalonga,S,"Capalonga, Cam Norte","14 19' 52"" N","121 30' 52"" E",Flashing R every 5 secs,ML-300,Concrete,Existing 
+LS Colongcogong,P,"Caramoan, Camarines Sur","13 43' 27"" N","123 58' 34"" E",Flashing W every 15 secs,PRB46,GRP,MSIP II
+LS Gata,P,"Caramoan, Camarines Sur","13 54' 47"" N","123 48' 48"" E",Flashing 4 W every 20 secs,PRB46,GRP,MSIP II
+LS Laganac,T,"Balatan, Camarines Sur","13 20' 35"" N","123 12' 42"" E",Flashing 3 W every 10 secs,FA-250,GRP,MSIP II
+LS Lahuy,T,"Guinaho-an Isl., Cam Sur","13 57' 54"" n","123 51' 26"" e",Flashing W every 5 secs,FA-250,GRP,MSIP II
+LS Ocata,S,"Lahug, Camarines Sur","13 59' 06"" N","123 49' 24"" E",Flashing G every 5 secs,Ml-300,Concrete,Existing
+LS Panganiban,T,"Panganiban, Cam Norte","14 18' 46"" N","124 39' 05"" E",Iso W every 4 secs,FA-250,GRP,MSIP II
+LS Paracale,T,"Paracale, Cam Norte","14 18' 25"" N","122 47' 00"" E",Flashing 2 W every 5 secs,FA-250,GRP,MSIP II
+LS Pasacao,T,"Pasacao, Camarines Sur","13 30' 12"" N","123 02' 12"" E",Flashing 2 W every 5 secs,FA-250,GRP,MSIP II
+LS Port Balatan,T,"Balatan, Camarines Sur","13 19' 45"" N","123 13' 20"" E",Flashing W every 5 secs,Zl-300,Steel,Existing 
+LS Sabang(lagonoy),S,"San Jose, Camarines Sur","13 43' 20"" N","123 34' 37"" E",Flashing W every 5 secs,Zl-300,Aluminum,Existing 
+LS Sabang,T,"Calabanga, Camerines Sur","13 43' 44"" N","123 12' 48"" E",Flashing W every 3 secs,Zl-300,Concrete,MSIP I-B
+LS Salingongon,T,"Minalabac, Camarines Sur","13 27' 25"" N","123 09' 00"" E",Flashing 2 W every 10 secs ,FA-250,GRP,MSIP II
+LS Tailon,S,"Panganiban, Cam Norte","14 24' 44"" N","122 39' 57"" E",Flashing W every 5 secs,ML-300,Concrete,Existing 
+Ls Buhi,T,"Buhi, Camarines Sur",13 26.5 N,123 31' E,Flashing R every 5 secs,ML-300,Concrete,Existing 
+LS Gibgos,S,"Caramoan, Camarines Sur",13 51’ 36” N,123 46’ 06” E,Flashing 2 W every 10 secs,BGC-600,GRP,MSIP III
+LS Patitinan,T,"Patitinan,Sagnay, Cam Sur","13 03' 00"" N","123 07' 00"" E",Flashing 2 W every 5 secs,,Concrete,PCG
+CGS MASBATE,,,,,,,,
+LS Bugui Point,S,"Aroroy, Masbate","12 36' 05"" N","123 14' 12"" E",Flashing 3 W every 10 secs,BGC-600,Concrete,Ex / MSIP III 
+LS Caduruan,P,"Esperanza, Masbate","11 43' 18"" N","124 03' 54"" E",Flashing 2 W every 10 secs,PRB46,GRP,MSIP II
+LS Calasuche,T,"Milagros, Masbate","12 13' 00"" N","123 31' 54"" E",Flashing 2 R every 4 secs,FA-250,GRP,MSIP II
+LS Colorada,S,"Aroroy, Masbate",12 32' 36' N,"123 12' 40"" E",Flashing 2 R every 5 secs,PBB,Concrete,Existing
+LS Malapingan,P,"Claveria, Masbate","12 50' 44"" N","123 12' 00"" E",Flashing W every 5 secs,ML-300,GRP,MSIP II
+LS Masbate ,T,"Masbate, Masbate","12 22' 48"" N","123 36' 30"" E",Flashing R every 5 secs,FA-250,GRP,MSIP II
+LS Matabao,S,"Matabao, Masbate","12 18' 36"" N","123 48' 28"" E",Flashing W every 5 secs,ML-300,Steel,Existing
+LS Jintotolo,P,"Balud, Masbate","11 50' 29"" N","123 07' 10"" E",Flashing 3 W every 10 secs,ZL-HP,Concrete,MSIP I
+LS Pagbulungan,T,"Mandaon, Masbate","12 13' 00"" N","123 13' 38"" E",Flashing 2 G every 5 secs,FA-250,GRP,MSIP II
+LS Pulandata,T,"Balud, Masbate","11 54' 25"" N",123 09' 49'' E,Flashing 2 W every 4 secs,FA-250,GRP,MSIP II
+LS Punta Aguja,T,"Claveria, Masbate","12 41' 46"" N","123 23' 00"" E",Flashing 3 W every 10 secs,FA-250,GRP,MSIP II
+LS Sn Pascual,T,"San Pascual, Masbate","13 08' 52"" N","124 59' 02"" E",Flashing W every 10 secs,FA-250,GRP,MSIP II
+LS San Jacinto,S,"San Jacinto, Masbate","12 34' 18"" N","123 44' 03"" E",Flashing R every 5 secs,ZF-30,Concrete,Existing 
+LS San Miguel,S,Monreal. Masbate,"12 43' 06"" N","123 35' 19"" E",Flashing 3 W every 15 secs,BBT,Concrete,Existing 
+LS Zapato Menor,T,"Balud, Masbate","11 42' 48"" N","122 59' 00"" E",Flashing 2 W every 10 secs,FA-250,GRP,MSIP II
+LS Naro,T,"Naro, Cawayan, Masbate",11 52' 320'' N,123 40' 093'' E,Flashing G every 5 secs,LED,RSL,Existing
+LS Guinawayan (M),T,"Guinawayan, Placer, Masbate",11 48’ 12” N,123 54’ 30” E,Flashing 2 W every 10 secs,BGC-300,GRP,MSIP III
+LS Matayum,T,"Matayum, Cataingan, Masbate",11 58’ 00” N,124 02’ 20” E,Flashing 2 W every 10 secs,BGC-300,GRP,MSIP III
+LS Tagapul-an,T,"Tagapul-an, Masbate",12 03’ 20” N,124 09’ 20” E,Flashing 2 W every 10 secs,BGC-300,GRP,MSIP III
+LS Cawayan,T,"Cawayan Port, Masbate","11 55' 162"" N","123 45' 186"" E",Flashing G every 5 secs,LED,RSL,Existing
+CGS SORSOGON,,,,,,,,
+LS Bagatao,P,"Magallanes, Sorsogon","12 50' 15"" N","123 47' 26"" E",Flashing W every 5 secs,ML-300,Concrete,Existing
+LS Barcelona,T,"Barcelona, Sorsogon","12 52' 06"" N","124 08' 36"" E",Flashing W every 10 secs,FA-250,GRP,MSIP II
+LS Bulan,S,"Bulan, Sorsogon","12 40' 08"" N","123 52' 17"" E ",Flashing R every 5 secs,ML-300,Concrete,Existing
+LS Calantas Rock,S,"Matnog, Sorsogon","12 30' 43"" N","124 04' 30"" E",Flashing R every 5 secs,BGC-300,GRP,Ex / MSIP III
+LS Casiguran,T,"Casiguran, Sorsogon","12 52' 33"" N","124 00' 27"" E",Flashing 2 W every 5 secs,ZL-300,Aluminum,MSIP I-B
+LS Castilla,T,"Castilla, Sorsogon","12 56' 55"" N","123 52' 48"" E",Flashing W every 5 secs,ML-300,Concrete,Existing
+LS Diamante,T,"Pto Diaz, Sorsogon","13 02' 30"" N","124 11' 40"" E",Flashing W every 15 secs,FA-250,GRP,MSIP II
+LS Donsol,S,"Donsol, Sorsogon","12 54' 24"" N","123 35' 24"" E",Flashing 3 R every 10 secs,ZF-30,Concrete,Existing
+LS Macalaya,T,"Castilla, Sorsogon","12 52' 54"" N","123 46' 12"" E",Flashing 2 W every 10 secs,FA-250,GRP,MSIP II
+LS Magdalena,P,"Magdalena, Sorsogon","12 38' 18"" N","124 05' 36"" E",Flashing 2 W every 10 secs,PRB46,GRP,MSIP II
+LS Pilar,T,"Pilar, Sorsogon","12 53' 25"" N","123 39' 42"" E",Flashing 3 G every 3 secs,FA-250,GRP,MSIP II
+LS Port Gubat,T,"Gubat, Sorsogon","12 55' 35"" N","124 07' 26"" E",Flashing W every 5 secs,ZL-300,Aluminum,MSIP I-B
+LS S Bernardino,S,"Bulusan, Sorsogon","12 45' 15"" N","124 16' 57"" E",Flashing W every 10 secs,ZL-RBG,Concrete,MSIP I-B
+LS Sorsogon Bay,T,"Magallanes, Sorsogon","12 50' 15"" N","123 47' 26"" E",Flashing R every 5 secs,ZP-20,Concrete,Existing
+PALAWAN,,,,,,,,
+CGS PUERTO PRINCESA,,,,,,,,
+LS Bancao-Bancao,S,"Apurawan, Aborlan, Palawan","09 43' 14"" N","118 45' 57"" E",Flashing 3 W every 15 secs,BBT-300,Concrete,Existing
+LS Bold Point,T,"Tinitian, Roxas, Palawan","10 01' 40"" N","119 08' 40"" E",Flashing 2 W every 10 secs,PRB46,GRP,MSIP II
+LS Barbacan,T,"Roxas, Palawan","10 19' 06""N","119 21' 01"" E",Flashing W every 5 secs,Zl-300,GRP,MSIP I-B
+LS Camungyan,T,"Pto Princesa, Palawan","10 09' 24"" N","118 45' 48"" E",Flashing 3 W every 15 secs,Zl-300,GRP,MSIP I-B
+LS Cagnipa,S,"Sn Vicente, Palawan","10 30' 37"" N","119 04' 19"" E",Flashing 2 W every 6 secs,PRB46,GRP,MSIP II
+LS Panacan,T,"Narra, Palawan","09 14' 07"" N","118 24' 31"" E",Flashing R every 5 secs,Zl-300,Steel,Existing
+LS Tide Pole,T,"Pto Princesa, Palawan","09 43' 53"" N","118 43' 53"" E",Flashing R every 5 secs,ML-300,Concrete,Existing 
+LS Tubbataha,P,"Cagayancillo, Palawan","08 44' 53"" N","117 48' 59"" E",Flashing W every 5 secs,ML-300,Concrete,Existing 
+LS Pag-asa,T,"Kalayaan, Palawan","11 02' 30"" N","114 21' 30"" E",Flashing W every 5 secs,Ml-300,steel,Existing 
+LS Honda Bay,T,"Sta Lourdes, Pto Princesa City","09 50' 38.4"" N","118 44' 45.6""E",Flashing W every 5 secs,ML-300,RSL,PCG
+LS Apurawan,S,"Apurawan, Aborlan, Palawan","09 37'50.28""N","118 21' 14.82""E",Flashing W every 5 secs,,RSL,PCG
+CGS EL NIDO,,,,,,,,
+LS Cabuli,P,"Cabuli, El Nido, Palawan",11 26’ 30” N,119 30’ 30” E,Flashing 2W every 10 secs,BGA-1000,GRP,MSIP III
+LS Lalutaya,T,"El Nido, Palawan",11 21' 50' N,"119 24' 45"" E",Flashing W every 5 secs,ML-300,GRP,MSIP II
+LS Taytay,T,"Taytay, Palawan","10 49 43"" N","119 30' 35""E",Flashing 2 W every 10 secs,FA-250,GRP,MSIP II 
+CGS CORON,,,,,,,,
+LS Bantac,T,"Coron, Palawan","12 12' 45"" N","120 23' 25"" E",Flashing 3 W every 10 secs  ,FA-250,GRP,MSIP II
+LS Coron,T,"Coron, Palawan","11 59' 02"" N","120 13' 24"" E",Flashing W every 5 secs,FA-250,GRP,MSIP II
+LS Culion,T,"Culion, Palawan","11 53' 37"" N","120 01' 22"" E",Flashing R every 5 secs,ML-300,Concrete ,Existing
+LS Delian,T,"Coron, Palawan","11 49' 44"" N","120 18' 38"" E",Morse A every 6secs,FA-250,GRP,MSIP II
+LS Decabaito,S,"Linapacan, Palawan","11 37' 00"" N","119 58' 00"" E",Flashing 2 W every 5 secs,PRB46,GRP,MSIP II
+CGS CUYO,,,,,,,,
+LS Agutaya,S,"Agutaya, Palawan","09 43' 22"" N","118 48' 57"" E",Flashing W every 5 secs,ML-300,Concrete ,Existing
+LS Cuyo,T,"Cuyo, Palawan","10 51' 7.56"" N","121 00' 20.9"" E",Flashing R every 5 secs,ML-300,GRP,MSIP II
+LS Manamoc,S,"Cuyo, Palawan","11 18' 24"" N","120 40' 18"" E",Flashing 2 W every 10 secs,ML-300,RC SPIRAL/32 FT,Existing 
+LS Manucan,S,"Cagayancillo, Palawan","09 38' 42"" N","121 21' 00"" E",Flashing W every 5 secs,ML-300,Concrete,Existing 
+LS Langoy,S,"Araceli, Palawan","10 29' 42"" N","119 59' 06"" E",Flashing W every 5 secs,ML-300,Conrete,Existing 
+CGS BROOKE POINT,,,,,,,,
+LS Brooke Point,S,"Brooke Pt., Palawan","08 46' 12"" N","117 50' 00"" E",Flashing R every 5 secs,BCG-600,GRP,Ex / MSIP III 
+LS Brooke Pt Jetty G,T,"Brooke Pt., Palawan","08 46' 29"" N","117 09'36"" E",Flashing G every 5 secs,LBEA85,Concrete,Existing 
+LS Brooke Pt Jetty R ,T,"Brooke Pt., Palawan","08 46' 18"" N","117 09' 36"" E",Flashing R every 5 secs,LBEA85,Concrete,Existing 
+LS Cape Melville,P,"Balabac, Palawan","07 55' 00"" N","117 00' 00"" E",Flashing W every 5 secs,BGC-1000,GRP,Ex / MSIP III
+LS Comiran,T,"Balabac, Palawan","07 55' 00"" N","117 13' 21"" E",Flashing W every 5 secs,FA-250,Steel,Existing 
+LS Espina Point,T,"Balabac, Palawan","07 59' 36"" N","117 04' 21"" E",Flashing W every 5 secs,ML-300,Concrete,Existing 
+LS Iraray,T,"Sofronio Espanola, Palawan","08 58' 03"" N","118 02' 38""E",Flashing W every 5 secs,ML-300,Steel,Existing 
+LS Mangsee,T,"Mangsee, Balabac, Palawan","07 30' 30""N","117 18' 18""E",Flashing W every 5 secs,FA-250,steel,Existing 
+LS Quezon,T,"Quezon, Palawan","09 14' 54"" N","117 51' 00"" E",Flashing W every 5 secs,ZL-300,GRP,MSIP I-B
+LS Tarumpitao,P,"Rizal, Palawan","09 03' 30"" N","117 38' 30"" E",Flashing 2 W every 10 secs,PRB46,GRP,MSIP II
+CENTRAL VISAYAS,,,,,,,,
+CGS CEBU,,,,,,,,
+LS Argao,P,"Argao, Cebu",09 52' 35' N,"123 36' 00"" E",Flashing 2 W every 10 secs,PRB46,GRP,MSIP II
+LS Bagacay,P,"Bagacay, Cebu","10 23' 23"" N","121 01' 03"" E",Flashing 3 W every 15 secs,ZL-HP,Concrete,MSIP I
+LS Bantayan,T,"Bantayan, Cebu","11 11' 00"" N","123 42' 45"" E",Flashing 2 W every 10 secs,ZL-300,Aluminum,MSIP I-B
+LS Balamban,S,"Balambalan, Cebu","10 30' 16"" N","123 42' 35"" E",Flashing W every 5 secs,ZL-300,Aluminum,MSIP I-B
+LS Bantolinao,T,"Lapu-Lapu City, Cebu","10 20' 12"" N","123 59' 07"" E",Flashing G every 5 secs,ZL-300,Aluminum,MSIP I
+LS Bogo Harbor,T,"Bogo, Cebu","11 05' 03"" N","124 01' 32"" E",Flashing 2 R every 5 secs,ZL-300,Concrete,MSIP I
+LS Buntay,T,"Madridejos, Cebu","11 18' 00"" N","123 43' 42"" E",Flashing W every 5 secs,ZL-300,Aluminum,MSIP I
+LS Capitancillo,S,"Capitancillo, Cebu","10 59' 29"" N","124 06' 10"" E",Flashing W every 10 secs,ZL-RBG,Aluminum,MSIP I
+LS Carnasa ,P,"Carnasa Island, Cebu","11 31' 00"" N","124 06' 00"" E",Flashing 2 W every 5 secs,PRB46,GRP,MSIP II
+LS Chocolate Is,T,"Chocolate Isl, Cebu","11 18' 26"" N","124 03' 40"" E",Flashing W every 3 secs,ZL-300,Concrete,MSIP I
+LS Cauit,T,"Cauit Isl., Cebu","10 16' 23"" N","123 52' 52"" E",Flashing W every 5 secs,FA-250,GRP,MSIP II
+LS Dumanjug,T,"Dumanjug, Cebu","10 04' 18"" N","123 26' 48"" E",Flashing R every 5 secs,ZL-300,Concrete,Ex / MSIP III
+LS Ginatilan,T,"Ginatalan, Cebu","09 37' 18"" N","123 19' 12"" E",Flashing W every 7 seca,BGC-300,AL/GRP,MSIP III
+LS Hagnaya,T,"San Remegio, Cebu","11 07' 15"" N","123 55' 18"" E",Flashing R every 5 secs,FA-249,Concrete,Existing
+LS Lauis Ledge,S,"Talisay, Cebu","10 14' 12"" N","123 53' 26"" E",Flashing W every 10 secs,ZL-RBG,Concrete,MSIP I
+LS Malapascua,P,"Malapascua, Cebu","11 24' 42"" N","124 06' 37"" E",Flashing 2 W every 10 secs,ZL-HP,Aluminum,MSIP I
+LS Opon,T,Lapu-Lapu City,"10 18' 48"" N","123 56' 42"" E",Flashing R every 5 secs,FA249,Concrete,Existing
+LS Pescador,T,"Moal-boal, Cebu","10 55' 27"" N","123 20' 33"" E",Flashing W every 5 secvs,ZL-300,GRP,MSIP I-B
+LS Pilar ,T,"Pilar, Ponson Is., Cebu","10 48' 18"" N","124 34 00"" E",Flashing 2 W every 10 secs,BGC-300,AL/GRP,MSIP III
+LS Poro,T,"Poro, Camotes Is., Cebu","10 37' 48"" N","124 24' 40"" E",Flashing W every 7 secs,BGC-300,AL/GRP,MSIP III
+LS Shell,T," Mactan Isl., Cebu","10 17' 09"" N","123 54' 00"" E",Flashing 2 W every 4 secs,FA-250,GRP,MSIP II
+LS Tabuelan,T,"Punta Point, Tabuelan","10 50' 00"" N","123 52' 01"" E",Flashing W every 5 secs,FA-250,Steel,Existing
+LS Tanguigui,P,"Tanguigui Isl., Cebu","11 29' 24"" N","123 43' 29"" E",Flashing W every 5 secs,ZL-HP,Aluminum,MSIP I
+LS Toledo,T,Toledo City,"10 23' 00"" N","123 38' 00"" E",Fixed Red,Sl-200,Concrete,Existing
+LS Tulang,P," Camotes, Cebu","10 43' 30"" N","124 19' 00"" E",Flashing 3 W every 15 secs,PRB46,GRP,MSIP II
+LS Guintacan,S,"Sta Fe, Cebu","11 18' 06"" N","123 53' 28"" E",Flashing W every 10 secs,Zl-RBG,Aluminum,MSIP I-B
+LS Sumilon,T,"Sumilon Isl,Oslob,Cebu","09 25' 52"" N","123 23' 22"" E",Flashing W every 5 secs,FA-250,Concrete,Existing
+LS Pacijan,S,"San Francisco, Camotes, Cebu",10 36’ 23” N,124 16’ 34” E,Flashing 2W every 10 secs,BGC-600,GRP,MSIP III
+CGS TAGBILARAN,,,,,,,,
+LS Baclayon,S,"Baclayon, Bohol","09 37' 18"" N","123 54' 42"" E",Flashing R every 5 Secs ,ML-300,Concrete,Existing
+LS Bagobanua,S,"Tubigon, Bohol","10 03' 05"" N","123 53' 54"" E",Flashing 3 W every 15 secs,FA-250,GRP,MSIP II
+LS Balicasag,S,"Panglao, Bohol","09 31' 03"" N","123 41' 59"" E",Flashing W every 7 secs,ZL-RBG,Aluminum,MSIP I-B
+LS Bungan,T,"Talibon, Bohol","10 16' 21""N","124 21' 46"" E",Flashing W every 10 secs,ZL-300,Concrete,Existing
+LS Cabilao,S,"Cabilao Island, Bohol","09 53' 30"" N","123 45' 30"" E",Flashing W every 5 secs,BGC-600,GRP,Ex /MSIP III
+LS Catagbacan,T,"Catagbacan, Bohol",09 51' 42' N,"123 49' 00"" E",Flashing G every 5 secs,ML-300,Concrete,Existing
+LS Gorda,S,"Valencia, Bohol","09 36' 00"" N","124 15' 35"" E",Flashing 2 W every 4 secs,PRB46,GRP,MSIP II
+LS Jagna,T,"Jagna, Bohol","09 39' 06"" N","124 21' 54"" E",Flashing R every 5 secs,ML-300,Concrete,Existing
+LS Jandayan,T,"Jetafe, Bohol","10 09; 58""N","124 09' 36""E",Flashing R every 5 secs,FA-250,GRP,MSIP II
+LS Loay,T,"Loay, Bohol","09 36' 03"" N","124 00' 30"" E",Flashing R e v 5 secs,ML-300,Concrete,Existing
+LS Maribojoc,T,"Maribojoc, Bohol","09 44' 17"" N","123 50' 18"" E",Flashing W every 5 secs,ZL-300,GRP,MSIP I-B
+LS Pamilacan,T,"Baclayon, Bohol","09 29' 30"" N","123 55' 12"" E",Morse U every10 sec,FA-250,GRP,MSIP II
+LS Tagbilaran,T,Tagbilaran City,"09 39' 34"" N","123 49' 26"" E",Flashing W every 3 secs,FA-250,GRP,MSIP II
+LS Talisay,T,"Anda, Bohol","09 46' 01"" N","124 53' 30"" E",Flashing 3 W every 8 secs,FA-250,GRP,MSIP II
+LS Talibon,T,"Talibon, Bohol","10 09' 06"" N","124 19' 33"" E",Flashing G every 3 secs,ML-300,Concrete,Existing
+LS Tambo,T,"Talibon, Bohol","10 11' 30"" N","124 17' 04"" E",Flashing 2 R every secs,FA-250,GRP,MSIP II
+LS Tubigon,T,"Tubigon, Bohol","09 57' 36"" N",123 57' 36' E,Flashing R every 5 secs,ML-300,Concrete,Existing
+LS Tugas,T,Pres Garcia. Bohol,"10 09' 00"" N","124 37' 00"" E",Flashing 3 W every 6 secs,FA-250,GRP,MSIP II
+LS Tungod,T,"Inabanga, Bohol","10 02' 00"" N","124 03'  24"" E",Flashing 2 R every 4 secs,FA-250,GRP,MSIP II
+LS Ubay,T,"Ubay, Bohol","10 03' 00"" N","124 28' 00"" E",Flashing G every 3 secs,ML-300,Concrete,Existing
+LS Pangangan,T,"Calape, Bohol","09 54' 48"" N","123 48' 43"" E",Flashing R every 5 secs,ZL-300,Concrete,Existing
+LS Getafe,T,"Getafe, Bohol","10 04' 20"" N","124 09' 05"" E",Flashing R every 5 secs,FA 250,Concrete,Existing
+LS Tagbilaran Nr1,T,Tagbilaran City,"09 39' 33"" N","123 49' 35"" E",Flashing G every 3 secs,ZL-300,Aluminum,MSIP I-B
+LS Tagbilaran Nr2,T,Tagbilaran City,"09 39' 29"" N","123 49' 39"" E",Flashing R every 3 secs,ZL-300,Aluminum,MSIP I-B
+LS Tagbilaran Nr 3,T,Tagbilaran City,"09 39' 31"" N","123 49' 41"" E",Flashing G every 5 secs,Peguin,Concrete,Existing
+LS Tagbilaran Nr 5,T,Tagbilaran City,"09 39' 26"" N","123 49' 32"" E",Flashing G every 3 secs,ZL-300,Aluminum,MSIP I-B
+LS Tagbilaran Nr 7,T,Tagbilaran City,"09 39' 16"" N","123 50' 06"" E",Flashing G every 5 secs ,ZL-300,Aluminum,MSIP I-B
+LS Tagbilaran Nr 8,T,Tagbilaran City,09 39' 04,"123 50' 20"" E",Flashing R every 5 secs,ZL-300,Aluminum,MSIP I-B
+LS Tubigon Nr 1,T,"Tubigon, Bohol","09 03' 35"" N","124 59' 01"" E",Flashing G every 5 secs,ZL-300,Aluminum,MSIP I-B
+LS Tubigon Nr 2,T,"Tubigon, Bohol","10 00' 36"" N","124 56' 46"" E",Flashing R every 3 secs,ZL-300,Aluminum,MSIP I-B
+CGS DUMAGUETE,,,,,,,,
+LS Amlan,S,"Avuquitar, Negros Oriental","09 27' 56"" N","123 13' 40"" E",Flashing W every 5 secs,ZL-300,Aluminum,MSIP I-B
+LS Antulang,P,"Tambobo, Siaton, Negros Or.","09 02' 29"" N","123 00' 53"" E",Flashing 3 W every 15 secs,PRB46,GRP,MSIP II
+LS Apo Island,S,"Zamboanguita, Negros Or","09 04' 30""N","123 16' 00"" E",Flashing W every 5 secs,ML-300,Concrete,Ex / MSIP III 
+LS Dumaguete,T,"Dumaguete, Negros Oriental","09 18' 53"" N","123 18' 36"" E",Flashing G every 3 secs,ML-300,Concrete,Existing 
+LS Guihulgan,T,"Guihulgan, Negros Oriental","10 07' 18"" N","123 16' 18"" E",Flashing 3 W every 12 secs,ML-300,GRP,MSIP II
+LS Canoan F,T,"Larena, Sequijor, Negros Or.","09 15' 06"" N","123 35' 36"" E",Fixed Red,RL-125,Concrete,Existing 
+LS Canoan R ,T,"Larena, Sequijor, Negors Or","09 14' 54"" N","123 36' 00"" E",Fixed Red,RL-125,Concrete,Existing 
+LS Minalulan,S,Siquijor,"09 07' 18"" N","123 40' 49"" E",Flashing 2 W every 10 secs,ZL-RBG,Aluminum,MSIP I-B
+LS Calambaguio,S,"Cangmunag, San Juan, Sequijor",09 09’ 15” N,123 30’ 50” E,Flashing 3 W every 10 secs,BGC-600,GRP,MSIP III
+LS Minarcahan Pt.,S,"Enrique Villanueva, Sequijor",09 18’ 05” N,123 37’ 15” E,Flashing W every 7 secs,BGC-600,GRP,MSIP III
+LS Cansilan Point,S,"Nagbo-alao, Basay, Negros Oriental",09 23’ 00” N,122 40’ 30” E,Flashing W every 5 secs,BGC-600,GRP,MSIP III 
+LS Dacu ,T,"Dacu Island, Negros Oriental",09 35’ 35” N,123 08’ 50” E,Flashing 2 W every 10 secs,BGC-300,GRP,MSIP III 
+EASTERN VISAYAS,,,,,,,,
+CGS TACLOBAN,,,,,,,,
+LS Abuyog,T,"Abuyog, Leyte","10 44' 17"" N","125 01' 23"" E",Flashing 2 W every 10 sec,ZL-300,Aluminum,MSIP I-B
+LS Biliran,T,"Biliran, Island","11 27' 24"" N","124 28' 39"" E",Flashing W every 4 secs,NH-20,Concrete,Existing
+LS Canauay,T,"Batbangon, Leyte","11 26' 13"" N","124 51' 09"" E",Flashing 3 W every 15 secs,Zl-300,Aluminum,MSIP I-B
+LS Carigara,T,"Carigara, Leyte","11 18' 12"" N","124 41' 03"" E",Flashing G every 5 sec,BGC-300,GRP, Ex / MSIP III
+LS Guian,T,"Guian, Eastern Samar",11  01' 55' N,"125 43' 14"" E",Flashing W every 5 secs,ZP-20,Concrete,Existing 
+LS Jinamoc,T,"Basay, Western Samar","11 15' 33"" N","125 04' 32"" E",Flashing 2 W every 10 secs,FA-250,Concrete,Existing
+LS Mabini,S,"Gigantangan, Leyte","11 34' 12"" N","124 15' 54"" E",Flashing W every 7 secs,ZL-RBG,Aluminum,MSIP I
+LS Manicani,T,"Guian., Eastern Samar","10 58' 59"" N","125 39' 05"" E",Flashing 3 W every 15 secs,FA-250,GRP,MSIP II
+LS Mariquitdaquit,S,"Tolosa, Leyte","11 04' 07"" N","125 09' 10"" E",Flashing W every 4 secs,ML-155,Concrete,Existing
+LS Sn Juanico 1(S),T,"T S Juanico B, Tacloban`","11 18' 03"" N","124 58' 10"" E",Flashing R every 15 secs,ML-300,Bridge,Existing 
+LS Sn Juanico 2©,T,"F S Juanico B,Tacloban","11 18' 05"" N","124 58' 07"" E",Flashing R every 25 secs,ML-155,Bridge,Existing 
+LS Sn Juanico 3(N),T,"Ft S Juanico B, Tacloban","11 18 08"" N","124 58' 07"" E",Flashing G every 25 secs,Ml-155,Bridge,Existing 
+LS Suluan,P,"Suluan Isl., Eastern Samar",10 45' 25' N,"125 57' 51"" E",Flashing 3 W every 15 secs,PRB46,GRP,MSIP II
+LS Tacloban,T,Tacloban City,"11 15' 10"" N","125 00' 12"" E",Flashing R every 5 secs,FA-249,Concrete,Existing 
+LS Tugnug,P,"Hernani, Eastern Samar","11 21' 00"" N","125 37' 48"" E",Flashing W every 5 secs,PRB46,GRP,MSIP II
+LS Kawayan,T,"Kawayan, Biliran, Samar","11 41' 00"" N","124 21' 15"" E",Flashing R every 5 secs,FA-250,GRP,MSIP II
+CGS CATBALOGAN,,,,,,,,
+LS Allen,T,"Allen, Northern Samar","12 30' 07"" N","124 16' 56"" E",Flashing W every 5 secs,Zl-300,GRP,MSIP I-B
+LS Arteche,T,Eastern Samar,"12 17'30""N","125 23'55""E",Iso R every 4 secs,FA-250,GRP,MSIP II
+LS Cabilison,P,"Almagro, Western Samar","09 53' 30"" N","124 16' 38"" E",Flashing 3 W every 20 secs,ML-300,Concrete,MSIP I-B
+LS Calbayog,T,Calbayog City,"12 04' 06"" N","124 35' 21"" E",Flashing R every 5 secs,ML-300,Concrete,Existing
+LS Capul,S,"Capul, Northern Samar","12 28' 52"" N","124 08' 29"" E",Flashing W every 7 secs,ZL-HP,Concrete,MSIP I-B
+LS Carangian,T,"San Jose, North Samar","12 31' 59"" N","124 29' 12"" E",Flashing W every 5 secs,Zl-300,Concrete,MSIP I-B
+LS Catarman,T,"Catarman, North Samar","12 31' 00"" N","124 39' 04"" E",Fixed red,ML-300,Concrete,Existing 
+LS Catbalogan,T,"Catbalogan, West Samar","11 47' 06"" N","124 51' 42"" E",Flashing R every 5 secs,ML-300,Concrete,Existing 
+LS Divinubo,S,"Borongan, North Samar","11 35' 56"" N","125 30' 10"" E",Flashing W every 5 secs,BBT-375,Concrete,Existing 
+LS Gandara River,T,Western Samar,"11 38' 57"" N","124 41' 27"" E",Flashing R every 5 secs,BGC-300,GRP,Ex / MSIP III
+LS Malaga,T,"Malaga, Tinamacan, Calbayog","12 14' 06"" N","122 22' 30"" E",Flashing W every 5 secs,BGC-300,AL/GRP,MSIP III
+LS Port Laoang,T,"Laoang, Northern Samar","12 34' 12"" N","125 00' 12"" E",Flashing R every 5 secs,FA-249,Concrete,Existing 
+LS San Antonio,S,"Bari, Northern Samar","12 36' 42"" N","124 26' 24"" E",Flashing R every 5 secs,ML-155,Concrete,Existing 
+LS Sila,T,"Gamay, Northern Samar","12 24' 24"" N","125 20' 00"" E",Flashing 2 W every 10 secs,FA-250,GRP,MSIP II
+LS Sto Niño,T,"Sto Nino, Western Samar","11 53' 30"" N","124 27' 53"" E",Flashing W every 5 secs,FA-250,GRP,MSIP II
+LS Uac-Uac,T,"Calbiga, Western Samar","11 39' 57"" N","124 58' 18"" E",Flashing W every 5 secs,ZP-20,Concrete,Existing
+LS Daram,T,"Daram, Samar","11 44' 12"" N","124 42' 50"" E",Flashing W every 5 secs`,FA-250,GRP,MSIP II
+CGS MAASIN,,,,,,,,
+LS Anahawan,T,"Anahawan, South Leyte","10 14' 25"" N","125 15' 05"" E",Flashing 2 W every 5 secs,FA-250,GRP,MSIP II
+LS Adam Reef,T,"Matalon, Leyte","11 14' 54"" N","124 42' 12"" E",Flashing 2 W every 10 secs,Zl-300,Aluminum,MSIP I-B
+LS Caligangan,T,"Catig, Liloan, South Leyte","10 07' 35"" N","125 12' 50"" E",Flashing W every 5 secs,BGC-300,AL/GRP,MSIP III
+LS Canigao,T,"Matalon, Leyte","10 14' 59"" N","124 45' 04"" E",Flashing W every 5 secs,Zl-300,Aluminum,MSIP I-B
+LS Cabutan,P,"San Ricardo, South Leyte","09 54' 52"" N","125 16' 52"" E",Flashing 4 W every 20 secs,PRB46,GRP,MSIP II
+LS Hindang,T,"Hindang, Leyte","10 26' 12"" N","124 43' 29"" E",Flashing G every 5 secs,BGC-300,GRP,Ex / MSIP III
+LS Ilijan Island,T,"San Francisco, So Leyte","10 04' 00"" N","125 08' 30"" E",Flashing W every 7 secs,BGC-300,AL/GRP,MSIP III
+LS Liloan Harbor,T,"Liloan, Southern Leyte","10 09' 40"" N","125 06' 58"" E",Flashing R every 5 secs,ZP-20,Concrete,Existing 
+LS Maasin,T,"Maasin, Leyte","10 08' 00"" N","124 50' 21"" E",Flashing R every 5 secs,ML-300,Concrete,Existing 
+LS Malitbog,T,"Malitbog, Southern Leyte","10 09' 30"" N","125 00' 10"" E",Flashing R every 3 secs,BCG-300,GRP,Ex / MSIP III
+LS Limasawa South,S,"Limasawa Isl., South Leyte","09 58' 10"" N","125 04' 50"" E",Flashing 2 W every 8 secs,BGC-600,GRP,MSIP II/MSIP III
+LS Saint Bernard,T,Southern Leyte,"10 16' 48"" N","125 08' 12"" E",Flashing R every 5 secs,NW-20,Concrete,Existing
+LS San Pedro,T,"San Pedro, Hinuangan, S Leyte","10 28' 30"" N","125 13' 30"" E",Flashing W every 5 secs,BGC-300,AL/GRP,MSIP III 
+LS Sogod,S,"Sogod, Southern Leyte","10 23' 00"" N","124 58' 40"" E",Flashing 3 W every 15 secs,PRB46,GRP,MSIP II
+LS San Juan,T,"San Juan, S Leyte","10 16' 00"" N","125 10' 30"" E",Flashing W every secs,FA-250,GRP,MSIP II
+LS Tood Is,T,"Matalon, Leyte","10 15' 36""N","124 39' 48"" E",Flashing 3 W every 15 secs,Zl-300,Aluminum,MSIP I-B
+LS Limasawa North,S,"San Agustin, Limasawa Isl, South Leyte","09 58' 10"" N","125 04' 50"" E",Flashing 2 W every 8 secs ,FA 250,GRP,MSIP II/MSIP III
+CGS ORMOC,,,,,,,,
+LS Albuera,S,"Albuera, Leyte","10 54' 47"" N","124 41' 28"" E",Flashing 2 every 10 secs,ZL-300,Aluminum,MSIP I-B
+LS Baybay,T,"Baybay, Leyte","10 40' 28"" N","124 47' 57"" E",Flashing W every 5 secs,ZL-300,GRP,MSIP I-B
+LS Binabaye,S,"Merida, Leyte","10 52' 30"" N","124 30' 00"" E",Flashing 2 G every 5 secs,PRB46,GRP,MSIP II
+LS Isabel,T,"Isabel, Leyte","10 55' 33"" N","124 25' 56"" E",Flashing R every 5 secs,FA-249,Concrete,Ex / MSIP III 
+LS Ormoc,T,Ormoc City,"11 00' 11"" N","124 36' 35"" E",Flashing W every 5 secs,ZL-300,GRP,MSIP I-B
+LS Palompon,T,"Palompon, Leyte","11 03' 12"" N","124 22' 55"" E",Flashing R every 5 secs,BGC-300,GRP,Ex / MSIP III
+LS Vicario ,T,"Dalupiri, San Antonio, N. Leyte",12 23’ 50” N,124 16’ 20” E,Flashing W every 10 secs,BGC-300,GRP,MSIP III
+WESTERN VISAYAS,,,,,,,,
+CGS ILOILO,,,,,,,,
+LS Bondulan,T,"Apurawan, Aborlan, Palawan","10 40' 00"" N","123 01' 18"" E",Flashing W every 7 secs,BGC-300,Steel/GRP,MSIP III
+LS Calabasaz,S,"Ajuy, Iloilo","11 04' 34"" N ","123 01' 18"" E",Flashing W every 10 secs,ZL-RBG,Aluminum,MSIP I-B
+LS Estancia,T,"Estancia, Iloilo","11 27' 05"" N ","123 09' 05"" E",Flashing W every 5 secs,Zl-300,Aluminum,MSIP I-B
+LS Iloilo Jetty R,T,Iloilo City,"10 41' 42"" N","122 35' 10"" E",Flashing R every 4 secs,ZL-300,GRP,MSIP I-B
+LS Iloilo Jetty G,T,Iloilo City,"10 41' 41"" N","122 34' 39"" E",Flashing G every 4 secs,ZL-300,GRP,MSIP I-B
+LS Luzaran,S,"N Valencia, Guimaras","10 29' 07"" N","123 28' 23"" E",Flashing 2 W every10 secs,PRB46,GRP,MSIP II
+LS Manigonigo,S,"Carles, Iloilo","11 36' 18"" N","123 10' 32"" E",Flashing W every 7 secs,ZL-RBG,Aluminum,MSIP I
+LS North Gigantes,S,"Estancia, Iloilo","11 38' 21"" N ","123 21' 24"" E",Flashing W every 10 secs,ZL-RBG,Aluminum,MSIP I
+LS Navalas,T,"Buenavista, Guimaras","10 43' 06"" N ","122 42' 41"" E",Flashing 3 W every 6 secs,FA-250,GRP,MSIP II
+LS Siete Pecados,T,Iloilo City,"10 46' 04"" N","122 40' 33"" E",Flashing W every 5 secs,Zl-300,GRP,MSIP I-B
+LS Baliguian,S,"Baliguian, Iloilo","11 12' 16""N","123 20' 10""E",Flashing W every 7 secs,ZL-RBG,Aluminum,MSIP I-B
+LS San Enrique,T,"San Lorienzo, Guimaras","10 37' 00""N","122 43' 24"" E",Flashing W every 5 secs,BGC-300,Stee/GRP,MSIP III 
+LS Taklong,T,"Nueva Valencia, Guimaras","10 24' 15"" N","122 30' 18"" E",Flashing W every 5 secs,BGC-300,Steel/GRP,MSIP III 
+LS Sinapsapan,T,"Jordan, Guimaras","10 35' 20"" N","122 30' 45"" E",Flashing W every10 secs,BGC-300,Steel/GRP,MSIP III 
+LS Buaya,S,"Brgy. Buaya, Carles, Iloilo",11 25’ 55” N,123 16’ 06” E,Flashing W every 10 secs,BGC-600,GRP,MSIP III 
+CGS BACOLOD,,,,,,,,
+LS Cadiz,S,Cadiz City,"10 57' 30"" N","123 19' 09"" E",Flashing R every 5 secs,ML-300,Wood ,Existing
+LS Escalante,S,"Escalante, Negros Occ","10 49' 30"" N","123 33' 30"" E",Fixed Red,BGC-300,GRP,Ex /MSIP III
+LS Hitalon,S,"Cadiz, Negros Occidental","10 57' 31"" N","123 19' 12"" E",Q Flashing Red,ML-300,Concrete,Existing
+LS Molocaboc,T,"Molocaboc, Negros Occ","10 58' 38"" N","123 32' 30"" E",Flashing W every 5 secs,BGC-300,Steel/GRP,MSIP III 
+LS Pulupandan,T,"Pulupandan, Negros Occl","10 31' 24"" N","122 47' 36"" E",Flashing 2 R every 5 secs,FA-250,GRP,MSIP II
+LS Refugio,S,Sn Carlos City Negros Occ,"10 28' 14"" N","123 27' 49"" E",Flashing W every 7 secs,ZL-RBG,Aluminum,MSIP I-B
+LS San Carlos,T,Sn Carlos City Negros Occ,"10 29' 49"" N","123 25' 45"" E",Flashing 2 R every10 secs,BBT,Concrete,Ex /MSIP III 
+LS Sojoton,S,"Cauayan, Negros Occ","09 58' 27"" N","122 27' 18"" E",Flashing 2 W every10 secs,ML-300,GRP,MSIP II
+LS Himamaylan,T,"Himamaylan, Negros Occ","10 05' 36"" N","122 51' 06""E",Flashing R every 5 secs,FA-250,Concrete,Existing 
+LS Banago,T,"Banago Pier, Bacolod","10 42' 24""N","122 55' 54""E",Flashing R every 5 secs,ML-300,Steel,Existing
+LS Bredco,T,"Bredco Port, Bacolod","10 41' 13.1"" N","122 56' 19"" E",Flashing W everye 5 secs,FA-250,Steel,Existing 
+LS Matutindoc Pt,S,"Sipalay City, Negros Occidental",09 32’ 00” N,122 23’ 00” E,Flashing W every 10 secs,BGC-600,GRP,MSIP III 
+LS Tomonton Point,T,"Tomonton, Magalona, Negros Occ",10 53’ 45” N,122 57’ 15” E,Flashing 2 W every 6 secs,BGC-300,GRP,MSIP III 
+LS Taliptipun,S,"Kulipapa, Hinobaan, Negros Occ",09 30’ 00” N,122 32’ 15” E,Flashing W every 5 secs,BGC-600,GRP,MSIP III 
+LS Buenavista,S,"Escalante, Negros Occ","10 48' 44"" N","123 33' 35"" E",Flashing R every 5 secs,BGA-600,GRP,MSIP III 
+CGS ROXAS,,,,,,,,
+LS Capiz Jetty R,T,"Culasi, Roxas City","11 36' 13"" N","122 42' 18"" E",Flashing R every 3 secs,ML-155,Concrete,Existing 
+LS Culasi Pt,S,Culasi Roxas City,"11 36' 36"" N","122 42' 15"" E",Flashing W every 7 secs,ZL-HP,Aluminum,MSIP I
+LS Olotayan,S,"Olotayan Island, Roxas City, Capiz",11 38’ 52” N,122 50’ 30” E,Flashing W every 5 secs,BGC-600,GRP,MSIP III
+CGS SAN JOSE BUENAVISTA,,,,,,,,
+LS Alegria,T,"Alegria, Simirara, Antique","12 01' 00"" N","121 24' 00"" E",Flashing W every 5 secs,BGC-300,Steel/GRP,MSIP III 
+LS Amparo,T,"Patnongon, Antique","10 55' 30"" N","121 58' 03"" E",Flashing W every 5 secs,BGC-300,Steel/GRP,MSIP III 
+LS Caluya,S,"Caluya, Antique",11 54' 40' N,"121 34' 30"" E",Flashing 2 W every 15 secs,FA250,GRP,MSIP II
+LS Libertad,T," Libertad, Antique","11 46' 12"" N","121 54' 46"" E",Flashing W every 5 secs,FA250,Steel,Existing
+LS Malaqui Island,T,"Malaqui Is., Antique","10 51' 45"" N","121 17' 30"" E",Flashing W every 7 secs,BGC-300,AL/GRP,MSIP III 
+LS Maniguin,P,"Culasi, Antique","11 35' 30"" N","121 41' 00"" E",Flashing 2 W every10 secs,BGA-1000,GRP,Ex /MSIP III
+LS Nogas,P,"Aniniy, Antique","10 25' 09"" N","121 56' 11"" E",Flashing W every 10 secs,ZL-RBG,Aluminum,MSIP I-B
+LS Sibulo,T,"Sibulo, Caluya, antique","12 05' 55"" N","121 34' 30"" E",Flashing W every 10 secs,BGC-300,AL/GRP,MSIP III 
+LS Tibiao,T,"Tibiao, Antique","11 17' 42"" N","124 14' 02"" E",Flashing W every 10 secs,FA-250,GRP,MSIP II
+LS Tubigan Point,T,"S J Buenavista, Antique","10 44' 20"" N","121 56' 06"" E",Flashing W every 5 secs,BGC-300,GRP,Ex / MSIP III
+LS Pucio Point,T,"Libertad, Antique"," 11 49'49"" N "," 121 50' 36"" E ",Flashing W every 7 secs , ZL-300 , Steel ,Existing
+LS Magtang Point,S,"Harigue, Sibay Island, Caluya Antique",11 50’ 20” N,121 25’ 00” E,Flashing W every 5 secs,BGC-600,GRP,MSIP III 
+CGS DUMAGUIT,,,,,,,,
+LS Apga,T,"Tangalan, Aklan","11 47' 42"" N","122 15' 18"" E",Flashing 2 W every 4 secs,FA-250,GRP,MSIP II
+LS Floripon,T,"Washington, Aklan","11 35' 34"" N","122 30' 10"" E",Flashing 3 W every 10 secs,FA-250,GRP,MSIP II
+LS Sonculan,T,"Batan, Aklan","11 36' 30"" N","122 33' 30"" E",Flashing W every 5 secs,BGC-300,GRP,MSIP III 
+LS Nasog Point,T,"Brgy. Nasog, Malay, Aklan",12 00’ 00” N,121 57’ 20” E,Flashing W every 5 secs,BGC-300,GRP,MSIP III 
+NORTHERN MINDANAO,,,,,,,,
+CGS CAGAYAN DE ORO,,,,,,,,
+LS Agutaya Reef,T,"Apurawan, Aborlan, Palawan","08 40' 30"" N","124 41' 15""E",Flashing R every 5 secs,LBEA-85,Concrete,Existing
+LS Balingasag,T,"Balingasag, Misamis Oriental","08 42' 24"" N","124 44' 45"" E",Flashing W every 5 secs,BGC-300,Steel/GRP,MSIP III 
+LS Binoni,T,"Mahilog, Camiguin Island","09 08' 29"" N","124 47' 56"" E",Flashing W every 3 secs,ML-155,Concrete,MSIP II
+LS Dampias,T,"Binuangan, Misamis Or","08 59' 04"" N","124 46' 15"" N",Flashing W every 5 secs,BGC-300,Steel/GRP,MSIP III 
+LS Farol,T,"Guinsilaban, Camiguin","09 05' 00"" N","124 46' 06"" E",Flashing 2 W every 7 secs,BGC-300,Steel/GRP,MSIP III 
+LS Gingoog ,T,Gingoog City,"08 52' 10"" N","125 08' 00"" E",Flashing G every secs,Ml-300,Concrete,Existing
+LS Macabalan,T,Cagayan de Oro City,"08 30' 20"" N","124 39' 43"" E",Flashing W every 5 secs,BGC-300,GRP,Ex / MSIP III
+LS Mambajao,S,"Mambajao, Misamis Or","09 15' 24"" N","124 42' 52"" E",Flashing R every 5 secs,BGC-600,GRP,MSIP II / III
+LS Medina,T,"Medina, Misamis Oriental","08 54' 35"" N","125 01' 30"" E",Flashing G every 5 secs,FA-250,Concrete,Existing
+LS Magsaysay,T,"Magsaysay, Misamis Oriental",09 00’ 45” N,125 10’ 15” E,Flashing 2 W every 10 secs,BGC-300,GRP,MSIP III
+LS Salauan,T,Laguindingan Mis Occ,"08 37' 00"" N","124 28' 36"" E",Flashing W every 10 secs,BGC-300,Steel/GRP,MSIP III 
+LS Catarman,S,"Bonbon, Catarman, Camiguin",09 12’ 08” N,124 38’ 04” E,Flashing 3 W every 10 sec,BGC-600,GRP,MSIP III
+LS Luyong Bonbon,T,"Loyung Bonbon, Opol, Mis Or","08 31' 58"" N","124 34' 17"" E",Flashing G every 5 secs,ML-300,concrete,MSIP I
+LS Looc,T,"Looc, Salay, Misamis Occ","08 51' 24 "" N","124 47' 12"" E",Flashing R every 5 secs,FA-250,Steel,Existing
+CGS SURIGAO,,,,,,,,
+LS Cambasac,T,"Dapa, Surigao Norte","09 44' 46"" N","126 01' 50"" E",Flashing W every 5 secs,BGC-300,Steel/GRP,Existing
+LS Campintac/Desolacion,P," Loreto, Surigao Norte.","10 26' 32"" N","125 36' 43"" E",Flashing 4 W every 12 secs,PRB46,GRP,MSIP II
+LS Dahakit,T,"Bucas Grande, Surigao N","09 33' 44"" N","125 55' 57"" E",Flashing W every 5 secs,Zl-300,GRP,MSIP I-B
+LS Dapa,T,"Dapa, Surigao Norte","09 44' 32""N","126 02' 36""E",Flashing W every 5 secs,FA-250,Concrete,Existing
+LS Hinatuan East,T,"Taganaan, Surigao Norte","09 47' 00"" N","125 44' 10"" E",Flashing W every 7 secs,BGC-300,AL/GRP,MSIP III 
+LS Hinatuan North,T,"Taganaan, Surigao Norte","09 48' 45"" N","125 42' 50"" E",Flashing W every 5 secs,BGC-300,AL/GRP,MSIP III 
+LS Kahinaan Island,T,"Albor, Surigao del Norte","10 10' 20"" N","125 27' 40"" E",Flashing W every 7 secs,BGC-300,AL/GRP,MSIP III 
+LS Kanhandon Point,T,"Loreto, Surigao del Norte","10 27' 40"" N","125 27'45"" E",Flashing W every 10 secs,BGC-300,AL/GRP,MSIP III 
+LS Loreto,T,"Loreto, Surigao del Norte","10 21'45""N","125 34' 42""E",Flashing R every 5 secs,FA-250,Concrete,Existing
+LS Punta Alegria,P,"Sta Monica, Surigao Norte","10 03' 40"" N","120 06' 20"" E",Flashing W every 10 secs,PRB-46,GRP,MSIP II
+LS Punta Beach,T,"Malimano, Surigao Norte","09 34' 00"" N","125 25' 04"" E",Flashing W every 10 secs,BGC-300,Steel/GRP,MSIP III 
+LS Rasa Island,S,"Rasa Island, Surigao Norte","09 47' 34"" N","125 35' 00"" E",Flashing 3 W every 10 secs,ML-300,Concrete,Existing
+LS Sumilon,P,"Sumilon Isl., Surigaol Norte","09 55' 00"" N","125 26' 30"" E",Flashing 3 W every 15 secs,PRB46,GRP,MSIP II
+LS Surigao,T,Surigao del Norte,"09 47' 08"" N","125 30' 00"" E",Flashing 2 R every 10 secs,ML-300,Concrete,Existing
+LS Socorro,T,"Socorro, Surigao del Norte","09 37' 10"" N","125 58' 00"" E",Flashing W every 5 secs,FA-250,concrete ,MSIP I
+LS Punta Bilar,S,"Punta Bilar, Surigao City",09 49’ 23” N,125 27’ 25” E,Flashing W every 10 secs,BGC-600,GRP,MSIP III
+LS Kanhinaud,T,"San Jose, Surigao del Norte",09 59’ 00” N,125 50’ 20” E,Flashing W every 5 secs,BGC-300,GRP,MSIP III
+CGS BUTUAN,,,,,,,,
+LS Agusan River ,T,"Magallanes, Agusan Norte","09 01' 00"" N",125 31' 20' E,Flashing R every 5 secs,ML-300,Concrete,Existing
+LS Cabadbaran,P,"Cabadbaran, Agusan Norte","09 07' 28"" N","125 31' 20"" E",Flashing G every 5 secs,BGC-300,AL/GRP,Ex / MSIP III 
+LS Diuata,T,"Vinapor, Carmen, ADN","09 05' 38"" N`","125 12' 26"" E",Flashing W every 10 secs,BGC-300,AL/GRP,MSIP III 
+LS Masao (lumbucan),T,"Butuan, Agusan del Norte",09 01’ 00” N,125 21’ 30” E,Flashing R every 5 secs,BGC-300,GRP,MSIP III
+LS Nasipit,T,"Sta Ana, Nasipit, ADN","08 59' 04"" N","125 19' 45"" E",Flashing W every 5 secs,BGC-300,Concrete,Ex / MSIP III
+LS San Vicente,S ,"San Vicente, Jabonga, ADN",09 25’ 30” N,126 26’ 48” E,Flashing 3 W every 10 secs,BGC-600,GRP,MSIP III
+LS Nasipit Old,T,"Sta Ana, Nasipit, ADN","08 59' 04"" N","125 19' 47"" E",Flashing G every 6 secs,FA-250,Concrete,
+CGS OZAMIZ,, ,,,,,,
+LS Baliangao,T,"Baliangao, Misamis Occ","08 40' 00"" N","123 37' 12"" E",Flashing W every 7 secs,BGC-300,AL/GRP,MSIP III 
+LS Oroquita,T,Oroquita City,"08 29' 48"" N","123 47' 45"" E",Iso W every 4 secs,FA-250,GRP,MSIP II
+LS Plaridel,S,"Plaridel, Misamis Occidental","08 36' 43"" N","123 43' 38"" E",Flashing R every 5 secs,FA-250`,Concrete,Existing
+LS Polo Point,S,"Plaridel, Misamis Occidental","08 35' 59"" N","123 45' 24"" E",Flashing 3 W every 10 secs,BGC-600,GRP,Ex / MSIP III
+LS Port Ozamis,T,Ozamis City,"08 08' 28"" N","123 50' 00"" E",Flashing 2 R every 10 secs,ML-300,Concrete,Existing
+LS Sinonoc ,T,"Sinacaban, Misamis Occ","08 18' 06""N","123 51' 48""E",Flashing W every 5 secs,FA-250,Concrete,Existing
+LS Tabu Point,S,"Jimenez, Misamis Occl","08 19' 34"" N","123 51' 44"" E",Flashing W every 5 secs,BGC-600,GRP,Ex / MSIP III
+CGS ILIGAN,,,,,,,,
+LS Iligan,T,Iligan City,"08 13' 58"" N","124 13' 52"" E",Flashing G every 5 secs,Ml-300,Steel,Existing
+LS Labuay,T,"Maigo, Lanao del Norte","08 09' 42"" N","123 57' 00"" E",Flashing 2 W every 6 secs,FA-250,GRP,MSIP II
+LS Salimbal,T,"Lugait, Misamis Oriental",08 20’ 15” N,124 15’ 35” E,Flashing W every 10 secs,BGC-300,GRP,MSIP III
+LS Tubod,T,"Tubod, Lanao del Norte","08 02' 42"" N","123 47' 12"" E",Flashing G every 10 secs,BGC-300,GRP,Ex / MSIP III
+LS Sultan Naga,T,"Dimaporo, Lano del Norte","07 47' 58"" N","123 43' 01"" E",Flashing G every 5 secs,LED,Steel,Existing
+CGS DAPITAN,,,,,,,,
+LS Port Puluan,T,"Puluan, Dipolog City","08 38' 17"" N","123 22' 48"" E",Flashing 2 W every 5 secs,ZL-300,Concrete,Existing
+LS Sibutad,T,"Pinahon Isl., Dapitan City","08 39' 31"" N","123 30' 30"" E",Flashing 2 W every 10 secs,FA-250,GRP,MSIP II
+LS Sindangan,P,"Sindangan, Zambo Norte","08 09' 40"" N","122 39' 41"" E",Flashing 4 W every 15 secs,FA-250,GRP,MSIP II
+LS Tagolo,T,Dapitan City,08 43' 36' N,"123 22' 48"" E",Flashing W every 10 secs,BGC-300,GRP,MSIP III
+LS Coronado Pt. ,P,"Petawi, Gutalac, Zamboanga del Norte",07 57’ 26” N,122 13’ 13” E,Flashing 2 W every 10 secs,BGA-1000,AL/GRP,MSIP III 
+LS Murcielagos,T,"Murcielagos Isl, Labason, ZDN",08 07’ 00” N,122 26’ 45” E,Flashing W every 7 secs,BGC-300,AL/GRP,MSIP III 
+LS Selinog,S,"Selinog Island, Dapitan City",10 40’ 00” N,122 33’ 40” E,Flashing W every 5 secs,BGC-600,GRP,MSIP III
+SOUTH WESTERN MINDANAO,,,,,,,,
+CGS ZAMBOANGA,,,,,,,,
+LS Kulay bato/Lamitan,T,"Lamitan, Basilan","06 40' 50"" N","122 10 35"" E",Flashing W every 5 secs,FA-250,Steel,Existing
+LS Little Sta Cruz,S,"Little Sta Cruz, Zambo City","06 53' 09"" N","122 02' 30"" E",Flashing 3 W every 15 secs,BGC-300,Steel,Ex / MSIP III
+LS Sirawai,T,"Sirawai, Zambo Del Norte","07 35' 10"" N","122 08' 20"" E",Flashing 3 W every 6 secs,BGC300,GRP/AL,MSIP II / III
+CGS PAGADIAN,,,,,,,,
+LS Dao-dao,S,"Dao-dao Isl., Pagadian","07 44' 00"" N","123 26' 03"" E",Flashing 2 W every 5 secs,FA-250,GRP,MSIP II
+LS Malangas,P,"Malangas, Zambo del Sur","07 37' 40"" N","123 02' 22"" E",Flashing 2 W every 10 secs ,FA-250,GRP,MSIP II
+LS Margosatubig,T,"Margosatubig, Zambo Sur","07 34' 30"" N","128 12' 00"" E",Flashing 2 W every 5 secs,FA-250,GRP,MSIP II
+LS Naga,P,"Taytay, Naga, Zambo Sur","07 47' 00"" N","122 41' 40"" E",Flashing 3 W every 15 secs,PRB46,GRP,MSIP II
+LS Pagadian,S,Pagadian City,"07 49' 25"" N","123 26' 15"" E",Flashing R every 5 secs,Sl-200,Steel,Existing
+LS San Pablo,S,"San Pablo, Zamboanga del Norte",07 38’ 07” N,123 28’ 10” E,Flashing W every 5 secs,BGC-600,AL/GRP,MSIP III 
+CGS JOLO,,,,,,,,
+LS Jolo ,T,"Jolo, Sulu","06 03' 30"" N","120 59' 56"" E",Flashing R every 5 secs ,FA-250,Concrete,Existing 
+CGS BONGAO,,,,,,,,
+LS Batobato,S,"Bongao, Tawi-tawi","05 04' 10"" N","119 53' 03"" E",Flashing G every 5 secs,Ml-300,wtr tank,Existing 
+LS Port Bongao,T,"Bongao, Tawi-tawi","05 02' 10"" N","119 44' 12"" E",Flashing W every 5 secs,ZP-20,Concrete,Existing 
+LS Saluag,P,"Sitangkai, Tawi-tawi","04' 35' 23"" N","119 28' 01"" E",Flashing w every 5 secs,BGA-1000,GRP,Ex / MSIP III
+CGS MAPUN,,,,,,,,
+LS Tandutao,P,Cagayan de Tawi-tawi,"06 58' 44"" N","118 32' 50"" E",Flashing R every 5 secs,ZP-20,Concrete,Existing
+CGS COTABATO,,,,,,,,
+LS Polloc,T,"Parang, Maguindanao","07 22' 24"" N","124 12' 30"" E",Flashing R every 5 secs,ML-300,Concrete,Existing
+LS Bongo Island,T,"Bongo Island, Parang Maguindanao",07 17’ 00” N,124 01’ 30” E,Flashing W every 10 secs,BGC-300,AL/GRP,MSIP III 
+LS Tabina,T,"Tambatan Point, Sabina, Zambo del Sur",07 26’ 04” N,123 27’ 03” E,Flashing W every 10 secs,BGC-300,AL/GRP,MSIP III 
+LS Tukuran,T,"Sto. Niño, Tukuran, Zamboanga del Sur",07 50’ 58” N,123 34’ 32” E,Flashing W every 7 secs,BGC-300,AL/GRP,MSIP III 
+SOUTH EASTERN MINDANAO,,,,,,,,
+CGS DAVAO,,,,,,,,
+LS Colapsin Point,S,"Sta Maria,Davao Sur","06 37' 58"" N","125 25' 38"" E",Flashing W every 5 secs,BGC-600,GRP,Ex / MSIP III
+LS Davao,T,"Apurawan, Aborlan, Palawan","07 04' 44"" N","125 37' 30"" E",Flashing G every 5 secs,BGC-300,GRP,Ex / MSIP III
+LS Hill 450,T,"Malalag, Davao Del Sur","06 36' 58"" N","125 25' 40"" E",Flashing R every 5 secs,BCG-300,Concrete,Ex / MSIP III
+LS Malalag River,T,"Malalag, Davao del Sur","06 36' 18"" N","125 23' 54"" E",Flashing R every 3 secs,ML-155,Concrete,Existing 
+LS Panacan,S,"Panacan, Davao City","07 09' 24"" N","125 39' 30"" E",Flashing G every 10 secs,ML-155,Concrete,Existing 
+LS Sasa ,T,"Sasa, Davao City","07 07' 25"" N","125 39' 41"" E",Flashing R every 5 secs,ML-300,Concrete,Existing 
+LS Tabulan Head,T,"Malita, Davao del Sur","06 30' 00"" N","125 35' 30"" E",Flashing 2 G every 5 secs,FA-250,GRP,MSIP II
+LS Talikud,S,"Talikud, Davao City","06 54' 33"" N","125 41' 18"" E",Flashing W every 5 secs,FA-250,Concrete,Existing
+LS Calian,P,"Don Marcelino, Davao Sur","06 15' 00"" N","125 41' 10"" E",Flashing 3 W every15 secs,FA-250,GRP,MSIP II
+LS Bolton Reef,T,"Malalag, Davao Sur","06 35' 54""N","125 24' 39""E",Flashing R every 5 secs,ML-300,Concrete,Existing
+LS Paet,S,"Samal, Davao del Sur",06 54’ 21” N,125 33’ 30” E,Flashing W every 5 secs,BGC-600,GRP,MSIP III
+LS Pasig Point,T,"Sta. Cruz, Davao del Sur",06 49’ 22” N,125 24’ 34” E,Flashing W every 10 secs,BGC-300,GRP,MSIP III
+LS Tingulo Point,T,"Malita, Davao del Sur",06 21’ 39” N,125 38’ 21” E,Flashing W every 10 secs,BGC-300,GRP,MSIP III
+LS Baños Point,S,"Jose Abad Santos, DDS",05 55’ 15” N,125 40’ 15” E,Flashing W every 10 secs,BGC-600,GRP,MSIP III
+CGS BISLIG,,,,,,,,
+LS Arangasa,S,"Aras-Aras, Surigao Sur","08 52' 45"" N","126 20' 27"" E",Flashing W every 5 secs,ML-300,Concrete,Existing
+LS Ayoke,P,"Cantilan, Surigao del Sur","09 23' 30"" N","126 02' 54"" E",Flashing 3 W every 10 secs,ML-300,GRP,MSIP II
+LS Cauit Point,T,"Cortes, Surigao Del Sur","09 18' 30"" N","126 12' 21"" E",Flashing 3 W every 8 ecs,FA-250,GRP,MSIP II
+LS Lianga Bay,T,"Lianga, Surigao del Sur","08 38' 35"" N","126 05' 55"" E",Flashing W every 5 secs,FA-250,Concrete,Existing
+LS Maboa,T,"Tandag, Surigao del Sur","09 05' 12"" N","126 11' 55"" E",Flashing 2 W every 15 secs,FA-250,GRP,MSIP II
+LS Sanco Point,S,"Bislig, Surigao del Sur","08 14' 45"" N","126 27' 15"" E",Flashing W every 5 secs,ML-300,Concrete,Existing
+CGS MATI,,,,,,,,
+LS Cape San Agustin,P,"Gov Generoso, Davao Or","06 16' 16"" N","126 11' 30"" E",Flashing 2 W every 5 secs,BGA-1000,GRP,Ex / MSIP III
+LS Lawigan Point,S,"Mati, Davao Oriental","06 48' 15"" N","126 20' 00"" E",Flashing W every 5 secs,BGC-600,GRP,MSIP III 
+LS Mati,T,"Mati, Davao Oriental","06 57' 04"" N","126 13' 00"" E",Flashing R every 5 secs ,ML-300,Concrete,Existing
+LS Mapanga,P,"Banaybanay, Davao Or","07 03' 00"" N","125 56' 50"" E",Flashing 2 W every 10 secs,FA-250,GRP,MSIP II
+LS Pujada,T,"Mati, Davao Oriental","06 46' 59"" N","126 16' 24"" E",Flashing R every 5 secs,BGA-1000,GRP,Existing
+LS Pusan Point,S,"Carigara, Davao Oriental","07 17' 42"" N","126 36"" 08"" E",Flashing W every 5 secs,BGC-300,GRP,Ex / MSIP III
+LS Sigaboy,P,"Gov Generoso, Davao Or","06 37' 00"" N","126 56' 00"" E",Flashing 4 W every 10 secs ,FA-250,GRP,MSIP II
+CGS GEN SANTOS,,,,,,,,
+LS Buca Pt,P,"Kiamba, Sarangani Prov","05 57' 30"" N","124 40' 30"" E",Flashing 2 W every10 secs,FA-250,GRP,MSIP II
+LS Tinaca,S,"Batulaki, South Cotabato","05 33' 22"" N","125 19' 50"" E",Flashing W every 5 secs,FA-250,Concrete,Existing
+LS Glan,T,"Glan, Sarangani","05 49 40""N","125 12' 08"" E",Flashing W every 3 ,FA-250,Concrete,Existing
+CGS SARANGANI,,,,,,,,
+LS Manamil,P,"Manamil Is., Sarangani Prov","05 22' 12"" N","125 21' 00"" E",Flashing 2 W every 6 secs,FA-250,GRP,MSIP II
+LS Olaniban,P,Sarangani Province,"05 31' 00"" N","125 31' 15"" E",Flashing W every 8 secs,FA-250,GRP,MSIP II
