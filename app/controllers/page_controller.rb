@@ -11,6 +11,7 @@ class PageController < ApplicationController
 		@categories = Category.all()
 		@category_markers = Hash.new
 		@category_filters = Hash.new
+		@category_count = Hash.new
 
 		@categories.each do |category|
 			if category.image != nil
@@ -20,6 +21,7 @@ class PageController < ApplicationController
 				@category_markers[category.id] = asset_path("assets/category_markers/default.png")
 				@category_filters[category.id] = asset_path("assets/category_markers/filter_default.png")
 			end
+			@category_count[category.id] = Poi.where(category_id: category.id).length
 		end
 
 		@ports.each_with_index do |port, i|
