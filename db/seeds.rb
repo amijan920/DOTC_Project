@@ -6,6 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Admin.create!(:email=>'admin@opentransport.com',:username=>'ot_admin',:password=>'admin_abde124')
+
 Category.create(name:"Sea Port", image:"seaport.png")
 Category.create(name:"Airport", image:"airport.png")
 Category.create(name:"Lighthouse", image:"lighthouse.png")

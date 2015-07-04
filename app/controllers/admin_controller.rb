@@ -1,5 +1,7 @@
 class AdminController < ApplicationController
 
+	before_action :authenticate_admin!
+
 	before_action :set_port, only: [:show_port, :save_port, :destroy_port]
   before_action :set_route, only: [:show_route, :save_route, :destroy_route]
 	

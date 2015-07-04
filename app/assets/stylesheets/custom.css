@@ -113,6 +113,9 @@ body {
 	overflow-y:auto;
 }
 
+#sign-in {
+	margin-top:24px;
+}
 
 #info-container {
 	margin-top:4px;
