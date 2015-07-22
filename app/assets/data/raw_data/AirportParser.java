@@ -10,7 +10,7 @@ public class AirportParser {
 	    .quote('"')      // quote character
 	    .create();       // new instance is immutable
 
-	  csv.read("airports_v00.csv", new CSVReadProc() {
+	  csv.read("railways_parsed.csv.csv", new CSVReadProc() {
 		    public void procRow(int rowIndex, String[] params) {
 						try {
 							String name = params[1];
