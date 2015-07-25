@@ -3,7 +3,7 @@ class PageController < ApplicationController
 	include ActionView::Helpers::AssetUrlHelper
 
 	def index
-
+		
 		@sub_uri = "ports"
 		@ports = Poi.order("id").all()
 		@images = Array.new(@ports.length)
