@@ -20,4 +20,6 @@
 //= require owl.carousel.min
 //= require typeahead
 //= require turbolinks
+//= require jquery-2.1.4
+//= require jquery.onepage-scroll
 //= require_tree .

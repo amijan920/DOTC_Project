@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'opentransport' => 'page#index'
+  get 'opentransport/map' => 'page#map'
 
   devise_for :admins
   # The priority is based upon order of creation: first created -> highest priority.

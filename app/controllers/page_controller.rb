@@ -2,7 +2,7 @@ class PageController < ApplicationController
 
 	include ActionView::Helpers::AssetUrlHelper
 
-	def index
+	def map
 		
 		@sub_uri = "ports"
 		@ports = Poi.order("id").all()
