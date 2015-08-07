@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'page#index'
+  #root to: redirect(subdomain: 'transport', path: 'opentransport')
+  root to: redirect(path: 'opentransport')
+  #root 'page#index'
 
   get  'admin' => 'admin#list_ports'
 
