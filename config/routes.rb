@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get  '/', to: redirect(path: 'opentransport')
   get 'opentransport' => 'page#index'
   get 'opentransport/map' => 'page#map'
 
