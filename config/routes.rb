@@ -12,22 +12,22 @@ Rails.application.routes.draw do
   root to: redirect(path: 'opentransport')
   #root 'page#index'
 
-  get  'admin' => 'admin#list_ports'
+  get  'opentransport/admin' => 'admin#list_ports'
 
-  get  'admin/listPorts', :action => 'list_ports', :controller => 'admin', :as => :list_ports
-  get  'admin/showPort(/:id)', :action => 'show_port', :controller => 'admin', :id => /[0-9]+/i, :as => :show_port
-  get  'admin/showPort/new', :action => 'show_port', :controller => 'admin', :as => :create_new_port
-  post 'admin/savePort', :action => 'save_port', :controller => 'admin', :as => :save_port
-  post 'admin/destroyPort', :action => 'destroy_port', :controller => 'admin', :as => :destroy_port
+  get  'opentransport/admin/listPorts', :action => 'list_ports', :controller => 'admin', :as => :list_ports
+  get  'opentransport/admin/showPort(/:id)', :action => 'show_port', :controller => 'admin', :id => /[0-9]+/i, :as => :show_port
+  get  'opentransport/admin/showPort/new', :action => 'show_port', :controller => 'admin', :as => :create_new_port
+  post 'opentransport/admin/savePort', :action => 'save_port', :controller => 'admin', :as => :save_port
+  post 'opentransport/admin/destroyPort', :action => 'destroy_port', :controller => 'admin', :as => :destroy_port
   
-  get  'admin/listRoutes', :action => 'list_routes', :controller => 'admin', :as => :list_routes
-  get  'admin/showRoute(/:id)', :action => 'show_route', :controller => 'admin', :id => /[0-9]+/i, :as => :show_route
-  get  'admin/showRoute/new', :action => 'show_route', :controller => 'admin', :as => :create_new_route
-  post 'admin/saveRoute', :action => 'save_route', :controller => 'admin', :as => :save_route
-  post 'admin/destroyRoute', :action => 'destroy_route', :controller => 'admin', :as => :destroy_route
+  get  'opentransport/admin/listRoutes', :action => 'list_routes', :controller => 'admin', :as => :list_routes
+  get  'opentransport/admin/showRoute(/:id)', :action => 'show_route', :controller => 'admin', :id => /[0-9]+/i, :as => :show_route
+  get  'opentransport/admin/showRoute/new', :action => 'show_route', :controller => 'admin', :as => :create_new_route
+  post 'opentransport/admin/saveRoute', :action => 'save_route', :controller => 'admin', :as => :save_route
+  post 'opentransport/admin/destroyRoute', :action => 'destroy_route', :controller => 'admin', :as => :destroy_route
 
-  post 'admin/saveInfo', :action => 'save_info', :controller => 'admin', :as => :save_info
-  post 'admin/createInfo', :action => 'create_info', :controller => 'admin', :as => :create_info
+  post 'opentransport/admin/saveInfo', :action => 'save_info', :controller => 'admin', :as => :save_info
+  post 'opentransport/admin/createInfo', :action => 'create_info', :controller => 'admin', :as => :create_info
 
   post 'getRoutes', :action => 'get_routes', :controller => 'page', :as => :get_routes
   get  'getRoutes' => 'page#get_routes'
