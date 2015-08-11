@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.cookie
+//= require jquery-2.1.4
 //= require handlebars-v3.0.0
 //= require d3.min
 //= require d3-tip
@@ -20,6 +21,5 @@
 //= require owl.carousel.min
 //= require typeahead
 //= require turbolinks
-//= require jquery-2.1.4
 //= require jquery.onepage-scroll
 //= require_tree .
