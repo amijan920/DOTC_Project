@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
-  get  '/', to: redirect(path: 'opentransport')
-  get 'opentransport' => 'page#index'
-  get 'opentransport/map' => 'page#map'
 
-  devise_for :admins
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -11,7 +7,11 @@ Rails.application.routes.draw do
   #root to: redirect(subdomain: 'transport', path: 'opentransport')
   root to: redirect(path: 'opentransport')
   #root 'page#index'
+  
+  get 'opentransport' => 'page#index'
+  get 'opentransport/map' => 'page#map'
 
+  devise_for :admins
   get  'opentransport/admin' => 'admin#list_ports'
 
   get  'opentransport/admin/listPorts', :action => 'list_ports', :controller => 'admin', :as => :list_ports
@@ -29,9 +29,9 @@ Rails.application.routes.draw do
   post 'opentransport/admin/saveInfo', :action => 'save_info', :controller => 'admin', :as => :save_info
   post 'opentransport/admin/createInfo', :action => 'create_info', :controller => 'admin', :as => :create_info
 
-  post 'getRoutes', :action => 'get_routes', :controller => 'page', :as => :get_routes
-  get  'getRoutes' => 'page#get_routes'
-  get  'getPorts' => 'page#get_ports'
+  post 'opentransport/map/getRoutes', :action => 'get_routes', :controller => 'page', :as => :get_routes
+  get  'opentransport/map/getRoutes' => 'page#get_routes'
+  get  'opentransport/map/getPorts' => 'page#get_ports'
 
   # resources :page do
   #   member do
