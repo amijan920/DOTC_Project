@@ -601,7 +601,6 @@ var MapDisplay = (function() {
 			  }
 			})(marker, this));
 	  }
-
 	  mapUI.setActivePort(233);
 	}
 
@@ -1099,6 +1098,7 @@ function ready() {
 	mapUI = new MapUI(ports, images, infos);
 	mapDisplay = new MapDisplay(ports, mapUI);
 	mapUI.setMapDisplay(mapDisplay);
+	mapDisplay.hideLayer(3);
 
 	initializeAutocomplete();
 
