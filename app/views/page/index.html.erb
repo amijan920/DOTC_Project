@@ -1,12 +1,42 @@
 <%= render "page/page_navbar" %>
 <script>
 	var view = "homepage";
+
+  function moveDown(){
+    $(".main-view").moveDown();
+  }
 </script>
 	
 <style>
+  .animated { 
+    -webkit-animation-duration: 2s; 
+    animation-duration: 2s; 
+    -webkit-animation-fill-mode: both; 
+    animation-fill-mode: both; 
+    -webkit-animation-timing-function: ease-in-out; 
+    animation-timing-function: ease-in-out; 
+    animation-iteration-count:infinite; 
+    -webkit-animation-iteration-count:infinite; 
+  } 
+
+  @-webkit-keyframes bounce { 
+      0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);} 
+      40% {-webkit-transform: translateY(-15px);} 
+      60% {-webkit-transform: translateY(-7px);} 
+  } 
+
+  @keyframes bounce { 
+      0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+      40% {transform: translateY(-15px);} 
+      60% {transform: translateY(-7px);} 
+  } 
+
+  .bounce { 
+      -webkit-animation-name: bounce; 
+      animation-name: bounce; 
+  }
+
   /* General */
-  
-  
   html, body{
     font-family: 'Open Sans', sans-serif;
     overflow: hidden;
@@ -48,8 +78,33 @@
   }
   
   .navbar-fixed-top {
-	border: 0px;
+	 border: 0px;
   }
+
+  .home-down, .home-down2{
+    position: absolute;
+    bottom: 1em;
+    left: 0;
+
+    text-align: center;
+  }
+
+  .home-down span, .home-down2 span{
+    color: white;
+    font-size: 4em;
+    text-decoration: none;
+    
+    opacity: 0.7;
+    text-shadow: 1px 1px 3px #666;
+
+    cursor: pointer;
+  }
+
+  .home-down2 span{
+    color: #1E4F79;
+    opacity: 1;
+  }
+
   </style>
   
   <div class="main-view">
@@ -60,7 +115,7 @@
       <div class="row text-center">
         <div class="col-md-8 col-md-offset-2 col-xs-12">
           <h1>Open Transport</h1>
-          <form role="form" class="form-inline">
+          <!-- <form role="form" class="form-inline">
             <div class="input-group">
               <input type="text" class="form-control text-center input-lg" placeholder="Search for a port or station" />
               <span class="input-group-btn input-group-btn-lg">
@@ -69,11 +124,14 @@
                 </button>
               </span>
             </div>
-            <b style="font-family: 'Intro'">OR</b>
-			<a class="btn btn-primary btn-lg" href="/opentransport/map">
-			  Explore the Map!
-			</a>
-          </form>
+            <b style="font-family: 'Intro'">OR</b> -->
+    			<a class="btn btn-primary btn-lg" href="/opentransport/map">
+    			  Explore the Map!
+    			</a>
+          <!-- </form> -->
+        </div>
+        <div class="home-down col-md-8 col-md-offset-2 col-xs-12">
+          <span class="glyphicon glyphicon-chevron-down animated bounce" onclick="moveDown()"></span>
         </div>
       </div>
     </div>
@@ -90,6 +148,10 @@
         
         <p>As one of the eight founding states of the Open Government Partnership, the Philippine government is committed to <b>open governance through initiatives that make national government data searchable, accessible, and useful</b>, with the help of the different agencies of government, and with the participation of the public. </p>      
         </div>
+
+        <div class="home-down2 col-md-8 col-md-offset-2 col-xs-12">
+          <span class="glyphicon glyphicon-chevron-down animated bounce" onclick="moveDown()"></span>
+        </div>
       </div>
     </div>
   </section>
@@ -104,6 +166,10 @@
         <p>This website consolidates the datasets of the Department of Transportation and Communication and its attached agencies, allowing users to find specific information from a <b>rich and continuously growing collection of public datasets on air, maritime, rail and road infrastructure projects</b>.</p>
         
         <p>It also provides information on how to access these datasets and tools, such as infographics and applications developed by the Ateneo de Manila University and other groups, to make the information easy to understand. </p>      
+        </div>
+
+        <div class="home-down2 col-md-8 col-md-offset-2 col-xs-12">
+          <span class="glyphicon glyphicon-chevron-down animated bounce" onclick="moveDown()"></span>
         </div>
       </div>
     </div>
@@ -120,6 +186,10 @@
         
         <p>This engagement of ideas between the public and the government will help develop the platform even further, for the benefit of everyone involved. <b>The primary goal of Open Data is to foster a citizenry empowered to make informed decisions, and to promote efficiency and transparency in government.</b></p>      
         </div>
+
+        <div class="home-down2 col-md-8 col-md-offset-2 col-xs-12">
+          <span class="glyphicon glyphicon-chevron-down animated bounce" onclick="moveDown()"></span>
+        </div>
       </div>
     </div>
   </section>    
@@ -133,6 +203,7 @@
         
         <p>The website is currently <b>under construction</b>, so you won't be able to see a lot of the things we've mentioned yet. This is what we envision, though, and we hope you're as excited about it as we are.</p>      
         </div>
+
       </div>
     </div>
   </section>
