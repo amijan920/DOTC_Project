@@ -12,7 +12,25 @@ class AdminController < ApplicationController
 		rootdir = File.join(Dir.pwd,'/public/assets/seeds.rb')
 		# puts rootdir
 		outfile = open(rootdir,'w')
-		outfile.write("testing haha")
+		outfile.write("
+# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
+#
+# Examples:
+#
+#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
+#   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Admin.create!(:email=>'admin@opentransport.com',:password=>'admin_abde124')
+
+Category.create(name:\"Sea Port\", image:\"seaport.png\")
+Category.create(name:\"Airport\", image:\"airport.png\")
+Category.create(name:\"Lighthouse\", image:\"lighthouse.png\")
+Category.create(name:\"Rail Station\", image:\"railstation.png\"); 
+
+#Sea Ports
+		")
+		outfile.write("")
 		outfile.close
 	end 
 
