@@ -5,6 +5,9 @@ class AdminController < ApplicationController
 	before_action :set_port, only: [:show_port, :save_port, :destroy_port]
   before_action :set_route, only: [:show_route, :save_route, :destroy_route]
 	
+	def export_data
+
+	end 
 	def list_ports
 		@page = "ports"
 		@ports = Poi.order("id").all()
