@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   devise_for :admins
   get  'opentransport/admin' => 'admin#list_ports'
 
+  get  'opentransport/admin/exportData', :action => 'export_data', :controller => 'admin', :as => :export_data
   get  'opentransport/admin/listPorts', :action => 'list_ports', :controller => 'admin', :as => :list_ports
   get  'opentransport/admin/showPort(/:id)', :action => 'show_port', :controller => 'admin', :id => /[0-9]+/i, :as => :show_port
   get  'opentransport/admin/showPort/new', :action => 'show_port', :controller => 'admin', :as => :create_new_port
