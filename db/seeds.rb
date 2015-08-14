@@ -235,98 +235,243 @@ Poi.create(name:"Ipil", description:"Ipil, Zamboanga Sibugay", category_id:1, la
 
 #Airports
 
-# Poi.create(name:"Ninoy Aquino International Airport", description:"Andrews Ave, Pasay, 1300 Metro Manila", category_id:2, lat_deg:14.512321, lat_min:0.000000, lat_sec:0.00000, lat_dir:"N", lon_deg:121.016336, lon_min:0.000000, lon_sec:0.00000, lon_dir:"E")
-#204
-Poi.create(name:"Loakan (Baguio) Airport", description:"Class 2 principal airport airport, Baguio City", category_id:2, lat_deg:16.000000, lat_min:22.000000, lat_sec:30.315100, lat_dir:"N", lon_deg:120.000000, lon_min:37.000000, lon_sec:8.191700, lon_dir:"E")
-Poi.create(name:"Laoag International Airport", description:"International airport airport, Ilocos Norte", category_id:2, lat_deg:18.000000, lat_min:10.000000, lat_sec:39.997100, lat_dir:"N", lon_deg:120.000000, lon_min:31.000000, lon_sec:52.553000, lon_dir:"E")
-Poi.create(name:"Lingayen Airport", description:"Community airport airport, Pangasinan", category_id:2, lat_deg:16.000000, lat_min:2.000000, lat_sec:4.302800, lat_dir:"N", lon_deg:120.000000, lon_min:14.000000, lon_sec:48.169800, lon_dir:"E")
+baguio = Poi.create(name:"Loakan (Baguio) Airport", description:"Class 2 principal airport airport, Baguio City", category_id:2, lat_deg:16.000000, lat_min:22.000000, lat_sec:30.315100, lat_dir:"N", lon_deg:120.000000, lon_min:37.000000, lon_sec:8.191700, lon_dir:"E")
+Image.create(poi_id:baguio.id , url:"airport/Loakan (Baguio)_001.jpg")
+Image.create(poi_id:baguio.id , url:"airport/Loakan (Baguio)_002.jpg")
+
+laoag = Poi.create(name:"Laoag International Airport", description:"International airport airport, Ilocos Norte", category_id:2, lat_deg:18.000000, lat_min:10.000000, lat_sec:39.997100, lat_dir:"N", lon_deg:120.000000, lon_min:31.000000, lon_sec:52.553000, lon_dir:"E")
+Image.create(poi_id:laoag.id , url:"airport/Laoag_001.jpg")
+
+lingayen = Poi.create(name:"Lingayen Airport", description:"Community airport airport, Pangasinan", category_id:2, lat_deg:16.000000, lat_min:2.000000, lat_sec:4.302800, lat_dir:"N", lon_deg:120.000000, lon_min:14.000000, lon_sec:48.169800, lon_dir:"E")
+Image.create(poi_id:lingayen.id , url:"airport/Lingayen.jpg")
+
 Poi.create(name:"Rosales Airport", description:"Community airport airport, Pangasinan", category_id:2, lat_deg:15.000000, lat_min:52.000000, lat_sec:54.327700, lat_dir:"N", lon_deg:120.000000, lon_min:37.000000, lon_sec:5.165600, lon_dir:"E")
-Poi.create(name:"Mindoro (Vigan) Airport", description:"Community airport airport, Ilocos Sur", category_id:2, lat_deg:17.000000, lat_min:33.000000, lat_sec:13.971900, lat_dir:"N", lon_deg:120.000000, lon_min:21.000000, lon_sec:5.211000, lon_dir:"E")
-Poi.create(name:"Bagabag Airport", description:"Community airport airport, Nueva Vizcaya", category_id:2, lat_deg:16.000000, lat_min:37.000000, lat_sec:10.149800, lat_dir:"N", lon_deg:121.000000, lon_min:15.000000, lon_sec:5.184100, lon_dir:"E")
-Poi.create(name:"Basco Airport", description:"Class 2 principal airport airport, Batanes", category_id:2, lat_deg:20.000000, lat_min:27.000000, lat_sec:1.334800, lat_dir:"N", lon_deg:121.000000, lon_min:58.000000, lon_sec:43.299100, lon_dir:"E")
-Poi.create(name:"Cauayan Airport", description:"Community airport airport, Isabela", category_id:2, lat_deg:16.000000, lat_min:55.000000, lat_sec:47.202620, lat_dir:"N", lon_deg:121.000000, lon_min:45.000000, lon_sec:11.913840, lon_dir:"E")
+
+vigan = Poi.create(name:"Mindoro (Vigan) Airport", description:"Community airport airport, Ilocos Sur", category_id:2, lat_deg:17.000000, lat_min:33.000000, lat_sec:13.971900, lat_dir:"N", lon_deg:120.000000, lon_min:21.000000, lon_sec:5.211000, lon_dir:"E")
+Image.create(poi_id:vigan.id , url:"airport/Vigan.jpg")
+
+
+bagabag = Poi.create(name:"Bagabag Airport", description:"Community airport airport, Nueva Vizcaya", category_id:2, lat_deg:16.000000, lat_min:37.000000, lat_sec:10.149800, lat_dir:"N", lon_deg:121.000000, lon_min:15.000000, lon_sec:5.184100, lon_dir:"E")
+Image.create(poi_id:bagabag.id , url:"airport/Bagabag.jpg")
+
+basco = Poi.create(name:"Basco Airport", description:"Class 2 principal airport airport, Batanes", category_id:2, lat_deg:20.000000, lat_min:27.000000, lat_sec:1.334800, lat_dir:"N", lon_deg:121.000000, lon_min:58.000000, lon_sec:43.299100, lon_dir:"E")
+Image.create(poi_id:basco.id , url:"airport/Basco_001.jpg")
+
+cauayan = Poi.create(name:"Cauayan Airport", description:"Community airport airport, Isabela", category_id:2, lat_deg:16.000000, lat_min:55.000000, lat_sec:47.202620, lat_dir:"N", lon_deg:121.000000, lon_min:45.000000, lon_sec:11.913840, lon_dir:"E")
+Image.create(poi_id:cauayan.id , url:"airport/Cauayan.jpg")
+
 Poi.create(name:"Itbayat Airport", description:"Community airport airport, Batanes", category_id:2, lat_deg:20.000000, lat_min:43.000000, lat_sec:14.286900, lat_dir:"N", lon_deg:121.000000, lon_min:49.000000, lon_sec:35.308900, lon_dir:"E")
-Poi.create(name:"Palanan Airport", description:"Community airport airport, Isabela", category_id:2, lat_deg:17.000000, lat_min:3.000000, lat_sec:48.023200, lat_dir:"N", lon_deg:122.000000, lon_min:25.000000, lon_sec:56.192900, lon_dir:"E")
-Poi.create(name:"Tuguegarao Airport", description:"Class 1 principal airport airport, Cagayan", category_id:2, lat_deg:17.000000, lat_min:38.000000, lat_sec:17.917500, lat_dir:"N", lon_deg:121.000000, lon_min:43.000000, lon_sec:50.211300, lon_dir:"E")
-Poi.create(name:"Iba Airport", description:"Community airport airport, Zambales", category_id:2, lat_deg:15.000000, lat_min:19.000000, lat_sec:53.821300, lat_dir:"N", lon_deg:119.000000, lon_min:58.000000, lon_sec:5.185600, lon_dir:"E")
-Poi.create(name:"Subic Bay International Airport", description:"International airport airport, Bataan", category_id:2, lat_deg:14.000000, lat_min:47.000000, lat_sec:40.016000, lat_dir:"N", lon_deg:120.000000, lon_min:16.000000, lon_sec:16.917000, lon_dir:"E")
-Poi.create(name:"Clark International Airport", description:"International airport airport, Pampanga", category_id:2, lat_deg:15.000000, lat_min:11.000000, lat_sec:9.560700, lat_dir:"N", lon_deg:120.000000, lon_min:33.000000, lon_sec:37.165800, lon_dir:"E")
-Poi.create(name:"Plaridel Airport", description:"Community airport airport, Bulacan", category_id:2, lat_deg:14.000000, lat_min:53.000000, lat_sec:29.544500, lat_dir:"N", lon_deg:120.000000, lon_min:51.000000, lon_sec:11.141000, lon_dir:"E")
-Poi.create(name:"Ninoy Aquino International Airport", description:"International airport airport, Metro Manila", category_id:2, lat_deg:14.000000, lat_min:30.000000, lat_sec:35.788000, lat_dir:"N", lon_deg:121.000000, lon_min:0.000000, lon_sec:49.892000, lon_dir:"E")
+
+palanan = Poi.create(name:"Palanan Airport", description:"Community airport airport, Isabela", category_id:2, lat_deg:17.000000, lat_min:3.000000, lat_sec:48.023200, lat_dir:"N", lon_deg:122.000000, lon_min:25.000000, lon_sec:56.192900, lon_dir:"E")
+Image.create(poi_id:palanan.id , url:"airport/Palanan.jpg")
+
+tuguegarao = Poi.create(name:"Tuguegarao Airport", description:"Class 1 principal airport airport, Cagayan", category_id:2, lat_deg:17.000000, lat_min:38.000000, lat_sec:17.917500, lat_dir:"N", lon_deg:121.000000, lon_min:43.000000, lon_sec:50.211300, lon_dir:"E")
+Image.create(poi_id:tuguegarao.id , url:"airport/Tuguegarao_001.jpg")
+
+iba = Poi.create(name:"Iba Airport", description:"Community airport airport, Zambales", category_id:2, lat_deg:15.000000, lat_min:19.000000, lat_sec:53.821300, lat_dir:"N", lon_deg:119.000000, lon_min:58.000000, lon_sec:5.185600, lon_dir:"E")
+Image.create(poi_id:iba.id , url:"airport/Iba.jpg")
+
+subic = Poi.create(name:"Subic Bay International Airport", description:"International airport airport, Bataan", category_id:2, lat_deg:14.000000, lat_min:47.000000, lat_sec:40.016000, lat_dir:"N", lon_deg:120.000000, lon_min:16.000000, lon_sec:16.917000, lon_dir:"E")
+Image.create(poi_id:subic.id , url:"airport/Subic_001.jpg")
+Image.create(poi_id:subic.id , url:"airport/Subic_002.jpg")
+
+clark = Poi.create(name:"Clark International Airport", description:"International airport airport, Pampanga", category_id:2, lat_deg:15.000000, lat_min:11.000000, lat_sec:9.560700, lat_dir:"N", lon_deg:120.000000, lon_min:33.000000, lon_sec:37.165800, lon_dir:"E")
+Image.create(poi_id:clark.id , url:"airport/Clark_001.jpg")
+Image.create(poi_id:clark.id , url:"airport/Clark_002.jpg")
+Image.create(poi_id:clark.id , url:"airport/Clark_003.jpg")
+Image.create(poi_id:clark.id , url:"airport/Clark_004.jpg")
+
+
+plaridel = Poi.create(name:"Plaridel Airport", description:"Community airport airport, Bulacan", category_id:2, lat_deg:14.000000, lat_min:53.000000, lat_sec:29.544500, lat_dir:"N", lon_deg:120.000000, lon_min:51.000000, lon_sec:11.141000, lon_dir:"E")
+Image.create(poi_id:plaridel.id , url:"airport/Plaridel.jpg")
+
+naia = Poi.create(name:"Ninoy Aquino International Airport", description:"International airport airport, Metro Manila", category_id:2, lat_deg:14.000000, lat_min:30.000000, lat_sec:35.788000, lat_dir:"N", lon_deg:121.000000, lon_min:0.000000, lon_sec:49.892000, lon_dir:"E")
+Image.create(poi_id:naia.id , url:"airport/NAIA T1_001.jpg")
+Image.create(poi_id:naia.id , url:"airport/NAIA T1_002.jpg")
+Image.create(poi_id:naia.id , url:"airport/NAIA T1_003.jpg")
+Image.create(poi_id:naia.id , url:"airport/NAIA T3_001.jpg")
+Image.create(poi_id:naia.id , url:"airport/NAIA T3_002.jpg")
+
 Poi.create(name:"Alabat Airport", description:"Community airport airport, Quezon", category_id:2, lat_deg:14.000000, lat_min:13.000000, lat_sec:58.672200, lat_dir:"N", lon_deg:121.000000, lon_min:55.000000, lon_sec:43.123600, lon_dir:"E")
-Poi.create(name:"Dr. Juan C. Angara (Baler) Airport", description:"Community airport airport, Aurora", category_id:2, lat_deg:15.000000, lat_min:43.000000, lat_sec:46.340500, lat_dir:"N", lon_deg:121.000000, lon_min:30.000000, lon_sec:13.160400, lon_dir:"E")
-Poi.create(name:"Francisco B. Reyes Airport (Busuanga) Airport", description:"Class 2 principal airport airport, Palawan", category_id:2, lat_deg:12.000000, lat_min:7.000000, lat_sec:14.207100, lat_dir:"N", lon_deg:120.000000, lon_min:5.000000, lon_sec:46.082500, lon_dir:"E")
+
+baler = Poi.create(name:"Dr. Juan C. Angara (Baler) Airport", description:"Community airport airport, Aurora", category_id:2, lat_deg:15.000000, lat_min:43.000000, lat_sec:46.340500, lat_dir:"N", lon_deg:121.000000, lon_min:30.000000, lon_sec:13.160400, lon_dir:"E")
+Image.create(poi_id:baler.id , url:"airport/Baler.jpg")
+
+busuanga = Poi.create(name:"Francisco B. Reyes Airport (Busuanga) Airport", description:"Class 2 principal airport airport, Palawan", category_id:2, lat_deg:12.000000, lat_min:7.000000, lat_sec:14.207100, lat_dir:"N", lon_deg:120.000000, lon_min:5.000000, lon_sec:46.082500, lon_dir:"E")
+Image.create(poi_id:busuanga.id , url:"airport/Francisco Reyes (Busuanga)_001.jpg")
+
 Poi.create(name:"Calapan Airport", description:"Community airport airport, Oriental Mindoro", category_id:2, lat_deg:13.000000, lat_min:25.000000, lat_sec:0.398200, lat_dir:"N", lon_deg:121.000000, lon_min:12.000000, lon_sec:6.457500, lon_dir:"E")
-Poi.create(name:"Cuyo Airport", description:"Class 2 principal airport airport, Palawan", category_id:2, lat_deg:10.000000, lat_min:51.000000, lat_sec:40.496100, lat_dir:"N", lon_deg:121.000000, lon_min:4.000000, lon_sec:5.059200, lon_dir:"E")
+
+cuyo = Poi.create(name:"Cuyo Airport", description:"Class 2 principal airport airport, Palawan", category_id:2, lat_deg:10.000000, lat_min:51.000000, lat_sec:40.496100, lat_dir:"N", lon_deg:121.000000, lon_min:4.000000, lon_sec:5.059200, lon_dir:"E")
+Image.create(poi_id:cuyo.id , url:"airport/Cuyo.jpg")
+
 Poi.create(name:"Jomalig Airport", description:"Community airport airport, Quezon", category_id:2, lat_deg:14.000000, lat_min:43.000000, lat_sec:24.548500, lat_dir:"N", lon_deg:122.000000, lon_min:24.000000, lon_sec:5.133300, lon_dir:"E")
-Poi.create(name:"Mamburao Airport", description:"Community airport airport, Occidental Mindoro", category_id:2, lat_deg:13.000000, lat_min:12.000000, lat_sec:14.940100, lat_dir:"N", lon_deg:120.000000, lon_min:36.000000, lon_sec:28.103800, lon_dir:"E")
-Poi.create(name:"Marinduque Airport", description:"Class 2 principal airport airport, Marinduque", category_id:2, lat_deg:13.000000, lat_min:19.000000, lat_sec:37.886200, lat_dir:"N", lon_deg:121.000000, lon_min:50.000000, lon_sec:55.104100, lon_dir:"E")
-Poi.create(name:"Puerto Princesa International Airport", description:"International airport airport, Palawan", category_id:2, lat_deg:9.000000, lat_min:44.000000, lat_sec:31.633000, lat_dir:"N", lon_deg:118.000000, lon_min:45.000000, lon_sec:31.428000, lon_dir:"E")
-Poi.create(name:"Tugdan (Romblon) Airport", description:"Class 2 principal airport airport, Romblon", category_id:2, lat_deg:12.000000, lat_min:18.000000, lat_sec:33.465200, lat_dir:"N", lon_deg:122.000000, lon_min:4.000000, lon_sec:34.353000, lon_dir:"E")
-Poi.create(name:"San Jose (Mindoro) Airport", description:"Class 1 principal airport airport, Occidental Mindoro", category_id:2, lat_deg:12.000000, lat_min:21.000000, lat_sec:30.132600, lat_dir:"N", lon_deg:121.000000, lon_min:2.000000, lon_sec:47.086300, lon_dir:"E")
+
+mamburao = Poi.create(name:"Mamburao Airport", description:"Community airport airport, Occidental Mindoro", category_id:2, lat_deg:13.000000, lat_min:12.000000, lat_sec:14.940100, lat_dir:"N", lon_deg:120.000000, lon_min:36.000000, lon_sec:28.103800, lon_dir:"E")
+Image.create(poi_id:mamburao.id , url:"airport/Mamburao.jpg")
+
+marinduque = Poi.create(name:"Marinduque Airport", description:"Class 2 principal airport airport, Marinduque", category_id:2, lat_deg:13.000000, lat_min:19.000000, lat_sec:37.886200, lat_dir:"N", lon_deg:121.000000, lon_min:50.000000, lon_sec:55.104100, lon_dir:"E")
+Image.create(poi_id:marinduque.id , url:"airport/Marinduque_001.jpg")
+
+puerto = Poi.create(name:"Puerto Princesa International Airport", description:"International airport airport, Palawan", category_id:2, lat_deg:9.000000, lat_min:44.000000, lat_sec:31.633000, lat_dir:"N", lon_deg:118.000000, lon_min:45.000000, lon_sec:31.428000, lon_dir:"E")
+Image.create(poi_id:puerto.id , url:"airport/Puerto Princesa_001.jpg")
+
+romblon = Poi.create(name:"Tugdan (Romblon) Airport", description:"Class 2 principal airport airport, Romblon", category_id:2, lat_deg:12.000000, lat_min:18.000000, lat_sec:33.465200, lat_dir:"N", lon_deg:122.000000, lon_min:4.000000, lon_sec:34.353000, lon_dir:"E")
+Image.create(poi_id:romblon.id , url:"airport/Tugdan.jpg")
+
+mindoro = Poi.create(name:"San Jose (Mindoro) Airport", description:"Class 1 principal airport airport, Occidental Mindoro", category_id:2, lat_deg:12.000000, lat_min:21.000000, lat_sec:30.132600, lat_dir:"N", lon_deg:121.000000, lon_min:2.000000, lon_sec:47.086300, lon_dir:"E")
+Image.create(poi_id:mindoro.id , url:"airport/San Jose (Mindoro)_001.jpg")
+
 Poi.create(name:"Pinamalayan Airport", description:"Community airport airport, Oriental Mindoro", category_id:2, lat_deg:12.000000, lat_min:58.000000, lat_sec:34.140000, lat_dir:"N", lon_deg:121.000000, lon_min:25.000000, lon_sec:26.760000, lon_dir:"E")
 Poi.create(name:"Wasig (Mansalay) Airport", description:"Community airport airport, Oriental Mindoro", category_id:2, lat_deg:12.000000, lat_min:32.000000, lat_sec:4.782100, lat_dir:"N", lon_deg:121.000000, lon_min:28.000000, lon_sec:58.088900, lon_dir:"E")
 Poi.create(name:"Bulan Airport", description:"Community airport airport, Sorsogon", category_id:2, lat_deg:12.000000, lat_min:41.000000, lat_sec:5.000600, lat_dir:"N", lon_deg:123.000000, lon_min:51.000000, lon_sec:42.082300, lon_dir:"E")
-Poi.create(name:"Bagasbas (Daet) Airport", description:"Community airport airport, Camarines Norte", category_id:2, lat_deg:14.000000, lat_min:7.000000, lat_sec:54.673200, lat_dir:"N", lon_deg:122.000000, lon_min:59.000000, lon_sec:15.117400, lon_dir:"E")
-Poi.create(name:"Legazpi Airport", description:"Class 1 principal airport airport, Albay", category_id:2, lat_deg:13.000000, lat_min:9.000000, lat_sec:43.147900, lat_dir:"N", lon_deg:123.000000, lon_min:44.000000, lon_sec:4.422700, lon_dir:"E")
-Poi.create(name:"Moises R. Espinosa (Masbate) Airport", description:"Class 2 principal airport airport, Masbate", category_id:2, lat_deg:12.000000, lat_min:21.000000, lat_sec:55.082900, lat_dir:"N", lon_deg:123.000000, lon_min:37.000000, lon_sec:5.077400, lon_dir:"E")
-Poi.create(name:"Naga (Pili) Airport", description:"Class 1 principal airport airport, Camarines Sur", category_id:2, lat_deg:13.000000, lat_min:34.000000, lat_sec:51.797400, lat_dir:"N", lon_deg:123.000000, lon_min:15.000000, lon_sec:43.104000, lon_dir:"E")
-Poi.create(name:"Virac Airport", description:"Class 2 principal airport airport, Catanduanes", category_id:2, lat_deg:13.000000, lat_min:34.000000, lat_sec:32.779200, lat_dir:"N", lon_deg:124.000000, lon_min:12.000000, lon_sec:54.098500, lon_dir:"E")
+
+daet = Poi.create(name:"Bagasbas (Daet) Airport", description:"Community airport airport, Camarines Norte", category_id:2, lat_deg:14.000000, lat_min:7.000000, lat_sec:54.673200, lat_dir:"N", lon_deg:122.000000, lon_min:59.000000, lon_sec:15.117400, lon_dir:"E")
+Image.create(poi_id:daet.id , url:"airport/Daet.jpg")
+
+legazpi = Poi.create(name:"Legazpi Airport", description:"Class 1 principal airport airport, Albay", category_id:2, lat_deg:13.000000, lat_min:9.000000, lat_sec:43.147900, lat_dir:"N", lon_deg:123.000000, lon_min:44.000000, lon_sec:4.422700, lon_dir:"E")
+Image.create(poi_id:legazpi.id , url:"airport/Legazpi_001.jpg")
+
+masbate = Poi.create(name:"Moises R. Espinosa (Masbate) Airport", description:"Class 2 principal airport airport, Masbate", category_id:2, lat_deg:12.000000, lat_min:21.000000, lat_sec:55.082900, lat_dir:"N", lon_deg:123.000000, lon_min:37.000000, lon_sec:5.077400, lon_dir:"E")
+Image.create(poi_id:masbate.id , url:"airport/Masbate_001.jpg")
+
+pili = Poi.create(name:"Naga (Pili) Airport", description:"Class 1 principal airport airport, Camarines Sur", category_id:2, lat_deg:13.000000, lat_min:34.000000, lat_sec:51.797400, lat_dir:"N", lon_deg:123.000000, lon_min:15.000000, lon_sec:43.104000, lon_dir:"E")
+Image.create(poi_id:pili.id , url:"airport/Naga_001.jpg")
+
+virac = Poi.create(name:"Virac Airport", description:"Class 2 principal airport airport, Catanduanes", category_id:2, lat_deg:13.000000, lat_min:34.000000, lat_sec:32.779200, lat_dir:"N", lon_deg:124.000000, lon_min:12.000000, lon_sec:54.098500, lon_dir:"E")
+Image.create(poi_id:virac.id , url:"airport/Virac_001.jpg")
+
 Poi.create(name:"Evelio Javier (Antique) Airport", description:"Class 2 principal airport airport, Antique", category_id:2, lat_deg:10.000000, lat_min:45.000000, lat_sec:59.000000, lat_dir:"N", lon_deg:121.000000, lon_min:55.000000, lon_sec:56.600000, lon_dir:"E")
-Poi.create(name:"Bacolod-Silay International Airport", description:"Class 1 principal airport airport, Negros Occidental", category_id:2, lat_deg:10.000000, lat_min:46.000000, lat_sec:35.774400, lat_dir:"N", lon_deg:123.000000, lon_min:1.000000, lon_sec:8.767700, lon_dir:"E")
-Poi.create(name:"Godofredo P. Ramos (Caticlan) Airport", description:"Class 2 principal airport airport, Aklan", category_id:2, lat_deg:11.000000, lat_min:55.000000, lat_sec:28.220700, lat_dir:"N", lon_deg:121.000000, lon_min:57.000000, lon_sec:13.076100, lon_dir:"E")
-Poi.create(name:"Iloilo International Airport", description:"International airport airport, Iloilo City", category_id:2, lat_deg:10.000000, lat_min:49.000000, lat_sec:58.862400, lat_dir:"N", lon_deg:122.000000, lon_min:29.000000, lon_sec:36.088100, lon_dir:"E")
-Poi.create(name:"Kalibo International Airport", description:"International airport airport, Aklan", category_id:2, lat_deg:11.000000, lat_min:40.000000, lat_sec:49.199200, lat_dir:"N", lon_deg:122.000000, lon_min:22.000000, lon_sec:34.939300, lon_dir:"E")
-Poi.create(name:"Roxas Airport", description:"Class 1 principal airport airport, Capiz", category_id:2, lat_deg:11.000000, lat_min:35.000000, lat_sec:51.208700, lat_dir:"N", lon_deg:122.000000, lon_min:45.000000, lon_sec:10.666100, lon_dir:"E")
-Poi.create(name:"Sibulan (Dumaguete) Airport", description:"Class 1 principal airport airport, Negros Oriental", category_id:2, lat_deg:9.000000, lat_min:20.000000, lat_sec:5.844700, lat_dir:"N", lon_deg:123.000000, lon_min:18.000000, lon_sec:3.028200, lon_dir:"E")
-Poi.create(name:"Mactan-Cebu International Airport", description:"International airport airport, Lapu-Lapu City", category_id:2, lat_deg:10.000000, lat_min:18.000000, lat_sec:27.165200, lat_dir:"N", lon_deg:123.000000, lon_min:58.000000, lon_sec:45.914700, lon_dir:"E")
+
+bacolod = Poi.create(name:"Bacolod-Silay International Airport", description:"Class 1 principal airport airport, Negros Occidental", category_id:2, lat_deg:10.000000, lat_min:46.000000, lat_sec:35.774400, lat_dir:"N", lon_deg:123.000000, lon_min:1.000000, lon_sec:8.767700, lon_dir:"E")
+Image.create(poi_id:bacolod.id , url:"airport/Bacolod_001.jpg")
+
+caticlan = Poi.create(name:"Godofredo P. Ramos (Caticlan) Airport", description:"Class 2 principal airport airport, Aklan", category_id:2, lat_deg:11.000000, lat_min:55.000000, lat_sec:28.220700, lat_dir:"N", lon_deg:121.000000, lon_min:57.000000, lon_sec:13.076100, lon_dir:"E")
+Image.create(poi_id:caticlan.id , url:"airport/Caticlan_001.jpg")
+Image.create(poi_id:caticlan.id , url:"airport/Caticlan_002.jpg")
+
+iloilo = Poi.create(name:"Iloilo International Airport", description:"International airport airport, Iloilo City", category_id:2, lat_deg:10.000000, lat_min:49.000000, lat_sec:58.862400, lat_dir:"N", lon_deg:122.000000, lon_min:29.000000, lon_sec:36.088100, lon_dir:"E")
+Image.create(poi_id:iloilo.id , url:"airport/Iloilo_001.jpg")
+Image.create(poi_id:iloilo.id , url:"airport/Iloilo_002.jpg")
+
+kalibo = Poi.create(name:"Kalibo International Airport", description:"International airport airport, Aklan", category_id:2, lat_deg:11.000000, lat_min:40.000000, lat_sec:49.199200, lat_dir:"N", lon_deg:122.000000, lon_min:22.000000, lon_sec:34.939300, lon_dir:"E")
+Image.create(poi_id:kalibo.id , url:"airport/Kalibo_001.jpg")
+
+roxas = Poi.create(name:"Roxas Airport", description:"Class 1 principal airport airport, Capiz", category_id:2, lat_deg:11.000000, lat_min:35.000000, lat_sec:51.208700, lat_dir:"N", lon_deg:122.000000, lon_min:45.000000, lon_sec:10.666100, lon_dir:"E")
+Image.create(poi_id:roxas.id , url:"airport/Roxas_001.jpg")
+
+dumaguete = Poi.create(name:"Sibulan (Dumaguete) Airport", description:"Class 1 principal airport airport, Negros Oriental", category_id:2, lat_deg:9.000000, lat_min:20.000000, lat_sec:5.844700, lat_dir:"N", lon_deg:123.000000, lon_min:18.000000, lon_sec:3.028200, lon_dir:"E")
+Image.create(poi_id:dumaguete.id , url:"airport/Sibulan (Dumaguete)_001.jpg")
+
+cebu = Poi.create(name:"Mactan-Cebu International Airport", description:"International airport airport, Lapu-Lapu City", category_id:2, lat_deg:10.000000, lat_min:18.000000, lat_sec:27.165200, lat_dir:"N", lon_deg:123.000000, lon_min:58.000000, lon_sec:45.914700, lon_dir:"E")
+Image.create(poi_id:cebu.id , url:"airport/Cebu_001.jpg")
+Image.create(poi_id:cebu.id , url:"airport/Cebu_002.jpg")
+
 Poi.create(name:"Siquijor Airport", description:"Community airport airport, Siquijor", category_id:2, lat_deg:9.000000, lat_min:12.000000, lat_sec:42.207800, lat_dir:"N", lon_deg:123.000000, lon_min:28.000000, lon_sec:16.061700, lon_dir:"E")
-Poi.create(name:"Tagbilaran Airport", description:"Class 1 principal airport airport, Bohol", category_id:2, lat_deg:9.000000, lat_min:39.000000, lat_sec:51.088000, lat_dir:"N", lon_deg:123.000000, lon_min:51.000000, lon_sec:13.066500, lon_dir:"E")
+
+tagbilaran = Poi.create(name:"Tagbilaran Airport", description:"Class 1 principal airport airport, Bohol", category_id:2, lat_deg:9.000000, lat_min:39.000000, lat_sec:51.088000, lat_dir:"N", lon_deg:123.000000, lon_min:51.000000, lon_sec:13.066500, lon_dir:"E")
+Image.create(poi_id:tagbilaran.id , url:"airport/Tagbilaran_001.jpg")
+
 Poi.create(name:"Ubay Airport", description:"Community airport airport, Bohol", category_id:2, lat_deg:10.000000, lat_min:2.000000, lat_sec:55.645700, lat_dir:"N", lon_deg:124.000000, lon_min:28.000000, lon_sec:5.032000, lon_dir:"E")
-Poi.create(name:"Bantayan Airport", description:"Community airport airport, Cebu", category_id:2, lat_deg:11.000000, lat_min:9.000000, lat_sec:44.905700, lat_dir:"N", lon_deg:123.000000, lon_min:47.000000, lon_sec:4.899500, lon_dir:"E")
+
+bantayan = Poi.create(name:"Bantayan Airport", description:"Community airport airport, Cebu", category_id:2, lat_deg:11.000000, lat_min:9.000000, lat_sec:44.905700, lat_dir:"N", lon_deg:123.000000, lon_min:47.000000, lon_sec:4.899500, lon_dir:"E")
+Image.create(poi_id:bantayan.id , url:"airport/Bantayan.jpg")
+
 Poi.create(name:"Biliran Airport", description:"Community airport airport, Biliran", category_id:2, lat_deg:11.000000, lat_min:33.000000, lat_sec:46.125900, lat_dir:"N", lon_deg:124.000000, lon_min:24.000000, lon_sec:50.287600, lon_dir:"E")
-Poi.create(name:"Borongan (Punta Maria) Airport", description:"Community airport airport, Eastern Samar", category_id:2, lat_deg:11.000000, lat_min:40.000000, lat_sec:25.219600, lat_dir:"N", lon_deg:125.000000, lon_min:28.000000, lon_sec:51.051600, lon_dir:"E")
-Poi.create(name:"Calbayog Airport", description:"Class 2 principal airport airport, Samar", category_id:2, lat_deg:12.000000, lat_min:4.000000, lat_sec:37.136400, lat_dir:"N", lon_deg:124.000000, lon_min:32.000000, lon_sec:52.066200, lon_dir:"E")
-Poi.create(name:"Catarman Airport", description:"Class 2 principal airport airport, Northern Samar", category_id:2, lat_deg:12.000000, lat_min:30.000000, lat_sec:8.030400, lat_dir:"N", lon_deg:124.000000, lon_min:38.000000, lon_sec:9.073700, lon_dir:"E")
+
+borongan = Poi.create(name:"Borongan (Punta Maria) Airport", description:"Community airport airport, Eastern Samar", category_id:2, lat_deg:11.000000, lat_min:40.000000, lat_sec:25.219600, lat_dir:"N", lon_deg:125.000000, lon_min:28.000000, lon_sec:51.051600, lon_dir:"E")
+Image.create(poi_id:borongan.id , url:"airport/Borongan.jpg")
+
+calbayog = Poi.create(name:"Calbayog Airport", description:"Class 2 principal airport airport, Samar", category_id:2, lat_deg:12.000000, lat_min:4.000000, lat_sec:37.136400, lat_dir:"N", lon_deg:124.000000, lon_min:32.000000, lon_sec:52.066200, lon_dir:"E")
+
+catarman = Poi.create(name:"Catarman Airport", description:"Class 2 principal airport airport, Northern Samar", category_id:2, lat_deg:12.000000, lat_min:30.000000, lat_sec:8.030400, lat_dir:"N", lon_deg:124.000000, lon_min:38.000000, lon_sec:9.073700, lon_dir:"E")
+Image.create(poi_id:catarman.id , url:"airport/Catarman.jpg")
+
 Poi.create(name:"Catbalogan Airport", description:"Community airport airport, Samar", category_id:2, lat_deg:11.000000, lat_min:48.000000, lat_sec:17.198500, lat_dir:"N", lon_deg:124.000000, lon_min:49.000000, lon_sec:51.059100, lon_dir:"E")
 Poi.create(name:"Guiuan Airport", description:"Community airport airport, Eastern Samar", category_id:2, lat_deg:11.000000, lat_min:2.000000, lat_sec:11.714200, lat_dir:"N", lon_deg:125.000000, lon_min:44.000000, lon_sec:34.076600, lon_dir:"E")
-Poi.create(name:"Hilongos Airport", description:"Community airport airport, Leyte", category_id:2, lat_deg:10.000000, lat_min:22.000000, lat_sec:34.735600, lat_dir:"N", lon_deg:124.000000, lon_min:45.000000, lon_sec:40.000300, lon_dir:"E")
+
+hilongos = Poi.create(name:"Hilongos Airport", description:"Community airport airport, Leyte", category_id:2, lat_deg:10.000000, lat_min:22.000000, lat_sec:34.735600, lat_dir:"N", lon_deg:124.000000, lon_min:45.000000, lon_sec:40.000300, lon_dir:"E")
+Image.create(poi_id:hilongos.id , url:"airport/Hilangos.jpg")
+
 Poi.create(name:"Panan-awan (Maasin) Airport", description:"Community airport airport, Southern Leyte", category_id:2, lat_deg:10.000000, lat_min:11.000000, lat_sec:13.595700, lat_dir:"N", lon_deg:124.000000, lon_min:46.000000, lon_sec:58.461500, lon_dir:"E")
-Poi.create(name:"Ormoc Airport", description:"Class 2 principal airport airport, Ormoc City", category_id:2, lat_deg:11.000000, lat_min:3.000000, lat_sec:23.471700, lat_dir:"N", lon_deg:124.000000, lon_min:33.000000, lon_sec:55.972900, lon_dir:"E")
-Poi.create(name:"Daniel Z. Romualdez (Tacloban) Airport", description:"Class 1 principal airport airport, Tacloban City", category_id:2, lat_deg:11.000000, lat_min:13.000000, lat_sec:39.456000, lat_dir:"N", lon_deg:125.000000, lon_min:1.000000, lon_sec:39.922000, lon_dir:"E")
+
+ormoc = Poi.create(name:"Ormoc Airport", description:"Class 2 principal airport airport, Ormoc City", category_id:2, lat_deg:11.000000, lat_min:3.000000, lat_sec:23.471700, lat_dir:"N", lon_deg:124.000000, lon_min:33.000000, lon_sec:55.972900, lon_dir:"E")
+Image.create(poi_id:ormoc.id , url:"airport/Ormoc_001.jpg")
+
+tacloban = Poi.create(name:"Daniel Z. Romualdez (Tacloban) Airport", description:"Class 1 principal airport airport, Tacloban City", category_id:2, lat_deg:11.000000, lat_min:13.000000, lat_sec:39.456000, lat_dir:"N", lon_deg:125.000000, lon_min:1.000000, lon_sec:39.922000, lon_dir:"E")
+Image.create(poi_id:tacloban.id , url:"airport/Tacloban_001.jpg")
+
 Poi.create(name:"Cagayan de Sulu (Mapun) Airport", description:"Community airport airport, Tawi-Tawi", category_id:2, lat_deg:7.000000, lat_min:0.000000, lat_sec:45.826200, lat_dir:"N", lon_deg:118.000000, lon_min:29.000000, lon_sec:43.036300, lon_dir:"E")
-Poi.create(name:"Dipolog Airport", description:"Class 1 principal airport airport, Zamboanga del Norte", category_id:2, lat_deg:8.000000, lat_min:36.000000, lat_sec:4.032500, lat_dir:"N", lon_deg:123.000000, lon_min:20.000000, lon_sec:35.017900, lon_dir:"E")
+
+dipolog = Poi.create(name:"Dipolog Airport", description:"Class 1 principal airport airport, Zamboanga del Norte", category_id:2, lat_deg:8.000000, lat_min:36.000000, lat_sec:4.032500, lat_dir:"N", lon_deg:123.000000, lon_min:20.000000, lon_sec:35.017900, lon_dir:"E")
+Image.create(poi_id:dipolog.id , url:"airport/Dipolog_001.jpg")
+
 Poi.create(name:"Ipil Airport", description:"Community airport airport, Zamboanga del Sur", category_id:2, lat_deg:7.000000, lat_min:47.000000, lat_sec:35.580700, lat_dir:"N", lon_deg:122.000000, lon_min:36.000000, lon_sec:25.046200, lon_dir:"E")
 Poi.create(name:"Jolo Airport", description:"Class 2 principal airport airport, Sulu", category_id:2, lat_deg:6.000000, lat_min:3.000000, lat_sec:11.047000, lat_dir:"N", lon_deg:121.000000, lon_min:0.000000, lon_sec:35.030400, lon_dir:"E")
 Poi.create(name:"Liloy Airport", description:"Community airport airport, Zamboanga del Norte", category_id:2, lat_deg:8.000000, lat_min:8.000000, lat_sec:55.488800, lat_dir:"N", lon_deg:122.000000, lon_min:40.000000, lon_sec:5.050400, lon_dir:"E")
-Poi.create(name:"Pagadian Airport", description:"Class 1 principal airport airport, Zamboanga del Sur", category_id:2, lat_deg:7.000000, lat_min:49.000000, lat_sec:43.561200, lat_dir:"N", lon_deg:123.000000, lon_min:28.000000, lon_sec:35.043500, lon_dir:"E")
+
+pagadian = Poi.create(name:"Pagadian Airport", description:"Class 1 principal airport airport, Zamboanga del Sur", category_id:2, lat_deg:7.000000, lat_min:49.000000, lat_sec:43.561200, lat_dir:"N", lon_deg:123.000000, lon_min:28.000000, lon_sec:35.043500, lon_dir:"E")
+Image.create(poi_id:pagadian.id , url:"airport/Pagadian_001.jpg")
+
 Poi.create(name:"Sanag-Sanga (Tawi-Tawi) Airport", description:"Class 2 principal airport airport, Tawi-Tawi", category_id:2, lat_deg:5.000000, lat_min:2.000000, lat_sec:40.319800, lat_dir:"N", lon_deg:119.000000, lon_min:44.000000, lon_sec:37.021200, lon_dir:"E")
 Poi.create(name:"Siocon Airport", description:"Community airport airport, Zamboanga del Norte", category_id:2, lat_deg:7.000000, lat_min:42.000000, lat_sec:25.608000, lat_dir:"N", lon_deg:122.000000, lon_min:9.000000, lon_sec:53.046300, lon_dir:"E")
-Poi.create(name:"Zamboanga International Airport", description:"International airport airport, Zamboanga City", category_id:2, lat_deg:6.000000, lat_min:55.000000, lat_sec:20.714700, lat_dir:"N", lon_deg:122.000000, lon_min:3.000000, lon_sec:34.684700, lon_dir:"E")
-Poi.create(name:"Butuan Airport", description:"Class 1 principal airport airport, Butuan City", category_id:2, lat_deg:8.000000, lat_min:57.000000, lat_sec:30.911400, lat_dir:"N", lon_deg:125.000000, lon_min:29.000000, lon_sec:30.008400, lon_dir:"E")
-Poi.create(name:"Laguindingan (Cagayan de Oro) Airport", description:"Class 1 principal airport airport, Misamis Oriental", category_id:2, lat_deg:8.000000, lat_min:36.000000, lat_sec:38.980000, lat_dir:"N", lon_deg:124.000000, lon_min:27.000000, lon_sec:28.440000, lon_dir:"E")
-Poi.create(name:"Camiguin Airport", description:"Class 2 principal airport airport, Camiguin", category_id:2, lat_deg:9.000000, lat_min:15.000000, lat_sec:15.845700, lat_dir:"N", lon_deg:124.000000, lon_min:42.000000, lon_sec:13.018600, lon_dir:"E")
-Poi.create(name:"Labo (Ozamiz) Airport", description:"Community airport airport, Misamis Occidental", category_id:2, lat_deg:8.000000, lat_min:10.000000, lat_sec:46.116300, lat_dir:"N", lon_deg:123.000000, lon_min:50.000000, lon_sec:31.316200, lon_dir:"E")
-Poi.create(name:"Sayak (Siargao) Airport", description:"Class 2 principal airport airport, Surigao del Norte", category_id:2, lat_deg:9.000000, lat_min:51.000000, lat_sec:33.656500, lat_dir:"N", lon_deg:126.000000, lon_min:0.000000, lon_sec:55.215900, lon_dir:"E")
-Poi.create(name:"Surigao Airport", description:"Class 2 principal airport airport, Surigao del Norte", category_id:2, lat_deg:9.000000, lat_min:45.000000, lat_sec:28.141200, lat_dir:"N", lon_deg:125.000000, lon_min:28.000000, lon_sec:51.864200, lon_dir:"E")
+
+zamboanga = Poi.create(name:"Zamboanga International Airport", description:"International airport airport, Zamboanga City", category_id:2, lat_deg:6.000000, lat_min:55.000000, lat_sec:20.714700, lat_dir:"N", lon_deg:122.000000, lon_min:3.000000, lon_sec:34.684700, lon_dir:"E")
+Image.create(poi_id:zamboanga.id , url:"airport/Zamboanga_001.jpg")
+
+butuan = Poi.create(name:"Butuan Airport", description:"Class 1 principal airport airport, Butuan City", category_id:2, lat_deg:8.000000, lat_min:57.000000, lat_sec:30.911400, lat_dir:"N", lon_deg:125.000000, lon_min:29.000000, lon_sec:30.008400, lon_dir:"E")
+Image.create(poi_id:butuan.id , url:"airport/Butuan_001.jpg")
+
+laguindingan = Poi.create(name:"Laguindingan (Cagayan de Oro) Airport", description:"Class 1 principal airport airport, Misamis Oriental", category_id:2, lat_deg:8.000000, lat_min:36.000000, lat_sec:38.980000, lat_dir:"N", lon_deg:124.000000, lon_min:27.000000, lon_sec:28.440000, lon_dir:"E")
+Image.create(poi_id:laguindingan.id , url:"airport/Laguindingan_001.jpg")
+Image.create(poi_id:laguindingan.id , url:"airport/Laguindingan_002.jpg")
+
+camiguin = Poi.create(name:"Camiguin Airport", description:"Class 2 principal airport airport, Camiguin", category_id:2, lat_deg:9.000000, lat_min:15.000000, lat_sec:15.845700, lat_dir:"N", lon_deg:124.000000, lon_min:42.000000, lon_sec:13.018600, lon_dir:"E")
+Image.create(poi_id:camiguin.id , url:"airport/Camiguin.jpg")
+
+ozamiz = Poi.create(name:"Labo (Ozamiz) Airport", description:"Community airport airport, Misamis Occidental", category_id:2, lat_deg:8.000000, lat_min:10.000000, lat_sec:46.116300, lat_dir:"N", lon_deg:123.000000, lon_min:50.000000, lon_sec:31.316200, lon_dir:"E")
+Image.create(poi_id:ozamiz.id , url:"airport/Ozamiz.jpg")
+
+siargao = Poi.create(name:"Sayak (Siargao) Airport", description:"Class 2 principal airport airport, Surigao del Norte", category_id:2, lat_deg:9.000000, lat_min:51.000000, lat_sec:33.656500, lat_dir:"N", lon_deg:126.000000, lon_min:0.000000, lon_sec:55.215900, lon_dir:"E")
+Image.create(poi_id:siargao.id , url:"airport/Siargao_001.jpg")
+
+surigao = Poi.create(name:"Surigao Airport", description:"Class 2 principal airport airport, Surigao del Norte", category_id:2, lat_deg:9.000000, lat_min:45.000000, lat_sec:28.141200, lat_dir:"N", lon_deg:125.000000, lon_min:28.000000, lon_sec:51.864200, lon_dir:"E")
+Image.create(poi_id:surigao.id , url:"airport/Surigao_001.jpg")
+
 Poi.create(name:"Allah Valley Airport", description:"Community airport airport, South Cotabato", category_id:2, lat_deg:6.000000, lat_min:20.000000, lat_sec:0.938000, lat_dir:"N", lon_deg:124.000000, lon_min:45.000000, lon_sec:5.020600, lon_dir:"E")
-Poi.create(name:"General Santos International Airport (Tambler)", description:"International airport airport, General Santos City", category_id:2, lat_deg:6.000000, lat_min:3.000000, lat_sec:29.248300, lat_dir:"N", lon_deg:125.000000, lon_min:5.000000, lon_sec:46.313100, lon_dir:"E")
+
+gensan = Poi.create(name:"General Santos International Airport (Tambler)", description:"International airport airport, General Santos City", category_id:2, lat_deg:6.000000, lat_min:3.000000, lat_sec:29.248300, lat_dir:"N", lon_deg:125.000000, lon_min:5.000000, lon_sec:46.313100, lon_dir:"E")
+Image.create(poi_id:gensan.id , url:"airport/Gen San (Tambler)_001.jpg")
+
 Poi.create(name:"Bislig Airport", description:"Community airport airport, Surigao del Sur", category_id:2, lat_deg:8.000000, lat_min:11.000000, lat_sec:18.433000, lat_dir:"N", lon_deg:126.000000, lon_min:19.000000, lon_sec:37.029600, lon_dir:"E")
-Poi.create(name:"Francisco Bangoy (Davao) International Airport", description:"International airport airport, Davao City", category_id:2, lat_deg:7.000000, lat_min:7.000000, lat_sec:31.883200, lat_dir:"N", lon_deg:125.000000, lon_min:38.000000, lon_sec:44.802100, lon_dir:"E")
-Poi.create(name:"Mati Airport", description:"Community airport airport, Davao Oriental", category_id:2, lat_deg:6.000000, lat_min:57.000000, lat_sec:20.758500, lat_dir:"N", lon_deg:126.000000, lon_min:12.000000, lon_sec:57.016200, lon_dir:"E")
-Poi.create(name:"Tandag Airport", description:"Class 2 principal airport airport, Surigao del Sur", category_id:2, lat_deg:9.000000, lat_min:3.000000, lat_sec:55.207600, lat_dir:"N", lon_deg:126.000000, lon_min:10.000000, lon_sec:5.042500, lon_dir:"E")
-Poi.create(name:"Awang (Cotabato) Airport", description:"Class 1 principal airport airport, Maguindanao", category_id:2, lat_deg:7.000000, lat_min:9.000000, lat_sec:53.048300, lat_dir:"N", lon_deg:124.000000, lon_min:12.000000, lon_sec:37.234500, lon_dir:"E")
+
+davao = Poi.create(name:"Francisco Bangoy (Davao) International Airport", description:"International airport airport, Davao City", category_id:2, lat_deg:7.000000, lat_min:7.000000, lat_sec:31.883200, lat_dir:"N", lon_deg:125.000000, lon_min:38.000000, lon_sec:44.802100, lon_dir:"E")
+Image.create(poi_id:davao.id , url:"airport/Davao_001.jpg")
+
+mati = Poi.create(name:"Mati Airport", description:"Community airport airport, Davao Oriental", category_id:2, lat_deg:6.000000, lat_min:57.000000, lat_sec:20.758500, lat_dir:"N", lon_deg:126.000000, lon_min:12.000000, lon_sec:57.016200, lon_dir:"E")
+Image.create(poi_id:mati.id , url:"airport/Mati.jpg")
+
+tandag = Poi.create(name:"Tandag Airport", description:"Class 2 principal airport airport, Surigao del Sur", category_id:2, lat_deg:9.000000, lat_min:3.000000, lat_sec:55.207600, lat_dir:"N", lon_deg:126.000000, lon_min:10.000000, lon_sec:5.042500, lon_dir:"E")
+Image.create(poi_id:tandag.id , url:"airport/Tandag_001.jpg")
+
+cotabato = Poi.create(name:"Awang (Cotabato) Airport", description:"Class 1 principal airport airport, Maguindanao", category_id:2, lat_deg:7.000000, lat_min:9.000000, lat_sec:53.048300, lat_dir:"N", lon_deg:124.000000, lon_min:12.000000, lon_sec:37.234500, lon_dir:"E")
+Image.create(poi_id:cotabato.id , url:"aiport/Awang-Cotabato_001.jpg")
+
 Poi.create(name:"Maria Cristina (Iligan) Airport", description:"Community airport airport, Lanao del Norte", category_id:2, lat_deg:8.000000, lat_min:8.000000, lat_sec:55.469700, lat_dir:"N", lon_deg:124.000000, lon_min:12.000000, lon_sec:35.043900, lon_dir:"E")
 Poi.create(name:"Malabang Airport", description:"Community airport airport, Lanao del Sur", category_id:2, lat_deg:7.000000, lat_min:37.000000, lat_sec:1.609100, lat_dir:"N", lon_deg:124.000000, lon_min:3.000000, lon_sec:20.548300, lon_dir:"E")
 Poi.create(name:"Lumbia (Cagayan de Oro) National Airport", description:" airport, Cagayan de Oro City", category_id:2, lat_deg:8.000000, lat_min:24.000000, lat_sec:58.364100, lat_dir:"N", lon_deg:124.000000, lon_min:36.000000, lon_sec:40.883100, lon_dir:"E")
 Poi.create(name:"Sorsogon (Gabao/Bacon) Airport", description:"Community airport airport, Sorsogon", category_id:2, lat_deg:12.000000, lat_min:59.000000, lat_sec:54.921700, lat_dir:"N", lon_deg:124.000000, lon_min:1.000000, lon_sec:5.087700, lon_dir:"E")
 Poi.create(name:"Lubang Airport", description:"Community airport airport, Occidental Mindoro", category_id:2, lat_deg:13.000000, lat_min:51.000000, lat_sec:30.797600, lat_dir:"N", lon_deg:120.000000, lon_min:6.000000, lon_sec:23.118000, lon_dir:"E")
-Poi.create(name:"San Fernando (Poro Point) Airport", description:"Community airport airport, La Union", category_id:2, lat_deg:16.000000, lat_min:35.000000, lat_sec:40.218200, lat_dir:"N", lon_deg:120.000000, lon_min:18.000000, lon_sec:11.242200, lon_dir:"E")
+
+sanfernando = Poi.create(name:"San Fernando (Poro Point) Airport", description:"Community airport airport, La Union", category_id:2, lat_deg:16.000000, lat_min:35.000000, lat_sec:40.218200, lat_dir:"N", lon_deg:120.000000, lon_min:18.000000, lon_sec:11.242200, lon_dir:"E")
+Image.create(poi_id:sanfernando.id , url:"airport/San Fernando.jpg")
+
 Poi.create(name:"Wao Airport", description:"Community airport airport, Lanao del Sur", category_id:2, lat_deg:7.000000, lat_min:38.000000, lat_sec:5.000000, lat_dir:"N", lon_deg:124.000000, lon_min:44.000000, lon_sec:1.000000, lon_dir:"E")
 
 
 
-#added these rail stations
+
+#Rail Stations
 
 Poi.create(name:"Roosevelt Station", description:"Light Rail Transit Line 1", category_id:4, lat_deg:14.000000, lat_min:39.000000, lat_sec:27.200000, lat_dir:"N", lon_deg:121.000000, lon_min:1.000000, lon_sec:16.290000, lon_dir:"E")
 Poi.create(name:"Balintawak Station", description:"Light Rail Transit Line 1", category_id:4, lat_deg:14.000000, lat_min:39.000000, lat_sec:26.680000, lat_dir:"N", lon_deg:121.000000, lon_min:0.000000, lon_sec:13.230000, lon_dir:"E")
@@ -403,1915 +548,2475 @@ Poi.create(name:"Naga Station", description:"Philippine National Railways - Bico
 
 
 
+
 #Lighthouses
 temp = Poi.create(name:"LS Bulacan", description:"Bulacan, Bulacan", category_id:3, lat_deg:14.000000, lat_min:42.000000, lat_sec:54.000000, lat_dir:"N", lon_deg:120.000000, lon_min:52.000000, lon_sec:12.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Steel", poi_id: temp.id)
+
 temp = Poi.create(name:"LS CBB", description:"Sangley Pt, Cavite City", category_id:3, lat_deg:14.000000, lat_min:29.000000, lat_sec:7.000000, lat_dir:"N", lon_deg:120.000000, lon_min:54.000000, lon_sec:8.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-LS2219", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Steel", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Cavite City", description:"Cavite city", category_id:3, lat_deg:14.000000, lat_min:28.000000, lat_sec:45.000000, lat_dir:"N", lon_deg:120.000000, lon_min:53.000000, lon_sec:20.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Steel", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Hagonoy", description:"Hagonoy, Bulacan", category_id:3, lat_deg:14.000000, lat_min:46.000000, lat_sec:16.000000, lat_dir:"N", lon_deg:120.000000, lon_min:41.000000, lon_sec:3.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-HP", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS El Fraile", description:"El Fraile, Ternate, Cavite", category_id:3, lat_deg:14.000000, lat_min:18.000000, lat_sec:24.000000, lat_dir:"N", lon_deg:120.000000, lon_min:37.000000, lon_sec:48.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS La Monja", description:"Mariveles, Bataan", category_id:3, lat_deg:14.000000, lat_min:22.000000, lat_sec:38.000000, lat_dir:"N", lon_deg:120.000000, lon_min:31.000000, lon_sec:15.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Mariveles", description:"Mariveles, Bataan", category_id:3, lat_deg:14.000000, lat_min:25.000000, lat_sec:54.000000, lat_dir:"N", lon_deg:120.000000, lon_min:29.000000, lon_sec:4.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 G every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"NW-20", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS NH Entrance", description:"N Entrance, NH, Manila", category_id:3, lat_deg:14.000000, lat_min:37.000000, lat_sec:31.000000, lat_dir:"N", lon_deg:120.000000, lon_min:56.000000, lon_sec:30.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete ", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Pto Azul", description:"Pto Azul, Ternate, Cavite", category_id:3, lat_deg:14.000000, lat_min:9.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:120.000000, lon_min:4.000000, lon_sec:36.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Pugad", description:"Pugad, Hagonoy, Bulacan", category_id:3, lat_deg:14.000000, lat_min:45.000000, lat_sec:43.000000, lat_dir:"N", lon_deg:120.000000, lon_min:44.000000, lon_sec:31.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Sangley Point", description:"Sangley Pt., Cavite City", category_id:3, lat_deg:14.000000, lat_min:29.000000, lat_sec:55.000000, lat_dir:"N", lon_deg:120.000000, lon_min:55.000000, lon_sec:2.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Steel", poi_id: temp.id)
+
 temp = Poi.create(name:"LS S Nicolas Shoal", description:"Rosario, Cavite", category_id:3, lat_deg:14.000000, lat_min:26.000000, lat_sec:17.000000, lat_dir:"N", lon_deg:120.000000, lon_min:45.000000, lon_sec:47.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"Zl-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Sisiman Cove", description:"Mariveles, Bataan", category_id:3, lat_deg:14.000000, lat_min:25.000000, lat_sec:24.000000, lat_dir:"N", lon_deg:120.000000, lon_min:31.000000, lon_sec:9.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-155", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Ternate", description:"Ternate, Cavite", category_id:3, lat_deg:14.000000, lat_min:16.000000, lat_sec:25.000000, lat_dir:"N", lon_deg:120.000000, lon_min:37.000000, lon_sec:48.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS NBHA Officer's Landing", description:"Sangley Point, Cavite City", category_id:3, lat_deg:14.000000, lat_min:29.000000, lat_sec:26.000000, lat_dir:"N", lon_deg:120.000000, lon_min:54.000000, lon_sec:23.900000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 R every 3 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-155", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Wooden Pile", poi_id: temp.id)
+
 temp = Poi.create(name:"LS NBHA", description:"NBHA, Sangley Point, Cavite City", category_id:3, lat_deg:14.000000, lat_min:29.000000, lat_sec:51.360000, lat_dir:"N", lon_deg:120.000000, lon_min:55.000000, lon_sec:11.640000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 Red 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-155", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete Pile", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Fort San Felipe 1", description:"Fort San Felipe Cavite City", category_id:3, lat_deg:14.000000, lat_min:28.000000, lat_sec:51.350000, lat_dir:"N", lon_deg:120.000000, lon_min:55.000000, lon_sec:17.710000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 Red 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-155", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete Pile", poi_id: temp.id)
+
 temp = Poi.create(name:"LS HPCG Wharf", description:"HPCG, Port Area, SH, Mla", category_id:3, lat_deg:14.000000, lat_min:34.000000, lat_sec:57.000000, lat_dir:"N", lon_deg:120.000000, lon_min:58.000000, lon_sec:18.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"APRB-288", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Steel ", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Botolan", description:"Botolan, Zambales", category_id:3, lat_deg:15.000000, lat_min:14.000000, lat_sec:6.000000, lat_dir:"N", lon_deg:120.000000, lon_min:0.000000, lon_sec:36.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every 15 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Capones", description:"San Antonio, Zambales", category_id:3, lat_deg:14.000000, lat_min:55.000000, lat_sec:9.000000, lat_dir:"N", lon_deg:120.000000, lon_min:0.000000, lon_sec:12.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every 15 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-HP8", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Hermana Mayor", description:"Sta Cruz, Zambales", category_id:3, lat_deg:15.000000, lat_min:47.000000, lat_sec:42.000000, lat_dir:"N", lon_deg:119.000000, lon_min:47.000000, lon_sec:42.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Ilanin Dir Light", description:"Subic, Zambales", category_id:3, lat_deg:14.000000, lat_min:46.000000, lat_sec:57.000000, lat_dir:"N", lon_deg:120.000000, lon_min:15.000000, lon_sec:9.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Iso W every 6 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Mayanga", description:"Subic Bay, Zambales", category_id:3, lat_deg:14.000000, lat_min:50.000000, lat_sec:14.000000, lat_dir:"N", lon_deg:120.000000, lon_min:14.000000, lon_sec:6.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Palauig", description:"Palauig, Zambales", category_id:3, lat_deg:15.000000, lat_min:23.000000, lat_sec:54.000000, lat_dir:"N", lon_deg:119.000000, lon_min:53.000000, lon_sec:52.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 10 sec", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"PBB", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Steel", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Sueste Point", description:"Subic, Zambales", category_id:3, lat_deg:14.000000, lat_min:45.000000, lat_sec:9.000000, lat_dir:"N", lon_deg:120.000000, lon_min:11.000000, lon_sec:18.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Wawa", description:"Wawa, Tanay, Rizal", category_id:3, lat_deg:14.000000, lat_min:29.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:121.000000, lon_min:16.000000, lon_sec:54.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 3 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Tanay", description:"Tanay, Rizal", category_id:3, lat_deg:14.000000, lat_min:30.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:121.000000, lon_min:16.000000, lon_sec:45.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-249", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Custom Tower", description:"Custom Bldg, SH, Mla", category_id:3, lat_deg:14.000000, lat_min:35.000000, lat_sec:13.000000, lat_dir:"N", lon_deg:120.000000, lon_min:57.000000, lon_sec:59.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Building", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Mla Jetty Nr 1", description:"South Harbor, Manila", category_id:3, lat_deg:14.000000, lat_min:34.000000, lat_sec:26.000000, lat_dir:"N", lon_deg:120.000000, lon_min:57.000000, lon_sec:15.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"LED", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"STEEL", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Mla Jetty Nr 2", description:"South Harbor, Manila", category_id:3, lat_deg:14.000000, lat_min:34.000000, lat_sec:20.000000, lat_dir:"N", lon_deg:120.000000, lon_min:57.000000, lon_sec:20.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Mla Jetty Nr 4", description:"South Harbor, Manila", category_id:3, lat_deg:14.000000, lat_min:33.000000, lat_sec:51.000000, lat_dir:"N", lon_deg:120.000000, lon_min:55.000000, lon_sec:42.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"LBEA-85", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Mla Jetty Nr 5", description:"South Harbor, Manila", category_id:3, lat_deg:14.000000, lat_min:33.000000, lat_sec:51.000000, lat_dir:"N", lon_deg:120.000000, lon_min:58.000000, lon_sec:50.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 G every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Pasig River", description:"Farola Com, Binondo, Mla", category_id:3, lat_deg:14.000000, lat_min:35.000000, lat_sec:53.000000, lat_dir:"N", lon_deg:120.000000, lon_min:57.000000, lon_sec:34.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"PBB", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Napindan", description:"Taguig, Rizal", category_id:3, lat_deg:14.000000, lat_min:31.000000, lat_sec:19.000000, lat_dir:"N", lon_deg:121.000000, lon_min:6.000000, lon_sec:53.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-155", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Balintang", description:"Balintang Island, Batanes", category_id:3, lat_deg:19.000000, lat_min:57.000000, lat_sec:35.000000, lat_dir:"N", lon_deg:122.000000, lon_min:8.000000, lon_sec:30.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"Ml-155", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Basco", description:"Apurawan, Aborlan, Palawan", category_id:3, lat_deg:20.000000, lat_min:27.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:121.000000, lon_min:57.000000, lon_sec:52.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 4 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Sabtang S", description:"Sabtang, Batanes", category_id:3, lat_deg:20.000000, lat_min:17.000000, lat_sec:35.000000, lat_dir:"N", lon_deg:121.000000, lon_min:52.000000, lon_sec:54.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Aparri", description:"Aparri, Cagayan", category_id:3, lat_deg:18.000000, lat_min:21.000000, lat_sec:50.000000, lat_dir:"N", lon_deg:121.000000, lon_min:37.000000, lon_sec:43.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Cape Engano", description:"Sta Ana, Cagayan", category_id:3, lat_deg:18.000000, lat_min:35.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:122.000000, lon_min:8.000000, lon_sec:5.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing Wevery 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Maconacon", description:"Maconacon, Isabela", category_id:3, lat_deg:17.000000, lat_min:23.000000, lat_sec:5.340000, lat_dir:"N", lon_deg:122.000000, lon_min:14.000000, lon_sec:10.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Palanan", description:"Palanan, Isabela", category_id:3, lat_deg:17.000000, lat_min:8.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:122.000000, lon_min:30.000000, lon_sec:24.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"PRB-46", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Palauig", description:"Sta Ana, Cagayan", category_id:3, lat_deg:18.000000, lat_min:28.000000, lat_sec:15.000000, lat_dir:"N", lon_deg:122.000000, lon_min:8.000000, lon_sec:30.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-155", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Pata Point", description:"Claveria, Cagayan", category_id:3, lat_deg:18.000000, lat_min:37.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:121.000000, lon_min:9.000000, lon_sec:15.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BBT", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Port Irene", description:"Sta Ana, Cagayan", category_id:3, lat_deg:18.000000, lat_min:24.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:122.000000, lon_min:7.000000, lon_sec:35.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS San Vicente", description:"Sta Ana, Cagayan", category_id:3, lat_deg:18.000000, lat_min:30.000000, lat_sec:45.000000, lat_dir:"N", lon_deg:122.000000, lon_min:8.000000, lon_sec:30.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-155", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Dinapigue", description:"Dinapigui, Isabela", category_id:3, lat_deg:16.000000, lat_min:30.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:122.000000, lon_min:14.000000, lon_sec:40.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Steel", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Baler", description:"Baler, Quezon", category_id:3, lat_deg:15.000000, lat_min:45.000000, lat_sec:25.000000, lat_dir:"N", lon_deg:121.000000, lon_min:34.000000, lon_sec:30.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZP-20", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Darigayos", description:"Darigayos, La Union", category_id:3, lat_deg:16.000000, lat_min:49.000000, lat_sec:9.000000, lat_dir:"N", lon_deg:120.000000, lon_min:19.000000, lon_sec:42.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Damortis", description:"Apurawan, Aborlan, Palawan", category_id:3, lat_deg:16.000000, lat_min:16.000000, lat_sec:18.000000, lat_dir:"N", lon_deg:120.000000, lon_min:23.000000, lon_sec:36.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Sn Fdo Point", description:"San Fernando, La Union", category_id:3, lat_deg:16.000000, lat_min:36.000000, lat_sec:59.000000, lat_dir:"N", lon_deg:120.000000, lon_min:16.000000, lon_sec:45.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Sn Fdo, R F", description:"San Fernando, La Union", category_id:3, lat_deg:16.000000, lat_min:37.000000, lat_sec:6.000000, lat_dir:"N", lon_deg:120.000000, lon_min:18.000000, lon_sec:40.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Fixed Green", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"RL-125", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Steel", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Sn Fdo R R", description:"San Fernando, La Union", category_id:3, lat_deg:16.000000, lat_min:36.000000, lat_sec:48.000000, lat_dir:"N", lon_deg:120.000000, lon_min:18.000000, lon_sec:53.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Fixed Green", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"RL-125", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Steel", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Sta Rita", description:"Sta Rita, Agoo, La Union", category_id:3, lat_deg:16.000000, lat_min:21.000000, lat_sec:42.000000, lat_dir:"N", lon_deg:120.000000, lon_min:20.000000, lon_sec:36.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"Ml-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Arboledan", description:"Currimao, Ilocos Norte", category_id:3, lat_deg:18.000000, lat_min:1.000000, lat_sec:16.000000, lat_dir:"N", lon_deg:120.000000, lon_min:28.000000, lon_sec:48.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-600", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"AL/GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Apatot", description:"Sn Esteban, Ilocos Norte", category_id:3, lat_deg:17.000000, lat_min:20.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:120.000000, lon_min:27.000000, lon_sec:30.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Iso R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250`", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Cabangtalan", description:"Magsingal, Ilocos Norte", category_id:3, lat_deg:17.000000, lat_min:51.000000, lat_sec:24.000000, lat_dir:"N", lon_deg:120.000000, lon_min:26.000000, lon_sec:42.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Cape Bojeador", description:"Burgos, Ilocos Norte", category_id:3, lat_deg:18.000000, lat_min:30.000000, lat_sec:57.000000, lat_dir:"N", lon_deg:120.000000, lon_min:35.000000, lon_sec:45.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Candon", description:"Candon, Ilocos Sur", category_id:3, lat_deg:17.000000, lat_min:12.000000, lat_sec:20.000000, lat_dir:"N", lon_deg:120.000000, lon_min:24.000000, lon_sec:57.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Diliao Pt", description:"Pagudpod, Ilocos Norte", category_id:3, lat_deg:18.000000, lat_min:37.000000, lat_sec:48.000000, lat_dir:"N", lon_deg:120.000000, lon_min:47.000000, lon_sec:19.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 4 W every 20 secs ", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Puropingit", description:"Sinait, Ilocos Sur", category_id:3, lat_deg:17.000000, lat_min:41.000000, lat_sec:24.000000, lat_dir:"N", lon_deg:120.000000, lon_min:21.000000, lon_sec:12.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Tagudin", description:"Tagudin, Ilocos Sur", category_id:3, lat_deg:16.000000, lat_min:57.000000, lat_sec:27.000000, lat_dir:"N", lon_deg:120.000000, lon_min:26.000000, lon_sec:8.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Pandan", description:"Pandan, Ilocos sur", category_id:3, lat_deg:17.000000, lat_min:32.000000, lat_sec:6.000000, lat_dir:"N", lon_deg:120.000000, lon_min:22.000000, lon_sec:5.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-155", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Salomague", description:"Cabugao, Ilocos Sur", category_id:3, lat_deg:17.000000, lat_min:46.000000, lat_sec:28.000000, lat_dir:"N", lon_deg:120.000000, lon_min:25.000000, lon_sec:27.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs ", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Anda", description:"Anda, Pangasinan", category_id:3, lat_deg:16.000000, lat_min:18.000000, lat_sec:50.000000, lat_dir:"N", lon_deg:120.000000, lon_min:0.000000, lon_sec:49.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Cabaoangan", description:"Burgos, Pangasinan", category_id:3, lat_deg:16.000000, lat_min:0.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:119.000000, lon_min:45.000000, lon_sec:46.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every 15 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"PRB46", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Cape Bolinao", description:"Bolinao, Pangasinan", category_id:3, lat_deg:16.000000, lat_min:18.000000, lat_sec:32.000000, lat_dir:"N", lon_deg:119.000000, lon_min:47.000000, lon_sec:5.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-HP8", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Dagupan", description:"Dagupan City", category_id:3, lat_deg:16.000000, lat_min:4.000000, lat_sec:24.000000, lat_dir:"N", lon_deg:120.000000, lon_min:20.000000, lon_sec:6.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Lucap ", description:"Alaminos, Pangsinan", category_id:3, lat_deg:16.000000, lat_min:11.000000, lat_sec:42.000000, lat_dir:"N", lon_deg:120.000000, lon_min:0.000000, lon_sec:12.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Port Bolinao", description:"Bolinao, Pangasinan", category_id:3, lat_deg:16.000000, lat_min:22.000000, lat_sec:51.000000, lat_dir:"N", lon_deg:119.000000, lon_min:54.000000, lon_sec:48.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-155", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Sual", description:"Sual, Pangasinan", category_id:3, lat_deg:16.000000, lat_min:4.000000, lat_sec:32.000000, lat_dir:"N", lon_deg:120.000000, lon_min:6.000000, lon_sec:42.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Sabangan Pt/Agno", description:"Agno, Pangasinan", category_id:3, lat_deg:16.000000, lat_min:8.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:119.000000, lon_min:46.000000, lon_sec:34.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Silaque", description:"Bolinao,Pangasinan", category_id:3, lat_deg:16.000000, lat_min:26.000000, lat_sec:36.000000, lat_dir:"N", lon_deg:119.000000, lon_min:55.000000, lon_sec:18.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Arenas", description:"Apurawan, Aborlan, Palawan", category_id:3, lat_deg:13.000000, lat_min:37.000000, lat_sec:21.000000, lat_dir:"N", lon_deg:120.000000, lon_min:4.000000, lon_sec:42.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Batangas", description:"Batangas City", category_id:3, lat_deg:13.000000, lat_min:45.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:121.000000, lon_min:2.000000, lon_sec:30.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-249", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"PPA Bldg", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Cape Santiago", description:"Calatagan, Batangas", category_id:3, lat_deg:13.000000, lat_min:46.000000, lat_sec:24.000000, lat_dir:"N", lon_deg:120.000000, lon_min:38.000000, lon_sec:6.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-HP (ML-300)", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Masonry", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Fortune Is", description:"Nasugbu, Batangas", category_id:3, lat_deg:14.000000, lat_min:3.000000, lat_sec:26.000000, lat_dir:"N", lon_deg:120.000000, lon_min:29.000000, lon_sec:27.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-RBG", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminun", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Lemery", description:"Lemery, Batangas", category_id:3, lat_deg:13.000000, lat_min:52.000000, lat_sec:36.000000, lat_dir:"N", lon_deg:120.000000, lon_min:54.000000, lon_sec:42.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-249", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Locoloco", description:"San Juan, Batangas", category_id:3, lat_deg:13.000000, lat_min:39.000000, lat_sec:18.000000, lat_dir:"N", lon_deg:121.000000, lon_min:25.000000, lon_sec:10.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"PRB46", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Mainaga", description:" Mabini, Batangas", category_id:3, lat_deg:13.000000, lat_min:45.000000, lat_sec:51.000000, lat_dir:"N", lon_deg:120.000000, lon_min:57.000000, lon_sec:18.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZP-20(FA-250)", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Malabrigo", description:"Lobo, Batangas", category_id:3, lat_deg:13.000000, lat_min:35.000000, lat_sec:59.000000, lat_dir:"N", lon_deg:121.000000, lon_min:15.000000, lon_sec:39.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every15 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-HP", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Masonry", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Malajibomanoc", description:"Batangas City", category_id:3, lat_deg:13.000000, lat_min:37.000000, lat_sec:43.000000, lat_dir:"N", lon_deg:120.000000, lon_min:57.000000, lon_sec:50.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Matuko Point", description:"Batangas City", category_id:3, lat_deg:13.000000, lat_min:38.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:121.000000, lon_min:5.000000, lon_sec:6.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 8 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-140", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Nasugbu", description:"Nasugbu, Batangas", category_id:3, lat_deg:14.000000, lat_min:5.000000, lat_sec:6.000000, lat_dir:"N", lon_deg:120.000000, lon_min:37.000000, lon_sec:4.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Verde", description:"Verde Island, Batangas", category_id:3, lat_deg:13.000000, lat_min:34.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:121.000000, lon_min:5.000000, lon_sec:6.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 3 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Alabat", description:"Alabat, Quezon", category_id:3, lat_deg:14.000000, lat_min:6.000000, lat_sec:15.000000, lat_dir:"N", lon_deg:122.000000, lon_min:0.000000, lon_sec:30.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 2 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"SF-30", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Baliscan", description:"Baliscan, Quezon", category_id:3, lat_deg:14.000000, lat_min:14.000000, lat_sec:45.000000, lat_dir:"N", lon_deg:121.000000, lon_min:54.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Boac", description:"Boac, Marinduque", category_id:3, lat_deg:13.000000, lat_min:26.000000, lat_sec:15.000000, lat_dir:"N", lon_deg:121.000000, lon_min:49.000000, lon_sec:7.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BBT", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Catanuan", description:"Catanuan, Quezon", category_id:3, lat_deg:13.000000, lat_min:55.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:122.000000, lon_min:19.000000, lon_sec:15.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Gasan", description:"Gasan, Marinduque", category_id:3, lat_deg:13.000000, lat_min:19.000000, lat_sec:37.000000, lat_dir:"N", lon_deg:122.000000, lon_min:50.000000, lon_sec:38.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Gen Luna", description:"General Luna, Quezon", category_id:3, lat_deg:13.000000, lat_min:41.000000, lat_sec:8.000000, lat_dir:"N", lon_deg:122.000000, lon_min:10.000000, lon_sec:14.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZP-20", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Guinayangan", description:"Guinayangan, Quezon", category_id:3, lat_deg:13.000000, lat_min:53.000000, lat_sec:55.000000, lat_dir:"N", lon_deg:126.000000, lon_min:27.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Iso G every 3 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Macalelon", description:"Macalelon, Quezon", category_id:3, lat_deg:13.000000, lat_min:44.000000, lat_sec:57.000000, lat_dir:"N", lon_deg:122.000000, lon_min:7.000000, lon_sec:57.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 4 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Mauban", description:"Mauban, Quezon", category_id:3, lat_deg:14.000000, lat_min:12.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:121.000000, lon_min:45.000000, lon_sec:8.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Perez,", description:"Perez, Quezon", category_id:3, lat_deg:14.000000, lat_min:11.000000, lat_sec:37.000000, lat_dir:"N", lon_deg:121.000000, lon_min:55.000000, lon_sec:22.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Pisngi", description:"Pisngi, Lucena City", category_id:3, lat_deg:13.000000, lat_min:53.000000, lat_sec:45.000000, lat_dir:"N", lon_deg:121.000000, lon_min:36.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Pitogo", description:"Pitogo, Quezon", category_id:3, lat_deg:13.000000, lat_min:47.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:122.000000, lon_min:5.000000, lon_sec:15.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Plaridel", description:"Plaridel, Quezon", category_id:3, lat_deg:13.000000, lat_min:57.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:122.000000, lon_min:1.000000, lon_sec:24.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Port Balanacan", description:"Balanacan, Marinduque", category_id:3, lat_deg:13.000000, lat_min:32.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:121.000000, lon_min:51.000000, lon_sec:55.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3G every 15 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZF-30", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS San Francisco", description:"San Francisco, Quezon", category_id:3, lat_deg:13.000000, lat_min:20.000000, lat_sec:45.000000, lat_dir:"N", lon_deg:122.000000, lon_min:30.000000, lon_sec:50.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Sta Cruz", description:"Sta Cruz, Marinduque", category_id:3, lat_deg:13.000000, lat_min:30.000000, lat_sec:5.000000, lat_dir:"N", lon_deg:122.000000, lon_min:2.000000, lon_sec:58.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZP-20", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Silangan Pass", description:"Alabat, Quezon", category_id:3, lat_deg:13.000000, lat_min:59.000000, lat_sec:54.000000, lat_dir:"N", lon_deg:122.000000, lon_min:10.000000, lon_sec:55.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Tres Reyes", description:"Gasan, Marinduque", category_id:3, lat_deg:13.000000, lat_min:13.000000, lat_sec:32.000000, lat_dir:"N", lon_deg:121.000000, lon_min:48.000000, lon_sec:46.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 6 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-HP", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Villa Norte", description:"Alabat, Quezon", category_id:3, lat_deg:14.000000, lat_min:8.000000, lat_sec:15.000000, lat_dir:"N", lon_deg:122.000000, lon_min:2.000000, lon_sec:46.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 3 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"Zl-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Bansud", description:"Bansud, Mindoro Or", category_id:3, lat_deg:12.000000, lat_min:51.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:124.000000, lon_min:29.000000, lon_sec:15.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-155", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Bongabong", description:"Bongabong, Mindoro Or", category_id:3, lat_deg:12.000000, lat_min:44.000000, lat_sec:53.000000, lat_dir:"N", lon_deg:121.000000, lon_min:29.000000, lon_sec:22.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 10 sec", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"Zl-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Calapan", description:"Calapan, Mindoro Oriental", category_id:3, lat_deg:13.000000, lat_min:25.000000, lat_sec:53.000000, lat_dir:"N", lon_deg:121.000000, lon_min:11.000000, lon_sec:37.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Steel", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Dumali Point", description:"Pinamalayan, Mindoro Orl", category_id:3, lat_deg:13.000000, lat_min:7.000000, lat_sec:16.000000, lat_dir:"N", lon_deg:121.000000, lon_min:33.000000, lon_sec:10.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-HP", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Duyugan", description:"Bangay, Roxas, Mindoro Or", category_id:3, lat_deg:12.000000, lat_min:36.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:121.000000, lon_min:33.000000, lon_sec:15.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every15 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"PRB46", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Escarceo", description:"Pto Galera, Mindoro Orl", category_id:3, lat_deg:13.000000, lat_min:31.000000, lat_sec:23.000000, lat_dir:"N", lon_deg:120.000000, lon_min:59.000000, lon_sec:28.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-RBG", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Herrera", description:"Naujan, Mindoro Or", category_id:3, lat_deg:13.000000, lat_min:14.000000, lat_sec:20.000000, lat_dir:"N", lon_deg:121.000000, lon_min:25.000000, lon_sec:25.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Steel", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Pili", description:"Pinamalayan Mindoro Or ", category_id:3, lat_deg:13.000000, lat_min:4.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:121.000000, lon_min:31.000000, lon_sec:30.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-249", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Steel", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Pinamalayan", description:"Pinamlayan, Mindoro Orl", category_id:3, lat_deg:13.000000, lat_min:2.000000, lat_sec:22.000000, lat_dir:"N", lon_deg:121.000000, lon_min:29.000000, lon_sec:35.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"AL/GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Concepcion", description:"Mstre de Campo, Romblon", category_id:3, lat_deg:12.000000, lat_min:54.000000, lat_sec:40.000000, lat_dir:"N", lon_deg:121.000000, lon_min:43.000000, lon_sec:23.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-140", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Port Galera", description:"Port Galera, Mindoro Or", category_id:3, lat_deg:13.000000, lat_min:30.000000, lat_sec:52.000000, lat_dir:"N", lon_deg:120.000000, lon_min:57.000000, lon_sec:35.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 3 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-155", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Tunggo Pt", description:"Concepcion, Romblon", category_id:3, lat_deg:12.000000, lat_min:54.000000, lat_sec:15.000000, lat_dir:"N", lon_deg:121.000000, lon_min:43.000000, lon_sec:16.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"Zl-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Varadero", description:"Pto Galera, Mindoro Or", category_id:3, lat_deg:13.000000, lat_min:30.000000, lat_sec:13.000000, lat_dir:"N", lon_deg:120.000000, lon_min:57.000000, lon_sec:13.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-249", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Tungtung Pt", description:"Pola, Mindoro Orient", category_id:3, lat_deg:13.000000, lat_min:9.000000, lat_sec:15.000000, lat_dir:"N", lon_deg:121.000000, lon_min:26.000000, lon_sec:15.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 5 sec", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Steel", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Ambulong", description:"San Jose, Mindoro Occ", category_id:3, lat_deg:12.000000, lat_min:12.000000, lat_sec:40.000000, lat_dir:"N", lon_deg:121.000000, lon_min:0.000000, lon_sec:32.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Steel", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Apo Reef", description:"Sablayan, Mindoro Occ", category_id:3, lat_deg:12.000000, lat_min:39.000000, lat_sec:42.000000, lat_dir:"N", lon_deg:120.000000, lon_min:24.000000, lon_sec:52.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-RBG", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Cabra", description:"Lubang, Occ Mindoro", category_id:3, lat_deg:13.000000, lat_min:53.000000, lat_sec:24.000000, lat_dir:"N", lon_deg:120.000000, lon_min:1.000000, lon_sec:19.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-1000", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"AL/GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Cape Calavite", description:"Paluan, Occ Mindoro", category_id:3, lat_deg:13.000000, lat_min:26.000000, lat_sec:42.000000, lat_dir:"N", lon_deg:120.000000, lon_min:18.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Caminauit", description:"San Jose, Mindoro Occ", category_id:3, lat_deg:12.000000, lat_min:19.000000, lat_sec:50.000000, lat_dir:"N", lon_deg:121.000000, lon_min:5.000000, lon_sec:12.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Golo", description:"Looc, Mindoro Occ", category_id:3, lat_deg:13.000000, lat_min:37.000000, lat_sec:41.000000, lat_dir:"N", lon_deg:120.000000, lon_min:25.000000, lon_sec:4.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 7 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-RBG", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Sablayan", description:"Sablayan, Mindoro Occ.", category_id:3, lat_deg:12.000000, lat_min:49.000000, lat_sec:54.000000, lat_dir:"N", lon_deg:120.000000, lon_min:45.000000, lon_sec:52.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-600", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Tilik", description:"Lubang, Occ. Mindoro", category_id:3, lat_deg:13.000000, lat_min:49.000000, lat_sec:9.000000, lat_dir:"N", lon_deg:120.000000, lon_min:11.000000, lon_sec:59.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"NW-20", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Tubili Pt", description:"Mamburao, Mindoro Occ.", category_id:3, lat_deg:13.000000, lat_min:13.000000, lat_sec:40.000000, lat_dir:"N", lon_deg:120.000000, lon_min:31.000000, lon_sec:30.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 4 W every20 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"PRB46", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Wawa", description:"Abra de Ilog, Mindoro Orl", category_id:3, lat_deg:13.000000, lat_min:27.000000, lat_sec:58.000000, lat_dir:"N", lon_deg:120.000000, lon_min:45.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Apunan", description:"Romblon", category_id:3, lat_deg:12.000000, lat_min:28.000000, lat_sec:48.000000, lat_dir:"N", lon_deg:122.000000, lon_min:19.000000, lon_sec:9.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-RBG", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Biaringan", description:"San Agustin, Romblon", category_id:3, lat_deg:12.000000, lat_min:37.000000, lat_sec:40.000000, lat_dir:"N", lon_deg:122.000000, lon_min:9.000000, lon_sec:48.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Cajidiocan", description:"Cajidiocan, Romblon", category_id:3, lat_deg:12.000000, lat_min:21.000000, lat_sec:48.000000, lat_dir:"N", lon_deg:122.000000, lon_min:41.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Calaton Hill", description:"Tablas, Romblon", category_id:3, lat_deg:12.000000, lat_min:10.000000, lat_sec:50.000000, lat_dir:"N", lon_deg:122.000000, lon_min:9.000000, lon_sec:50.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Carmen", description:"San Agustin", category_id:3, lat_deg:12.000000, lat_min:37.000000, lat_sec:12.000000, lat_dir:"N", lon_deg:122.000000, lon_min:7.000000, lon_sec:13.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 3 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Corcuera", description:"Corcuera, Romblon", category_id:3, lat_deg:12.000000, lat_min:47.000000, lat_sec:46.000000, lat_dir:"N", lon_deg:122.000000, lon_min:1.000000, lon_sec:12.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-RBG", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Cresta de Gallo", description:"San Fdo, Romblon", category_id:3, lat_deg:12.000000, lat_min:11.000000, lat_sec:13.000000, lat_dir:"N", lon_deg:122.000000, lon_min:41.000000, lon_sec:42.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"AL/GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Gorda", description:"Romblon, Romblon", category_id:3, lat_deg:12.000000, lat_min:39.000000, lat_sec:36.000000, lat_dir:"N", lon_deg:122.000000, lon_min:9.000000, lon_sec:16.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every15 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-HP", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Looc", description:"Looc, Romblon", category_id:3, lat_deg:12.000000, lat_min:14.000000, lat_sec:48.000000, lat_dir:"N", lon_deg:121.000000, lon_min:58.000000, lon_sec:54.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Magdiwang", description:"Magdiwang, Romblon", category_id:3, lat_deg:11.000000, lat_min:29.000000, lat_sec:40.000000, lat_dir:"N", lon_deg:122.000000, lon_min:30.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"LBEA85", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Poctoy", description:"Odiongan, Romblon", category_id:3, lat_deg:12.000000, lat_min:24.000000, lat_sec:18.000000, lat_dir:"N", lon_deg:121.000000, lon_min:58.000000, lon_sec:49.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Port Malbog", description:"Looc, Romblon", category_id:3, lat_deg:12.000000, lat_min:13.000000, lat_sec:24.000000, lat_dir:"N", lon_deg:122.000000, lon_min:0.000000, lon_sec:14.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"LBEA85", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Romblon J G", description:"Romblon, Romblon", category_id:3, lat_deg:12.000000, lat_min:34.000000, lat_sec:55.000000, lat_dir:"N", lon_deg:122.000000, lon_min:15.000000, lon_sec:48.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Romblon J R", description:"Romblon, Romblon", category_id:3, lat_deg:12.000000, lat_min:35.000000, lat_sec:6.000000, lat_dir:"N", lon_deg:122.000000, lon_min:15.000000, lon_sec:48.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Sabang Pt", description:"Romblon, Romblon", category_id:3, lat_deg:12.000000, lat_min:35.000000, lat_sec:42.000000, lat_dir:"N", lon_deg:122.000000, lon_min:15.000000, lon_sec:54.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BBT", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS San Agustin", description:"San Agustin, Romblon", category_id:3, lat_deg:12.000000, lat_min:37.000000, lat_sec:10.000000, lat_dir:"N", lon_deg:122.000000, lon_min:8.000000, lon_sec:5.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS San Fernando", description:"Azagra, Romblon", category_id:3, lat_deg:12.000000, lat_min:17.000000, lat_sec:1.000000, lat_dir:"N", lon_deg:122.000000, lon_min:37.000000, lon_sec:35.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-HP", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Mahaba Pt/Masadya", description:" Concepcion, Romblon", category_id:3, lat_deg:12.000000, lat_min:55.000000, lat_sec:54.000000, lat_dir:"N", lon_deg:121.000000, lon_min:40.000000, lon_sec:55.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 7 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"AL/GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Burdeous", description:"Polillo, Quezon", category_id:3, lat_deg:14.000000, lat_min:51.000000, lat_sec:9.500000, lat_dir:"N", lon_deg:121.000000, lon_min:58.000000, lon_sec:41.500000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-155", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Dinahican", description:"Infanta, Quezon", category_id:3, lat_deg:14.000000, lat_min:41.000000, lat_sec:54.000000, lat_dir:"N", lon_deg:121.000000, lon_min:43.000000, lon_sec:45.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Jomalig", description:"Jomalig, Quezon", category_id:3, lat_deg:14.000000, lat_min:41.000000, lat_sec:55.000000, lat_dir:"N", lon_deg:122.000000, lon_min:18.000000, lon_sec:53.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Panukulan", description:" Polillo Is., Quezon", category_id:3, lat_deg:14.000000, lat_min:55.000000, lat_sec:54.000000, lat_dir:"N", lon_deg:121.000000, lon_min:48.000000, lon_sec:35.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"PRB46", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Patnanongan", description:"Patnanongan Is., Quezon", category_id:3, lat_deg:14.000000, lat_min:45.000000, lat_sec:4.000000, lat_dir:"N", lon_deg:122.000000, lon_min:13.000000, lon_sec:49.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Polillo R (F)", description:"Polillo, Quezon", category_id:3, lat_deg:14.000000, lat_min:42.000000, lat_sec:58.000000, lat_dir:"N", lon_deg:121.000000, lon_min:56.000000, lon_sec:15.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Fixed Red", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"RL-125", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Polillo R (R)", description:"Polillo Quezon", category_id:3, lat_deg:14.000000, lat_min:43.000000, lat_sec:8.000000, lat_dir:"N", lon_deg:121.000000, lon_min:56.000000, lon_sec:7.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Fixed Red", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"RL-125", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Real", description:"Real, Quezon", category_id:3, lat_deg:14.000000, lat_min:40.000000, lat_sec:21.000000, lat_dir:"N", lon_deg:121.000000, lon_min:36.000000, lon_sec:30.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Fixed Red", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Infanta", description:"Infanta, Quezon", category_id:3, lat_deg:14.000000, lat_min:46.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:121.000000, lon_min:39.000000, lon_sec:29.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Bon-bon", description:"Panukulan, Quezon", category_id:3, lat_deg:15.000000, lat_min:1.000000, lat_sec:45.000000, lat_dir:"N", lon_deg:121.000000, lon_min:52.000000, lon_sec:2.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Bukal", description:"Jomalig, Quezon", category_id:3, lat_deg:14.000000, lat_min:41.000000, lat_sec:12.000000, lat_dir:"N", lon_deg:122.000000, lon_min:23.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Rizal(balubalic)", description:"Ribuyunan, Burdeos, Quezon", category_id:3, lat_deg:15.000000, lat_min:2.000000, lat_sec:31.000000, lat_dir:"N", lon_deg:121.000000, lon_min:58.000000, lon_sec:24.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"Led Red", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Bonifacio", description:"Bonifacio, Burdeos,Qu", category_id:3, lat_deg:15.000000, lat_min:2.000000, lat_sec:45.000000, lat_dir:"N", lon_deg:121.000000, lon_min:58.000000, lon_sec:45.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"Led Green", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Bongliw", description:"Rizal, Burdeos,Quezo", category_id:3, lat_deg:15.000000, lat_min:3.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:121.000000, lon_min:55.000000, lon_sec:48.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Baras", description:"Baras, Catanduanes", category_id:3, lat_deg:13.000000, lat_min:38.000000, lat_sec:24.000000, lat_dir:"N", lon_deg:124.000000, lon_min:24.000000, lon_sec:31.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 R every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Cabarian Pt", description:"Ligao, Albay", category_id:3, lat_deg:13.000000, lat_min:0.000000, lat_sec:34.000000, lat_dir:"N", lon_deg:123.000000, lon_min:19.000000, lon_sec:11.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluninum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Calolbon", description:"Calolbon, Catanduanes", category_id:3, lat_deg:13.000000, lat_min:36.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:124.000000, lon_min:5.000000, lon_sec:42.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Labcan", description:"Rapu-Rapu, Albay", category_id:3, lat_deg:13.000000, lat_min:17.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:123.000000, lon_min:58.000000, lon_sec:45.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Iso W every 4 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Legaspi", description:"San Roque, Legaspi City", category_id:3, lat_deg:13.000000, lat_min:9.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:123.000000, lon_min:45.000000, lon_sec:12.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Lolong Pt", description:"Lolong, Catanduanes", category_id:3, lat_deg:13.000000, lat_min:56.000000, lat_sec:54.000000, lat_dir:"N", lon_deg:124.000000, lon_min:21.000000, lon_sec:12.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-HP8", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluninum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Malinao R (R)", description:"Malinao, Albay", category_id:3, lat_deg:13.000000, lat_min:23.000000, lat_sec:12.000000, lat_dir:"N", lon_deg:123.000000, lon_min:42.000000, lon_sec:12.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Fixed Red", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"RL-125", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Malinao R (F)", description:"Malinao, Albay", category_id:3, lat_deg:13.000000, lat_min:24.000000, lat_sec:18.000000, lat_dir:"N", lon_deg:123.000000, lon_min:42.000000, lon_sec:48.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Fixed Red", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"RL-125", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Pandan Point", description:"Pandan, Catanduanes", category_id:3, lat_deg:14.000000, lat_min:3.000000, lat_sec:7.000000, lat_dir:"N", lon_deg:124.000000, lon_min:10.000000, lon_sec:8.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Port Sula", description:"Bacacay, Albay", category_id:3, lat_deg:13.000000, lat_min:13.000000, lat_sec:32.000000, lat_dir:"N", lon_deg:123.000000, lon_min:52.000000, lon_sec:15.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Rawis", description:"Tabaco, Albay", category_id:3, lat_deg:13.000000, lat_min:24.000000, lat_sec:20.000000, lat_dir:"N", lon_deg:123.000000, lon_min:45.000000, lon_sec:45.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 G every 4 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Sialat", description:"Calolbon, Catanduanes", category_id:3, lat_deg:13.000000, lat_min:59.000000, lat_sec:48.000000, lat_dir:"N", lon_deg:124.000000, lon_min:1.000000, lon_sec:30.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 4 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"NW-20", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Tabugoc", description:"Tabugoc, Catanduanes", category_id:3, lat_deg:14.000000, lat_min:3.000000, lat_sec:31.000000, lat_dir:"N", lon_deg:124.000000, lon_min:14.000000, lon_sec:2.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Ungay", description:"Rapu-Rapu, Albay", category_id:3, lat_deg:13.000000, lat_min:10.000000, lat_sec:44.000000, lat_dir:"N", lon_deg:124.000000, lon_min:12.000000, lon_sec:50.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 7 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-RBG", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluninum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Virac", description:"Virac, Catanduanes", category_id:3, lat_deg:13.000000, lat_min:335.000000, lat_sec:3.000000, lat_dir:"N", lon_deg:124.000000, lon_min:14.000000, lon_sec:2.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Cabusao", description:"Cabusao, Camarines Sur", category_id:3, lat_deg:13.000000, lat_min:25.000000, lat_sec:3.000000, lat_dir:"N", lon_deg:123.000000, lon_min:6.000000, lon_sec:48.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Canimo", description:"Mercedes, Cam Norte", category_id:3, lat_deg:14.000000, lat_min:19.000000, lat_sec:32.000000, lat_dir:"N", lon_deg:123.000000, lon_min:3.000000, lon_sec:3.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Capalonga", description:"Capalonga, Cam Norte", category_id:3, lat_deg:14.000000, lat_min:19.000000, lat_sec:52.000000, lat_dir:"N", lon_deg:121.000000, lon_min:30.000000, lon_sec:52.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Colongcogong", description:"Caramoan, Camarines Sur", category_id:3, lat_deg:13.000000, lat_min:43.000000, lat_sec:27.000000, lat_dir:"N", lon_deg:123.000000, lon_min:58.000000, lon_sec:34.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 15 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"PRB46", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Gata", description:"Caramoan, Camarines Sur", category_id:3, lat_deg:13.000000, lat_min:54.000000, lat_sec:47.000000, lat_dir:"N", lon_deg:123.000000, lon_min:48.000000, lon_sec:48.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 4 W every 20 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"PRB46", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Laganac", description:"Balatan, Camarines Sur", category_id:3, lat_deg:13.000000, lat_min:20.000000, lat_sec:35.000000, lat_dir:"N", lon_deg:123.000000, lon_min:12.000000, lon_sec:42.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Lahuy", description:"Guinaho-an Isl., Cam Sur", category_id:3, lat_deg:13.000000, lat_min:57.000000, lat_sec:54.000000, lat_dir:"N", lon_deg:123.000000, lon_min:51.000000, lon_sec:26.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Ocata", description:"Lahug, Camarines Sur", category_id:3, lat_deg:13.000000, lat_min:59.000000, lat_sec:6.000000, lat_dir:"N", lon_deg:123.000000, lon_min:49.000000, lon_sec:24.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"Ml-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Panganiban", description:"Panganiban, Cam Norte", category_id:3, lat_deg:14.000000, lat_min:18.000000, lat_sec:46.000000, lat_dir:"N", lon_deg:124.000000, lon_min:39.000000, lon_sec:5.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Iso W every 4 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Paracale", description:"Paracale, Cam Norte", category_id:3, lat_deg:14.000000, lat_min:18.000000, lat_sec:25.000000, lat_dir:"N", lon_deg:122.000000, lon_min:47.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Pasacao", description:"Pasacao, Camarines Sur", category_id:3, lat_deg:13.000000, lat_min:30.000000, lat_sec:12.000000, lat_dir:"N", lon_deg:123.000000, lon_min:2.000000, lon_sec:12.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Port Balatan", description:"Balatan, Camarines Sur", category_id:3, lat_deg:13.000000, lat_min:19.000000, lat_sec:45.000000, lat_dir:"N", lon_deg:123.000000, lon_min:13.000000, lon_sec:20.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"Zl-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Steel", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Sabang(lagonoy)", description:"San Jose, Camarines Sur", category_id:3, lat_deg:13.000000, lat_min:43.000000, lat_sec:20.000000, lat_dir:"N", lon_deg:123.000000, lon_min:34.000000, lon_sec:37.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"Zl-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Sabang", description:"Calabanga, Camerines Sur", category_id:3, lat_deg:13.000000, lat_min:43.000000, lat_sec:44.000000, lat_dir:"N", lon_deg:123.000000, lon_min:12.000000, lon_sec:48.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 3 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"Zl-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Salingongon", description:"Minalabac, Camarines Sur", category_id:3, lat_deg:13.000000, lat_min:27.000000, lat_sec:25.000000, lat_dir:"N", lon_deg:123.000000, lon_min:9.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 10 secs ", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Tailon", description:"Panganiban, Cam Norte", category_id:3, lat_deg:14.000000, lat_min:24.000000, lat_sec:44.000000, lat_dir:"N", lon_deg:122.000000, lon_min:39.000000, lon_sec:57.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Patitinan", description:"Patitinan,Sagnay, Cam Sur", category_id:3, lat_deg:13.000000, lat_min:3.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:123.000000, lon_min:7.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Bugui Point", description:"Aroroy, Masbate", category_id:3, lat_deg:12.000000, lat_min:36.000000, lat_sec:5.000000, lat_dir:"N", lon_deg:123.000000, lon_min:14.000000, lon_sec:12.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-600", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Caduruan", description:"Esperanza, Masbate", category_id:3, lat_deg:11.000000, lat_min:43.000000, lat_sec:18.000000, lat_dir:"N", lon_deg:124.000000, lon_min:3.000000, lon_sec:54.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"PRB46", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Calasuche", description:"Milagros, Masbate", category_id:3, lat_deg:12.000000, lat_min:13.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:123.000000, lon_min:31.000000, lon_sec:54.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 R every 4 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Malapingan", description:"Claveria, Masbate", category_id:3, lat_deg:12.000000, lat_min:50.000000, lat_sec:44.000000, lat_dir:"N", lon_deg:123.000000, lon_min:12.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Masbate ", description:"Masbate, Masbate", category_id:3, lat_deg:12.000000, lat_min:22.000000, lat_sec:48.000000, lat_dir:"N", lon_deg:123.000000, lon_min:36.000000, lon_sec:30.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Matabao", description:"Matabao, Masbate", category_id:3, lat_deg:12.000000, lat_min:18.000000, lat_sec:36.000000, lat_dir:"N", lon_deg:123.000000, lon_min:48.000000, lon_sec:28.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Steel", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Jintotolo", description:"Balud, Masbate", category_id:3, lat_deg:11.000000, lat_min:50.000000, lat_sec:29.000000, lat_dir:"N", lon_deg:123.000000, lon_min:7.000000, lon_sec:10.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-HP", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Pagbulungan", description:"Mandaon, Masbate", category_id:3, lat_deg:12.000000, lat_min:13.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:123.000000, lon_min:13.000000, lon_sec:38.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 G every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Punta Aguja", description:"Claveria, Masbate", category_id:3, lat_deg:12.000000, lat_min:41.000000, lat_sec:46.000000, lat_dir:"N", lon_deg:123.000000, lon_min:23.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Sn Pascual", description:"San Pascual, Masbate", category_id:3, lat_deg:13.000000, lat_min:8.000000, lat_sec:52.000000, lat_dir:"N", lon_deg:124.000000, lon_min:59.000000, lon_sec:2.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS San Jacinto", description:"San Jacinto, Masbate", category_id:3, lat_deg:12.000000, lat_min:34.000000, lat_sec:18.000000, lat_dir:"N", lon_deg:123.000000, lon_min:44.000000, lon_sec:3.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZF-30", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS San Miguel", description:"Monreal. Masbate", category_id:3, lat_deg:12.000000, lat_min:43.000000, lat_sec:6.000000, lat_dir:"N", lon_deg:123.000000, lon_min:35.000000, lon_sec:19.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every 15 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BBT", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Zapato Menor", description:"Balud, Masbate", category_id:3, lat_deg:11.000000, lat_min:42.000000, lat_sec:48.000000, lat_dir:"N", lon_deg:122.000000, lon_min:59.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Cawayan", description:"Cawayan Port, Masbate", category_id:3, lat_deg:11.000000, lat_min:55.000000, lat_sec:162.000000, lat_dir:"N", lon_deg:123.000000, lon_min:45.000000, lon_sec:186.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"LED", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"RSL", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Bagatao", description:"Magallanes, Sorsogon", category_id:3, lat_deg:12.000000, lat_min:50.000000, lat_sec:15.000000, lat_dir:"N", lon_deg:123.000000, lon_min:47.000000, lon_sec:26.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Barcelona", description:"Barcelona, Sorsogon", category_id:3, lat_deg:12.000000, lat_min:52.000000, lat_sec:6.000000, lat_dir:"N", lon_deg:124.000000, lon_min:8.000000, lon_sec:36.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Bulan", description:"Bulan, Sorsogon", category_id:3, lat_deg:12.000000, lat_min:40.000000, lat_sec:8.000000, lat_dir:"N", lon_deg:123.000000, lon_min:52.000000, lon_sec:17.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Calantas Rock", description:"Matnog, Sorsogon", category_id:3, lat_deg:12.000000, lat_min:30.000000, lat_sec:43.000000, lat_dir:"N", lon_deg:124.000000, lon_min:4.000000, lon_sec:30.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Casiguran", description:"Casiguran, Sorsogon", category_id:3, lat_deg:12.000000, lat_min:52.000000, lat_sec:33.000000, lat_dir:"N", lon_deg:124.000000, lon_min:0.000000, lon_sec:27.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Castilla", description:"Castilla, Sorsogon", category_id:3, lat_deg:12.000000, lat_min:56.000000, lat_sec:55.000000, lat_dir:"N", lon_deg:123.000000, lon_min:52.000000, lon_sec:48.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Diamante", description:"Pto Diaz, Sorsogon", category_id:3, lat_deg:13.000000, lat_min:2.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:124.000000, lon_min:11.000000, lon_sec:40.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 15 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Donsol", description:"Donsol, Sorsogon", category_id:3, lat_deg:12.000000, lat_min:54.000000, lat_sec:24.000000, lat_dir:"N", lon_deg:123.000000, lon_min:35.000000, lon_sec:24.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 R every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZF-30", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Macalaya", description:"Castilla, Sorsogon", category_id:3, lat_deg:12.000000, lat_min:52.000000, lat_sec:54.000000, lat_dir:"N", lon_deg:123.000000, lon_min:46.000000, lon_sec:12.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Magdalena", description:"Magdalena, Sorsogon", category_id:3, lat_deg:12.000000, lat_min:38.000000, lat_sec:18.000000, lat_dir:"N", lon_deg:124.000000, lon_min:5.000000, lon_sec:36.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"PRB46", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Pilar", description:"Pilar, Sorsogon", category_id:3, lat_deg:12.000000, lat_min:53.000000, lat_sec:25.000000, lat_dir:"N", lon_deg:123.000000, lon_min:39.000000, lon_sec:42.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 G every 3 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Port Gubat", description:"Gubat, Sorsogon", category_id:3, lat_deg:12.000000, lat_min:55.000000, lat_sec:35.000000, lat_dir:"N", lon_deg:124.000000, lon_min:7.000000, lon_sec:26.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS S Bernardino", description:"Bulusan, Sorsogon", category_id:3, lat_deg:12.000000, lat_min:45.000000, lat_sec:15.000000, lat_dir:"N", lon_deg:124.000000, lon_min:16.000000, lon_sec:57.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-RBG", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Sorsogon Bay", description:"Magallanes, Sorsogon", category_id:3, lat_deg:12.000000, lat_min:50.000000, lat_sec:15.000000, lat_dir:"N", lon_deg:123.000000, lon_min:47.000000, lon_sec:26.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZP-20", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Bancao-Bancao", description:"Apurawan, Aborlan, Palawan", category_id:3, lat_deg:9.000000, lat_min:43.000000, lat_sec:14.000000, lat_dir:"N", lon_deg:118.000000, lon_min:45.000000, lon_sec:57.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every 15 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BBT-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Bold Point", description:"Tinitian, Roxas, Palawan", category_id:3, lat_deg:10.000000, lat_min:1.000000, lat_sec:40.000000, lat_dir:"N", lon_deg:119.000000, lon_min:8.000000, lon_sec:40.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"PRB46", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Barbacan", description:"Roxas, Palawan", category_id:3, lat_deg:10.000000, lat_min:19.000000, lat_sec:6.000000, lat_dir:"N", lon_deg:119.000000, lon_min:21.000000, lon_sec:1.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"Zl-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Camungyan", description:"Pto Princesa, Palawan", category_id:3, lat_deg:10.000000, lat_min:9.000000, lat_sec:24.000000, lat_dir:"N", lon_deg:118.000000, lon_min:45.000000, lon_sec:48.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every 15 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"Zl-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Cagnipa", description:"Sn Vicente, Palawan", category_id:3, lat_deg:10.000000, lat_min:30.000000, lat_sec:37.000000, lat_dir:"N", lon_deg:119.000000, lon_min:4.000000, lon_sec:19.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 6 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"PRB46", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Panacan", description:"Narra, Palawan", category_id:3, lat_deg:9.000000, lat_min:14.000000, lat_sec:7.000000, lat_dir:"N", lon_deg:118.000000, lon_min:24.000000, lon_sec:31.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"Zl-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Steel", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Tide Pole", description:"Pto Princesa, Palawan", category_id:3, lat_deg:9.000000, lat_min:43.000000, lat_sec:53.000000, lat_dir:"N", lon_deg:118.000000, lon_min:43.000000, lon_sec:53.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Tubbataha", description:"Cagayancillo, Palawan", category_id:3, lat_deg:8.000000, lat_min:44.000000, lat_sec:53.000000, lat_dir:"N", lon_deg:117.000000, lon_min:48.000000, lon_sec:59.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Pag-asa", description:"Kalayaan, Palawan", category_id:3, lat_deg:11.000000, lat_min:2.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:114.000000, lon_min:21.000000, lon_sec:30.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"Ml-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"steel", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Honda Bay", description:"Sta Lourdes, Pto Princesa City", category_id:3, lat_deg:9.000000, lat_min:50.000000, lat_sec:38.400000, lat_dir:"N", lon_deg:118.000000, lon_min:44.000000, lon_sec:45.600000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"RSL", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Bantac", description:"Coron, Palawan", category_id:3, lat_deg:12.000000, lat_min:12.000000, lat_sec:45.000000, lat_dir:"N", lon_deg:120.000000, lon_min:23.000000, lon_sec:25.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every 10 secs  ", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Coron", description:"Coron, Palawan", category_id:3, lat_deg:11.000000, lat_min:59.000000, lat_sec:2.000000, lat_dir:"N", lon_deg:120.000000, lon_min:13.000000, lon_sec:24.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Culion", description:"Culion, Palawan", category_id:3, lat_deg:11.000000, lat_min:53.000000, lat_sec:37.000000, lat_dir:"N", lon_deg:120.000000, lon_min:1.000000, lon_sec:22.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete ", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Delian", description:"Coron, Palawan", category_id:3, lat_deg:11.000000, lat_min:49.000000, lat_sec:44.000000, lat_dir:"N", lon_deg:120.000000, lon_min:18.000000, lon_sec:38.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Morse A every 6secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Decabaito", description:"Linapacan, Palawan", category_id:3, lat_deg:11.000000, lat_min:37.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:119.000000, lon_min:58.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"PRB46", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Agutaya", description:"Agutaya, Palawan", category_id:3, lat_deg:9.000000, lat_min:43.000000, lat_sec:22.000000, lat_dir:"N", lon_deg:118.000000, lon_min:48.000000, lon_sec:57.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete ", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Cuyo", description:"Cuyo, Palawan", category_id:3, lat_deg:10.000000, lat_min:51.000000, lat_sec:7.560000, lat_dir:"N", lon_deg:121.000000, lon_min:0.000000, lon_sec:20.900000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Manamoc", description:"Cuyo, Palawan", category_id:3, lat_deg:11.000000, lat_min:18.000000, lat_sec:24.000000, lat_dir:"N", lon_deg:120.000000, lon_min:40.000000, lon_sec:18.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"RC SPIRAL/32 FT", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Manucan", description:"Cagayancillo, Palawan", category_id:3, lat_deg:9.000000, lat_min:38.000000, lat_sec:42.000000, lat_dir:"N", lon_deg:121.000000, lon_min:21.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Langoy", description:"Araceli, Palawan", category_id:3, lat_deg:10.000000, lat_min:29.000000, lat_sec:42.000000, lat_dir:"N", lon_deg:119.000000, lon_min:59.000000, lon_sec:6.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Conrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Brooke Point", description:"Brooke Pt., Palawan", category_id:3, lat_deg:8.000000, lat_min:46.000000, lat_sec:12.000000, lat_dir:"N", lon_deg:117.000000, lon_min:50.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BCG-600", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Brooke Pt Jetty R ", description:"Brooke Pt., Palawan", category_id:3, lat_deg:8.000000, lat_min:46.000000, lat_sec:18.000000, lat_dir:"N", lon_deg:117.000000, lon_min:9.000000, lon_sec:36.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"LBEA85", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Cape Melville", description:"Balabac, Palawan", category_id:3, lat_deg:7.000000, lat_min:55.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:117.000000, lon_min:0.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-1000", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Comiran", description:"Balabac, Palawan", category_id:3, lat_deg:7.000000, lat_min:55.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:117.000000, lon_min:13.000000, lon_sec:21.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Steel", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Espina Point", description:"Balabac, Palawan", category_id:3, lat_deg:7.000000, lat_min:59.000000, lat_sec:36.000000, lat_dir:"N", lon_deg:117.000000, lon_min:4.000000, lon_sec:21.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Iraray", description:"Sofronio Espanola, Palawan", category_id:3, lat_deg:8.000000, lat_min:58.000000, lat_sec:3.000000, lat_dir:"N", lon_deg:118.000000, lon_min:2.000000, lon_sec:38.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Steel", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Mangsee", description:"Mangsee, Balabac, Palawan", category_id:3, lat_deg:7.000000, lat_min:30.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:117.000000, lon_min:18.000000, lon_sec:18.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"steel", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Quezon", description:"Quezon, Palawan", category_id:3, lat_deg:9.000000, lat_min:14.000000, lat_sec:54.000000, lat_dir:"N", lon_deg:117.000000, lon_min:51.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Tarumpitao", description:"Rizal, Palawan", category_id:3, lat_deg:9.000000, lat_min:3.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:117.000000, lon_min:38.000000, lon_sec:30.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"PRB46", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Bagacay", description:"Bagacay, Cebu", category_id:3, lat_deg:10.000000, lat_min:23.000000, lat_sec:23.000000, lat_dir:"N", lon_deg:121.000000, lon_min:1.000000, lon_sec:3.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every 15 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-HP", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Bantayan", description:"Bantayan, Cebu", category_id:3, lat_deg:11.000000, lat_min:11.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:123.000000, lon_min:42.000000, lon_sec:45.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Balamban", description:"Balambalan, Cebu", category_id:3, lat_deg:10.000000, lat_min:30.000000, lat_sec:16.000000, lat_dir:"N", lon_deg:123.000000, lon_min:42.000000, lon_sec:35.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Bantolinao", description:"Lapu-Lapu City, Cebu", category_id:3, lat_deg:10.000000, lat_min:20.000000, lat_sec:12.000000, lat_dir:"N", lon_deg:123.000000, lon_min:59.000000, lon_sec:7.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Bogo Harbor", description:"Bogo, Cebu", category_id:3, lat_deg:11.000000, lat_min:5.000000, lat_sec:3.000000, lat_dir:"N", lon_deg:124.000000, lon_min:1.000000, lon_sec:32.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Buntay", description:"Madridejos, Cebu", category_id:3, lat_deg:11.000000, lat_min:18.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:123.000000, lon_min:43.000000, lon_sec:42.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Capitancillo", description:"Capitancillo, Cebu", category_id:3, lat_deg:10.000000, lat_min:59.000000, lat_sec:29.000000, lat_dir:"N", lon_deg:124.000000, lon_min:6.000000, lon_sec:10.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-RBG", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Carnasa ", description:"Carnasa Island, Cebu", category_id:3, lat_deg:11.000000, lat_min:31.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:124.000000, lon_min:6.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"PRB46", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Chocolate Is", description:"Chocolate Isl, Cebu", category_id:3, lat_deg:11.000000, lat_min:18.000000, lat_sec:26.000000, lat_dir:"N", lon_deg:124.000000, lon_min:3.000000, lon_sec:40.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 3 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Cauit", description:"Cauit Isl., Cebu", category_id:3, lat_deg:10.000000, lat_min:16.000000, lat_sec:23.000000, lat_dir:"N", lon_deg:123.000000, lon_min:52.000000, lon_sec:52.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Dumanjug", description:"Dumanjug, Cebu", category_id:3, lat_deg:10.000000, lat_min:4.000000, lat_sec:18.000000, lat_dir:"N", lon_deg:123.000000, lon_min:26.000000, lon_sec:48.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Ginatilan", description:"Ginatalan, Cebu", category_id:3, lat_deg:9.000000, lat_min:37.000000, lat_sec:18.000000, lat_dir:"N", lon_deg:123.000000, lon_min:19.000000, lon_sec:12.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 7 seca", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"AL/GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Hagnaya", description:"San Remegio, Cebu", category_id:3, lat_deg:11.000000, lat_min:7.000000, lat_sec:15.000000, lat_dir:"N", lon_deg:123.000000, lon_min:55.000000, lon_sec:18.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-249", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Lauis Ledge", description:"Talisay, Cebu", category_id:3, lat_deg:10.000000, lat_min:14.000000, lat_sec:12.000000, lat_dir:"N", lon_deg:123.000000, lon_min:53.000000, lon_sec:26.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-RBG", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Malapascua", description:"Malapascua, Cebu", category_id:3, lat_deg:11.000000, lat_min:24.000000, lat_sec:42.000000, lat_dir:"N", lon_deg:124.000000, lon_min:6.000000, lon_sec:37.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-HP", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Opon", description:"Lapu-Lapu City", category_id:3, lat_deg:10.000000, lat_min:18.000000, lat_sec:48.000000, lat_dir:"N", lon_deg:123.000000, lon_min:56.000000, lon_sec:42.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA249", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Pescador", description:"Moal-boal, Cebu", category_id:3, lat_deg:10.000000, lat_min:55.000000, lat_sec:27.000000, lat_dir:"N", lon_deg:123.000000, lon_min:20.000000, lon_sec:33.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secvs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Poro", description:"Poro, Camotes Is., Cebu", category_id:3, lat_deg:10.000000, lat_min:37.000000, lat_sec:48.000000, lat_dir:"N", lon_deg:124.000000, lon_min:24.000000, lon_sec:40.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 7 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"AL/GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Shell", description:" Mactan Isl., Cebu", category_id:3, lat_deg:10.000000, lat_min:17.000000, lat_sec:9.000000, lat_dir:"N", lon_deg:123.000000, lon_min:54.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 4 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Tabuelan", description:"Punta Point, Tabuelan", category_id:3, lat_deg:10.000000, lat_min:50.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:123.000000, lon_min:52.000000, lon_sec:1.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Steel", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Tanguigui", description:"Tanguigui Isl., Cebu", category_id:3, lat_deg:11.000000, lat_min:29.000000, lat_sec:24.000000, lat_dir:"N", lon_deg:123.000000, lon_min:43.000000, lon_sec:29.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-HP", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Toledo", description:"Toledo City", category_id:3, lat_deg:10.000000, lat_min:23.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:123.000000, lon_min:38.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Fixed Red", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"Sl-200", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Tulang", description:" Camotes, Cebu", category_id:3, lat_deg:10.000000, lat_min:43.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:124.000000, lon_min:19.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every 15 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"PRB46", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Guintacan", description:"Sta Fe, Cebu", category_id:3, lat_deg:11.000000, lat_min:18.000000, lat_sec:6.000000, lat_dir:"N", lon_deg:123.000000, lon_min:53.000000, lon_sec:28.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"Zl-RBG", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Sumilon", description:"Sumilon Isl,Oslob,Cebu", category_id:3, lat_deg:9.000000, lat_min:25.000000, lat_sec:52.000000, lat_dir:"N", lon_deg:123.000000, lon_min:23.000000, lon_sec:22.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Baclayon", description:"Baclayon, Bohol", category_id:3, lat_deg:9.000000, lat_min:37.000000, lat_sec:18.000000, lat_dir:"N", lon_deg:123.000000, lon_min:54.000000, lon_sec:42.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 Secs ", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Bagobanua", description:"Tubigon, Bohol", category_id:3, lat_deg:10.000000, lat_min:3.000000, lat_sec:5.000000, lat_dir:"N", lon_deg:123.000000, lon_min:53.000000, lon_sec:54.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every 15 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Balicasag", description:"Panglao, Bohol", category_id:3, lat_deg:9.000000, lat_min:31.000000, lat_sec:3.000000, lat_dir:"N", lon_deg:123.000000, lon_min:41.000000, lon_sec:59.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 7 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-RBG", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Bungan", description:"Talibon, Bohol", category_id:3, lat_deg:10.000000, lat_min:16.000000, lat_sec:21.000000, lat_dir:"N", lon_deg:124.000000, lon_min:21.000000, lon_sec:46.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Cabilao", description:"Cabilao Island, Bohol", category_id:3, lat_deg:9.000000, lat_min:53.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:123.000000, lon_min:45.000000, lon_sec:30.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-600", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Gorda", description:"Valencia, Bohol", category_id:3, lat_deg:9.000000, lat_min:36.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:124.000000, lon_min:15.000000, lon_sec:35.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 4 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"PRB46", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Jagna", description:"Jagna, Bohol", category_id:3, lat_deg:9.000000, lat_min:39.000000, lat_sec:6.000000, lat_dir:"N", lon_deg:124.000000, lon_min:21.000000, lon_sec:54.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Loay", description:"Loay, Bohol", category_id:3, lat_deg:9.000000, lat_min:36.000000, lat_sec:3.000000, lat_dir:"N", lon_deg:124.000000, lon_min:0.000000, lon_sec:30.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R e v 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Maribojoc", description:"Maribojoc, Bohol", category_id:3, lat_deg:9.000000, lat_min:44.000000, lat_sec:17.000000, lat_dir:"N", lon_deg:123.000000, lon_min:50.000000, lon_sec:18.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Pamilacan", description:"Baclayon, Bohol", category_id:3, lat_deg:9.000000, lat_min:29.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:123.000000, lon_min:55.000000, lon_sec:12.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Morse U every10 sec", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Tagbilaran", description:"Tagbilaran City", category_id:3, lat_deg:9.000000, lat_min:39.000000, lat_sec:34.000000, lat_dir:"N", lon_deg:123.000000, lon_min:49.000000, lon_sec:26.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 3 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Talisay", description:"Anda, Bohol", category_id:3, lat_deg:9.000000, lat_min:46.000000, lat_sec:1.000000, lat_dir:"N", lon_deg:124.000000, lon_min:53.000000, lon_sec:30.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every 8 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Talibon", description:"Talibon, Bohol", category_id:3, lat_deg:10.000000, lat_min:9.000000, lat_sec:6.000000, lat_dir:"N", lon_deg:124.000000, lon_min:19.000000, lon_sec:33.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 3 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Tambo", description:"Talibon, Bohol", category_id:3, lat_deg:10.000000, lat_min:11.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:124.000000, lon_min:17.000000, lon_sec:4.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 R every secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Tugas", description:"Pres Garcia. Bohol", category_id:3, lat_deg:10.000000, lat_min:9.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:124.000000, lon_min:37.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every 6 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Ubay", description:"Ubay, Bohol", category_id:3, lat_deg:10.000000, lat_min:3.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:124.000000, lon_min:28.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 3 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Pangangan", description:"Calape, Bohol", category_id:3, lat_deg:9.000000, lat_min:54.000000, lat_sec:48.000000, lat_dir:"N", lon_deg:123.000000, lon_min:48.000000, lon_sec:43.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Getafe", description:"Getafe, Bohol", category_id:3, lat_deg:10.000000, lat_min:4.000000, lat_sec:20.000000, lat_dir:"N", lon_deg:124.000000, lon_min:9.000000, lon_sec:5.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA 250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Tagbilaran Nr1", description:"Tagbilaran City", category_id:3, lat_deg:9.000000, lat_min:39.000000, lat_sec:33.000000, lat_dir:"N", lon_deg:123.000000, lon_min:49.000000, lon_sec:35.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 3 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Tagbilaran Nr2", description:"Tagbilaran City", category_id:3, lat_deg:9.000000, lat_min:39.000000, lat_sec:29.000000, lat_dir:"N", lon_deg:123.000000, lon_min:49.000000, lon_sec:39.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 3 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Tagbilaran Nr 3", description:"Tagbilaran City", category_id:3, lat_deg:9.000000, lat_min:39.000000, lat_sec:31.000000, lat_dir:"N", lon_deg:123.000000, lon_min:49.000000, lon_sec:41.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"Peguin", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Tagbilaran Nr 5", description:"Tagbilaran City", category_id:3, lat_deg:9.000000, lat_min:39.000000, lat_sec:26.000000, lat_dir:"N", lon_deg:123.000000, lon_min:49.000000, lon_sec:32.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 3 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Tagbilaran Nr 7", description:"Tagbilaran City", category_id:3, lat_deg:9.000000, lat_min:39.000000, lat_sec:16.000000, lat_dir:"N", lon_deg:123.000000, lon_min:50.000000, lon_sec:6.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 5 secs ", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Tubigon Nr 1", description:"Tubigon, Bohol", category_id:3, lat_deg:9.000000, lat_min:3.000000, lat_sec:35.000000, lat_dir:"N", lon_deg:124.000000, lon_min:59.000000, lon_sec:1.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Tubigon Nr 2", description:"Tubigon, Bohol", category_id:3, lat_deg:10.000000, lat_min:0.000000, lat_sec:36.000000, lat_dir:"N", lon_deg:124.000000, lon_min:56.000000, lon_sec:46.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 3 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Amlan", description:"Avuquitar, Negros Oriental", category_id:3, lat_deg:9.000000, lat_min:27.000000, lat_sec:56.000000, lat_dir:"N", lon_deg:123.000000, lon_min:13.000000, lon_sec:40.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Antulang", description:"Tambobo, Siaton, Negros Or.", category_id:3, lat_deg:9.000000, lat_min:2.000000, lat_sec:29.000000, lat_dir:"N", lon_deg:123.000000, lon_min:0.000000, lon_sec:53.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every 15 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"PRB46", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Apo Island", description:"Zamboanguita, Negros Or", category_id:3, lat_deg:9.000000, lat_min:4.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:123.000000, lon_min:16.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Dumaguete", description:"Dumaguete, Negros Oriental", category_id:3, lat_deg:9.000000, lat_min:18.000000, lat_sec:53.000000, lat_dir:"N", lon_deg:123.000000, lon_min:18.000000, lon_sec:36.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 3 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Guihulgan", description:"Guihulgan, Negros Oriental", category_id:3, lat_deg:10.000000, lat_min:7.000000, lat_sec:18.000000, lat_dir:"N", lon_deg:123.000000, lon_min:16.000000, lon_sec:18.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every 12 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Canoan F", description:"Larena, Sequijor, Negros Or.", category_id:3, lat_deg:9.000000, lat_min:15.000000, lat_sec:6.000000, lat_dir:"N", lon_deg:123.000000, lon_min:35.000000, lon_sec:36.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Fixed Red", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"RL-125", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Canoan R ", description:"Larena, Sequijor, Negors Or", category_id:3, lat_deg:9.000000, lat_min:14.000000, lat_sec:54.000000, lat_dir:"N", lon_deg:123.000000, lon_min:36.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Fixed Red", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"RL-125", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Minalulan", description:"Siquijor", category_id:3, lat_deg:9.000000, lat_min:7.000000, lat_sec:18.000000, lat_dir:"N", lon_deg:123.000000, lon_min:40.000000, lon_sec:49.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-RBG", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Abuyog", description:"Abuyog, Leyte", category_id:3, lat_deg:10.000000, lat_min:44.000000, lat_sec:17.000000, lat_dir:"N", lon_deg:125.000000, lon_min:1.000000, lon_sec:23.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 10 sec", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Biliran", description:"Biliran, Island", category_id:3, lat_deg:11.000000, lat_min:27.000000, lat_sec:24.000000, lat_dir:"N", lon_deg:124.000000, lon_min:28.000000, lon_sec:39.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 4 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"NH-20", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Canauay", description:"Batbangon, Leyte", category_id:3, lat_deg:11.000000, lat_min:26.000000, lat_sec:13.000000, lat_dir:"N", lon_deg:124.000000, lon_min:51.000000, lon_sec:9.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every 15 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"Zl-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Carigara", description:"Carigara, Leyte", category_id:3, lat_deg:11.000000, lat_min:18.000000, lat_sec:12.000000, lat_dir:"N", lon_deg:124.000000, lon_min:41.000000, lon_sec:3.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 5 sec", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Jinamoc", description:"Basay, Western Samar", category_id:3, lat_deg:11.000000, lat_min:15.000000, lat_sec:33.000000, lat_dir:"N", lon_deg:125.000000, lon_min:4.000000, lon_sec:32.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Mabini", description:"Gigantangan, Leyte", category_id:3, lat_deg:11.000000, lat_min:34.000000, lat_sec:12.000000, lat_dir:"N", lon_deg:124.000000, lon_min:15.000000, lon_sec:54.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 7 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-RBG", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Manicani", description:"Guian., Eastern Samar", category_id:3, lat_deg:10.000000, lat_min:58.000000, lat_sec:59.000000, lat_dir:"N", lon_deg:125.000000, lon_min:39.000000, lon_sec:5.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every 15 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Mariquitdaquit", description:"Tolosa, Leyte", category_id:3, lat_deg:11.000000, lat_min:4.000000, lat_sec:7.000000, lat_dir:"N", lon_deg:125.000000, lon_min:9.000000, lon_sec:10.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 4 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-155", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Sn Juanico 1(S)", description:"T S Juanico B, Tacloban`", category_id:3, lat_deg:11.000000, lat_min:18.000000, lat_sec:3.000000, lat_dir:"N", lon_deg:124.000000, lon_min:58.000000, lon_sec:10.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 15 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Bridge", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Sn Juanico 2©", description:"F S Juanico B,Tacloban", category_id:3, lat_deg:11.000000, lat_min:18.000000, lat_sec:5.000000, lat_dir:"N", lon_deg:124.000000, lon_min:58.000000, lon_sec:7.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 25 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-155", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Bridge", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Tacloban", description:"Tacloban City", category_id:3, lat_deg:11.000000, lat_min:15.000000, lat_sec:10.000000, lat_dir:"N", lon_deg:125.000000, lon_min:0.000000, lon_sec:12.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-249", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Tugnug", description:"Hernani, Eastern Samar", category_id:3, lat_deg:11.000000, lat_min:21.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:125.000000, lon_min:37.000000, lon_sec:48.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"PRB46", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Kawayan", description:"Kawayan, Biliran, Samar", category_id:3, lat_deg:11.000000, lat_min:41.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:124.000000, lon_min:21.000000, lon_sec:15.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Allen", description:"Allen, Northern Samar", category_id:3, lat_deg:12.000000, lat_min:30.000000, lat_sec:7.000000, lat_dir:"N", lon_deg:124.000000, lon_min:16.000000, lon_sec:56.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"Zl-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Cabilison", description:"Almagro, Western Samar", category_id:3, lat_deg:9.000000, lat_min:53.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:124.000000, lon_min:16.000000, lon_sec:38.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every 20 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Calbayog", description:"Calbayog City", category_id:3, lat_deg:12.000000, lat_min:4.000000, lat_sec:6.000000, lat_dir:"N", lon_deg:124.000000, lon_min:35.000000, lon_sec:21.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Capul", description:"Capul, Northern Samar", category_id:3, lat_deg:12.000000, lat_min:28.000000, lat_sec:52.000000, lat_dir:"N", lon_deg:124.000000, lon_min:8.000000, lon_sec:29.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 7 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-HP", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Carangian", description:"San Jose, North Samar", category_id:3, lat_deg:12.000000, lat_min:31.000000, lat_sec:59.000000, lat_dir:"N", lon_deg:124.000000, lon_min:29.000000, lon_sec:12.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"Zl-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Catarman", description:"Catarman, North Samar", category_id:3, lat_deg:12.000000, lat_min:31.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:124.000000, lon_min:39.000000, lon_sec:4.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Fixed red", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Catbalogan", description:"Catbalogan, West Samar", category_id:3, lat_deg:11.000000, lat_min:47.000000, lat_sec:6.000000, lat_dir:"N", lon_deg:124.000000, lon_min:51.000000, lon_sec:42.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Divinubo", description:"Borongan, North Samar", category_id:3, lat_deg:11.000000, lat_min:35.000000, lat_sec:56.000000, lat_dir:"N", lon_deg:125.000000, lon_min:30.000000, lon_sec:10.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BBT-375", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Gandara River", description:"Western Samar", category_id:3, lat_deg:11.000000, lat_min:38.000000, lat_sec:57.000000, lat_dir:"N", lon_deg:124.000000, lon_min:41.000000, lon_sec:27.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Malaga", description:"Malaga, Tinamacan, Calbayog", category_id:3, lat_deg:12.000000, lat_min:14.000000, lat_sec:6.000000, lat_dir:"N", lon_deg:122.000000, lon_min:22.000000, lon_sec:30.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"AL/GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Port Laoang", description:"Laoang, Northern Samar", category_id:3, lat_deg:12.000000, lat_min:34.000000, lat_sec:12.000000, lat_dir:"N", lon_deg:125.000000, lon_min:0.000000, lon_sec:12.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-249", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS San Antonio", description:"Bari, Northern Samar", category_id:3, lat_deg:12.000000, lat_min:36.000000, lat_sec:42.000000, lat_dir:"N", lon_deg:124.000000, lon_min:26.000000, lon_sec:24.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-155", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Sila", description:"Gamay, Northern Samar", category_id:3, lat_deg:12.000000, lat_min:24.000000, lat_sec:24.000000, lat_dir:"N", lon_deg:125.000000, lon_min:20.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Sto Niño", description:"Sto Nino, Western Samar", category_id:3, lat_deg:11.000000, lat_min:53.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:124.000000, lon_min:27.000000, lon_sec:53.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Uac-Uac", description:"Calbiga, Western Samar", category_id:3, lat_deg:11.000000, lat_min:39.000000, lat_sec:57.000000, lat_dir:"N", lon_deg:124.000000, lon_min:58.000000, lon_sec:18.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZP-20", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Daram", description:"Daram, Samar", category_id:3, lat_deg:11.000000, lat_min:44.000000, lat_sec:12.000000, lat_dir:"N", lon_deg:124.000000, lon_min:42.000000, lon_sec:50.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs`", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Anahawan", description:"Anahawan, South Leyte", category_id:3, lat_deg:10.000000, lat_min:14.000000, lat_sec:25.000000, lat_dir:"N", lon_deg:125.000000, lon_min:15.000000, lon_sec:5.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Adam Reef", description:"Matalon, Leyte", category_id:3, lat_deg:11.000000, lat_min:14.000000, lat_sec:54.000000, lat_dir:"N", lon_deg:124.000000, lon_min:42.000000, lon_sec:12.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"Zl-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Caligangan", description:"Catig, Liloan, South Leyte", category_id:3, lat_deg:10.000000, lat_min:7.000000, lat_sec:35.000000, lat_dir:"N", lon_deg:125.000000, lon_min:12.000000, lon_sec:50.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"AL/GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Canigao", description:"Matalon, Leyte", category_id:3, lat_deg:10.000000, lat_min:14.000000, lat_sec:59.000000, lat_dir:"N", lon_deg:124.000000, lon_min:45.000000, lon_sec:4.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"Zl-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Cabutan", description:"San Ricardo, South Leyte", category_id:3, lat_deg:9.000000, lat_min:54.000000, lat_sec:52.000000, lat_dir:"N", lon_deg:125.000000, lon_min:16.000000, lon_sec:52.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 4 W every 20 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"PRB46", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Hindang", description:"Hindang, Leyte", category_id:3, lat_deg:10.000000, lat_min:26.000000, lat_sec:12.000000, lat_dir:"N", lon_deg:124.000000, lon_min:43.000000, lon_sec:29.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Ilijan Island", description:"San Francisco, So Leyte", category_id:3, lat_deg:10.000000, lat_min:4.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:125.000000, lon_min:8.000000, lon_sec:30.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 7 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"AL/GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Liloan Harbor", description:"Liloan, Southern Leyte", category_id:3, lat_deg:10.000000, lat_min:9.000000, lat_sec:40.000000, lat_dir:"N", lon_deg:125.000000, lon_min:6.000000, lon_sec:58.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZP-20", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Maasin", description:"Maasin, Leyte", category_id:3, lat_deg:10.000000, lat_min:8.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:124.000000, lon_min:50.000000, lon_sec:21.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Malitbog", description:"Malitbog, Southern Leyte", category_id:3, lat_deg:10.000000, lat_min:9.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:125.000000, lon_min:0.000000, lon_sec:10.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 3 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BCG-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Limasawa South", description:"Limasawa Isl., South Leyte", category_id:3, lat_deg:9.000000, lat_min:58.000000, lat_sec:10.000000, lat_dir:"N", lon_deg:125.000000, lon_min:4.000000, lon_sec:50.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 8 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-600", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Saint Bernard", description:"Southern Leyte", category_id:3, lat_deg:10.000000, lat_min:16.000000, lat_sec:48.000000, lat_dir:"N", lon_deg:125.000000, lon_min:8.000000, lon_sec:12.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"NW-20", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS San Pedro", description:"San Pedro, Hinuangan, S Leyte", category_id:3, lat_deg:10.000000, lat_min:28.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:125.000000, lon_min:13.000000, lon_sec:30.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"AL/GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Sogod", description:"Sogod, Southern Leyte", category_id:3, lat_deg:10.000000, lat_min:23.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:124.000000, lon_min:58.000000, lon_sec:40.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every 15 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"PRB46", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS San Juan", description:"San Juan, S Leyte", category_id:3, lat_deg:10.000000, lat_min:16.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:125.000000, lon_min:10.000000, lon_sec:30.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Tood Is", description:"Matalon, Leyte", category_id:3, lat_deg:10.000000, lat_min:15.000000, lat_sec:36.000000, lat_dir:"N", lon_deg:124.000000, lon_min:39.000000, lon_sec:48.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every 15 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"Zl-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Limasawa North", description:"San Agustin, Limasawa Isl, South Leyte", category_id:3, lat_deg:9.000000, lat_min:58.000000, lat_sec:10.000000, lat_dir:"N", lon_deg:125.000000, lon_min:4.000000, lon_sec:50.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 8 secs ", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA 250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Albuera", description:"Albuera, Leyte", category_id:3, lat_deg:10.000000, lat_min:54.000000, lat_sec:47.000000, lat_dir:"N", lon_deg:124.000000, lon_min:41.000000, lon_sec:28.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Baybay", description:"Baybay, Leyte", category_id:3, lat_deg:10.000000, lat_min:40.000000, lat_sec:28.000000, lat_dir:"N", lon_deg:124.000000, lon_min:47.000000, lon_sec:57.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Binabaye", description:"Merida, Leyte", category_id:3, lat_deg:10.000000, lat_min:52.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:124.000000, lon_min:30.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 G every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"PRB46", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Isabel", description:"Isabel, Leyte", category_id:3, lat_deg:10.000000, lat_min:55.000000, lat_sec:33.000000, lat_dir:"N", lon_deg:124.000000, lon_min:25.000000, lon_sec:56.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-249", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Ormoc", description:"Ormoc City", category_id:3, lat_deg:11.000000, lat_min:0.000000, lat_sec:11.000000, lat_dir:"N", lon_deg:124.000000, lon_min:36.000000, lon_sec:35.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Palompon", description:"Palompon, Leyte", category_id:3, lat_deg:11.000000, lat_min:3.000000, lat_sec:12.000000, lat_dir:"N", lon_deg:124.000000, lon_min:22.000000, lon_sec:55.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Bondulan", description:"Apurawan, Aborlan, Palawan", category_id:3, lat_deg:10.000000, lat_min:40.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:123.000000, lon_min:1.000000, lon_sec:18.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 7 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Steel/GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Calabasaz", description:"Ajuy, Iloilo", category_id:3, lat_deg:11.000000, lat_min:4.000000, lat_sec:34.000000, lat_dir:"N", lon_deg:123.000000, lon_min:1.000000, lon_sec:18.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-RBG", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Estancia", description:"Estancia, Iloilo", category_id:3, lat_deg:11.000000, lat_min:27.000000, lat_sec:5.000000, lat_dir:"N", lon_deg:123.000000, lon_min:9.000000, lon_sec:5.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"Zl-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Iloilo Jetty R", description:"Iloilo City", category_id:3, lat_deg:10.000000, lat_min:41.000000, lat_sec:42.000000, lat_dir:"N", lon_deg:122.000000, lon_min:35.000000, lon_sec:10.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 4 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Iloilo Jetty G", description:"Iloilo City", category_id:3, lat_deg:10.000000, lat_min:41.000000, lat_sec:41.000000, lat_dir:"N", lon_deg:122.000000, lon_min:34.000000, lon_sec:39.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 4 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Luzaran", description:"N Valencia, Guimaras", category_id:3, lat_deg:10.000000, lat_min:29.000000, lat_sec:7.000000, lat_dir:"N", lon_deg:123.000000, lon_min:28.000000, lon_sec:23.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"PRB46", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Manigonigo", description:"Carles, Iloilo", category_id:3, lat_deg:11.000000, lat_min:36.000000, lat_sec:18.000000, lat_dir:"N", lon_deg:123.000000, lon_min:10.000000, lon_sec:32.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 7 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-RBG", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS North Gigantes", description:"Estancia, Iloilo", category_id:3, lat_deg:11.000000, lat_min:38.000000, lat_sec:21.000000, lat_dir:"N", lon_deg:123.000000, lon_min:21.000000, lon_sec:24.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-RBG", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Navalas", description:"Buenavista, Guimaras", category_id:3, lat_deg:10.000000, lat_min:43.000000, lat_sec:6.000000, lat_dir:"N", lon_deg:122.000000, lon_min:42.000000, lon_sec:41.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every 6 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Siete Pecados", description:"Iloilo City", category_id:3, lat_deg:10.000000, lat_min:46.000000, lat_sec:4.000000, lat_dir:"N", lon_deg:122.000000, lon_min:40.000000, lon_sec:33.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"Zl-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Baliguian", description:"Baliguian, Iloilo", category_id:3, lat_deg:11.000000, lat_min:12.000000, lat_sec:16.000000, lat_dir:"N", lon_deg:123.000000, lon_min:20.000000, lon_sec:10.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 7 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-RBG", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS San Enrique", description:"San Lorienzo, Guimaras", category_id:3, lat_deg:10.000000, lat_min:37.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:122.000000, lon_min:43.000000, lon_sec:24.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Stee/GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Taklong", description:"Nueva Valencia, Guimaras", category_id:3, lat_deg:10.000000, lat_min:24.000000, lat_sec:15.000000, lat_dir:"N", lon_deg:122.000000, lon_min:30.000000, lon_sec:18.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Steel/GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Sinapsapan", description:"Jordan, Guimaras", category_id:3, lat_deg:10.000000, lat_min:35.000000, lat_sec:20.000000, lat_dir:"N", lon_deg:122.000000, lon_min:30.000000, lon_sec:45.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Steel/GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Cadiz", description:"Cadiz City", category_id:3, lat_deg:10.000000, lat_min:57.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:123.000000, lon_min:19.000000, lon_sec:9.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Wood ", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Escalante", description:"Escalante, Negros Occ", category_id:3, lat_deg:10.000000, lat_min:49.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:123.000000, lon_min:33.000000, lon_sec:30.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Fixed Red", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Hitalon", description:"Cadiz, Negros Occidental", category_id:3, lat_deg:10.000000, lat_min:57.000000, lat_sec:31.000000, lat_dir:"N", lon_deg:123.000000, lon_min:19.000000, lon_sec:12.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Q Flashing Red", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Molocaboc", description:"Molocaboc, Negros Occ", category_id:3, lat_deg:10.000000, lat_min:58.000000, lat_sec:38.000000, lat_dir:"N", lon_deg:123.000000, lon_min:32.000000, lon_sec:30.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Steel/GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Pulupandan", description:"Pulupandan, Negros Occl", category_id:3, lat_deg:10.000000, lat_min:31.000000, lat_sec:24.000000, lat_dir:"N", lon_deg:122.000000, lon_min:47.000000, lon_sec:36.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Refugio", description:"Sn Carlos City Negros Occ", category_id:3, lat_deg:10.000000, lat_min:28.000000, lat_sec:14.000000, lat_dir:"N", lon_deg:123.000000, lon_min:27.000000, lon_sec:49.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 7 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-RBG", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS San Carlos", description:"Sn Carlos City Negros Occ", category_id:3, lat_deg:10.000000, lat_min:29.000000, lat_sec:49.000000, lat_dir:"N", lon_deg:123.000000, lon_min:25.000000, lon_sec:45.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 R every10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BBT", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Sojoton", description:"Cauayan, Negros Occ", category_id:3, lat_deg:9.000000, lat_min:58.000000, lat_sec:27.000000, lat_dir:"N", lon_deg:122.000000, lon_min:27.000000, lon_sec:18.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Himamaylan", description:"Himamaylan, Negros Occ", category_id:3, lat_deg:10.000000, lat_min:5.000000, lat_sec:36.000000, lat_dir:"N", lon_deg:122.000000, lon_min:51.000000, lon_sec:6.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Banago", description:"Banago Pier, Bacolod", category_id:3, lat_deg:10.000000, lat_min:42.000000, lat_sec:24.000000, lat_dir:"N", lon_deg:122.000000, lon_min:55.000000, lon_sec:54.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Steel", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Bredco", description:"Bredco Port, Bacolod", category_id:3, lat_deg:10.000000, lat_min:41.000000, lat_sec:13.100000, lat_dir:"N", lon_deg:122.000000, lon_min:56.000000, lon_sec:19.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W everye 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Steel", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Buenavista", description:"Escalante, Negros Occ", category_id:3, lat_deg:10.000000, lat_min:48.000000, lat_sec:44.000000, lat_dir:"N", lon_deg:123.000000, lon_min:33.000000, lon_sec:35.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGA-600", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Capiz Jetty R", description:"Culasi, Roxas City", category_id:3, lat_deg:11.000000, lat_min:36.000000, lat_sec:13.000000, lat_dir:"N", lon_deg:122.000000, lon_min:42.000000, lon_sec:18.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 3 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-155", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Culasi Pt", description:"Culasi Roxas City", category_id:3, lat_deg:11.000000, lat_min:36.000000, lat_sec:36.000000, lat_dir:"N", lon_deg:122.000000, lon_min:42.000000, lon_sec:15.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 7 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-HP", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Alegria", description:"Alegria, Simirara, Antique", category_id:3, lat_deg:12.000000, lat_min:1.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:121.000000, lon_min:24.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Steel/GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Amparo", description:"Patnongon, Antique", category_id:3, lat_deg:10.000000, lat_min:55.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:121.000000, lon_min:58.000000, lon_sec:3.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Steel/GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Libertad", description:" Libertad, Antique", category_id:3, lat_deg:11.000000, lat_min:46.000000, lat_sec:12.000000, lat_dir:"N", lon_deg:121.000000, lon_min:54.000000, lon_sec:46.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Steel", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Malaqui Island", description:"Malaqui Is., Antique", category_id:3, lat_deg:10.000000, lat_min:51.000000, lat_sec:45.000000, lat_dir:"N", lon_deg:121.000000, lon_min:17.000000, lon_sec:30.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 7 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"AL/GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Maniguin", description:"Culasi, Antique", category_id:3, lat_deg:11.000000, lat_min:35.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:121.000000, lon_min:41.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGA-1000", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Nogas", description:"Aniniy, Antique", category_id:3, lat_deg:10.000000, lat_min:25.000000, lat_sec:9.000000, lat_dir:"N", lon_deg:121.000000, lon_min:56.000000, lon_sec:11.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-RBG", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Aluminum", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Sibulo", description:"Sibulo, Caluya, antique", category_id:3, lat_deg:12.000000, lat_min:5.000000, lat_sec:55.000000, lat_dir:"N", lon_deg:121.000000, lon_min:34.000000, lon_sec:30.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"AL/GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Tibiao", description:"Tibiao, Antique", category_id:3, lat_deg:11.000000, lat_min:17.000000, lat_sec:42.000000, lat_dir:"N", lon_deg:124.000000, lon_min:14.000000, lon_sec:2.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Tubigan Point", description:"S J Buenavista, Antique", category_id:3, lat_deg:10.000000, lat_min:44.000000, lat_sec:20.000000, lat_dir:"N", lon_deg:121.000000, lon_min:56.000000, lon_sec:6.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
 temp = Poi.create(name:"LS Apga", description:"Tangalan, Aklan", category_id:3, lat_deg:11.000000, lat_min:47.000000, lat_sec:42.000000, lat_dir:"N", lon_deg:122.000000, lon_min:15.000000, lon_sec:18.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 4 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Floripon", description:"Washington, Aklan", category_id:3, lat_deg:11.000000, lat_min:35.000000, lat_sec:34.000000, lat_dir:"N", lon_deg:122.000000, lon_min:30.000000, lon_sec:10.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Sonculan", description:"Batan, Aklan", category_id:3, lat_deg:11.000000, lat_min:36.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:122.000000, lon_min:33.000000, lon_sec:30.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Agutaya Reef", description:"Apurawan, Aborlan, Palawan", category_id:3, lat_deg:8.000000, lat_min:40.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:124.000000, lon_min:41.000000, lon_sec:15.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"LBEA-85", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Balingasag", description:"Balingasag, Misamis Oriental", category_id:3, lat_deg:8.000000, lat_min:42.000000, lat_sec:24.000000, lat_dir:"N", lon_deg:124.000000, lon_min:44.000000, lon_sec:45.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Steel/GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Binoni", description:"Mahilog, Camiguin Island", category_id:3, lat_deg:9.000000, lat_min:8.000000, lat_sec:29.000000, lat_dir:"N", lon_deg:124.000000, lon_min:47.000000, lon_sec:56.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 3 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-155", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Dampias", description:"Binuangan, Misamis Or", category_id:3, lat_deg:8.000000, lat_min:59.000000, lat_sec:4.000000, lat_dir:"N", lon_deg:124.000000, lon_min:46.000000, lon_sec:15.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Steel/GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Farol", description:"Guinsilaban, Camiguin", category_id:3, lat_deg:9.000000, lat_min:5.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:124.000000, lon_min:46.000000, lon_sec:6.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 7 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Steel/GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Gingoog ", description:"Gingoog City", category_id:3, lat_deg:8.000000, lat_min:52.000000, lat_sec:10.000000, lat_dir:"N", lon_deg:125.000000, lon_min:8.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"Ml-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Macabalan", description:"Cagayan de Oro City", category_id:3, lat_deg:8.000000, lat_min:30.000000, lat_sec:20.000000, lat_dir:"N", lon_deg:124.000000, lon_min:39.000000, lon_sec:43.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Mambajao", description:"Mambajao, Misamis Or", category_id:3, lat_deg:9.000000, lat_min:15.000000, lat_sec:24.000000, lat_dir:"N", lon_deg:124.000000, lon_min:42.000000, lon_sec:52.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-600", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Medina", description:"Medina, Misamis Oriental", category_id:3, lat_deg:8.000000, lat_min:54.000000, lat_sec:35.000000, lat_dir:"N", lon_deg:125.000000, lon_min:1.000000, lon_sec:30.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Salauan", description:"Laguindingan Mis Occ", category_id:3, lat_deg:8.000000, lat_min:37.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:124.000000, lon_min:28.000000, lon_sec:36.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Steel/GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Luyong Bonbon", description:"Loyung Bonbon, Opol, Mis Or", category_id:3, lat_deg:8.000000, lat_min:31.000000, lat_sec:58.000000, lat_dir:"N", lon_deg:124.000000, lon_min:34.000000, lon_sec:17.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"concrete", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Cambasac", description:"Dapa, Surigao Norte", category_id:3, lat_deg:9.000000, lat_min:44.000000, lat_sec:46.000000, lat_dir:"N", lon_deg:126.000000, lon_min:1.000000, lon_sec:50.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Steel/GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Campintac/Desolacion", description:" Loreto, Surigao Norte.", category_id:3, lat_deg:10.000000, lat_min:26.000000, lat_sec:32.000000, lat_dir:"N", lon_deg:125.000000, lon_min:36.000000, lon_sec:43.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 4 W every 12 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"PRB46", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Dahakit", description:"Bucas Grande, Surigao N", category_id:3, lat_deg:9.000000, lat_min:33.000000, lat_sec:44.000000, lat_dir:"N", lon_deg:125.000000, lon_min:55.000000, lon_sec:57.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"Zl-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Dapa", description:"Dapa, Surigao Norte", category_id:3, lat_deg:9.000000, lat_min:44.000000, lat_sec:32.000000, lat_dir:"N", lon_deg:126.000000, lon_min:2.000000, lon_sec:36.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Hinatuan East", description:"Taganaan, Surigao Norte", category_id:3, lat_deg:9.000000, lat_min:47.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:125.000000, lon_min:44.000000, lon_sec:10.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 7 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"AL/GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Hinatuan North", description:"Taganaan, Surigao Norte", category_id:3, lat_deg:9.000000, lat_min:48.000000, lat_sec:45.000000, lat_dir:"N", lon_deg:125.000000, lon_min:42.000000, lon_sec:50.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"AL/GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Kahinaan Island", description:"Albor, Surigao del Norte", category_id:3, lat_deg:10.000000, lat_min:10.000000, lat_sec:20.000000, lat_dir:"N", lon_deg:125.000000, lon_min:27.000000, lon_sec:40.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 7 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"AL/GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Punta Alegria", description:"Sta Monica, Surigao Norte", category_id:3, lat_deg:10.000000, lat_min:3.000000, lat_sec:40.000000, lat_dir:"N", lon_deg:120.000000, lon_min:6.000000, lon_sec:20.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"PRB-46", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Punta Beach", description:"Malimano, Surigao Norte", category_id:3, lat_deg:9.000000, lat_min:34.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:125.000000, lon_min:25.000000, lon_sec:4.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Steel/GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Rasa Island", description:"Rasa Island, Surigao Norte", category_id:3, lat_deg:9.000000, lat_min:47.000000, lat_sec:34.000000, lat_dir:"N", lon_deg:125.000000, lon_min:35.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Sumilon", description:"Sumilon Isl., Surigaol Norte", category_id:3, lat_deg:9.000000, lat_min:55.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:125.000000, lon_min:26.000000, lon_sec:30.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every 15 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"PRB46", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Surigao", description:"Surigao del Norte", category_id:3, lat_deg:9.000000, lat_min:47.000000, lat_sec:8.000000, lat_dir:"N", lon_deg:125.000000, lon_min:30.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 R every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Socorro", description:"Socorro, Surigao del Norte", category_id:3, lat_deg:9.000000, lat_min:37.000000, lat_sec:10.000000, lat_dir:"N", lon_deg:125.000000, lon_min:58.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"concrete ", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Cabadbaran", description:"Cabadbaran, Agusan Norte", category_id:3, lat_deg:9.000000, lat_min:7.000000, lat_sec:28.000000, lat_dir:"N", lon_deg:125.000000, lon_min:31.000000, lon_sec:20.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"AL/GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Diuata", description:"Vinapor, Carmen, ADN", category_id:3, lat_deg:9.000000, lat_min:5.000000, lat_sec:38.000000, lat_dir:"N", lon_deg:125.000000, lon_min:12.000000, lon_sec:26.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"AL/GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Nasipit", description:"Sta Ana, Nasipit, ADN", category_id:3, lat_deg:8.000000, lat_min:59.000000, lat_sec:4.000000, lat_dir:"N", lon_deg:125.000000, lon_min:19.000000, lon_sec:45.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Nasipit Old", description:"Sta Ana, Nasipit, ADN", category_id:3, lat_deg:8.000000, lat_min:59.000000, lat_sec:4.000000, lat_dir:"N", lon_deg:125.000000, lon_min:19.000000, lon_sec:47.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 6 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Baliangao", description:"Baliangao, Misamis Occ", category_id:3, lat_deg:8.000000, lat_min:40.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:123.000000, lon_min:37.000000, lon_sec:12.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 7 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"AL/GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Oroquita", description:"Oroquita City", category_id:3, lat_deg:8.000000, lat_min:29.000000, lat_sec:48.000000, lat_dir:"N", lon_deg:123.000000, lon_min:47.000000, lon_sec:45.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Iso W every 4 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Plaridel", description:"Plaridel, Misamis Occidental", category_id:3, lat_deg:8.000000, lat_min:36.000000, lat_sec:43.000000, lat_dir:"N", lon_deg:123.000000, lon_min:43.000000, lon_sec:38.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250`", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Polo Point", description:"Plaridel, Misamis Occidental", category_id:3, lat_deg:8.000000, lat_min:35.000000, lat_sec:59.000000, lat_dir:"N", lon_deg:123.000000, lon_min:45.000000, lon_sec:24.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-600", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Port Ozamis", description:"Ozamis City", category_id:3, lat_deg:8.000000, lat_min:8.000000, lat_sec:28.000000, lat_dir:"N", lon_deg:123.000000, lon_min:50.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 R every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Sinonoc ", description:"Sinacaban, Misamis Occ", category_id:3, lat_deg:8.000000, lat_min:18.000000, lat_sec:6.000000, lat_dir:"N", lon_deg:123.000000, lon_min:51.000000, lon_sec:48.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Tabu Point", description:"Jimenez, Misamis Occl", category_id:3, lat_deg:8.000000, lat_min:19.000000, lat_sec:34.000000, lat_dir:"N", lon_deg:123.000000, lon_min:51.000000, lon_sec:44.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-600", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Iligan", description:"Iligan City", category_id:3, lat_deg:8.000000, lat_min:13.000000, lat_sec:58.000000, lat_dir:"N", lon_deg:124.000000, lon_min:13.000000, lon_sec:52.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"Ml-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Steel", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Labuay", description:"Maigo, Lanao del Norte", category_id:3, lat_deg:8.000000, lat_min:9.000000, lat_sec:42.000000, lat_dir:"N", lon_deg:123.000000, lon_min:57.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 6 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Tubod", description:"Tubod, Lanao del Norte", category_id:3, lat_deg:8.000000, lat_min:2.000000, lat_sec:42.000000, lat_dir:"N", lon_deg:123.000000, lon_min:47.000000, lon_sec:12.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Sultan Naga", description:"Dimaporo, Lano del Norte", category_id:3, lat_deg:7.000000, lat_min:47.000000, lat_sec:58.000000, lat_dir:"N", lon_deg:123.000000, lon_min:43.000000, lon_sec:1.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"LED", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Steel", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Port Puluan", description:"Puluan, Dipolog City", category_id:3, lat_deg:8.000000, lat_min:38.000000, lat_sec:17.000000, lat_dir:"N", lon_deg:123.000000, lon_min:22.000000, lon_sec:48.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZL-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Sibutad", description:"Pinahon Isl., Dapitan City", category_id:3, lat_deg:8.000000, lat_min:39.000000, lat_sec:31.000000, lat_dir:"N", lon_deg:123.000000, lon_min:30.000000, lon_sec:30.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Sindangan", description:"Sindangan, Zambo Norte", category_id:3, lat_deg:8.000000, lat_min:9.000000, lat_sec:40.000000, lat_dir:"N", lon_deg:122.000000, lon_min:39.000000, lon_sec:41.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 4 W every 15 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Little Sta Cruz", description:"Little Sta Cruz, Zambo City", category_id:3, lat_deg:6.000000, lat_min:53.000000, lat_sec:9.000000, lat_dir:"N", lon_deg:122.000000, lon_min:2.000000, lon_sec:30.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every 15 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Steel", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Sirawai", description:"Sirawai, Zambo Del Norte", category_id:3, lat_deg:7.000000, lat_min:35.000000, lat_sec:10.000000, lat_dir:"N", lon_deg:122.000000, lon_min:8.000000, lon_sec:20.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every 6 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP/AL", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Dao-dao", description:"Dao-dao Isl., Pagadian", category_id:3, lat_deg:7.000000, lat_min:44.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:123.000000, lon_min:26.000000, lon_sec:3.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Malangas", description:"Malangas, Zambo del Sur", category_id:3, lat_deg:7.000000, lat_min:37.000000, lat_sec:40.000000, lat_dir:"N", lon_deg:123.000000, lon_min:2.000000, lon_sec:22.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 10 secs ", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Margosatubig", description:"Margosatubig, Zambo Sur", category_id:3, lat_deg:7.000000, lat_min:34.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:128.000000, lon_min:12.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Naga", description:"Taytay, Naga, Zambo Sur", category_id:3, lat_deg:7.000000, lat_min:47.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:122.000000, lon_min:41.000000, lon_sec:40.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every 15 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"PRB46", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Pagadian", description:"Pagadian City", category_id:3, lat_deg:7.000000, lat_min:49.000000, lat_sec:25.000000, lat_dir:"N", lon_deg:123.000000, lon_min:26.000000, lon_sec:15.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"Sl-200", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Steel", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Jolo ", description:"Jolo, Sulu", category_id:3, lat_deg:6.000000, lat_min:3.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:120.000000, lon_min:59.000000, lon_sec:56.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs ", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Batobato", description:"Bongao, Tawi-tawi", category_id:3, lat_deg:5.000000, lat_min:4.000000, lat_sec:10.000000, lat_dir:"N", lon_deg:119.000000, lon_min:53.000000, lon_sec:3.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"Ml-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"wtr tank", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Port Bongao", description:"Bongao, Tawi-tawi", category_id:3, lat_deg:5.000000, lat_min:2.000000, lat_sec:10.000000, lat_dir:"N", lon_deg:119.000000, lon_min:44.000000, lon_sec:12.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZP-20", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Tandutao", description:"Cagayan de Tawi-tawi", category_id:3, lat_deg:6.000000, lat_min:58.000000, lat_sec:44.000000, lat_dir:"N", lon_deg:118.000000, lon_min:32.000000, lon_sec:50.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ZP-20", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Polloc", description:"Parang, Maguindanao", category_id:3, lat_deg:7.000000, lat_min:22.000000, lat_sec:24.000000, lat_dir:"N", lon_deg:124.000000, lon_min:12.000000, lon_sec:30.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Colapsin Point", description:"Sta Maria,Davao Sur", category_id:3, lat_deg:6.000000, lat_min:37.000000, lat_sec:58.000000, lat_dir:"N", lon_deg:125.000000, lon_min:25.000000, lon_sec:38.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-600", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Davao", description:"Apurawan, Aborlan, Palawan", category_id:3, lat_deg:7.000000, lat_min:4.000000, lat_sec:44.000000, lat_dir:"N", lon_deg:125.000000, lon_min:37.000000, lon_sec:30.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Hill 450", description:"Malalag, Davao Del Sur", category_id:3, lat_deg:6.000000, lat_min:36.000000, lat_sec:58.000000, lat_dir:"N", lon_deg:125.000000, lon_min:25.000000, lon_sec:40.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BCG-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Malalag River", description:"Malalag, Davao del Sur", category_id:3, lat_deg:6.000000, lat_min:36.000000, lat_sec:18.000000, lat_dir:"N", lon_deg:125.000000, lon_min:23.000000, lon_sec:54.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 3 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-155", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Panacan", description:"Panacan, Davao City", category_id:3, lat_deg:7.000000, lat_min:9.000000, lat_sec:24.000000, lat_dir:"N", lon_deg:125.000000, lon_min:39.000000, lon_sec:30.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing G every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-155", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Sasa ", description:"Sasa, Davao City", category_id:3, lat_deg:7.000000, lat_min:7.000000, lat_sec:25.000000, lat_dir:"N", lon_deg:125.000000, lon_min:39.000000, lon_sec:41.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Tabulan Head", description:"Malita, Davao del Sur", category_id:3, lat_deg:6.000000, lat_min:30.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:125.000000, lon_min:35.000000, lon_sec:30.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 G every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Talikud", description:"Talikud, Davao City", category_id:3, lat_deg:6.000000, lat_min:54.000000, lat_sec:33.000000, lat_dir:"N", lon_deg:125.000000, lon_min:41.000000, lon_sec:18.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Calian", description:"Don Marcelino, Davao Sur", category_id:3, lat_deg:6.000000, lat_min:15.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:125.000000, lon_min:41.000000, lon_sec:10.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every15 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Bolton Reef", description:"Malalag, Davao Sur", category_id:3, lat_deg:6.000000, lat_min:35.000000, lat_sec:54.000000, lat_dir:"N", lon_deg:125.000000, lon_min:24.000000, lon_sec:39.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Arangasa", description:"Aras-Aras, Surigao Sur", category_id:3, lat_deg:8.000000, lat_min:52.000000, lat_sec:45.000000, lat_dir:"N", lon_deg:126.000000, lon_min:20.000000, lon_sec:27.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Ayoke", description:"Cantilan, Surigao del Sur", category_id:3, lat_deg:9.000000, lat_min:23.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:126.000000, lon_min:2.000000, lon_sec:54.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Cauit Point", description:"Cortes, Surigao Del Sur", category_id:3, lat_deg:9.000000, lat_min:18.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:126.000000, lon_min:12.000000, lon_sec:21.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 3 W every 8 ecs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Lianga Bay", description:"Lianga, Surigao del Sur", category_id:3, lat_deg:8.000000, lat_min:38.000000, lat_sec:35.000000, lat_dir:"N", lon_deg:126.000000, lon_min:5.000000, lon_sec:55.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Maboa", description:"Tandag, Surigao del Sur", category_id:3, lat_deg:9.000000, lat_min:5.000000, lat_sec:12.000000, lat_dir:"N", lon_deg:126.000000, lon_min:11.000000, lon_sec:55.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 15 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Sanco Point", description:"Bislig, Surigao del Sur", category_id:3, lat_deg:8.000000, lat_min:14.000000, lat_sec:45.000000, lat_dir:"N", lon_deg:126.000000, lon_min:27.000000, lon_sec:15.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Cape San Agustin", description:"Gov Generoso, Davao Or", category_id:3, lat_deg:6.000000, lat_min:16.000000, lat_sec:16.000000, lat_dir:"N", lon_deg:126.000000, lon_min:11.000000, lon_sec:30.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGA-1000", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Lawigan Point", description:"Mati, Davao Oriental", category_id:3, lat_deg:6.000000, lat_min:48.000000, lat_sec:15.000000, lat_dir:"N", lon_deg:126.000000, lon_min:20.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGC-600", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Mati", description:"Mati, Davao Oriental", category_id:3, lat_deg:6.000000, lat_min:57.000000, lat_sec:4.000000, lat_dir:"N", lon_deg:126.000000, lon_min:13.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs ", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"ML-300", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Mapanga", description:"Banaybanay, Davao Or", category_id:3, lat_deg:7.000000, lat_min:3.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:125.000000, lon_min:56.000000, lon_sec:50.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Pujada", description:"Mati, Davao Oriental", category_id:3, lat_deg:6.000000, lat_min:46.000000, lat_sec:59.000000, lat_dir:"N", lon_deg:126.000000, lon_min:16.000000, lon_sec:24.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing R every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"BGA-1000", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Sigaboy", description:"Gov Generoso, Davao Or", category_id:3, lat_deg:6.000000, lat_min:37.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:126.000000, lon_min:56.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 4 W every 10 secs ", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Buca Pt", description:"Kiamba, Sarangani Prov", category_id:3, lat_deg:5.000000, lat_min:57.000000, lat_sec:30.000000, lat_dir:"N", lon_deg:124.000000, lon_min:40.000000, lon_sec:30.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every10 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Tinaca", description:"Batulaki, South Cotabato", category_id:3, lat_deg:5.000000, lat_min:33.000000, lat_sec:22.000000, lat_dir:"N", lon_deg:125.000000, lon_min:19.000000, lon_sec:50.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 5 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"Concrete", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Manamil", description:"Manamil Is., Sarangani Prov", category_id:3, lat_deg:5.000000, lat_min:22.000000, lat_sec:12.000000, lat_dir:"N", lon_deg:125.000000, lon_min:21.000000, lon_sec:0.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing 2 W every 6 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
 Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.id)
+
+
 temp = Poi.create(name:"LS Olaniban", description:"Sarangani Province", category_id:3, lat_deg:5.000000, lat_min:31.000000, lat_sec:0.000000, lat_dir:"N", lon_deg:125.000000, lon_min:31.000000, lon_sec:15.000000, lon_dir:"E")
 Details.create(name:"Characteristics", detail_type:"text", body:"Flashing W every 8 secs", poi_id: temp.id)
 Details.create(name:"Lantern Type", detail_type:"text", body:"FA-250", poi_id: temp.id)
@@ -2332,244 +3037,212 @@ Details.create(name:"Tower Type", detail_type:"text", body:"GRP", poi_id: temp.i
 # Philippines
 # 7.125273, 125.645363
 
-Image.create(poi_id:14 , url:"img_000.jpg")
-Image.create(poi_id:14 , url:"img_001.jpg")
-Image.create(poi_id:6 , url:"img_002.jpg")
-Image.create(poi_id:6 , url:"img_003.jpg")
-Image.create(poi_id:246 , url:"img_004.jpg")
-Image.create(poi_id:277 , url:"img_005.jpg")
-Image.create(poi_id:219 , url:"img_006.jpg")
-Image.create(poi_id:219 , url:"img_007.jpg")
-
-Image.create(poi_id:217 , url:"Clark_001.jpg")
-Image.create(poi_id:217 , url:"Clark_002.jpg")
-Image.create(poi_id:217 , url:"Clark_003.jpg")
-Image.create(poi_id:217 , url:"Clark_004.jpg")
-
-Image.create(poi_id:219 , url:"NAIA T1_001.jpg")
-Image.create(poi_id:219 , url:"NAIA T1_002.jpg")
-Image.create(poi_id:219 , url:"NAIA T1_003.jpg")
-Image.create(poi_id:219 , url:"NAIA T3_001.jpg")
-Image.create(poi_id:219 , url:"NAIA T3_002.jpg")
 
 
-
-
-# Image.create(poi_id:219 , url:"Laguindingan_001.jpg")
-# Image.create(poi_id:219 , url:"Laguindingan_002.jpg")
-# Image.create(poi_id:219 , url:"Laguindingan_003.jpg")
-
-
-
-
-# Details.create(name:"Sample additional info 1" , detail_type:"text", body:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fermentum sollicitudin quam eget sagittis. Vivamus nisl orci, interdum in lobortis sit amet, condimentum a nibh.", poi_id:14)
-# Details.create(name:"Sample additional info 2" , detail_type:"text", body:"In congue, ante at varius cursus, arcu felis varius elit, vel varius mauris sapien sed nulla. Maecenas vel magna pellentesque, porta tellus sed, tincidunt justo. Morbi quis dolor tincidunt est interdum imperdiet ullamcorper nec ipsum.", poi_id:14)
-# Details.create(name:"Sample additional info 3" , detail_type:"text", body:"Vestibulum urna massa, aliquet sit amet pharetra ac, sollicitudin ac massa. Donec malesuada dolor non nisi ornare, pretium pellentesque mi consectetur.", poi_id:14)
-# Details.create(name:"Sample additional info 4" , detail_type:"text", body:"Proin varius mattis tortor in venenatis. Vestibulum eleifend fringilla tellus. Duis rhoncus sed lorem vitae cursus. Integer vitae lectus quis nunc semper facilisis. Fusce scelerisque commodo odio, sed ullamcorper erat hendrerit nec. Duis elementum lacus a odio vulputate, sit amet placerat quam tristique. Vestibulum eget lectus egestas, sollicitudin velit id, tempus dui. Aliquam malesuada, augue a accumsan ullamcorper, mauris diam euismod diam, sed vestibulum ex turpis a sem.", poi_id:1)
 
 
 RouteProvider.create(name:"Philippine Airlines" , image:nil)
 
 
-Route.create(route_provider_id:1 , route_id:"PR 2031", travel_type:"air", departure_time:"8:40:00", arrival_time:"9:35:00", days:127, active:true, origin_poi_id:219, destination_poi_id:222)
-Route.create(route_provider_id:1 , route_id:"PR 2027", travel_type:"air", departure_time:"11:10:00", arrival_time:"12:05:00", days:127, active:false, origin_poi_id:219, destination_poi_id:222)
-Route.create(route_provider_id:1 , route_id:"PR 2033", travel_type:"air", departure_time:"14:40:00", arrival_time:"15:35:00", days:127, active:true, origin_poi_id:219, destination_poi_id:222)
-Route.create(route_provider_id:1 , route_id:"PR 2032", travel_type:"air", departure_time:"9:55:00", arrival_time:"10:50:00", days:127, active:true, origin_poi_id:222, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2028", travel_type:"air", departure_time:"12:25:00", arrival_time:"13:20:00", days:127, active:false, origin_poi_id:222, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2034", travel_type:"air", departure_time:"15:55:00", arrival_time:"16:50:00", days:127, active:true, origin_poi_id:222, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2967", travel_type:"air", departure_time:"5:10:00", arrival_time:"6:35:00", days:127, active:true, origin_poi_id:219, destination_poi_id:270)
-Route.create(route_provider_id:1 , route_id:"PR 2968", travel_type:"air", departure_time:"7:15:00", arrival_time:"8:45:00", days:42, active:true, origin_poi_id:270, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2966", travel_type:"air", departure_time:"10:05:00", arrival_time:"11:35:00", days:85, active:true, origin_poi_id:270, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2519", travel_type:"air", departure_time:"4:45:00", arrival_time:"6:20:00", days:127, active:false, origin_poi_id:219, destination_poi_id:284)
-Route.create(route_provider_id:1 , route_id:"PR 1519", travel_type:"air", departure_time:"4:45:00", arrival_time:"6:20:00", days:127, active:true, origin_poi_id:219, destination_poi_id:284)
-Route.create(route_provider_id:1 , route_id:"PR 2521", travel_type:"air", departure_time:"9:35:00", arrival_time:"11:10:00", days:127, active:true, origin_poi_id:219, destination_poi_id:284)
-Route.create(route_provider_id:1 , route_id:"PR 2527", travel_type:"air", departure_time:"11:45:00", arrival_time:"13:20:00", days:127, active:true, origin_poi_id:219, destination_poi_id:284)
-Route.create(route_provider_id:1 , route_id:"PR 2525", travel_type:"air", departure_time:"14:20:00", arrival_time:"15:55:00", days:127, active:true, origin_poi_id:219, destination_poi_id:284)
-Route.create(route_provider_id:1 , route_id:"PR 2529", travel_type:"air", departure_time:"18:15:00", arrival_time:"19:50:00", days:127, active:true, origin_poi_id:219, destination_poi_id:284)
-Route.create(route_provider_id:1 , route_id:"PR 2520", travel_type:"air", departure_time:"7:00:00", arrival_time:"8:30:00", days:127, active:false, origin_poi_id:284, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 1520", travel_type:"air", departure_time:"7:00:00", arrival_time:"8:30:00", days:127, active:true, origin_poi_id:284, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2522", travel_type:"air", departure_time:"11:50:00", arrival_time:"13:20:00", days:127, active:true, origin_poi_id:284, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2528", travel_type:"air", departure_time:"14:00:00", arrival_time:"15:30:00", days:127, active:true, origin_poi_id:284, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2526", travel_type:"air", departure_time:"16:35:00", arrival_time:"18:05:00", days:127, active:true, origin_poi_id:284, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2530", travel_type:"air", departure_time:"20:30:00", arrival_time:"22:00:00", days:127, active:true, origin_poi_id:284, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2071", travel_type:"air", departure_time:"5:15:00", arrival_time:"6:30:00", days:127, active:true, origin_poi_id:219, destination_poi_id:253)
-Route.create(route_provider_id:1 , route_id:"PR 2072", travel_type:"air", departure_time:"6:50:00", arrival_time:"8:10:00", days:127, active:true, origin_poi_id:253, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2079", travel_type:"air", departure_time:"5:15:00", arrival_time:"6:30:00", days:127, active:true, origin_poi_id:219, destination_poi_id:254)
-Route.create(route_provider_id:1 , route_id:"PR 2080", travel_type:"air", departure_time:"6:55:00", arrival_time:"8:10:00", days:127, active:true, origin_poi_id:254, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2039", travel_type:"air", departure_time:"6:00:00", arrival_time:"7:00:00", days:127, active:true, origin_poi_id:219, destination_poi_id:241)
-Route.create(route_provider_id:1 , route_id:"PR 2045", travel_type:"air", departure_time:"7:00:00", arrival_time:"8:00:00", days:127, active:true, origin_poi_id:219, destination_poi_id:241)
-Route.create(route_provider_id:1 , route_id:"PR 2043", travel_type:"air", departure_time:"8:25:00", arrival_time:"9:25:00", days:127, active:true, origin_poi_id:219, destination_poi_id:241)
-Route.create(route_provider_id:1 , route_id:"PR 2051", travel_type:"air", departure_time:"9:00:00", arrival_time:"10:00:00", days:127, active:true, origin_poi_id:219, destination_poi_id:241)
-Route.create(route_provider_id:1 , route_id:"PR 2059", travel_type:"air", departure_time:"9:40:00", arrival_time:"10:40:00", days:127, active:true, origin_poi_id:219, destination_poi_id:241)
-Route.create(route_provider_id:1 , route_id:"PR 2041", travel_type:"air", departure_time:"11:15:00", arrival_time:"12:15:00", days:127, active:true, origin_poi_id:219, destination_poi_id:241)
-Route.create(route_provider_id:1 , route_id:"PR 2057", travel_type:"air", departure_time:"11:55:00", arrival_time:"12:55:00", days:127, active:true, origin_poi_id:219, destination_poi_id:241)
-Route.create(route_provider_id:1 , route_id:"PR 2049", travel_type:"air", departure_time:"12:30:00", arrival_time:"13:30:00", days:127, active:true, origin_poi_id:219, destination_poi_id:241)
-Route.create(route_provider_id:1 , route_id:"PR 2063", travel_type:"air", departure_time:"14:05:00", arrival_time:"15:05:00", days:127, active:true, origin_poi_id:219, destination_poi_id:241)
-Route.create(route_provider_id:1 , route_id:"PR 2053", travel_type:"air", departure_time:"15:10:00", arrival_time:"16:10:00", days:127, active:true, origin_poi_id:219, destination_poi_id:241)
-Route.create(route_provider_id:1 , route_id:"PR 2040", travel_type:"air", departure_time:"7:20:00", arrival_time:"8:20:00", days:127, active:true, origin_poi_id:241, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2046", travel_type:"air", departure_time:"8:20:00", arrival_time:"9:20:00", days:127, active:true, origin_poi_id:241, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2044", travel_type:"air", departure_time:"9:45:00", arrival_time:"10:45:00", days:127, active:true, origin_poi_id:241, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2052", travel_type:"air", departure_time:"10:20:00", arrival_time:"11:20:00", days:127, active:true, origin_poi_id:241, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2060", travel_type:"air", departure_time:"11:00:00", arrival_time:"12:00:00", days:127, active:true, origin_poi_id:241, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2042", travel_type:"air", departure_time:"12:35:00", arrival_time:"13:35:00", days:127, active:true, origin_poi_id:241, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2058", travel_type:"air", departure_time:"13:15:00", arrival_time:"14:15:00", days:127, active:true, origin_poi_id:241, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2050", travel_type:"air", departure_time:"13:50:00", arrival_time:"14:50:00", days:127, active:true, origin_poi_id:241, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2064", travel_type:"air", departure_time:"15:25:00", arrival_time:"16:25:00", days:127, active:true, origin_poi_id:241, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2054", travel_type:"air", departure_time:"16:30:00", arrival_time:"17:30:00", days:127, active:true, origin_poi_id:241, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2835", travel_type:"air", departure_time:"4:00:00", arrival_time:"5:10:00", days:127, active:true, origin_poi_id:219, destination_poi_id:246)
-Route.create(route_provider_id:1 , route_id:"PR 1841", travel_type:"air", departure_time:"5:00:00", arrival_time:"6:15:00", days:127, active:true, origin_poi_id:219, destination_poi_id:246)
-Route.create(route_provider_id:1 , route_id:"PR 1845", travel_type:"air", departure_time:"7:00:00", arrival_time:"8:15:00", days:127, active:true, origin_poi_id:219, destination_poi_id:246)
-Route.create(route_provider_id:1 , route_id:"PR 1849", travel_type:"air", departure_time:"9:00:00", arrival_time:"10:15:00", days:127, active:true, origin_poi_id:219, destination_poi_id:246)
-Route.create(route_provider_id:1 , route_id:"PR 1853", travel_type:"air", departure_time:"11:00:00", arrival_time:"12:15:00", days:127, active:true, origin_poi_id:219, destination_poi_id:246)
-Route.create(route_provider_id:1 , route_id:"PR 1859", travel_type:"air", departure_time:"14:30:00", arrival_time:"15:45:00", days:127, active:true, origin_poi_id:219, destination_poi_id:246)
-Route.create(route_provider_id:1 , route_id:"PR 1861", travel_type:"air", departure_time:"16:00:00", arrival_time:"17:15:00", days:127, active:true, origin_poi_id:219, destination_poi_id:246)
-Route.create(route_provider_id:1 , route_id:"PR 1863", travel_type:"air", departure_time:"18:30:00", arrival_time:"19:45:00", days:127, active:true, origin_poi_id:219, destination_poi_id:246)
-Route.create(route_provider_id:1 , route_id:"PR 1867", travel_type:"air", departure_time:"20:00:00", arrival_time:"21:15:00", days:127, active:true, origin_poi_id:219, destination_poi_id:246)
-Route.create(route_provider_id:1 , route_id:"PR 1869", travel_type:"air", departure_time:"22:00:00", arrival_time:"23:15:00", days:127, active:true, origin_poi_id:219, destination_poi_id:246)
-Route.create(route_provider_id:1 , route_id:"PR 1836", travel_type:"air", departure_time:"4:50:00", arrival_time:"6:00:00", days:127, active:true, origin_poi_id:246, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 1842", travel_type:"air", departure_time:"6:55:00", arrival_time:"8:10:00", days:127, active:true, origin_poi_id:246, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 1846", travel_type:"air", departure_time:"8:55:00", arrival_time:"10:10:00", days:127, active:true, origin_poi_id:246, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 1850", travel_type:"air", departure_time:"11:00:00", arrival_time:"12:15:00", days:127, active:true, origin_poi_id:246, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 1854", travel_type:"air", departure_time:"13:00:00", arrival_time:"14:15:00", days:127, active:true, origin_poi_id:246, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 1860", travel_type:"air", departure_time:"16:25:00", arrival_time:"17:40:00", days:127, active:true, origin_poi_id:246, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 1862", travel_type:"air", departure_time:"17:55:00", arrival_time:"19:10:00", days:127, active:true, origin_poi_id:246, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2880", travel_type:"air", departure_time:"19:30:00", arrival_time:"20:45:00", days:127, active:true, origin_poi_id:246, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 1864", travel_type:"air", departure_time:"20:25:00", arrival_time:"21:40:00", days:127, active:true, origin_poi_id:246, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 1868", travel_type:"air", departure_time:"22:00:00", arrival_time:"23:15:00", days:127, active:true, origin_poi_id:246, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2959", travel_type:"air", departure_time:"9:25:00", arrival_time:"11:10:00", days:127, active:true, origin_poi_id:219, destination_poi_id:281)
-Route.create(route_provider_id:1 , route_id:"PR 2960", travel_type:"air", departure_time:"11:50:00", arrival_time:"13:30:00", days:127, active:true, origin_poi_id:281, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 1809", travel_type:"air", departure_time:"4:00:00", arrival_time:"5:50:00", days:127, active:true, origin_poi_id:219, destination_poi_id:278)
-Route.create(route_provider_id:1 , route_id:"PR 1811", travel_type:"air", departure_time:"6:40:00", arrival_time:"8:30:00", days:127, active:true, origin_poi_id:219, destination_poi_id:278)
-Route.create(route_provider_id:1 , route_id:"PR 1813", travel_type:"air", departure_time:"9:10:00", arrival_time:"11:00:00", days:127, active:true, origin_poi_id:219, destination_poi_id:278)
-Route.create(route_provider_id:1 , route_id:"PR 1815", travel_type:"air", departure_time:"12:00:00", arrival_time:"13:50:00", days:127, active:true, origin_poi_id:219, destination_poi_id:278)
-Route.create(route_provider_id:1 , route_id:"PR 1817", travel_type:"air", departure_time:"15:00:00", arrival_time:"16:50:00", days:127, active:true, origin_poi_id:219, destination_poi_id:278)
-Route.create(route_provider_id:1 , route_id:"PR 1819", travel_type:"air", departure_time:"17:10:00", arrival_time:"19:00:00", days:127, active:true, origin_poi_id:219, destination_poi_id:278)
-Route.create(route_provider_id:1 , route_id:"PR 1823", travel_type:"air", departure_time:"19:40:00", arrival_time:"21:30:00", days:127, active:true, origin_poi_id:219, destination_poi_id:278)
-Route.create(route_provider_id:1 , route_id:"PR 1825", travel_type:"air", departure_time:"21:00:00", arrival_time:"22:45:00", days:127, active:true, origin_poi_id:219, destination_poi_id:278)
-Route.create(route_provider_id:1 , route_id:"PR 1808", travel_type:"air", departure_time:"4:30:00", arrival_time:"6:20:00", days:127, active:true, origin_poi_id:278, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 1810", travel_type:"air", departure_time:"6:30:00", arrival_time:"8:20:00", days:127, active:true, origin_poi_id:278, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 1812", travel_type:"air", departure_time:"9:20:00", arrival_time:"11:10:00", days:127, active:true, origin_poi_id:278, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 1814", travel_type:"air", departure_time:"11:40:00", arrival_time:"13:30:00", days:127, active:true, origin_poi_id:278, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 1816", travel_type:"air", departure_time:"14:30:00", arrival_time:"16:20:00", days:127, active:true, origin_poi_id:278, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 1818", travel_type:"air", departure_time:"17:30:00", arrival_time:"19:20:00", days:127, active:true, origin_poi_id:278, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 1820", travel_type:"air", departure_time:"19:40:00", arrival_time:"21:30:00", days:127, active:true, origin_poi_id:278, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 1824", travel_type:"air", departure_time:"22:15:00", arrival_time:"0:05:00", days:127, active:true, origin_poi_id:278, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2557", travel_type:"air", departure_time:"11:05:00", arrival_time:"12:30:00", days:127, active:true, origin_poi_id:219, destination_poi_id:262)
-Route.create(route_provider_id:1 , route_id:"PR 2558", travel_type:"air", departure_time:"13:10:00", arrival_time:"14:40:00", days:127, active:true, origin_poi_id:262, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2545", travel_type:"air", departure_time:"8:40:00", arrival_time:"10:00:00", days:127, active:true, origin_poi_id:219, destination_poi_id:245)
-Route.create(route_provider_id:1 , route_id:"PR 2543", travel_type:"air", departure_time:"13:20:00", arrival_time:"14:40:00", days:127, active:true, origin_poi_id:219, destination_poi_id:245)
-Route.create(route_provider_id:1 , route_id:"PR 2546", travel_type:"air", departure_time:"10:40:00", arrival_time:"12:00:00", days:127, active:true, origin_poi_id:245, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2544", travel_type:"air", departure_time:"15:20:00", arrival_time:"16:40:00", days:127, active:true, origin_poi_id:245, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 453", travel_type:"air", departure_time:"6:55:00", arrival_time:"8:45:00", days:127, active:true, origin_poi_id:219, destination_poi_id:276)
-Route.create(route_provider_id:1 , route_id:"PR 454", travel_type:"air", departure_time:"10:00:00", arrival_time:"12:00:00", days:127, active:true, origin_poi_id:276, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2139", travel_type:"air", departure_time:"4:30:00", arrival_time:"5:40:00", days:127, active:true, origin_poi_id:219, destination_poi_id:242)
-Route.create(route_provider_id:1 , route_id:"PR 2141", travel_type:"air", departure_time:"8:15:00", arrival_time:"9:25:00", days:127, active:true, origin_poi_id:219, destination_poi_id:242)
-Route.create(route_provider_id:1 , route_id:"PR 2143", travel_type:"air", departure_time:"12:15:00", arrival_time:"13:25:00", days:127, active:true, origin_poi_id:219, destination_poi_id:242)
-Route.create(route_provider_id:1 , route_id:"PR 2145", travel_type:"air", departure_time:"16:50:00", arrival_time:"18:00:00", days:127, active:true, origin_poi_id:219, destination_poi_id:242)
-Route.create(route_provider_id:1 , route_id:"PR 2147", travel_type:"air", departure_time:"18:45:00", arrival_time:"19:55:00", days:127, active:true, origin_poi_id:219, destination_poi_id:242)
-Route.create(route_provider_id:1 , route_id:"PR 2140", travel_type:"air", departure_time:"6:20:00", arrival_time:"7:25:00", days:127, active:true, origin_poi_id:242, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2142", travel_type:"air", departure_time:"10:05:00", arrival_time:"11:10:00", days:127, active:true, origin_poi_id:242, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2144", travel_type:"air", departure_time:"14:05:00", arrival_time:"15:10:00", days:127, active:true, origin_poi_id:242, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2146", travel_type:"air", departure_time:"18:40:00", arrival_time:"19:55:00", days:127, active:true, origin_poi_id:242, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2148", travel_type:"air", departure_time:"20:35:00", arrival_time:"21:45:00", days:127, active:true, origin_poi_id:242, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2969", travel_type:"air", departure_time:"8:35:00", arrival_time:"9:35:00", days:127, active:true, origin_poi_id:219, destination_poi_id:243)
-Route.create(route_provider_id:1 , route_id:"PR 249", travel_type:"air", departure_time:"12:40:00", arrival_time:"13:40:00", days:1, active:true, origin_poi_id:219, destination_poi_id:243)
-Route.create(route_provider_id:1 , route_id:"PR 2975", travel_type:"air", departure_time:"16:40:00", arrival_time:"17:40:00", days:127, active:true, origin_poi_id:219, destination_poi_id:243)
-Route.create(route_provider_id:1 , route_id:"PR 2975", travel_type:"air", departure_time:"16:30:00", arrival_time:"17:30:00", days:127, active:false, origin_poi_id:219, destination_poi_id:243)
-Route.create(route_provider_id:1 , route_id:"PR 2971", travel_type:"air", departure_time:"18:15:00", arrival_time:"19:15:00", days:127, active:true, origin_poi_id:219, destination_poi_id:243)
-Route.create(route_provider_id:1 , route_id:"PR 1239", travel_type:"air", departure_time:"22:00:00", arrival_time:"23:00:00", days:40, active:true, origin_poi_id:219, destination_poi_id:243)
-Route.create(route_provider_id:1 , route_id:"PR 1239", travel_type:"air", departure_time:"22:00:00", arrival_time:"23:00:00", days:0, active:false, origin_poi_id:219, destination_poi_id:243)
-Route.create(route_provider_id:1 , route_id:"PR 2970", travel_type:"air", departure_time:"10:15:00", arrival_time:"11:15:00", days:127, active:true, origin_poi_id:243, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 240", travel_type:"air", departure_time:"12:40:00", arrival_time:"13:40:00", days:127, active:true, origin_poi_id:243, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 250", travel_type:"air", departure_time:"14:00:00", arrival_time:"15:00:00", days:2, active:true, origin_poi_id:243, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2976", travel_type:"air", departure_time:"18:20:00", arrival_time:"19:20:00", days:127, active:true, origin_poi_id:243, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2976", travel_type:"air", departure_time:"18:10:00", arrival_time:"19:10:00", days:127, active:false, origin_poi_id:243, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2972", travel_type:"air", departure_time:"19:55:00", arrival_time:"20:55:00", days:127, active:true, origin_poi_id:243, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2196", travel_type:"air", departure_time:"12:00:00", arrival_time:"13:00:00", days:127, active:true, origin_poi_id:219, destination_poi_id:205)
-Route.create(route_provider_id:1 , route_id:"PR 2198", travel_type:"air", departure_time:"19:00:00", arrival_time:"20:00:00", days:127, active:true, origin_poi_id:219, destination_poi_id:205)
-Route.create(route_provider_id:1 , route_id:"PR 2198", travel_type:"air", departure_time:"19:00:00", arrival_time:"20:00:00", days:87, active:false, origin_poi_id:219, destination_poi_id:205)
-Route.create(route_provider_id:1 , route_id:"PR 2197", travel_type:"air", departure_time:"13:40:00", arrival_time:"14:40:00", days:127, active:true, origin_poi_id:205, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2199", travel_type:"air", departure_time:"20:40:00", arrival_time:"21:40:00", days:127, active:true, origin_poi_id:205, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2199", travel_type:"air", departure_time:"20:40:00", arrival_time:"21:40:00", days:87, active:false, origin_poi_id:205, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2925", travel_type:"air", departure_time:"9:35:00", arrival_time:"10:35:00", days:127, active:true, origin_poi_id:219, destination_poi_id:235)
-Route.create(route_provider_id:1 , route_id:"PR 2927", travel_type:"air", departure_time:"13:10:00", arrival_time:"14:10:00", days:127, active:true, origin_poi_id:219, destination_poi_id:235)
-Route.create(route_provider_id:1 , route_id:"PR 2926", travel_type:"air", departure_time:"11:15:00", arrival_time:"12:15:00", days:127, active:true, origin_poi_id:235, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2928", travel_type:"air", departure_time:"14:50:00", arrival_time:"15:50:00", days:127, active:true, origin_poi_id:235, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2021", travel_type:"air", departure_time:"5:05:00", arrival_time:"6:20:00", days:127, active:true, origin_poi_id:219, destination_poi_id:236)
-Route.create(route_provider_id:1 , route_id:"PR 2022", travel_type:"air", departure_time:"6:40:00", arrival_time:"7:55:00", days:127, active:true, origin_poi_id:236, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2263", travel_type:"air", departure_time:"7:00:00", arrival_time:"8:00:00", days:0, active:false, origin_poi_id:219, destination_poi_id:237)
-Route.create(route_provider_id:1 , route_id:"PR 2265", travel_type:"air", departure_time:"8:40:00", arrival_time:"9:30:00", days:127, active:true, origin_poi_id:219, destination_poi_id:237)
-Route.create(route_provider_id:1 , route_id:"PR 2261", travel_type:"air", departure_time:"11:20:00", arrival_time:"12:10:00", days:127, active:true, origin_poi_id:219, destination_poi_id:237)
-Route.create(route_provider_id:1 , route_id:"PR 2267", travel_type:"air", departure_time:"12:20:00", arrival_time:"13:10:00", days:0, active:false, origin_poi_id:219, destination_poi_id:237)
-Route.create(route_provider_id:1 , route_id:"PR 2264", travel_type:"air", departure_time:"8:20:00", arrival_time:"9:20:00", days:0, active:false, origin_poi_id:237, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2266", travel_type:"air", departure_time:"9:50:00", arrival_time:"10:40:00", days:127, active:true, origin_poi_id:237, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2262", travel_type:"air", departure_time:"12:30:00", arrival_time:"13:20:00", days:127, active:true, origin_poi_id:237, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2268", travel_type:"air", departure_time:"13:30:00", arrival_time:"14:20:00", days:0, active:false, origin_poi_id:237, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2889", travel_type:"air", departure_time:"5:05:00", arrival_time:"6:40:00", days:127, active:true, origin_poi_id:219, destination_poi_id:272)
-Route.create(route_provider_id:1 , route_id:"PR 2890", travel_type:"air", departure_time:"7:20:00", arrival_time:"8:45:00", days:127, active:true, origin_poi_id:272, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 1197", travel_type:"air", departure_time:"14:45:00", arrival_time:"16:00:00", days:32, active:true, origin_poi_id:219, destination_poi_id:228)
-Route.create(route_provider_id:1 , route_id:"PR 2781", travel_type:"air", departure_time:"5:20:00", arrival_time:"6:40:00", days:127, active:true, origin_poi_id:219, destination_poi_id:228)
-Route.create(route_provider_id:1 , route_id:"PR 2785", travel_type:"air", departure_time:"13:10:00", arrival_time:"14:30:00", days:127, active:true, origin_poi_id:219, destination_poi_id:228)
-Route.create(route_provider_id:1 , route_id:"PR 2787", travel_type:"air", departure_time:"16:20:00", arrival_time:"17:40:00", days:127, active:true, origin_poi_id:219, destination_poi_id:228)
-Route.create(route_provider_id:1 , route_id:"PR 2787", travel_type:"air", departure_time:"17:30:00", arrival_time:"18:50:00", days:127, active:false, origin_poi_id:219, destination_poi_id:228)
-Route.create(route_provider_id:1 , route_id:"PR 1198", travel_type:"air", departure_time:"14:00:00", arrival_time:"15:15:00", days:4, active:true, origin_poi_id:228, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2782", travel_type:"air", departure_time:"7:20:00", arrival_time:"8:35:00", days:127, active:true, origin_poi_id:228, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2786", travel_type:"air", departure_time:"15:10:00", arrival_time:"16:30:00", days:127, active:true, origin_poi_id:228, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2788", travel_type:"air", departure_time:"18:20:00", arrival_time:"19:40:00", days:127, active:true, origin_poi_id:228, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2788", travel_type:"air", departure_time:"19:30:00", arrival_time:"20:50:00", days:127, active:false, origin_poi_id:228, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2201", travel_type:"air", departure_time:"5:10:00", arrival_time:"6:10:00", days:127, active:true, origin_poi_id:219, destination_poi_id:244)
-Route.create(route_provider_id:1 , route_id:"PR 2202", travel_type:"air", departure_time:"6:50:00", arrival_time:"7:45:00", days:127, active:true, origin_poi_id:244, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2095", travel_type:"air", departure_time:"10:20:00", arrival_time:"12:00:00", days:127, active:true, origin_poi_id:219, destination_poi_id:274)
-Route.create(route_provider_id:1 , route_id:"PR 2096", travel_type:"air", departure_time:"12:40:00", arrival_time:"14:20:00", days:127, active:true, origin_poi_id:274, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2077", travel_type:"air", departure_time:"11:00:00", arrival_time:"12:05:00", days:21, active:true, origin_poi_id:219, destination_poi_id:229)
-Route.create(route_provider_id:1 , route_id:"PR 2078", travel_type:"air", departure_time:"12:25:00", arrival_time:"13:30:00", days:21, active:true, origin_poi_id:229, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2981", travel_type:"air", departure_time:"4:45:00", arrival_time:"6:00:00", days:127, active:true, origin_poi_id:219, destination_poi_id:260)
-Route.create(route_provider_id:1 , route_id:"PR 2985", travel_type:"air", departure_time:"12:55:00", arrival_time:"14:15:00", days:127, active:true, origin_poi_id:219, destination_poi_id:260)
-Route.create(route_provider_id:1 , route_id:"PR 2987", travel_type:"air", departure_time:"15:30:00", arrival_time:"16:45:00", days:127, active:true, origin_poi_id:219, destination_poi_id:260)
-Route.create(route_provider_id:1 , route_id:"PR 2982", travel_type:"air", departure_time:"9:20:00", arrival_time:"10:35:00", days:127, active:true, origin_poi_id:260, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2986", travel_type:"air", departure_time:"14:55:00", arrival_time:"16:15:00", days:127, active:true, origin_poi_id:260, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2988", travel_type:"air", departure_time:"17:25:00", arrival_time:"18:40:00", days:127, active:true, origin_poi_id:260, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2771", travel_type:"air", departure_time:"5:20:00", arrival_time:"6:35:00", days:127, active:true, origin_poi_id:219, destination_poi_id:248)
-Route.create(route_provider_id:1 , route_id:"PR 2773", travel_type:"air", departure_time:"9:20:00", arrival_time:"10:35:00", days:127, active:true, origin_poi_id:219, destination_poi_id:248)
-Route.create(route_provider_id:1 , route_id:"PR 2777", travel_type:"air", departure_time:"14:40:00", arrival_time:"16:00:00", days:127, active:true, origin_poi_id:219, destination_poi_id:248)
-Route.create(route_provider_id:1 , route_id:"PR 2772", travel_type:"air", departure_time:"7:15:00", arrival_time:"8:30:00", days:127, active:true, origin_poi_id:248, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2774", travel_type:"air", departure_time:"11:15:00", arrival_time:"12:30:00", days:127, active:true, origin_poi_id:248, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2778", travel_type:"air", departure_time:"16:40:00", arrival_time:"17:55:00", days:127, active:true, origin_poi_id:248, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2014", travel_type:"air", departure_time:"14:00:00", arrival_time:"15:15:00", days:127, active:true, origin_poi_id:219, destination_poi_id:214)
-Route.create(route_provider_id:1 , route_id:"PR 2015", travel_type:"air", departure_time:"15:45:00", arrival_time:"17:00:00", days:127, active:true, origin_poi_id:214, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2993", travel_type:"air", departure_time:"4:05:00", arrival_time:"5:45:00", days:127, active:true, origin_poi_id:219, destination_poi_id:269)
-Route.create(route_provider_id:1 , route_id:"PR 2997", travel_type:"air", departure_time:"17:30:00", arrival_time:"19:10:00", days:127, active:true, origin_poi_id:219, destination_poi_id:269)
-Route.create(route_provider_id:1 , route_id:"PR 2994", travel_type:"air", departure_time:"6:25:00", arrival_time:"7:55:00", days:85, active:true, origin_poi_id:269, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2996", travel_type:"air", departure_time:"10:15:00", arrival_time:"11:45:00", days:42, active:true, origin_poi_id:269, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2998", travel_type:"air", departure_time:"19:55:00", arrival_time:"21:35:00", days:127, active:true, origin_poi_id:269, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2289", travel_type:"air", departure_time:"15:10:00", arrival_time:"15:55:00", days:84, active:true, origin_poi_id:246, destination_poi_id:240)
-Route.create(route_provider_id:1 , route_id:"PR 2290", travel_type:"air", departure_time:"16:35:00", arrival_time:"17:20:00", days:84, active:true, origin_poi_id:240, destination_poi_id:246)
-Route.create(route_provider_id:1 , route_id:"PR 2361", travel_type:"air", departure_time:"8:40:00", arrival_time:"9:25:00", days:85, active:true, origin_poi_id:246, destination_poi_id:270)
-Route.create(route_provider_id:1 , route_id:"PR 2362", travel_type:"air", departure_time:"7:15:00", arrival_time:"8:00:00", days:85, active:true, origin_poi_id:270, destination_poi_id:246)
-Route.create(route_provider_id:1 , route_id:"PR 2295", travel_type:"air", departure_time:"5:50:00", arrival_time:"6:35:00", days:127, active:true, origin_poi_id:246, destination_poi_id:284)
-Route.create(route_provider_id:1 , route_id:"PR 2296", travel_type:"air", departure_time:"7:15:00", arrival_time:"8:00:00", days:127, active:true, origin_poi_id:284, destination_poi_id:246)
-Route.create(route_provider_id:1 , route_id:"PR 2263", travel_type:"air", departure_time:"8:40:00", arrival_time:"9:50:00", days:127, active:true, origin_poi_id:246, destination_poi_id:278)
-Route.create(route_provider_id:1 , route_id:"PR 2264", travel_type:"air", departure_time:"7:15:00", arrival_time:"8:00:00", days:127, active:true, origin_poi_id:278, destination_poi_id:246)
-Route.create(route_provider_id:1 , route_id:"PR 2384", travel_type:"air", departure_time:"12:20:00", arrival_time:"13:05:00", days:127, active:true, origin_poi_id:246, destination_poi_id:242)
-Route.create(route_provider_id:1 , route_id:"PR 2385", travel_type:"air", departure_time:"13:45:00", arrival_time:"14:30:00", days:84, active:true, origin_poi_id:242, destination_poi_id:246)
-Route.create(route_provider_id:1 , route_id:"PR 2385", travel_type:"air", departure_time:"18:05:00", arrival_time:"18:50:00", days:43, active:true, origin_poi_id:242, destination_poi_id:246)
-Route.create(route_provider_id:1 , route_id:"PR 2236", travel_type:"air", departure_time:"8:00:00", arrival_time:"8:40:00", days:127, active:true, origin_poi_id:246, destination_poi_id:260)
-Route.create(route_provider_id:1 , route_id:"PR 2237", travel_type:"air", departure_time:"6:40:00", arrival_time:"7:20:00", days:127, active:true, origin_poi_id:260, destination_poi_id:246)
-Route.create(route_provider_id:1 , route_id:"PR 2892", travel_type:"air", departure_time:"15:55:00", arrival_time:"17:25:00", days:43, active:true, origin_poi_id:276, destination_poi_id:242)
-Route.create(route_provider_id:1 , route_id:"PR 2891", travel_type:"air", departure_time:"13:45:00", arrival_time:"15:15:00", days:43, active:true, origin_poi_id:242, destination_poi_id:276)
-Route.create(route_provider_id:1 , route_id:"PR 2272", travel_type:"air", departure_time:"6:25:00", arrival_time:"7:40:00", days:42, active:true, origin_poi_id:269, destination_poi_id:278)
-Route.create(route_provider_id:1 , route_id:"PR 2273", travel_type:"air", departure_time:"8:20:00", arrival_time:"9:35:00", days:42, active:true, origin_poi_id:278, destination_poi_id:269)
-Route.create(route_provider_id:1 , route_id:"PR 2129", travel_type:"air", departure_time:"4:25:00", arrival_time:"5:40:00", days:127, active:true, origin_poi_id:219, destination_poi_id:240)
-Route.create(route_provider_id:1 , route_id:"PR 2131", travel_type:"air", departure_time:"8:20:00", arrival_time:"9:35:00", days:127, active:true, origin_poi_id:219, destination_poi_id:240)
-Route.create(route_provider_id:1 , route_id:"PR 2133", travel_type:"air", departure_time:"13:20:00", arrival_time:"14:35:00", days:127, active:true, origin_poi_id:219, destination_poi_id:240)
-Route.create(route_provider_id:1 , route_id:"PR 2135", travel_type:"air", departure_time:"16:00:00", arrival_time:"17:15:00", days:127, active:true, origin_poi_id:219, destination_poi_id:240)
-Route.create(route_provider_id:1 , route_id:"PR 2137", travel_type:"air", departure_time:"19:55:00", arrival_time:"21:05:00", days:127, active:true, origin_poi_id:219, destination_poi_id:240)
-Route.create(route_provider_id:1 , route_id:"PR 2130", travel_type:"air", departure_time:"6:20:00", arrival_time:"7:30:00", days:127, active:true, origin_poi_id:240, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2132", travel_type:"air", departure_time:"10:15:00", arrival_time:"11:25:00", days:127, active:true, origin_poi_id:240, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2134", travel_type:"air", departure_time:"15:15:00", arrival_time:"16:25:00", days:127, active:true, origin_poi_id:240, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2136", travel_type:"air", departure_time:"17:55:00", arrival_time:"19:05:00", days:127, active:true, origin_poi_id:240, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2138", travel_type:"air", departure_time:"21:45:00", arrival_time:"22:55:00", days:127, active:true, origin_poi_id:240, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2084", travel_type:"air", departure_time:"6:00:00", arrival_time:"7:45:00", days:127, active:true, origin_poi_id:219, destination_poi_id:210)
-Route.create(route_provider_id:1 , route_id:"PR 2086", travel_type:"air", departure_time:"7:00:00", arrival_time:"8:45:00", days:127, active:false, origin_poi_id:219, destination_poi_id:210)
-Route.create(route_provider_id:1 , route_id:"PR 2085", travel_type:"air", departure_time:"8:10:00", arrival_time:"9:50:00", days:127, active:true, origin_poi_id:210, destination_poi_id:219)
-Route.create(route_provider_id:1 , route_id:"PR 2087", travel_type:"air", departure_time:"9:10:00", arrival_time:"10:50:00", days:127, active:false, origin_poi_id:210, destination_poi_id:219)
+Route.create(route_provider_id:1 , route_id:"PR 2031", travel_type:"air", departure_time:"8:40:00", arrival_time:"9:35:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: busuanga.id)
+Route.create(route_provider_id:1 , route_id:"PR 2027", travel_type:"air", departure_time:"11:10:00", arrival_time:"12:05:00", days:127, active:false, origin_poi_id:naia.id, destination_poi_id: busuanga.id)
+Route.create(route_provider_id:1 , route_id:"PR 2033", travel_type:"air", departure_time:"14:40:00", arrival_time:"15:35:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: busuanga.id)
+Route.create(route_provider_id:1 , route_id:"PR 2032", travel_type:"air", departure_time:"9:55:00", arrival_time:"10:50:00", days:127, active:true, origin_poi_id: busuanga.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2028", travel_type:"air", departure_time:"12:25:00", arrival_time:"13:20:00", days:127, active:false, origin_poi_id: busuanga.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2034", travel_type:"air", departure_time:"15:55:00", arrival_time:"16:50:00", days:127, active:true, origin_poi_id: busuanga.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2967", travel_type:"air", departure_time:"5:10:00", arrival_time:"6:35:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: butuan.id)
+Route.create(route_provider_id:1 , route_id:"PR 2968", travel_type:"air", departure_time:"7:15:00", arrival_time:"8:45:00", days:42, active:true, origin_poi_id: butuan.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2966", travel_type:"air", departure_time:"10:05:00", arrival_time:"11:35:00", days:85, active:true, origin_poi_id: butuan.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2519", travel_type:"air", departure_time:"4:45:00", arrival_time:"6:20:00", days:127, active:false, origin_poi_id:naia.id, destination_poi_id: laguindingan.id)
+Route.create(route_provider_id:1 , route_id:"PR 1519", travel_type:"air", departure_time:"4:45:00", arrival_time:"6:20:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: laguindingan.id)
+Route.create(route_provider_id:1 , route_id:"PR 2521", travel_type:"air", departure_time:"9:35:00", arrival_time:"11:10:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: laguindingan.id)
+Route.create(route_provider_id:1 , route_id:"PR 2527", travel_type:"air", departure_time:"11:45:00", arrival_time:"13:20:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: laguindingan.id)
+Route.create(route_provider_id:1 , route_id:"PR 2525", travel_type:"air", departure_time:"14:20:00", arrival_time:"15:55:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: laguindingan.id)
+Route.create(route_provider_id:1 , route_id:"PR 2529", travel_type:"air", departure_time:"18:15:00", arrival_time:"19:50:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: laguindingan.id)
+Route.create(route_provider_id:1 , route_id:"PR 2520", travel_type:"air", departure_time:"7:00:00", arrival_time:"8:30:00", days:127, active:false, origin_poi_id: laguindingan.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 1520", travel_type:"air", departure_time:"7:00:00", arrival_time:"8:30:00", days:127, active:true, origin_poi_id: laguindingan.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2522", travel_type:"air", departure_time:"11:50:00", arrival_time:"13:20:00", days:127, active:true, origin_poi_id: laguindingan.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2528", travel_type:"air", departure_time:"14:00:00", arrival_time:"15:30:00", days:127, active:true, origin_poi_id: laguindingan.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2526", travel_type:"air", departure_time:"16:35:00", arrival_time:"18:05:00", days:127, active:true, origin_poi_id: laguindingan.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2530", travel_type:"air", departure_time:"20:30:00", arrival_time:"22:00:00", days:127, active:true, origin_poi_id: laguindingan.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2071", travel_type:"air", departure_time:"5:15:00", arrival_time:"6:30:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: calbayog.id)
+Route.create(route_provider_id:1 , route_id:"PR 2072", travel_type:"air", departure_time:"6:50:00", arrival_time:"8:10:00", days:127, active:true, origin_poi_id: calbayog.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2079", travel_type:"air", departure_time:"5:15:00", arrival_time:"6:30:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: catarman.id)
+Route.create(route_provider_id:1 , route_id:"PR 2080", travel_type:"air", departure_time:"6:55:00", arrival_time:"8:10:00", days:127, active:true, origin_poi_id: catarman.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2039", travel_type:"air", departure_time:"6:00:00", arrival_time:"7:00:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: caticlan.id)
+Route.create(route_provider_id:1 , route_id:"PR 2045", travel_type:"air", departure_time:"7:00:00", arrival_time:"8:00:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: caticlan.id)
+Route.create(route_provider_id:1 , route_id:"PR 2043", travel_type:"air", departure_time:"8:25:00", arrival_time:"9:25:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: caticlan.id)
+Route.create(route_provider_id:1 , route_id:"PR 2051", travel_type:"air", departure_time:"9:00:00", arrival_time:"10:00:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: caticlan.id)
+Route.create(route_provider_id:1 , route_id:"PR 2059", travel_type:"air", departure_time:"9:40:00", arrival_time:"10:40:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: caticlan.id)
+Route.create(route_provider_id:1 , route_id:"PR 2041", travel_type:"air", departure_time:"11:15:00", arrival_time:"12:15:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: caticlan.id)
+Route.create(route_provider_id:1 , route_id:"PR 2057", travel_type:"air", departure_time:"11:55:00", arrival_time:"12:55:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: caticlan.id)
+Route.create(route_provider_id:1 , route_id:"PR 2049", travel_type:"air", departure_time:"12:30:00", arrival_time:"13:30:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: caticlan.id)
+Route.create(route_provider_id:1 , route_id:"PR 2063", travel_type:"air", departure_time:"14:05:00", arrival_time:"15:05:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: caticlan.id)
+Route.create(route_provider_id:1 , route_id:"PR 2053", travel_type:"air", departure_time:"15:10:00", arrival_time:"16:10:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: caticlan.id)
+Route.create(route_provider_id:1 , route_id:"PR 2040", travel_type:"air", departure_time:"7:20:00", arrival_time:"8:20:00", days:127, active:true, origin_poi_id: caticlan.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2046", travel_type:"air", departure_time:"8:20:00", arrival_time:"9:20:00", days:127, active:true, origin_poi_id: caticlan.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2044", travel_type:"air", departure_time:"9:45:00", arrival_time:"10:45:00", days:127, active:true, origin_poi_id: caticlan.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2052", travel_type:"air", departure_time:"10:20:00", arrival_time:"11:20:00", days:127, active:true, origin_poi_id: caticlan.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2060", travel_type:"air", departure_time:"11:00:00", arrival_time:"12:00:00", days:127, active:true, origin_poi_id: caticlan.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2042", travel_type:"air", departure_time:"12:35:00", arrival_time:"13:35:00", days:127, active:true, origin_poi_id: caticlan.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2058", travel_type:"air", departure_time:"13:15:00", arrival_time:"14:15:00", days:127, active:true, origin_poi_id: caticlan.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2050", travel_type:"air", departure_time:"13:50:00", arrival_time:"14:50:00", days:127, active:true, origin_poi_id: caticlan.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2064", travel_type:"air", departure_time:"15:25:00", arrival_time:"16:25:00", days:127, active:true, origin_poi_id: caticlan.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2054", travel_type:"air", departure_time:"16:30:00", arrival_time:"17:30:00", days:127, active:true, origin_poi_id: caticlan.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2835", travel_type:"air", departure_time:"4:00:00", arrival_time:"5:10:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: cebu.id)
+Route.create(route_provider_id:1 , route_id:"PR 1841", travel_type:"air", departure_time:"5:00:00", arrival_time:"6:15:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: cebu.id)
+Route.create(route_provider_id:1 , route_id:"PR 1845", travel_type:"air", departure_time:"7:00:00", arrival_time:"8:15:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: cebu.id)
+Route.create(route_provider_id:1 , route_id:"PR 1849", travel_type:"air", departure_time:"9:00:00", arrival_time:"10:15:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: cebu.id)
+Route.create(route_provider_id:1 , route_id:"PR 1853", travel_type:"air", departure_time:"11:00:00", arrival_time:"12:15:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: cebu.id)
+Route.create(route_provider_id:1 , route_id:"PR 1859", travel_type:"air", departure_time:"14:30:00", arrival_time:"15:45:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: cebu.id)
+Route.create(route_provider_id:1 , route_id:"PR 1861", travel_type:"air", departure_time:"16:00:00", arrival_time:"17:15:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: cebu.id)
+Route.create(route_provider_id:1 , route_id:"PR 1863", travel_type:"air", departure_time:"18:30:00", arrival_time:"19:45:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: cebu.id)
+Route.create(route_provider_id:1 , route_id:"PR 1867", travel_type:"air", departure_time:"20:00:00", arrival_time:"21:15:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: cebu.id)
+Route.create(route_provider_id:1 , route_id:"PR 1869", travel_type:"air", departure_time:"22:00:00", arrival_time:"23:15:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: cebu.id)
+Route.create(route_provider_id:1 , route_id:"PR 1836", travel_type:"air", departure_time:"4:50:00", arrival_time:"6:00:00", days:127, active:true, origin_poi_id: cebu.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 1842", travel_type:"air", departure_time:"6:55:00", arrival_time:"8:10:00", days:127, active:true, origin_poi_id: cebu.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 1846", travel_type:"air", departure_time:"8:55:00", arrival_time:"10:10:00", days:127, active:true, origin_poi_id: cebu.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 1850", travel_type:"air", departure_time:"11:00:00", arrival_time:"12:15:00", days:127, active:true, origin_poi_id: cebu.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 1854", travel_type:"air", departure_time:"13:00:00", arrival_time:"14:15:00", days:127, active:true, origin_poi_id: cebu.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 1860", travel_type:"air", departure_time:"16:25:00", arrival_time:"17:40:00", days:127, active:true, origin_poi_id: cebu.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 1862", travel_type:"air", departure_time:"17:55:00", arrival_time:"19:10:00", days:127, active:true, origin_poi_id: cebu.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2880", travel_type:"air", departure_time:"19:30:00", arrival_time:"20:45:00", days:127, active:true, origin_poi_id: cebu.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 1864", travel_type:"air", departure_time:"20:25:00", arrival_time:"21:40:00", days:127, active:true, origin_poi_id: cebu.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 1868", travel_type:"air", departure_time:"22:00:00", arrival_time:"23:15:00", days:127, active:true, origin_poi_id: cebu.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2959", travel_type:"air", departure_time:"9:25:00", arrival_time:"11:10:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: cotabato.id)
+Route.create(route_provider_id:1 , route_id:"PR 2960", travel_type:"air", departure_time:"11:50:00", arrival_time:"13:30:00", days:127, active:true, origin_poi_id: cotabato.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 1809", travel_type:"air", departure_time:"4:00:00", arrival_time:"5:50:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: davao.id)
+Route.create(route_provider_id:1 , route_id:"PR 1811", travel_type:"air", departure_time:"6:40:00", arrival_time:"8:30:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: davao.id)
+Route.create(route_provider_id:1 , route_id:"PR 1813", travel_type:"air", departure_time:"9:10:00", arrival_time:"11:00:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: davao.id)
+Route.create(route_provider_id:1 , route_id:"PR 1815", travel_type:"air", departure_time:"12:00:00", arrival_time:"13:50:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: davao.id)
+Route.create(route_provider_id:1 , route_id:"PR 1817", travel_type:"air", departure_time:"15:00:00", arrival_time:"16:50:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: davao.id)
+Route.create(route_provider_id:1 , route_id:"PR 1819", travel_type:"air", departure_time:"17:10:00", arrival_time:"19:00:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: davao.id)
+Route.create(route_provider_id:1 , route_id:"PR 1823", travel_type:"air", departure_time:"19:40:00", arrival_time:"21:30:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: davao.id)
+Route.create(route_provider_id:1 , route_id:"PR 1825", travel_type:"air", departure_time:"21:00:00", arrival_time:"22:45:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: davao.id)
+Route.create(route_provider_id:1 , route_id:"PR 1808", travel_type:"air", departure_time:"4:30:00", arrival_time:"6:20:00", days:127, active:true, origin_poi_id: davao.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 1810", travel_type:"air", departure_time:"6:30:00", arrival_time:"8:20:00", days:127, active:true, origin_poi_id: davao.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 1812", travel_type:"air", departure_time:"9:20:00", arrival_time:"11:10:00", days:127, active:true, origin_poi_id: davao.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 1814", travel_type:"air", departure_time:"11:40:00", arrival_time:"13:30:00", days:127, active:true, origin_poi_id: davao.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 1816", travel_type:"air", departure_time:"14:30:00", arrival_time:"16:20:00", days:127, active:true, origin_poi_id: davao.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 1818", travel_type:"air", departure_time:"17:30:00", arrival_time:"19:20:00", days:127, active:true, origin_poi_id: davao.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 1820", travel_type:"air", departure_time:"19:40:00", arrival_time:"21:30:00", days:127, active:true, origin_poi_id: davao.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 1824", travel_type:"air", departure_time:"22:15:00", arrival_time:"0:05:00", days:127, active:true, origin_poi_id: davao.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2557", travel_type:"air", departure_time:"11:05:00", arrival_time:"12:30:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: dipolog.id)
+Route.create(route_provider_id:1 , route_id:"PR 2558", travel_type:"air", departure_time:"13:10:00", arrival_time:"14:40:00", days:127, active:true, origin_poi_id: dipolog.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2545", travel_type:"air", departure_time:"8:40:00", arrival_time:"10:00:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: dumaguete.id)
+Route.create(route_provider_id:1 , route_id:"PR 2543", travel_type:"air", departure_time:"13:20:00", arrival_time:"14:40:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: dumaguete.id)
+Route.create(route_provider_id:1 , route_id:"PR 2546", travel_type:"air", departure_time:"10:40:00", arrival_time:"12:00:00", days:127, active:true, origin_poi_id: dumaguete.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2544", travel_type:"air", departure_time:"15:20:00", arrival_time:"16:40:00", days:127, active:true, origin_poi_id: dumaguete.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 453", travel_type:"air", departure_time:"6:55:00", arrival_time:"8:45:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: gensan.id)
+Route.create(route_provider_id:1 , route_id:"PR 454", travel_type:"air", departure_time:"10:00:00", arrival_time:"12:00:00", days:127, active:true, origin_poi_id: gensan.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2139", travel_type:"air", departure_time:"4:30:00", arrival_time:"5:40:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: iloilo.id)
+Route.create(route_provider_id:1 , route_id:"PR 2141", travel_type:"air", departure_time:"8:15:00", arrival_time:"9:25:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: iloilo.id)
+Route.create(route_provider_id:1 , route_id:"PR 2143", travel_type:"air", departure_time:"12:15:00", arrival_time:"13:25:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: iloilo.id)
+Route.create(route_provider_id:1 , route_id:"PR 2145", travel_type:"air", departure_time:"16:50:00", arrival_time:"18:00:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: iloilo.id)
+Route.create(route_provider_id:1 , route_id:"PR 2147", travel_type:"air", departure_time:"18:45:00", arrival_time:"19:55:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: iloilo.id)
+Route.create(route_provider_id:1 , route_id:"PR 2140", travel_type:"air", departure_time:"6:20:00", arrival_time:"7:25:00", days:127, active:true, origin_poi_id: iloilo.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2142", travel_type:"air", departure_time:"10:05:00", arrival_time:"11:10:00", days:127, active:true, origin_poi_id: iloilo.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2144", travel_type:"air", departure_time:"14:05:00", arrival_time:"15:10:00", days:127, active:true, origin_poi_id: iloilo.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2146", travel_type:"air", departure_time:"18:40:00", arrival_time:"19:55:00", days:127, active:true, origin_poi_id: iloilo.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2148", travel_type:"air", departure_time:"20:35:00", arrival_time:"21:45:00", days:127, active:true, origin_poi_id: iloilo.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2969", travel_type:"air", departure_time:"8:35:00", arrival_time:"9:35:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: kalibo.id)
+Route.create(route_provider_id:1 , route_id:"PR 249", travel_type:"air", departure_time:"12:40:00", arrival_time:"13:40:00", days:1, active:true, origin_poi_id:naia.id, destination_poi_id: kalibo.id)
+Route.create(route_provider_id:1 , route_id:"PR 2975", travel_type:"air", departure_time:"16:40:00", arrival_time:"17:40:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: kalibo.id)
+Route.create(route_provider_id:1 , route_id:"PR 2975", travel_type:"air", departure_time:"16:30:00", arrival_time:"17:30:00", days:127, active:false, origin_poi_id:naia.id, destination_poi_id: kalibo.id)
+Route.create(route_provider_id:1 , route_id:"PR 2971", travel_type:"air", departure_time:"18:15:00", arrival_time:"19:15:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: kalibo.id)
+Route.create(route_provider_id:1 , route_id:"PR 1239", travel_type:"air", departure_time:"22:00:00", arrival_time:"23:00:00", days:40, active:true, origin_poi_id:naia.id, destination_poi_id: kalibo.id)
+Route.create(route_provider_id:1 , route_id:"PR 1239", travel_type:"air", departure_time:"22:00:00", arrival_time:"23:00:00", days:0, active:false, origin_poi_id:naia.id, destination_poi_id: kalibo.id)
+Route.create(route_provider_id:1 , route_id:"PR 2970", travel_type:"air", departure_time:"10:15:00", arrival_time:"11:15:00", days:127, active:true, origin_poi_id: kalibo.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 240", travel_type:"air", departure_time:"12:40:00", arrival_time:"13:40:00", days:127, active:true, origin_poi_id: kalibo.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 250", travel_type:"air", departure_time:"14:00:00", arrival_time:"15:00:00", days:2, active:true, origin_poi_id: kalibo.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2976", travel_type:"air", departure_time:"18:20:00", arrival_time:"19:20:00", days:127, active:true, origin_poi_id: kalibo.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2976", travel_type:"air", departure_time:"18:10:00", arrival_time:"19:10:00", days:127, active:false, origin_poi_id: kalibo.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2972", travel_type:"air", departure_time:"19:55:00", arrival_time:"20:55:00", days:127, active:true, origin_poi_id: kalibo.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2196", travel_type:"air", departure_time:"12:00:00", arrival_time:"13:00:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: laoag.id)
+Route.create(route_provider_id:1 , route_id:"PR 2198", travel_type:"air", departure_time:"19:00:00", arrival_time:"20:00:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: laoag.id)
+Route.create(route_provider_id:1 , route_id:"PR 2198", travel_type:"air", departure_time:"19:00:00", arrival_time:"20:00:00", days:87, active:false, origin_poi_id:naia.id, destination_poi_id: laoag.id)
+Route.create(route_provider_id:1 , route_id:"PR 2197", travel_type:"air", departure_time:"13:40:00", arrival_time:"14:40:00", days:127, active:true, origin_poi_id: laoag.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2199", travel_type:"air", departure_time:"20:40:00", arrival_time:"21:40:00", days:127, active:true, origin_poi_id: laoag.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2199", travel_type:"air", departure_time:"20:40:00", arrival_time:"21:40:00", days:87, active:false, origin_poi_id: laoag.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2925", travel_type:"air", departure_time:"9:35:00", arrival_time:"10:35:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: legazpi.id)
+Route.create(route_provider_id:1 , route_id:"PR 2927", travel_type:"air", departure_time:"13:10:00", arrival_time:"14:10:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: legazpi.id)
+Route.create(route_provider_id:1 , route_id:"PR 2926", travel_type:"air", departure_time:"11:15:00", arrival_time:"12:15:00", days:127, active:true, origin_poi_id: legazpi.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2928", travel_type:"air", departure_time:"14:50:00", arrival_time:"15:50:00", days:127, active:true, origin_poi_id: legazpi.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2021", travel_type:"air", departure_time:"5:05:00", arrival_time:"6:20:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: masbate.id)
+Route.create(route_provider_id:1 , route_id:"PR 2022", travel_type:"air", departure_time:"6:40:00", arrival_time:"7:55:00", days:127, active:true, origin_poi_id: masbate.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2263", travel_type:"air", departure_time:"7:00:00", arrival_time:"8:00:00", days:0, active:false, origin_poi_id:naia.id, destination_poi_id: pili.id)
+Route.create(route_provider_id:1 , route_id:"PR 2265", travel_type:"air", departure_time:"8:40:00", arrival_time:"9:30:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: pili.id)
+Route.create(route_provider_id:1 , route_id:"PR 2261", travel_type:"air", departure_time:"11:20:00", arrival_time:"12:10:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: pili.id)
+Route.create(route_provider_id:1 , route_id:"PR 2267", travel_type:"air", departure_time:"12:20:00", arrival_time:"13:10:00", days:0, active:false, origin_poi_id:naia.id, destination_poi_id: pili.id)
+Route.create(route_provider_id:1 , route_id:"PR 2264", travel_type:"air", departure_time:"8:20:00", arrival_time:"9:20:00", days:0, active:false, origin_poi_id: pili.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2266", travel_type:"air", departure_time:"9:50:00", arrival_time:"10:40:00", days:127, active:true, origin_poi_id: pili.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2262", travel_type:"air", departure_time:"12:30:00", arrival_time:"13:20:00", days:127, active:true, origin_poi_id: pili.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2268", travel_type:"air", departure_time:"13:30:00", arrival_time:"14:20:00", days:0, active:false, origin_poi_id: pili.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2889", travel_type:"air", departure_time:"5:05:00", arrival_time:"6:40:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: ozamiz.id)
+Route.create(route_provider_id:1 , route_id:"PR 2890", travel_type:"air", departure_time:"7:20:00", arrival_time:"8:45:00", days:127, active:true, origin_poi_id: ozamiz.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 1197", travel_type:"air", departure_time:"14:45:00", arrival_time:"16:00:00", days:32, active:true, origin_poi_id:naia.id, destination_poi_id: puerto.id)
+Route.create(route_provider_id:1 , route_id:"PR 2781", travel_type:"air", departure_time:"5:20:00", arrival_time:"6:40:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: puerto.id)
+Route.create(route_provider_id:1 , route_id:"PR 2785", travel_type:"air", departure_time:"13:10:00", arrival_time:"14:30:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: puerto.id)
+Route.create(route_provider_id:1 , route_id:"PR 2787", travel_type:"air", departure_time:"16:20:00", arrival_time:"17:40:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: puerto.id)
+Route.create(route_provider_id:1 , route_id:"PR 2787", travel_type:"air", departure_time:"17:30:00", arrival_time:"18:50:00", days:127, active:false, origin_poi_id:naia.id, destination_poi_id: puerto.id)
+Route.create(route_provider_id:1 , route_id:"PR 1198", travel_type:"air", departure_time:"14:00:00", arrival_time:"15:15:00", days:4, active:true, origin_poi_id: puerto.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2782", travel_type:"air", departure_time:"7:20:00", arrival_time:"8:35:00", days:127, active:true, origin_poi_id: puerto.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2786", travel_type:"air", departure_time:"15:10:00", arrival_time:"16:30:00", days:127, active:true, origin_poi_id: puerto.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2788", travel_type:"air", departure_time:"18:20:00", arrival_time:"19:40:00", days:127, active:true, origin_poi_id: puerto.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2788", travel_type:"air", departure_time:"19:30:00", arrival_time:"20:50:00", days:127, active:false, origin_poi_id: puerto.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2201", travel_type:"air", departure_time:"5:10:00", arrival_time:"6:10:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: roxas.id)
+Route.create(route_provider_id:1 , route_id:"PR 2202", travel_type:"air", departure_time:"6:50:00", arrival_time:"7:45:00", days:127, active:true, origin_poi_id: roxas.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2095", travel_type:"air", departure_time:"10:20:00", arrival_time:"12:00:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: surigao.id)
+Route.create(route_provider_id:1 , route_id:"PR 2096", travel_type:"air", departure_time:"12:40:00", arrival_time:"14:20:00", days:127, active:true, origin_poi_id: surigao.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2077", travel_type:"air", departure_time:"11:00:00", arrival_time:"12:05:00", days:21, active:true, origin_poi_id:naia.id, destination_poi_id:romblon.id)
+Route.create(route_provider_id:1 , route_id:"PR 2078", travel_type:"air", departure_time:"12:25:00", arrival_time:"13:30:00", days:21, active:true, origin_poi_id:romblon.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2981", travel_type:"air", departure_time:"4:45:00", arrival_time:"6:00:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: tacloban.id)
+Route.create(route_provider_id:1 , route_id:"PR 2985", travel_type:"air", departure_time:"12:55:00", arrival_time:"14:15:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: tacloban.id)
+Route.create(route_provider_id:1 , route_id:"PR 2987", travel_type:"air", departure_time:"15:30:00", arrival_time:"16:45:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: tacloban.id)
+Route.create(route_provider_id:1 , route_id:"PR 2982", travel_type:"air", departure_time:"9:20:00", arrival_time:"10:35:00", days:127, active:true, origin_poi_id: tacloban.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2986", travel_type:"air", departure_time:"14:55:00", arrival_time:"16:15:00", days:127, active:true, origin_poi_id: tacloban.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2988", travel_type:"air", departure_time:"17:25:00", arrival_time:"18:40:00", days:127, active:true, origin_poi_id: tacloban.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2771", travel_type:"air", departure_time:"5:20:00", arrival_time:"6:35:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: tagbilaran.id)
+Route.create(route_provider_id:1 , route_id:"PR 2773", travel_type:"air", departure_time:"9:20:00", arrival_time:"10:35:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: tagbilaran.id)
+Route.create(route_provider_id:1 , route_id:"PR 2777", travel_type:"air", departure_time:"14:40:00", arrival_time:"16:00:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: tagbilaran.id)
+Route.create(route_provider_id:1 , route_id:"PR 2772", travel_type:"air", departure_time:"7:15:00", arrival_time:"8:30:00", days:127, active:true, origin_poi_id: tagbilaran.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2774", travel_type:"air", departure_time:"11:15:00", arrival_time:"12:30:00", days:127, active:true, origin_poi_id: tagbilaran.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2778", travel_type:"air", departure_time:"16:40:00", arrival_time:"17:55:00", days:127, active:true, origin_poi_id: tagbilaran.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2014", travel_type:"air", departure_time:"14:00:00", arrival_time:"15:15:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: tuguegarao.id)
+Route.create(route_provider_id:1 , route_id:"PR 2015", travel_type:"air", departure_time:"15:45:00", arrival_time:"17:00:00", days:127, active:true, origin_poi_id: tuguegarao.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2993", travel_type:"air", departure_time:"4:05:00", arrival_time:"5:45:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: zamboanga.id)
+Route.create(route_provider_id:1 , route_id:"PR 2997", travel_type:"air", departure_time:"17:30:00", arrival_time:"19:10:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id: zamboanga.id)
+Route.create(route_provider_id:1 , route_id:"PR 2994", travel_type:"air", departure_time:"6:25:00", arrival_time:"7:55:00", days:85, active:true, origin_poi_id: zamboanga.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2996", travel_type:"air", departure_time:"10:15:00", arrival_time:"11:45:00", days:42, active:true, origin_poi_id: zamboanga.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2998", travel_type:"air", departure_time:"19:55:00", arrival_time:"21:35:00", days:127, active:true, origin_poi_id: zamboanga.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2289", travel_type:"air", departure_time:"15:10:00", arrival_time:"15:55:00", days:84, active:true, origin_poi_id: cebu.id, destination_poi_id: bacolod.id)
+Route.create(route_provider_id:1 , route_id:"PR 2290", travel_type:"air", departure_time:"16:35:00", arrival_time:"17:20:00", days:84, active:true, origin_poi_id: bacolod.id, destination_poi_id: cebu.id)
+Route.create(route_provider_id:1 , route_id:"PR 2361", travel_type:"air", departure_time:"8:40:00", arrival_time:"9:25:00", days:85, active:true, origin_poi_id: cebu.id, destination_poi_id: butuan.id)
+Route.create(route_provider_id:1 , route_id:"PR 2362", travel_type:"air", departure_time:"7:15:00", arrival_time:"8:00:00", days:85, active:true, origin_poi_id: butuan.id, destination_poi_id: cebu.id)
+Route.create(route_provider_id:1 , route_id:"PR 2295", travel_type:"air", departure_time:"5:50:00", arrival_time:"6:35:00", days:127, active:true, origin_poi_id: cebu.id, destination_poi_id: laguindingan.id)
+Route.create(route_provider_id:1 , route_id:"PR 2296", travel_type:"air", departure_time:"7:15:00", arrival_time:"8:00:00", days:127, active:true, origin_poi_id: laguindingan.id, destination_poi_id: cebu.id)
+Route.create(route_provider_id:1 , route_id:"PR 2263", travel_type:"air", departure_time:"8:40:00", arrival_time:"9:50:00", days:127, active:true, origin_poi_id: cebu.id, destination_poi_id: davao.id)
+Route.create(route_provider_id:1 , route_id:"PR 2264", travel_type:"air", departure_time:"7:15:00", arrival_time:"8:00:00", days:127, active:true, origin_poi_id: davao.id, destination_poi_id: cebu.id)
+Route.create(route_provider_id:1 , route_id:"PR 2384", travel_type:"air", departure_time:"12:20:00", arrival_time:"13:05:00", days:127, active:true, origin_poi_id: cebu.id, destination_poi_id: iloilo.id)
+Route.create(route_provider_id:1 , route_id:"PR 2385", travel_type:"air", departure_time:"13:45:00", arrival_time:"14:30:00", days:84, active:true, origin_poi_id: iloilo.id, destination_poi_id: cebu.id)
+Route.create(route_provider_id:1 , route_id:"PR 2385", travel_type:"air", departure_time:"18:05:00", arrival_time:"18:50:00", days:43, active:true, origin_poi_id: iloilo.id, destination_poi_id: cebu.id)
+Route.create(route_provider_id:1 , route_id:"PR 2236", travel_type:"air", departure_time:"8:00:00", arrival_time:"8:40:00", days:127, active:true, origin_poi_id: cebu.id, destination_poi_id: tacloban.id)
+Route.create(route_provider_id:1 , route_id:"PR 2237", travel_type:"air", departure_time:"6:40:00", arrival_time:"7:20:00", days:127, active:true, origin_poi_id: tacloban.id, destination_poi_id: cebu.id)
+Route.create(route_provider_id:1 , route_id:"PR 2892", travel_type:"air", departure_time:"15:55:00", arrival_time:"17:25:00", days:43, active:true, origin_poi_id: gensan.id, destination_poi_id: iloilo.id)
+Route.create(route_provider_id:1 , route_id:"PR 2891", travel_type:"air", departure_time:"13:45:00", arrival_time:"15:15:00", days:43, active:true, origin_poi_id: iloilo.id, destination_poi_id: gensan.id)
+Route.create(route_provider_id:1 , route_id:"PR 2272", travel_type:"air", departure_time:"6:25:00", arrival_time:"7:40:00", days:42, active:true, origin_poi_id:zamboanga.id, destination_poi_id: davao.id)
+Route.create(route_provider_id:1 , route_id:"PR 2273", travel_type:"air", departure_time:"8:20:00", arrival_time:"9:35:00", days:42, active:true, origin_poi_id: davao.id, destination_poi_id:zamboanga.id)
+Route.create(route_provider_id:1 , route_id:"PR 2129", travel_type:"air", departure_time:"4:25:00", arrival_time:"5:40:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id:bacolod.id)
+Route.create(route_provider_id:1 , route_id:"PR 2131", travel_type:"air", departure_time:"8:20:00", arrival_time:"9:35:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id:bacolod.id)
+Route.create(route_provider_id:1 , route_id:"PR 2133", travel_type:"air", departure_time:"13:20:00", arrival_time:"14:35:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id:bacolod.id)
+Route.create(route_provider_id:1 , route_id:"PR 2135", travel_type:"air", departure_time:"16:00:00", arrival_time:"17:15:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id:bacolod.id)
+Route.create(route_provider_id:1 , route_id:"PR 2137", travel_type:"air", departure_time:"19:55:00", arrival_time:"21:05:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id:bacolod.id)
+Route.create(route_provider_id:1 , route_id:"PR 2130", travel_type:"air", departure_time:"6:20:00", arrival_time:"7:30:00", days:127, active:true, origin_poi_id:bacolod.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2132", travel_type:"air", departure_time:"10:15:00", arrival_time:"11:25:00", days:127, active:true, origin_poi_id:bacolod.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2134", travel_type:"air", departure_time:"15:15:00", arrival_time:"16:25:00", days:127, active:true, origin_poi_id:bacolod.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2136", travel_type:"air", departure_time:"17:55:00", arrival_time:"19:05:00", days:127, active:true, origin_poi_id:bacolod.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2138", travel_type:"air", departure_time:"21:45:00", arrival_time:"22:55:00", days:127, active:true, origin_poi_id:bacolod.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2084", travel_type:"air", departure_time:"6:00:00", arrival_time:"7:45:00", days:127, active:true, origin_poi_id:naia.id, destination_poi_id:basco.id)
+Route.create(route_provider_id:1 , route_id:"PR 2086", travel_type:"air", departure_time:"7:00:00", arrival_time:"8:45:00", days:127, active:false, origin_poi_id:naia.id, destination_poi_id:basco.id)
+Route.create(route_provider_id:1 , route_id:"PR 2085", travel_type:"air", departure_time:"8:10:00", arrival_time:"9:50:00", days:127, active:true, origin_poi_id:basco.id, destination_poi_id:naia.id)
+Route.create(route_provider_id:1 , route_id:"PR 2087", travel_type:"air", departure_time:"9:10:00", arrival_time:"10:50:00", days:127, active:false, origin_poi_id:basco.id, destination_poi_id:naia.id)
