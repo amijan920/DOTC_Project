@@ -12,23 +12,38 @@ class AdminController < ApplicationController
 		# puts rootdir
 		outfile = open(rootdir,'w')
 		outfile.write("
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+		# This file should contain all the record creation needed to seed the database with its default values.
+		# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
+		#
+		# Examples:
+		#
+		#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
+		#   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Admin.create!(:email=>'admin@opentransport.com',:password=>'admin_abde124')
+		Admin.create!(:email=>'admin@opentransport.com',:password=>'admin_abde124')
 
-Category.create(name:\"Sea Port\", image:\"seaport.png\")
-Category.create(name:\"Airport\", image:\"airport.png\")
-Category.create(name:\"Lighthouse\", image:\"lighthouse.png\")
-Category.create(name:\"Rail Station\", image:\"railstation.png\"); 
+		Category.create(name:\"Sea Port\", image:\"seaport.png\")
+		Category.create(name:\"Airport\", image:\"airport.png\")
+		Category.create(name:\"Lighthouse\", image:\"lighthouse.png\")
+		Category.create(name:\"Rail Station\", image:\"railstation.png\"); 
 
-#Sea Ports
-		")
+		#Sea Ports")
+
+		@ports = Poi.order("id").all()
+		@ports.each{
+			|port|
+			s = "\tPoi.create(name:\""
+			s<< port.name << "\", description: \"" << port.description  << "\", category_id:" << port.category_id.to_s() << ", lat_deg:" << port.lat_deg.to_s('F') << ", lat_min:" << port.lat_min.to_s('F') << ", lat_sec:" << port.lat_sec.to_s('F') << ", lat_dir:\"" << port.lat_dir << "\", lon_deg:" << port.lon_deg.to_s('F') << ", lon_min:" << port.lon_min.to_s('F') << ", lon_sec:" << port.lon_sec.to_s('F') << ", lon_dir:\"" << port.lon_dir << "\")\n"
+			
+			outfile.write(s)
+			@details = Details.where("poi_id = ?", port.id)
+			@details.each{
+				|detail|
+				temp = "\tDetails.create(name:\"" << detail.name << "\", detail_type:\"" << detail.detail_type << "\", body:\"" << detail.body << "\", poi_id:" << detail.poi_id.to_s<< ")\n"
+				outfile.write(temp)
+			}
+		}
+
 		outfile.write("")
 		outfile.close
 	end 
