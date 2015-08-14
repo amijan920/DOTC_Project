@@ -13,6 +13,7 @@
  *= require bootstrap
  *= require owl.carousel
  *= require owl.theme
+ *= require onepage-scroll
  *= require_tree .
  *= require_self
  */
