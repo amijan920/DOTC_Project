@@ -7,7 +7,13 @@ class AdminController < ApplicationController
 	
 	def export_data
 		@page = "export"
-		puts "testing if this is working"
+		# puts "testing if this is working"
+		# puts Dir.pwd
+		rootdir = File.join(Dir.pwd,'/public/assets/seeds.rb')
+		# puts rootdir
+		outfile = open(rootdir,'w')
+		outfile.write("testing haha")
+		outfile.close
 	end 
 
 	def list_ports
