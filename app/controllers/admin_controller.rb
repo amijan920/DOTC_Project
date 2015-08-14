@@ -7,7 +7,6 @@ class AdminController < ApplicationController
 	
 	def export_data
 		@page = "export"
-		# puts "testing if this is working"
 		# puts Dir.pwd
 		rootdir = File.join(Dir.pwd,'/public/assets/seeds.rb')
 		# puts rootdir
