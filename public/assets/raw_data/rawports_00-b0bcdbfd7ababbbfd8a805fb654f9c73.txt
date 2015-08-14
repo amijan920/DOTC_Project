@@ -1,0 +1,228 @@
+Name|Address|Latitude|Longtitude||
+Port of Batangas - BP|Sta. Clara Batangas City|13.758239|121.043756||
+Port of Alabat|"Alabat, Quezon"|14.100333|122.010110||
+Port of Ambulong|"Magdiwag, Romblon Sibuyan Island"|12.494782|122.489135||
+Port of Atimonan|"Atimonan, Quezon"|14.000536|121.928735||
+Port of Balanacan|"Mogpog, Marinduque"|13.533469|121.865733||
+Port of Bauan|"Bauan Aplaya, Batangas"|13.788928|120.989942||
+Port of Burdeos|"Brgy. San Rafael, Burdeos Quezon , Polillo Island"|14.849989|121.979639||
+Port of Calatagan|"Calatagan, Batangas"|13.822506|120.628356||
+Port of Cawit (Boac)|"Boac, Marinduque"|13.382908|121.820775||
+Port of Cotta|"Brgy. Cotta, Lucena City"|13.912803|121.606122||
+Port of Gumaca (Villa Bota)|"Brgy. Villabota, Gumaca, Quezon"|13.923239|122.101583||
+Port of Jomalig|"Jomalig, Quezon Polillo Island"|14.701899|122.325285||
+Port of Lopez|"Lopez, Quezon"|13.897117|122.228386||
+Port of Lucena (Dalahican)|"Brgy. Talao-Talao, Lucena City"|13.904092|121.621683||
+Port of Mauban|"Poblacion, Mauban Quezon"|14.191731|121.735031||
+Port of Mulanay|"Malunay, Quezon"|13.519942|122.403422||
+Port of Nasugbu|"Brgy. Wawa, Nasugbu, Batangas"|14.082535|120.620619||
+Port of Pagbilao|"Pagbilao, Quezon"|13.966781|121.688969||
+Port of Panukulan|"Panukulan, Quezon Polillo Island"|14.932417|121.816044||
+Port of Patnanungan|"Patnanungan, Quezon"|14.752931|122.217968||
+Port of Poctoy (Odiongan)|"Brgy. Batiano, Odiongan, Romblon"|12.417678|121.988627||
+Port of Polillo|"Polillo, Quezon"|14.714297|121.935410||
+Port of Real|"Brgy. Ungos, Real Quezon"|14.670990|121.613420||
+Port of Romblon|"Romblon, Romblon"|12.578103|122.268983||
+Port of San Andres|"San Andres, Quezon"|13.322466|122.679021||
+Port of San Agustin|"San Agustin, Romblon"|12.567773|122.135793||
+Port of San Juan|"Brgy. Subukin, San Juan Batangas"|13.722039|121.449253||
+Port of Sta. Cruz|"Brgy. Buyabod, Sta. Cruz Marinduque"|13.478581|122.054600||
+Port of Cagayan de Oro|"Brgy. Macabalan, Cagayan de Oro City"|8.498519|124.663256||
+"Port of Benoni, TMO Benoni"|"Benoni, Municipality of Mahinog, Camiguin"|9.139323|124.793932||
+"Port of Balbagon, TMO Benoni"|"Balbagon, Municipality of Mambajao, Camiguin"|9.242922|124.737303||
+"Port of Guinsiliban, TMO Benoni"|"Poblacion, Municipality of Guinsiliban, Camiguin"|9.098629|124.786422||
+"Port of Balingoan, TMO Balingoan"|"Municipality of Balingoan, Misamis Oriental"|9.005547|124.845898||
+Port of Opol||8.527556|124.572609||
+Port of Calapan|"Calapan City, Oriental Mindoro 5200"|13.429664|121.195161||
+Port of Roxas|"Dangay, Roxas, Oriental Mindoro"|12.593268|121.530071||
+Port of Abra de Ilog|"Matabang, Abra de Ilog"|13.467925|120.771744||
+Port of Lubang|"Tilik, Lubang Is. Occidental Mindoro"|13.816172|120.201634||
+Port of Bulalacao|"Bulalacao, Oriental Mindoro"|12.313551|121.340397||
+Port of Mansalay|"Mansalay, Oriental Mindoro"|12.521483|121.451506||
+Port of Pola|"Pola, Oriental Mindoro"||||
+Port of San Jose|"Caminawit, San Jose, Occidental Mindoro"|12.330353|121.087589||
+Baseport Cotabato|Cotabato City|7.226072|124.247292||
+TMO of Kalamansig|"Kalamansig, Sultan Kudarat"|6.553687|124.044998||
+Port of Dapitan|"San Vicente, Dapitan City"|8.636533|123.381872||
+Port of Sindangan|"Sindangan, Zamboanga del Norte"|8.251246|122.987377||
+Port of Lamao|"Lamao, Liloy, Zamboanga del Norte"|8.137444|122.675739||
+Port of Taguilon|"Brgy. Taguilon, Dapitan City"|8.696619|123.402172||
+Sasa Wharf|"Sasa, Davao City"|7.131617|125.663025||
+Mati Wharf|"Mati, Davao Oriental"|6.948947|126.218378||
+Babak Ro-ro Port|Island Garden City of Samal|7.133386|125.684371||
+Banaybanay Ro-ro Port|"Puntalinao, Banaybanay, Davao Oriental"|7.060969|125.955819||
+Lupon Municipal Port|"Lupon, Davao Oriental"|6.889756|126.006039||
+Maco Municipal Port|"Maco, Compostela Valley Province"|7.348611|125.854167||
+San Isidro Municipal Port|"San Isidro, Davao Oriental"|6.777133|126.079808||
+Tagpopongan Port|"Tagpopongan, Samal, Davao del Norte"|7.123853|125.792217||
+Dumaguete Baseport|"Brgy. Looc, Dumaguete City"|9.312236|123.311028||
+Larena Terminal Port|"Larena, Siquijor"|9.250254|123.587839||
+Tandayag Terminal Port|"Tandayag, Amlan, Negros Oriental"|9.442128|123.237222||
+Siquijor Port|"Siquijor, Siquijor"|9.250911|123.590819||
+Lazi Port|"Lazi, Siquijor"|9.123301|123.637465||
+Guihulngan Port|"Guihulngan, Negros Oriental"|10.189599|123.291345||
+Port of General Santos (Makar Wharf)|"Makar, Labangal, Gen Santos City"|6.093475|125.157553||
+Terminal Port of Glan|"Municipality of Glan, Sarangani"|5.825503|125.200558||
+Municipal Port of Kiamba|"Municipality of Kiamba, Sarngani Province"|5.986300|124.626175||
+Port of Mabila|"Municipality of Sarangani, Davao Occidental"|5.412640|125.426504||
+Baseport of Iligan|"Port Area, Iligan City"|8.232417|126.234083||
+Tubod Port|"Brgy. Poblacion, Port, Area, Tubod, Lanao del Norte"|8.112003|123.890578||
+Kolambugan Port|"Poblacion, Kolambugan, Lanao del Norte"|8.113325|123.895550||
+Iloilo Commercial Port Complex - Loboc Baseport|"Brgy. Loboc, Iloilo City"|10.697247|122.581258||
+River Wharf Baseport|"Muelle Loney, Iloilo City"|10.698233|122.575831||
+Fort San Pedro Baseport|"Fort San Pedro, Iloilo City"|10.690218|122.582325||
+Basiao Port|"Basiao, Ivisan, Capiz"|11.547667|122.636506||
+Caluya Port|"Sitio Tonggo, Imba, Caluya, Antique"|11.957606|121.559158||
+Caticlan Port|"Caticlan, Malay, Aklan"|11.927799|121.951069||
+Concepcion Port|"Sitio Puntales, Brgy. Nipa, Concepcion, Iloilo"|11.216272|123.110923||
+Culasi Terminal Port|"Culasi, Roxas City"|11.610084|122.715490||
+Dumaguit Terminal Port|"Dumaguit, New Washington, Aklan"|11.595607|122.481662||
+Dumangas Terminal Port|"Sitio Naluoyan, Brgy. Sapao, Dumangas, Iloilo"|10.779206|122.709289||
+Estancia Terminal Port|"Estancia, Iloilo"|10.721275|122.560967||
+Guimbal Port|"Brgy. Poblacion, Guimbal, Iloilo"|10.657440|122.321509||
+Jordan Port|"Brgy. Hoskyn, Jordan, Guimaras"|10.666794|122.589317||
+Libertad Port|"Brgy. Poblacion, Libertad, Antique"|11.767672|121.917119||
+Lipata Port|"Brgy. Lipata, Culasi, Antique"|11.469368|122.056800||
+San Jose de Buenavista Port|"San Jose de Buenavista, Antique"|10.737836|121.938039||
+San Lorenzo Port|"San Lorenzo, Cabano, Guimaras"|10.609569|122.720886||
+Sibunag Port|"Brgy. Sebaste, Sibunag, Guimaras"|10.496178|122.676142||
+Legazpi - BP|Albay|13.145408|123.756481||
+Aroroy Port|Masbate|12.513361|123.396421||
+Bacacay Port|Albay|13.297995|123.794214||
+Bulan Port|Sorsogon|12.666746|123.872697||
+"Caramoan Port, San Vicente, Guijalo"|Camarines Sur|13.811519|123.850189||
+Castilla Port|Sorsogon|12.955206|123.883488||
+Cataingan Port|Masbate|12.002678|124.003733||
+Cawayan Port|Masbate||||
+"Claveria Port, Claveria, Burias"|"Burias Island, Masbate"|12.906515|123.246152||
+Esperanza Port|Masbate|11.736396|124.040526||
+Jose Panganiban Port|Camarines Norte|13.811519|123.850189||
+Masbate Port|Masbate|12.369193|123.616353||
+Matnog Port|Sorsogon|12.584222|124.086056||
+"Nato, Sagnay Port"|Camarines Sur|13.610975|123.536781||
+Pantao Port|Albay|13.192767|123.324986||
+Pasacao Port|Camarines Sur|13.505105|123.041131||
+Pioduran Port|Albay|13.028864|123.443356||
+San Andres Port|Catanduanes|13.597428|124.096670||
+"San Pascual, Burias Port"|"Burias Island, Masbate"|13.128225|122.975357||
+Tabaco Port|Albay|13.362231|123.736931||
+Tandoc (Siruma) Port|Camarines Sur|14.055394|123.300006||
+Virac Port|Catanduanes|13.581514|124.234514||
+Lamao Baseport|"Port of Lamao, Limay, Bataan"|14.512313|120.605010||
+Capinpin (Orion) Port|"Bgy. Puting Buhangin, Orion, Bataan"|14.583287|120.589783||
+Dingalan Port|"Bgy. Aplaya, Aurora, Province"|15.381241|121.396367||
+Mariveles (Anchorage)|"Mariveles, Bataan"|14.437101|120.487903||
+Baler Port|"Baler, Aurora"|15.756421|121.590422||
+Canalate Port|"Canalate, Malolos, Bulacan"|14.838720|120.800605||
+Casiguran Port|"Bgy. Dibacong, Casiguran, Aurora"||||
+Sasmuan Port|"Samuan, Pampanga"||||
+Masantol Port|"Masantol, Pampanga"|14.838297|120.683856||
+Sta. Cruz (Paombong) Port|"Sta. Cruz, Paombong, Bulacan"|14.760864|120.791506||
+Nasipit Port|"Nasipit, Agusan del Norte"|8.979033|125.336164||
+Masao Port|"Brgy. Lumbucan, Butuan City"|9.011461|125.503108||
+Butuan Port|San Francisco St. Butuan City|8.951426|125.478821||
+Butuan Ferry Terminal|Municipality along Agusan River|8.953131|125.542719||
+North Harbor|"North Harbor, Tondo, Manila"|14.616111|120.956667||
+Pier 4||14.602283|120.959142||
+Pier 6||14.604264|120.959153||
+Pier 8||14.606294|120.958992||
+Pier 10||14.608306|120.958894||
+Pier 12||14.610219|120.958686||
+Pier 14||14.612150|120.958453||
+Pier 2||14.600281|120.959464||
+Pier 16||14.616525|120.957094||
+MSW|||||
+IPB|||||
+Pier 18||14.624100|120.957019||
+Vitas Port Arrastre Corp.||14.620565|120.965965||
+Ormoc Port|"Ormoc City, Leyte"|11.005000|124.608889||
+Calubian Port|"Brgy. Garganera, Calubian, Leyte"|11.448950|124.429786||
+Palompon Port|"Magallanes St., Palompon, Leyte"|11.049609|124.384798||
+Isabel Port|"Isabel, Leyte"|10.895269|124.447417||
+Baybay Port|"Bonifacio St., Baybay, Leyte"|10.674464|124.796308||
+Hilongos Port|"Hilongos, Southern Leyte"|10.369967|124.742761||
+Maasin Port|"S. Demeterio St., Maasin, Southern Leyte"|10.132732|124.840844||
+Naval Port|"Brgy. Poblacion, Naval, Biliran"|11.557897|124.394492||
+Limasawa Port|"Brgy. Triana, Limasawa, Southern Leyte"|10.060241|124.956812||
+Maripipi Port|"Brgy. Binongto-an, Maripipi, Biliran"|11.777361|124.349603||
+Kawayan Port|"Brgy. Inasuyan, Kawayan, Biliran"|11.682211|124.359231||
+Bato Port|"Port Area, Bato, Leyte"|10.326953|124.784325||
+Padre Burgos Port|"Brgy. Poblacion, Padre Burgos, Southern Leyte"|10.030864|125.019161||
+San Isidro Port|"Brgy. Crossing , San Isidro, Leyte"||||
+Port of Ozamiz|"Port Road, Ozamiz City, Misamis Occidental"|8.139408|123.845742||
+Port of Caluya|"Molocamboc Island, Misamis Occidental"|11.957215|121.558679||
+Port of Jimenez|"Jimenez, Misamis Occidental"|8.332169|123.857519||
+Port of Plaridel|"Plaridel, Misamis Occidental"|8.607122|123.725644||
+Port of Silanga|"Tangub, Misamis Occidental"||||
+Puerto Princesa|"Port Area, Malvar St., Bgy. Bagong Pag-asa, Pto. Princesa City"|9.742197|118.728178||
+Brooke's Point|"Bgy. Buligay, Brooke's Pt., Palawan"|8.772647|117.829436||
+Coron|"Bgy. Tagumpay, Coron, Palawan"|11.991261|120.211678||
+Culion|"Bgy. Balala, Culion"|11.894975|120.019481||
+Cuyo|"Bgy. Tenga-Tenga, Cuyo, Palawan"|10.852078|121.005822||
+Port of El Nido|"El Nido, Palawan"|11.181206|119.386831||
+Punta Baja|"Bgy. Punta Baja, Rizal, Palawan"||||
+Taytay (Sta. Cruz)|"Bgy. Bantulan, Taytay"|10.827297|119.515431||
+Agutaya|"Bgy. Abagat, Agutaya"|11.146403|120.938361||
+Buliluyan (Bataraza)|"Bgy. Buliluyan, Bataraza, Palawan"|8.333689|117.206847||
+Pulupandan|"Pulupandan, Negros Occidental"|10.519303|122.795306||
+Cadiz|"Cadiz City, Negros Occidental"|10.954294|123.324647||
+"Danao, Escalante"|"Danao, Escalante City, Negros Occidental"|10.816414|123.550794||
+San Carlos|"San Carlos City, Negros Occidental"|10.477392|123.421633||
+Hinoba-an|"Brgy. Salvacion, Hinoba-an, Negros Occidental"|9.631811|122.451067||
+Himamaylan|"Brgy. Aguisan, Himamaylan, Negros Occidental"|10.180025|122.902466||
+Aparri Port|"Punta, Aparri, Cagayan"|18.362338|121.628914||
+Port of Currimao|"Barangay Pias Sur, Currimao, Ilocos, Norte"|17.987392|120.488344||
+Port of Salomague|"Cabugao, Ilocos Sur"|17.780840|120.415167||
+Port of Basco|"Basco, Batanes"|20.447362|121.966641||
+Baloganon Port (Masinloc)|"Baloganon, Masinloc, Zambales"|15.537439|119.947286||
+"Sual, Pangsinan"|"Sual, Pangasinan"|16.066417|120.096528||
+"Valanga, Itbayat"|"Valanga, Itbayat"||||
+Baseport|"South Harbor, Port Area, Manila"|14.572497|120.955687||
+Terminal Pasig|"Muelle del Rio, Delpan, Port Area, Manila"|14.594429|120.974591||
+Manila Int'l Container Terminal|"Room 201, 2nd Floor, ICTSI Administration Building, MICT, South Access Road, Manila"|14.598131|120.951778||
+Surigao City|"Port Area, Surigao City"|9.783119|125.501478||
+Aras-Asan|"Cagwait, Surigao del Sur"|8.876281|126.313797||
+Bislig (Lawigan)|"Port Area, Bislig City"|8.198669|126.378036||
+Cantilan|"Brgy. Consuelo, Cantilan, Surigao del Sur"|9.379683|125.987731||
+Caramcam|"Tabon, Bislig City"|8.191644|126.353044||
+Dapa|"Dapa, Surigao del Norte"|9.755080|126.050386||
+Del Carmen|"Del Carmen, Surigao del Norte"|9.867571|125.968476||
+Lianga|"Lianga, Surigao del Sur"|8.616028|126.087175||
+Lipata Ferry|"Lipata, Surigao City"|9.815644|125.454696||
+San Jose|"San Jose, Surigao del Norte"|10.007539|125.569378||
+Socorro|"Socorro, Surigao del Norte"|9.617063|125.966688||
+Tandag|"Tanday, Surigao del Sur"|9.084358|126.197128||
+Tacloban|Tacloban City|11.250222|125.000636||
+Borongan|"Borongan, E. Samar"|11.608994|125.445664||
+Calbayog|"Calbayog, Samar"|12.061028|124.591889||
+Catbalogan|"Catbalogan, Samar"|11.774311|124.879172||
+Guiuan|"Guiuan, E. Samar"|11.029275|125.720014||
+Liloan Ferry|"Liloan, So. Leyte"|10.159194|125.125000||
+Maguinoo|"Maguinoo, Calbayog, Samar"|12.137500|124.457419||
+San Isidro Ferry|"San Isidro, N. Samar"|12.371333|124.338236||
+San Jose|"San Jose, N. Samar"|10.737493|121.938281||
+San Ricardo|"San Ricardo, So. Leyte"|9.918466|125.292687||
+San Juan (Cabalian)|"San Juan, So. Leyte"|10.262650|125.171717||
+St. Bernard|"St. Bernard, So. Leyte"|10.276933|125.138772||
+Almagro|"Almagro, Samar"|11.905008|124.284597||
+Pagsanghan|"Pagsanghan, Samar"|11.902564|124.749481||
+Vinisitahan|"San Antonio, N. Samar"|12.443728|124.261689||
+Sto. Niño|"Sto. Niño, Samar"|11.927752|124.449308||
+Ligaya|"Ligaya, Rosario, N. Samar"|12.548961|124.427861||
+Carigara|"Carigara, Leyte"|11.305760|124.688286||
+Port of Tagbilaran - BP|Tagbilaran City|9.649761|123.845472||
+Port of Catagbacan|"Loon, Bohol"|9.861560|123.828699||
+Port of Jagna|"Jagna, Bohol"|9.649450|124.366264||
+Port of Getafe|"Getafe, Bohol"|10.153575|124.158231||
+Port of Loay|"Loay, Bohol"|9.598519|124.008933||
+Port of Maribojoc|"Maribojoc, Bohol"|9.736058|123.838781||
+Port of Talibon|"Talibon, Bohol"|10.153381|124.328653||
+Port of Tapal|"Tapal, Ubay, Bohol"|10.053364|124.526266||
+Port of Tubigon|"Tubigon, Bohol"|9.955954|123.957761||
+Port of Ubay|"Ubay, Bohol"|10.062081|124.473294||
+Zamboanga|"R.T. Lim Blvd., Port Area"|6.902378|122.073994||
+Basilan|"Isabela City, Zamboanga Peninsula"|6.709887|121.974903||
+Pagadian|Zamboanga del Sur|7.818062|123.439121||
+Margosatubig|"Margosatubig, Zamboanga del Sur"|7.578728|123.166625||
+Malangas|"Malangas , Zamboanga Sibugay"|7.626524|123.033335||
+Ipil|"Ipil, Zamboanga Sibugay"|7.744927|122.584419||

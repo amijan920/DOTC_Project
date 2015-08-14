@@ -21121,7 +21121,7 @@ var MapDisplay = (function() {
 			})(marker, this));
 	  }
 
-	  mapUI.setActivePort(219);
+	  mapUI.setActivePort(1086);
 	}
 
 	MapDisplay.prototype.panToMarker = function(id) {
