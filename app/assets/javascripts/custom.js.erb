@@ -601,8 +601,7 @@ var MapDisplay = (function() {
 			  }
 			})(marker, this));
 	  }
-
-	  mapUI.setActivePort(219);
+	  mapUI.setActivePort(233);
 	}
 
 	MapDisplay.prototype.panToMarker = function(id) {
@@ -1047,7 +1046,28 @@ function routesViewScript() {
  	);
 }
 
+function homepageScript() {
+	$(".main-view").onepage_scroll({
+		   sectionContainer: "section", 
+		   easing: "ease",       
+		   animationTime: 1000,    
+		   pagination: true, 
+		   loop: true, 
+		   keyboard: true, 
+		   responsiveFallback: false,  
+		   direction: "vertical"  
+		});
+    
+    var input = $('input[type="text"]');
+    input.attr('size',input.attr('placeholder').length);
+}
+
 function ready() {
+	if(view == "homepage") {
+		homepageScript();
+		return;
+	}
+	
 	if(view === "ports") {
 		portsViewScript();
 		return;
@@ -1071,12 +1091,14 @@ function ready() {
 	if(view === "sign_in") {
 		return;
 	}
+	
 
 	compileTemplates();
 
 	mapUI = new MapUI(ports, images, infos);
 	mapDisplay = new MapDisplay(ports, mapUI);
 	mapUI.setMapDisplay(mapDisplay);
+	mapDisplay.hideLayer(3);
 
 	initializeAutocomplete();
 

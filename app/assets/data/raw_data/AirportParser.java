@@ -10,7 +10,7 @@ public class AirportParser {
 	    .quote('"')      // quote character
 	    .create();       // new instance is immutable
 
-	  csv.read("airports_v00.csv", new CSVReadProc() {
+	  csv.read("airports_v01.csv", new CSVReadProc() {
 		    public void procRow(int rowIndex, String[] params) {
 						try {
 							String name = params[1];
@@ -37,9 +37,14 @@ public class AirportParser {
 							lon_sec += (lon_min % 1) * 60;
 							lon_min -= lon_min % 1; 
 							
+							StringBuilder varName = new StringBuilder(); 
+							StringTokenizer tk = new StringTokenizer(name);
+							varName.append(tk.nextToken().toLowerCase()); 
+							String temp = tk.nextToken(); 
+							if(!temp.equalsIgnoreCase("airport")) varName.append("_" + temp); 
 							//System.out.printf("\"%s\",\"%s\",\"%s\",%f,%f,%f,%s,%f,%f,%f,%s\n",name, desc, "Sea Port", lat_deg, lat_min, lat_sec, lat_dir, lon_deg, lon_min, lon_sec, lon_dir);
-							System.out.printf("Poi.create(name:\"%s\", description:\"%s\", category_id:%d, lat_deg:%f, lat_min:%f, lat_sec:%f, lat_dir:\"%s\", lon_deg:%f, lon_min:%f, lon_sec:%f, lon_dir:\"%s\")\n",
-								name, desc, category, lat_deg, lat_min, lat_sec, lat_dir, lon_deg, lon_min, lon_sec, lon_dir);
+							System.out.printf("%s = Poi.create(name:\"%s\", description:\"%s\", category_id:%d, lat_deg:%f, lat_min:%f, lat_sec:%f, lat_dir:\"%s\", lon_deg:%f, lon_min:%f, lon_sec:%f, lon_dir:\"%s\")\n",
+								varName.toString().toLowerCase(), name, desc, category, lat_deg, lat_min, lat_sec, lat_dir, lon_deg, lon_min, lon_sec, lon_dir);
 						}
 						catch(Exception e) {
 							
