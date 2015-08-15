@@ -4,7 +4,46 @@ class AdminController < ApplicationController
 
 	before_action :set_port, only: [:show_port, :save_port, :destroy_port]
   before_action :set_route, only: [:show_route, :save_route, :destroy_route]
-	
+	def get_varname(port_name, cat_id)
+		
+		toks = port_name.split(" ")
+		varname = ""
+		if toks[0]=="Port" || toks[0]=="TMO" || toks[0]=="LS" || toks[0]=="San"
+			if toks[-1].include?("/")
+				temp = toks[-1].split("/")
+				varname << temp[0].downcase();
+			elsif toks[-1] == "Point" || toks[-1]=="Port"
+				varname << toks[-2].downcase()
+			else
+				varname << toks[-1].downcase()
+			end
+		elsif toks[0]=="Pier"
+			varname << toks[0].downcase() << "_" << toks[1].downcase()
+		else
+			if toks[0].include?("'")
+				varname << toks[1].downcase()
+			elsif toks[0].include?("/")
+				temp = toks[0].split("/")
+				varname << temp[0].downcase();
+			elsif toks[0].include?("-")
+				temp = toks[0].split("-")
+				varname << temp[0].downcase();
+			else
+				varname << toks[0].downcase()
+			end
+		end
+
+		if cat_id==1
+			varname << "_seaport"
+		elsif cat_id==2
+			varname << "_airport"
+		elsif cat_id==3
+			varname << "_lighthouse"
+		else
+			varname << "_station"
+		end
+	end
+
 	def export_data
 		@page = "export"
 		# puts Dir.pwd
@@ -22,49 +61,35 @@ class AdminController < ApplicationController
 
 		Admin.create!(:email=>'admin@opentransport.com',:password=>'admin_abde124')
 
-		Category.create(name:\"Sea Port\", image:\"seaport.png\")
-		Category.create(name:\"Airport\", image:\"airport.png\")
-		Category.create(name:\"Lighthouse\", image:\"lighthouse.png\")
-		Category.create(name:\"Rail Station\", image:\"railstation.png\"); 
+		#Category.create(name:\"Sea Port\", image:\"seaport.png\")
+		#Category.create(name:\"Airport\", image:\"airport.png\")
+		#Category.create(name:\"Lighthouse\", image:\"lighthouse.png\")
+		#Category.create(name:\"Rail Station\", image:\"railstation.png\"); 
 
 		#Sea Ports")
+
+		@admins = Admin.all()
+		@admins.each{
+			|adm|
+			s = "Admin.create!(:email=>'" << adm.email << "',:password=>'" <<  adm.encrypted_password << ")\n"
+			outfile.write(s)
+		}
+		outfile.write("\n")
+
+		@categories = Category.all()
+		@categories.each{
+			|cat|
+			s = "Category.create(name:\"" << cat.name << "\", image:\"" << cat.image << "\")\n"
+			outfile.write(s)
+		}
+		outfile.write("\n")
 
 		@ports = Poi.order("id").all()
 		@ports.each{
 			|port|
-			toks = port.name.split(" ")
-			varname = ""
-			if toks[0]=="Port" || toks[0]=="TMO" || toks[0]=="LS"
-				if toks[-1].include?("/")
-					temp = toks[-1].split("/")
-					varname << temp[0].downcase();
-				else
-					varname << toks[-1].downcase()
-				end
-			elsif toks[0]=="Pier"
-				varname << toks[0].downcase() << "_" << toks[1].downcase()
-			else
-				if toks[0].include?("'")
-					varname << toks[1].downcase()
-				elsif toks[0].include?("/")
-					temp = toks[0].split("/")
-					varname << temp[0].downcase();
-				else
-					varname << toks[0].downcase()
-				end
-			end
-
-			if port.category_id==1
-				varname << "_seaport"
-			elsif port.category_id==2
-				varname << "_airport"
-			elsif port.category_id==3
-				varname << "_lighthouse"
-			else
-				varname << "_station"
-			end
+			name = get_varname(port.name, port.category_id)
 			s = ""
-			s << varname 
+			s << name
 			s << " = Poi.create(name:\""
 			s << port.name << "\", description: \"" << port.description  << "\", category_id:" << port.category_id.to_s() << ", lat_deg:" << port.lat_deg.to_s('F') << ", lat_min:" << port.lat_min.to_s('F') << ", lat_sec:" << port.lat_sec.to_s('F') << ", lat_dir:\"" << port.lat_dir << "\", lon_deg:" << port.lon_deg.to_s('F') << ", lon_min:" << port.lon_min.to_s('F') << ", lon_sec:" << port.lon_sec.to_s('F') << ", lon_dir:\"" << port.lon_dir << "\")\n"
 			
@@ -72,17 +97,41 @@ class AdminController < ApplicationController
 			@details = Details.where("poi_id = ?", port.id)
 			@details.each{
 				|detail|
-				temp = "\tDetails.create(name:\"" << detail.name << "\", detail_type:\"" << detail.detail_type << "\", body:\"" << detail.body << "\", poi_id:" << varname << ".id)\n"
+				temp = "\tDetails.create(name:\"" << detail.name << "\", detail_type:\"" << detail.detail_type << "\", body:\"" << detail.body << "\", poi_id:" << name << ".id)\n"
 				outfile.write(temp)
 			}
 
 			@images = Image.where("poi_id = ?", port.id); 
 			@images.each{
 				|image|
-				temp = "\tImage.create(poi_id:" << varname << ".id, url:\"" << image.url << "\")\n"
+				temp = "\tImage.create(poi_id:" << name << ".id, url:\"" << image.url << "\")\n"
 				outfile.write(temp)
 			}
 		}
+
+		outfile.write("\n")
+		@provs = RouteProvider.all()
+		@provs.each{
+			|prov|
+			s = "RouteProvider.create(name:\"" << prov.name << "\", image:"
+			if !prov.image.nil?
+				s << prov.image
+			else
+				s << "nil"
+			end
+			s << ")\n"
+			outfile.write(s) 
+
+			@routes = Route.where("route_provider_id = ?", prov.id)
+			@routes.each{
+				|route|
+				arriv = route.arrival_time.to_s.split(" ")[1]
+				dep = route.departure_time.to_s.split(" ")[1]
+				temp = "Route.create(route_provider_id:" << prov.id.to_s << ", route_id:\"" << route.id.to_s << "\", travel_type:\"" << route.travel_type << "\", departure_time\"" << dep << "\", arrival_time:\"" << arriv << "\", days:" << route.days.to_s << ", active:" << route.active.to_s << ", origin_poi_id:" <<  route.origin_poi_id.to_s << ", destination_poi_id:" << route.destination_poi_id.to_s << ")\n"
+				outfile.write(temp)
+			}
+		}
+
 
 		outfile.write("")
 		outfile.close
