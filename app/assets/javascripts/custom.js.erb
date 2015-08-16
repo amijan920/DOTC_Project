@@ -69,6 +69,10 @@ function compileTemplates() {
 
 	source   = $("#no-routes-template").html();
 	templates["no-routes"] = Handlebars.compile(source);
+
+	source   = $("#export-data-template").html();
+	templates["export-data"] = Handlebars.compile(source);
+
 }
 
 // mapUI
