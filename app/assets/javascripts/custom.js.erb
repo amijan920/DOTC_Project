@@ -1058,8 +1058,8 @@ function homepageScript() {
 		   direction: "vertical"  
 		});
     
-    var input = $('input[type="text"]');
-    input.attr('size',input.attr('placeholder').length);
+    // var input = $('input[type="text"]');
+    // input.attr('size',input.attr('placeholder').length);
 }
 
 function ready() {
@@ -1116,6 +1116,11 @@ function ready() {
 			$("#routes-options .scroll-container").html("");
 		});
 		mapUI.showAllRoutes();
+	});
+
+	
+    $(function () {
+	  $('[data-toggle="tooltip"]').tooltip()
 	});
 }
 
