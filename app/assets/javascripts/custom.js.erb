@@ -69,10 +69,6 @@ function compileTemplates() {
 
 	source   = $("#no-routes-template").html();
 	templates["no-routes"] = Handlebars.compile(source);
-
-	source   = $("#export-data-template").html();
-	templates["export-data"] = Handlebars.compile(source);
-
 }
 
 // mapUI
@@ -1096,32 +1092,32 @@ function ready() {
 		return;
 	}
 	
+	if(view !== "export"){
+		compileTemplates();
 
-	compileTemplates();
+		mapUI = new MapUI(ports, images, infos);
+		mapDisplay = new MapDisplay(ports, mapUI);
+		mapUI.setMapDisplay(mapDisplay);
+		mapDisplay.hideLayer(3);
 
-	mapUI = new MapUI(ports, images, infos);
-	mapDisplay = new MapDisplay(ports, mapUI);
-	mapUI.setMapDisplay(mapDisplay);
-	mapDisplay.hideLayer(3);
+		initializeAutocomplete();
 
-	initializeAutocomplete();
-
-	$(".filter-image").click(function(e) {
-		var visible = mapDisplay.toggleLayer($(this).data("category"));
-		// $(this).toggleClass("gray", !visible);
-	});
-	
-	$("#panel-title").click(function() {
-		mapUI.switchView("details");
-	});
-
-	$("#routes-options .section-title").click(function(e) {
-		$("#routes-options-container").slideUp(400, function(c) {
-			$("#routes-options .scroll-container").html("");
+		$(".filter-image").click(function(e) {
+			var visible = mapDisplay.toggleLayer($(this).data("category"));
+			// $(this).toggleClass("gray", !visible);
 		});
-		mapUI.showAllRoutes();
-	});
+		
+		$("#panel-title").click(function() {
+			mapUI.switchView("details");
+		});
 
+		$("#routes-options .section-title").click(function(e) {
+			$("#routes-options-container").slideUp(400, function(c) {
+				$("#routes-options .scroll-container").html("");
+			});
+			mapUI.showAllRoutes();
+		});
+	}
 	
     $(function () {
 	  $('[data-toggle="tooltip"]').tooltip()
