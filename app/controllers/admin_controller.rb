@@ -4,15 +4,16 @@ class AdminController < ApplicationController
 
 	before_action :set_port, only: [:show_port, :save_port, :destroy_port]
   before_action :set_route, only: [:show_route, :save_route, :destroy_route]
+
+  	
 	def get_varname(port_name, cat_id)
-		
+		port_name = port_name.gsub(/[^[:alnum:]]/, " ")
 		toks = port_name.split(" ")
 		varname = ""
 		if toks[0]=="Port" || toks[0]=="TMO" || toks[0]=="LS" || toks[0]=="San"
-			if toks[-1].include?("/")
-				temp = toks[-1].split("/")
-				varname << temp[0].downcase();
-			elsif toks[-1] == "Point" || toks[-1]=="Port"
+			port_name = port_name.gsub(/[^a-zA-Z]/, ' ')
+			toks = port_name.split(" ")
+			if toks[-1] == "Point" || toks[-1]=="Port" || toks[-1].length==1
 				varname << toks[-2].downcase()
 			else
 				varname << toks[-1].downcase()
@@ -20,23 +21,15 @@ class AdminController < ApplicationController
 		elsif toks[0]=="Pier"
 			varname << toks[0].downcase() << "_" << toks[1].downcase()
 		else
-			if toks[0].include?("'")
-				varname << toks[1].downcase()
-			elsif toks[0].include?("/")
-				temp = toks[0].split("/")
-				varname << temp[0].downcase();
-			elsif toks[0].include?("-")
-				temp = toks[0].split("-")
-				varname << temp[0].downcase();
-			else
-				varname << toks[0].downcase()
-			end
+			port_name = port_name.gsub(/[^a-zA-Z]/, ' ')
+			toks = port_name.split(" ")
+			varname << toks[0].downcase()
 		end
 
 		if cat_id==1
-			varname << "_seaport"
-		elsif cat_id==2
 			varname << "_airport"
+		elsif cat_id==2
+			varname << "_seaport"
 		elsif cat_id==3
 			varname << "_lighthouse"
 		else
@@ -127,7 +120,7 @@ class AdminController < ApplicationController
 				|route|
 				arriv = route.arrival_time.to_s.split(" ")[1]
 				dep = route.departure_time.to_s.split(" ")[1]
-				temp = "Route.create(route_provider_id:" << prov.id.to_s << ", route_id:\"" << route.id.to_s << "\", travel_type:\"" << route.travel_type << "\", departure_time\"" << dep << "\", arrival_time:\"" << arriv << "\", days:" << route.days.to_s << ", active:" << route.active.to_s << ", origin_poi_id:" <<  route.origin_poi_id.to_s << ", destination_poi_id:" << route.destination_poi_id.to_s << ")\n"
+				temp = "Route.create(route_provider_id:" << prov.id.to_s << ", route_id:\"" << route.id.to_s << "\", travel_type:\"" << route.travel_type << "\", departure_time:\"" << dep << "\", arrival_time:\"" << arriv << "\", days:" << route.days.to_s << ", active:" << route.active.to_s << ", origin_poi_id:" <<  route.origin_poi_id.to_s << ", destination_poi_id:" << route.destination_poi_id.to_s << ")\n"
 				outfile.write(temp)
 			}
 		}
