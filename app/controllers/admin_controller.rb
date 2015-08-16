@@ -128,6 +128,7 @@ class AdminController < ApplicationController
 
 		outfile.write("")
 		outfile.close
+		send_file rootdir
 	end 
 
 	def list_ports
