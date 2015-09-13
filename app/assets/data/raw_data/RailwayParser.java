@@ -13,15 +13,31 @@ public class RailwayParser
 			String input = br.readLine(); 
 			if(input==null) break;
 
-			StringTokenizer tk = new StringTokenizer(input,",");
+			StringTokenizer tk = new StringTokenizer(input,"	");
 			String name = tk.nextToken(); 
+			if(name.charAt(0) == '\"' && name.charAt(name.length()-1) == '\"') name = name.substring(1,name.length()-1);
 			String status = tk.nextToken();
-			String lat = tk.nextToken();
-			String lng = tk.nextToken(); 
-			String desc = tk.nextToken(); 
+			String lat, lng = null; 
+			try{
+				lat = tk.nextToken();
+				lng = tk.nextToken(); 
+			}catch(Exception e)
+			{
+				continue;
+			}
+			
+			String desc = tk.nextToken() + " - " + status; 
 			int category = 4; 
-			Object[] lat_ex = extract(lat);
-			Object[] lon_ex = extract(lng); 
+			if(!status.equalsIgnoreCase("Operational")) category = 5;
+			Object[] lat_ex, lon_ex = null; 
+			try{
+				lat_ex = extract(lat);
+				lon_ex = extract(lng); 
+			}catch(Exception e)
+			{
+				continue; 
+			}
+			
 			
 			
 			/*StringBuilder sb = new StringBuilder(); 
