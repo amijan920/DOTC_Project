@@ -278,6 +278,12 @@ var MapUI = (function() {
 
 		this.activePort = port;
 
+		$("#init-instructions").hide();
+
+		console.log($("#panel-title").html());
+		if($("#panel-title").html() == "Instructions") 
+			$("#panel-title").html("Details");
+
 	  // $("#panel-title").html(port.name);
 	  $("#name-container .bold").html(port.name);
 	  $("#name-container #description.small-desc").html(port.description.replace(/(?:\r\n|\r|\n)/g, '<br />'));
@@ -361,6 +367,7 @@ var MapUI = (function() {
 	}
 
 	MapUI.prototype.switchView = function(spec) {
+		$("#init-instructions").hide();
 		if(spec == null) {
 			if(this.uiView == "flights") {
 				$("#port-details").slideDown();
@@ -370,10 +377,9 @@ var MapUI = (function() {
 				$("#routes-options-container").slideUp(400, function(c) {
 					$("#routes-options .scroll-container").html("");
 				});
-				$("#panel-title").html("Port Details");
+				$("#panel-title").html("Details");
 				this.mapState = "none";
 				this.mapDisplay.removePath();
-				this.mapDisplay.showAllLayers();
 				this.uiView = "details";
 			}
 			else {
@@ -538,8 +544,13 @@ var MapDisplay = (function() {
 	  this.currentPath = null;
 
 		var mapOptions = {
-	    center: { lat: 14, lng: 121},
-	    zoom: 10,
+	    center: { lat: 13, lng: 116},
+	    zoom: 6,
+    	zoomControl: true,
+    	zoomControlOptions: {
+    		// style: google.maps.ZoomControlStyle.SMALL,
+	        position: google.maps.ControlPosition.RIGHT_BOTTOM
+	    },
 	    disableDefaultUI: true
 	  };
 
@@ -601,7 +612,7 @@ var MapDisplay = (function() {
 			  }
 			})(marker, this));
 	  }
-	  mapUI.setActivePort(233);
+	  // mapUI.setActivePort(233);
 	}
 
 	MapDisplay.prototype.panToMarker = function(id) {
@@ -1098,7 +1109,8 @@ function ready() {
 		mapUI = new MapUI(ports, images, infos);
 		mapDisplay = new MapDisplay(ports, mapUI);
 		mapUI.setMapDisplay(mapDisplay);
-		mapDisplay.hideLayer(3);
+		mapDisplay.hideAllLayers(3);
+		mapDisplay.showLayer(1);
 
 		initializeAutocomplete();
 
