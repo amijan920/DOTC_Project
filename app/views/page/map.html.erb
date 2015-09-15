@@ -48,7 +48,10 @@
 
 <div id="layer-ui-container">
 	<% @categories.each do |category| %>
-		<% if @category_count[category.id] > 0 %>
+		<% if category.id == 5%>
+			<% next %> 
+		<% end %> 
+		<% if @category_count[category.id] > 0%>
 			<div class="filter-button active">
 				<image class="image-responsive filter-image" src="<%= @category_filters[category.id] %>" data-category="<%= category.id %>" title="<%= category.name%>">
 			</div>
