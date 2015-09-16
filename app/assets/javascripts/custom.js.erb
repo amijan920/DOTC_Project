@@ -1,6 +1,6 @@
 var templates = {};
 var mapDisplay;
-
+var train_id = 4; 
 
 // helper methods
 function computeLatitude(port) {
@@ -632,10 +632,16 @@ var MapDisplay = (function() {
 	MapDisplay.prototype.toggleLayer = function(id) {
 		if(this.cat_vis[id] == true) {
 			this.hideLayer(id);
+			if(id == train_id){
+				this.hideLayer(train_id+1);
+			}
 			return false;
 		}
 		else {
 			this.showLayer(id);
+			if(id == train_id){
+				this.showLayer(train_id+1);
+			}
 			return true;
 		}
 	}
