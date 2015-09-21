@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   
   get 'opentransport' => 'page#index'
   get 'opentransport/map' => 'page#map'
-
+  get 'opentransport/guesses/ports' => 'page#portClusters'
   devise_for :admins
   get  'opentransport/admin' => 'admin#list_ports'
 
