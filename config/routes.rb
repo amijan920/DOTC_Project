@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   get 'opentransport/map' => 'page#map'
   get 'opentransport/ppa/portclusters' => 'page#portClusters'
   get 'opentransport/ppa/vesselclusters' => 'page#vesselClusters'
+  get 'opentransport/ppa/visualization' => 'page#port_visualizer'
+
   devise_for :admins
   get  'opentransport/admin' => 'admin#list_ports'
 
