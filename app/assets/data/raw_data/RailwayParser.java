@@ -29,6 +29,8 @@ public class RailwayParser
 			String desc = tk.nextToken() + " - " + status; 
 			int category = 4; 
 			if(!status.equalsIgnoreCase("Operational")) category = 5;
+			
+			if(status.contains("ITS")) category = 6; 
 			Object[] lat_ex, lon_ex = null; 
 			try{
 				lat_ex = extract(lat);

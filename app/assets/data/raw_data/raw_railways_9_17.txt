@@ -1,0 +1,89 @@
+Station	Status	Lat 	Lng	Line
+Pier 4 Station	To be constructed	"14°36'12.84""N"	"120°57'40.82""E"	Light Rail Transit Line 2 - West Extension
+Divisoria Station	To be constructed	"14°36'9.55""N"	"120°58'3.35""E"	Light Rail Transit Line 2 - West Extension
+Tutuban Station	To be constructed	"14°36'22.54""N"	"120°58'20.41""E"	Light Rail Transit Line 2 - West Extension
+Recto Station	Operational	"14°36'12.54""N"	"120°59'0.75""E"	Light Rail Transit Line 2
+Legarda Station	Operational	"14°36'2.95""N"	"120°59'33.11""E"	Light Rail Transit Line 2
+Pureza Station	Operational	"14°36'5.99""N"	"121° 0'18.54""E"	Light Rail Transit Line 2
+V. Mapa Station	Operational	"14°36'14.74""N"	"121° 1'1.81""E"	Light Rail Transit Line 2
+J. Ruiz Station	Operational	"14°36'38.01""N"	"121° 1'34.34""E"	Light Rail Transit Line 2
+Gilmore Station	Operational	"14°36'48.62""N"	"121° 2'3.34""E"	Light Rail Transit Line 2
+Betty-Go Belmonte Station	Operational	"14°37'6.60""N"	"121° 2'33.68""E"	Light Rail Transit Line 2
+Araneta Center-Cubao Station	Operational	"14°37'22.05""N"	"121° 3'10.79""E"	Light Rail Transit Line 2
+Anonas Station	Operational	"14°37'40.62""N"	"121° 3'53.02""E"	Light Rail Transit Line 2
+Katipunan Station	Operational	"14°37'51.74""N"	"121° 4'22.87""E"	Light Rail Transit Line 2
+Santolan Station	Operational	"14°37'19.34""N"	"121° 5'9.74""E"	Light Rail Transit Line 2
+Emerald Station	To be constructed	"14°37'13.41""N"	"121° 6'2.67""E"	Light Rail Transit Line 2 (East Extension)
+Masinag Station	To be constructed	"14°37'28.85""N"	"121° 7'14.87""E"	Light Rail Transit Line 2 (East Extension)
+North Avenue Station	Operational	"14°39'7.78""N"	"121° 1'56.44""E"	Metro Rail Transit Line 3
+Quezon Avenue Station	Operational	"14°38'33.51""N"	"121° 2'18.51""E"	Metro Rail Transit Line 3
+Kamuning Station	Operational	"14°38'6.79""N"	"121° 2'35.93""E"	Metro Rail Transit Line 3
+Araneta Center-Cubao Station	Operational	"14°37'9.35""N"	"121° 3'4.31""E"	Metro Rail Transit Line 3
+Santolan-Annapolis Station	Operational	"14°36'28.20""N"	"121° 3'23.02""E"	Metro Rail Transit Line 3
+Ortigas Station	Operational	"14°35'16.28""N"	"121° 3'24.19""E"	Metro Rail Transit Line 3
+Shaw Boulevard Station	Operational	"14°34'52.29""N"	"121° 3'13.22""E"	Metro Rail Transit Line 3
+Boni Station	Operational	"14°34'25.38""N"	"121° 2'53.37""E"	Metro Rail Transit Line 3
+Guadalupe Station	Operational	"14°34'0.64""N"	"121° 2'43.84""E"	Metro Rail Transit Line 3
+Buendia Station	Operational	"14°33'16.83""N"	"121° 2'4.75""E"	Metro Rail Transit Line 3
+Ayala Station	Operational	"14°32'57.33""N"	"121° 1'40.66""E"	Metro Rail Transit Line 3
+Magallanes Station	Operational	"14°32'30.85""N"	"121° 1'9.54""E"	Metro Rail Transit Line 3
+Taft Avenue Station	Operational	"14°32'15.32""N"	"121° 0'6.28""E"	Metro Rail Transit Line 3
+Roosevelt Station	Operational	"14°39'26.94""N"	"121° 1'16.28""E"	Light Rail Transit Line 1
+Balintawak Station	Operational	"14°39'26.68""N"	"121° 0'13.23""E"	Light Rail Transit Line 1
+Monumento Station	Operational	"14°39'15.60""N"	"120°59'2.06""E"	Light Rail Transit Line 1
+5th Avenue Station	Operational	"14°38'39.54""N"	"120°59'0.85""E"	Light Rail Transit Line 1
+R. Papa Station	Operational	"14°38'9.40""N"	"120°58'56.26""E"	Light Rail Transit Line 1
+Abad Santos Station	Operational	"14°37'50.31""N"	"120°58'53.03""E"	Light Rail Transit Line 1
+Blumentritt Station	Operational	"14°37'21.39""N"	"120°58'58.49""E"	Light Rail Transit Line 1
+Tayuman Station	Operational	"14°36'59.89""N"	"120°58'57.90""E"	Light Rail Transit Line 1
+Bambang Station	Operational	"14°36'40.47""N"	"120°58'56.99""E"	Light Rail Transit Line 1
+Doroteo Jose Station	Operational	"14°36'19.16""N"	"120°58'55.34""E"	Light Rail Transit Line 1
+Carriedo Station	Operational	"14°35'56.25""N"	"120°58'52.74""E"	Light Rail Transit Line 1
+Central Terminal Station	Operational	"14°35'33.82""N"	"120°58'53.85""E"	Light Rail Transit Line 1
+United Nations Station	Operational	"14°34'56.53""N"	"120°59'4.99""E"	Light Rail Transit Line 1
+Pedro Gil Station	Operational	"14°34'35.60""N"	"120°59'16.96""E"	Light Rail Transit Line 1
+Quirino Station	Operational	"14°34'13.07""N"	"120°59'29.75""E"	Light Rail Transit Line 1
+Vito Cruz Station	Operational	"14°33'48.39""N"	"120°59'41.12""E"	Light Rail Transit Line 1
+Gil Puyat Station	Operational	"14°33'15.47""N"	"120°59'49.54""E"	Light Rail Transit Line 1
+Libertad Station	Operational	"14°32'51.66""N"	"120°59'55.01""E"	Light Rail Transit Line 1
+EDSA Station	Operational	"14°32'19.42""N"	"121° 0'2.42""E"	Light Rail Transit Line 1
+Baclaran Station	Operational	"14°32'3.24""N"	"120°59'54.03""E"	Light Rail Transit Line 1
+Caloocan (Valenzuela) Station	Non-operational	"14°41'33.85""N"	"120°57'54.85""E"	Philippine National Railways - Metro Commuter Line
+Asistio Station	Non-operational	"14°39'7.20""N"	"120°58'29.36""E"	Philippine National Railways - Metro Commuter Line
+5th Avenue (C3) Station	Non-operational	"14°38'39.26""N"	"120°58'34.99""E"	Philippine National Railways - Metro Commuter Line
+Solis Station	Non-operational	"14°37'37.11""N"	"120°58'32.09""E"	Philippine National Railways - Metro Commuter Line
+Tutuban Station	Operational	"14°36'40.80""N"	"120°58'23.19""E"	Philippine National Railways - Metro Commuter Line
+Blumentritt Station	Operational	"14°37'21.57""N"	"120°59'0.46""E"	Philippine National Railways - Metro Commuter Line
+Laong-Laan Station	Operational	"14°37'0.17""N"	"120°59'33.40""E"	Philippine National Railways - Metro Commuter Line
+España Station	Operational	"14°36'44.10""N"	"120°59'48.80""E"	Philippine National Railways - Metro Commuter Line
+Sta. Mesa Station	Operational	"14°36'2.87""N"	"121° 0'37.11""E"	Philippine National Railways - Metro Commuter Line
+Pandacan Station	Operational	"14°35'24.91""N"	"121° 0'31.69""E"	Philippine National Railways - Metro Commuter Line
+Paco Station	Operational	"14°34'44.91""N"	"120°59'57.32""E"	Philippine National Railways - Metro Commuter Line
+San Andres Station	Operational	"14°34'23.77""N"	"120°59'58.16""E"	Philippine National Railways - Metro Commuter Line
+Vito Cruz Station	Operational	"14°34'1.69""N"	"121° 0'10.07""E"	Philippine National Railways - Metro Commuter Line
+Buendia Station	Operational	"14°33'26.08""N"	"121° 0'29.27""E"	Philippine National Railways - Metro Commuter Line
+Pasay Road Station	Operational	"14°32'58.90""N"	"121° 0'43.89""E"	Philippine National Railways - Metro Commuter Line
+EDSA Station	Operational	"14°32'29.95""N"	"121° 0'59.54""E"	Philippine National Railways - Metro Commuter Line
+Nichols Station	Operational	"14°31'24.89""N"	"121° 1'34.65""E"	Philippine National Railways - Metro Commuter Line
+"Food Terminal, Inc. Station"	Operational	"14°30'23.49""N"	"121° 2'7.73""E"	Philippine National Railways - Metro Commuter Line
+Bicutan Station	Operational	"14°29'16.90""N"	"121° 2'43.59""E"	Philippine National Railways - Metro Commuter Line
+Sucat Station	Operational	"14°27'8.35""N"	"121° 3'3.40""E"	Philippine National Railways - Metro Commuter Line
+Buli Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Alabang Station	Operational	"14°25'1.37""N"	"121° 2'51.66""E"	Philippine National Railways - Metro Commuter Line
+Muntinlupa Station	Operational	"14°23'21.38""N"	"121° 2'51.32""E"	Philippine National Railways - Metro Commuter Line
+Tunasan Crossing Station	Non-operational			Philippine National Railways - Metro Commuter Line
+"San Pedro, Laguna Station"	Operational	"14°21'36.17""N"	"121° 3'22.96""E"	Philippine National Railways - Metro Commuter Line
+Pacita Complex Station	Non-operational	"14°20'48.41""N"	"121° 3'49.87""E"	Philippine National Railways - Metro Commuter Line
+Chrysanthemum Village Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Carmona Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Pacita Main Gate Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Golden City 1 Station	Non-operational	"14°20'12.33""N"	"121° 4'30.28""E"	Philippine National Railways - Metro Commuter Line
+Biñan Station	Operational	"14°19'53.06""N"	"121° 4'52.26""E"	Philippine National Railways - Metro Commuter Line
+"Sta. Rosa, Laguna Station"	Operational	"14°18'22.52""N"	"121° 6'35.27""E"	Philippine National Railways - Metro Commuter Line
+Golden City 2 Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Cabuyao Station	Operational	"14°16'49.68""N"	"121° 7'33.73""E"	Philippine National Railways - Metro Commuter Line
+Mamatid Station	Operational	"14°13'56.46""N"	"121° 8'44.24""E"	Philippine National Railways - Metro Commuter Line
+Banlic Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Calamba Station	Operational	"14°12'25.24""N"	"121° 9'28.86""E"	Philippine National Railways - Metro Commuter Line
+Southwest	Operational	"14° 30' 44.0388""N"	"120° 59' 31.7112""E"	ITS Terminals
+South	Operational	"14° 30' 24.2064""N"	"121° 2' 8.1564""E"	ITS Terminals

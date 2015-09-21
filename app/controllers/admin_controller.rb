@@ -77,10 +77,19 @@ class AdminController < ApplicationController
 		}
 		outfile.write("\n")
 
+		prev = -1
 		@ports = Poi.order("id").all()
 		@ports.each{
 			|port|
 			name = get_varname(port.name, port.category_id)
+
+			tempid = port.category_id.to_s()
+			if prev==-1 
+				prev = tempid
+			elsif tempid!=prev
+				prev = tempid
+				s << "\n"
+			end 
 			s = ""
 			s << name
 			s << " = Poi.create(name:\""
