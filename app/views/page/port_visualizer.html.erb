@@ -11,8 +11,8 @@
         padding: 0px
       }
 
-      #info{
-        margin: 40px;
+      #info-window{
+        margin: 30px;
         padding: 10px;
         border: 1px solid transparent;
         border-radius: 2px 0 0 2px;
@@ -28,25 +28,27 @@
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
       }
 
-      a{
+      p{
         margin: 8px;
         display: block;
+        color: #FFF;
       }
 
       #info2,#info3{
         padding-left:10px;
       }
     </style>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.20.exp&signed_in=true&region=PH"></script>
+    <!-- // <script src="https://maps.googleapis.com/maps/api/js?v=3.20.exp&signed_in=true&region=PH"></script> -->
   </head>
   <body>
-    <div id="info">
-      <a id="info1">Information Window</a>
-      <a id="info2">Click any port or connection to display statistics</a>
-      <a id="info3"></a>
+    <div id="info-window">
+      <p id="info1">Information Window</p>
+      <p id="info2">Click any port or connection to display statistics</p>
+      <p id="info3"></p>
     </div>
     <div id="map-canvas"></div>
     <script>
+    view = "port_vis";
       var map;
 var active;
 var graph = [];
@@ -59,10 +61,18 @@ var ln1 = "Information Window";
 var ln2 = "Click any port or connection to display statistics";
 var ln3 = "";
 
-var a0 = '../../assets/images/port-vis/active_c0.png';
-var a2 = '../../assets/images/port-vis/active_c2.png';
-var i0 = '../../assets/images/port-vis/inactive_c0.png';
-var i2 = '../../assets/images/port-vis/inactive_c2.png';
+var a0 = "<%= asset_path('assets/port_vis/active_c0.png') %>";
+var a2 = "<%= asset_path('assets/port_vis/active_c2.png') %>";
+var i0 = "<%= asset_path('assets/port_vis/inactive_c0.png') %>";
+var i2 = "<%= asset_path('assets/port_vis/inactive_c2.png') %>";
+// var a0 = url(<%= asset_path('assets/images/port_vis/active_c0.png') %>);
+// var a2 = url(<%= asset_path('assets/images/port_vis/active_c2.png') %>);
+// var i0 = url(<%= asset_path('assets/images/port_vis/inactive_c0.png') %>);
+// var i2 = url(<%= asset_path('assets/images/port_vis/inactive_c2.png') %>);
+// var a0 = '../../assets/images/port-vis/active_c0.png';
+// var a2 = '../../assets/images/port-vis/active_c2.png';
+// var i0 = '../../assets/images/port-vis/inactive_c0.png';
+// var i2 = '../../assets/images/port-vis/inactive_c2.png';
 
 function Port(n, lt, ln, c, s){
   this.portName = n;
@@ -1158,7 +1168,7 @@ function initialize(){
     zoom: 6,
   };
   map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
-  map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(info);
+  map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(document.getElementById('info-window'));
   initGraph();
   for (var i = 0; i < graph.length; i++) graph[i].marker.setMap(map);
 }

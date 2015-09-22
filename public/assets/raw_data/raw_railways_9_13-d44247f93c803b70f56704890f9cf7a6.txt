@@ -1,0 +1,209 @@
+Roosevelt Station	Operational	"14°39'27.20""N"	"121° 1'16.29""E"	Light Rail Transit Line 1
+Balintawak Station	Operational	"14°39'26.68""N"	"121° 0'13.23""E"	Light Rail Transit Line 1
+Monumento Station	Operational	"14°39'15.60""N"	"120°59'2.06""E"	Light Rail Transit Line 1
+5th Avenue Station	Operational	"14°38'39.54""N"	"120°59'0.85""E"	Light Rail Transit Line 1
+R. Papa Station	Operational	"14°38'9.40""N"	"120°58'56.26""E"	Light Rail Transit Line 1
+Abad Santos Station	Operational	"14°37'50.31""N"	"120°58'53.03""E"	Light Rail Transit Line 1
+Blumentritt Station	Operational	"14°37'21.39""N"	"120°58'58.49""E"	Light Rail Transit Line 1
+Tayuman Station	Operational	"14°36'59.89""N"	"120°58'57.90""E"	Light Rail Transit Line 1
+Bambang Station	Operational	"14°36'40.47""N"	"120°58'56.99""E"	Light Rail Transit Line 1
+Doroteo Jose Station	Operational	"14°36'19.16""N"	"120°58'55.34""E"	Light Rail Transit Line 1
+Carriedo Station	Operational	"14°35'56.25""N"	"120°58'52.74""E"	Light Rail Transit Line 1
+Central Terminal Station	Operational	"14°35'33.82""N"	"120°58'53.85""E"	Light Rail Transit Line 1
+United Nations Station	Operational	"14°34'56.53""N"	"120°59'4.99""E"	Light Rail Transit Line 1
+Pedro Gil Station	Operational	"14°34'35.60""N"	"120°59'16.96""E"	Light Rail Transit Line 1
+Quirino Station	Operational	"14°34'13.06""N"	"120°59'29.53""E"	Light Rail Transit Line 1
+Vito Cruz Station	Operational	"14°33'48.39""N"	"120°59'41.12""E"	Light Rail Transit Line 1
+Gil Puyat Station	Operational	"14°33'15.47""N"	"120°59'49.54""E"	Light Rail Transit Line 1
+Libertad Station	Operational	"14°32'51.66""N"	"120°59'55.01""E"	Light Rail Transit Line 1
+EDSA Station	Operational	"14°32'19.42""N"	"121° 0'2.42""E"	Light Rail Transit Line 1
+Baclaran Station	Operational	"14°32'3.48""N"	"120°59'54.03""E"	Light Rail Transit Line 1
+Recto Station	Operational	"14°36'12.54""N"	"120°59'0.75""E"	Light Rail Transit Line 2
+Legarda Station	Operational	"14°36'2.95""N"	"120°59'33.11""E"	Light Rail Transit Line 2
+Pureza Station	Operational	"14°36'5.99""N"	"121° 0'18.54""E"	Light Rail Transit Line 2
+V. Mapa Station	Operational	"14°36'14.74""N"	"121° 1'1.81""E"	Light Rail Transit Line 2
+J. Ruiz Station	Operational	"14°36'38.01""N"	"121° 1'34.34""E"	Light Rail Transit Line 2
+Gilmore Station	Operational	"14°36'48.62""N"	"121° 2'3.34""E"	Light Rail Transit Line 2
+Betty-Go Belmonte Station	Operational	"14°37'6.60""N"	"121° 2'33.68""E"	Light Rail Transit Line 2
+Araneta Center-Cubao Station	Operational	"14°37'22.05""N"	"121° 3'10.79""E"	Light Rail Transit Line 2
+Anonas Station	Operational	"14°37'40.62""N"	"121° 3'53.02""E"	Light Rail Transit Line 2
+Katipunan Station	Operational	"14°37'51.74""N"	"121° 4'22.87""E"	Light Rail Transit Line 2
+Santolan Station	Operational	"14°37'19.34""N"	"121° 5'9.74""E"	Light Rail Transit Line 2
+North Avenue Station	Operational	"14°39'7.78""N"	"121° 1'56.44""E"	Metro Rail Transit Line 3
+Quezon Avenue Station	Operational	"14°38'33.51""N"	"121° 2'18.51""E"	Metro Rail Transit Line 3
+Kamuning Station	Operational	"14°38'6.79""N"	"121° 2'35.93""E"	Metro Rail Transit Line 3
+Araneta Center-Cubao Station	Operational	"14°37'9.35""N"	"121° 3'4.31""E"	Metro Rail Transit Line 3
+Santolan-Annapolis Station	Operational	"14°36'28.20""N"	"121° 3'23.02""E"	Metro Rail Transit Line 3
+Ortigas Station	Operational	"14°35'16.28""N"	"121° 3'24.19""E"	Metro Rail Transit Line 3
+Shaw Boulevard Station	Operational	"14°34'52.29""N"	"121° 3'13.22""E"	Metro Rail Transit Line 3
+Boni Station	Operational	"14°34'25.38""N"	"121° 2'53.37""E"	Metro Rail Transit Line 3
+Guadalupe Station	Operational	"14°34'0.64""N"	"121° 2'43.84""E"	Metro Rail Transit Line 3
+Buendia Station	Operational	"14°33'16.83""N"	"121° 2'4.75""E"	Metro Rail Transit Line 3
+Ayala Station	Operational	"14°32'57.33""N"	"121° 1'40.66""E"	Metro Rail Transit Line 3
+Magallanes Station	Operational	"14°32'30.85""N"	"121° 1'9.54""E"	Metro Rail Transit Line 3
+Taft Avenue Station	Operational	"14°32'15.32""N"	"121° 0'6.28""E"	Metro Rail Transit Line 3
+Caloocan (Valenzuela) Station	Non-operational	"14°41'33.85""N"	"120°57'54.85""E"	Philippine National Railways - Metro Commuter Line
+Asistio Station	Non-operational	"14°39'7.20""N"	"120°58'29.36""E"	Philippine National Railways - Metro Commuter Line
+5th Avenue (C3) Station	Non-operational	"14°38'39.26""N"	"120°58'34.99""E"	Philippine National Railways - Metro Commuter Line
+Solis Station	Non-operational	"14°37'37.11""N"	"120°58'32.09""E"	Philippine National Railways - Metro Commuter Line
+Tutuban Station	Operational	"14°36'40.80""N"	"120°58'23.19""E"	Philippine National Railways - Metro Commuter Line
+Blumentritt Station	Operational	"14°37'21.57""N"	"120°59'0.46""E"	Philippine National Railways - Metro Commuter Line
+Laong-Laan Station	Operational	"14°37'0.17""N"	"120°59'33.40""E"	Philippine National Railways - Metro Commuter Line
+España Station	Operational	"14°36'44.10""N"	"120°59'48.80""E"	Philippine National Railways - Metro Commuter Line
+Sta. Mesa Station	Operational	"14°36'2.87""N"	"121° 0'37.11""E"	Philippine National Railways - Metro Commuter Line
+Pandacan Station	Operational	"14°35'24.91""N"	"121° 0'31.69""E"	Philippine National Railways - Metro Commuter Line
+Paco Station	Operational	"14°34'44.91""N"	"120°59'57.32""E"	Philippine National Railways - Metro Commuter Line
+San Andres Station	Operational	"14°34'23.77""N"	"120°59'58.16""E"	Philippine National Railways - Metro Commuter Line
+Vito Cruz Station	Operational	"14°34'1.69""N"	"121° 0'10.07""E"	Philippine National Railways - Metro Commuter Line
+Buendia Station	Operational	"14°33'26.08""N"	"121° 0'29.27""E"	Philippine National Railways - Metro Commuter Line
+Pasay Road Station	Operational	"14°32'58.90""N"	"121° 0'43.89""E"	Philippine National Railways - Metro Commuter Line
+EDSA Station	Operational	"14°32'29.95""N"	"121° 0'59.54""E"	Philippine National Railways - Metro Commuter Line
+Nichols Station	Operational	"14°31'24.89""N"	"121° 1'34.65""E"	Philippine National Railways - Metro Commuter Line
+"Food Terminal, Inc. Station"	Operational	"14°30'23.49""N"	"121° 2'7.73""E"	Philippine National Railways - Metro Commuter Line
+Bicutan Station	Operational	"14°29'16.90""N"	"121° 2'43.59""E"	Philippine National Railways - Metro Commuter Line
+Sucat Station	Operational	"14°27'8.35""N"	"121° 3'3.40""E"	Philippine National Railways - Metro Commuter Line
+Buli Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Alabang Station	Operational	"14°25'1.37""N"	"121° 2'51.66""E"	Philippine National Railways - Metro Commuter Line
+Muntinlupa Station	Operational	"14°23'21.38""N"	"121° 2'51.32""E"	Philippine National Railways - Metro Commuter Line
+Tunasan Crossing Station	Non-operational			Philippine National Railways - Metro Commuter Line
+"San Pedro, Laguna Station"	Operational	"14°21'36.17""N"	"121° 3'22.96""E"	Philippine National Railways - Metro Commuter Line
+Pacita Complex Station	Non-operational	"14°20'48.41""N"	"121° 3'49.87""E"	Philippine National Railways - Metro Commuter Line
+Chrysanthemum Village Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Carmona Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Pacita Main Gate Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Golden City 1 Station	Non-operational	"14°20'12.33""N"	"121° 4'30.28""E"	Philippine National Railways - Metro Commuter Line
+Biñan Station	Operational	"14°19'53.06""N"	"121° 4'52.26""E"	Philippine National Railways - Metro Commuter Line
+"Sta. Rosa, Laguna Station"	Operational	"14°18'22.52""N"	"121° 6'35.27""E"	Philippine National Railways - Metro Commuter Line
+Golden City 2 Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Cabuyao Station	Operational	"14°16'49.68""N"	"121° 7'33.73""E"	Philippine National Railways - Metro Commuter Line
+Mamatid Station	Operational	"14°13'56.46""N"	"121° 8'44.24""E"	Philippine National Railways - Metro Commuter Line
+Banlic Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Calamba Station	Operational	"14°12'25.24""N"	"121° 9'28.86""E"	Philippine National Railways - Metro Commuter Line
+Pansol Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Masili Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Los Baños Station	Non-operational			Philippine National Railways - Metro Commuter Line
+College Station	Non-operational			Philippine National Railways - Metro Commuter Line
+"San Pablo, Laguna Station"	Non-operational	"14° 4'8.99""N"	"121°19'16.01""E"	Philippine National Railways - Metro Commuter Line
+McCord Station	Non-operational			Philippine National Railways - Metro Commuter Line
+"Sta. Ana, Laguna Station"	Non-operational			Philippine National Railways - Metro Commuter Line
+Tiaon Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Lusacan Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Taguan Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Candelaria Station	To be reactivated	"13°55'32.85""N"	"121°25'30.71""E"	Philippine National Railways - Metro Commuter Line
+Concepcion Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Lutucan Station	Non-operational	"13°55'3.14""N"	"121°29'42.62""E"	Philippine National Railways - Metro Commuter Line
+Sitio Ilao Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Sariaya Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Morong Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Lucena Station	Non-operational	"13°55'36.81""N"	"121°36'47.05""E"	Philippine National Railways - Metro Commuter Line
+Mayao Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Castillo Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Pagbilao Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Pinagbayanan Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Palsabangan Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Binahaan Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Malicboy Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Guitong Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Sipa Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Hinguiwin Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Padre Burgos Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Marao Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Pinaninding Station	Non-operational			Philippine National Railways - Metro Commuter Line
+"San Isidro, Quezon Station"	Non-operational			Philippine National Railways - Metro Commuter Line
+Walay Station	Non-operational			Philippine National Railways - Metro Commuter Line
+"Cabuyao, Quezon Station"	Non-operational			Philippine National Railways - Metro Commuter Line
+Kinagunan Station	Non-operational			Philippine National Railways - Metro Commuter Line
+"Agdangan, Quezon Station"	Non-operational	"13°52'38.69""N"	"121°55'2.94""E"	Philippine National Railways - Metro Commuter Line
+Santol Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Binagbag Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Bulo Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Panaon Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Tubigan Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Poctol Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Summit Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Duhat Station	Non-operational			Philippine National Railways - Metro Commuter Line
+"Plaridel, Quezon Station"	Non-operational	"13°57'20.53""N"	"122° 1'13.28""E"	Philippine National Railways - Metro Commuter Line
+Inaklagan Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Villabota Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Gumaca Station	Non-operational	"13°55'12.82""N"	"122° 6'10.38""E"	Philippine National Railways - Metro Commuter Line
+Panilihan Station	Non-operational			Philippine National Railways - Metro Commuter Line
+"Bamban, Quezon Station"	Non-operational			Philippine National Railways - Metro Commuter Line
+Camohaguin Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Hagakhakin Station	Non-operational			Philippine National Railways - Metro Commuter Line
+San Vicente Station	Non-operational			Philippine National Railways - Metro Commuter Line
+"Pansol, Quezon Station"	Non-operational			Philippine National Railways - Metro Commuter Line
+Lopez Station	To be reactivated			Philippine National Railways - Metro Commuter Line
+Sta. Lucia Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Hondagua Station	Non-operational	"13°53'6.68""N"	"122°15'38.98""E"	Philippine National Railways - Metro Commuter Line
+Quinalin Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Calauag Station	Non-operational	"13°57'20.06""N"	"122°17'55.77""E"	Philippine National Railways - Metro Commuter Line
+Sumulong Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Sto. Domingo Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Nursery Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Danlagin Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Aloneros Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Cabuguang Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Manato Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Mangayao Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Katimo Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Buyabod Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Kinatakutan Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Laurel Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Aliji Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Morato Station	Non-operational	"13°57'59.78""N"	"122°32'4.63""E"	Philippine National Railways - Metro Commuter Line
+Tagkawayan Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Pasay Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Cabatbatan Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Del Gallego Station	Non-operational			Philippine National Railways - Metro Commuter Line
+San Juan Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Sinuknipan Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Masungod Station	Non-operational			Philippine National Railways - Metro Commuter Line
+"Godofredo Reyes, Sr. Station"	Non-operational			Philippine National Railways - Metro Commuter Line
+Port Junction Station	Non-operational			Philippine National Railways - Metro Commuter Line
+F. Simeon Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Liboro Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Ragay Station	Non-operational	"13°49'15.38""N"	"122°45'13.11""E"	Philippine National Railways - Metro Commuter Line
+Agrupacion Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Banga Caves Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Del Rosario Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Lupi Viejo Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Lupi Nuevo Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Manangle Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Malaguico Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Azucena Station	Non-operational			Philippine National Railways - Metro Commuter Line
+Sipocot Station	Operational	"13°45'51.39""N"	"122°57'47.77""E"	Philippine National Railways - Bicol Commuter Line
+Awayan Station	Non-operational			Philippine National Railways - Bicol Commuter Line
+Mantalisay Station	Non-operational			Philippine National Railways - Bicol Commuter Line
+Camambugan Station	Non-operational			Philippine National Railways - Bicol Commuter Line
+Libmanan Station	Operational	"13°41'31.36""N"	"123° 3'30.24""E"	Philippine National Railways - Bicol Commuter Line
+Rongos Station	Non-operational			Philippine National Railways - Bicol Commuter Line
+Malansad Station	Non-operational			Philippine National Railways - Bicol Commuter Line
+Mambulo Station	Non-operational	"13°36'59.40""N"	"123° 4'5.41""E"	Philippine National Railways - Bicol Commuter Line
+Pamplona Station	Operational	"13°35'34.50""N"	"123° 4'45.36""E"	Philippine National Railways - Bicol Commuter Line
+Borabod Station	Non-operational	"13°35'28.05""N"	"123° 6'13.94""E"	Philippine National Railways - Bicol Commuter Line
+"Sampaloc, Camarines Sur Station"	Non-operational			Philippine National Railways - Bicol Commuter Line
+Naga Station	Operational	"13°37'10.34""N"	"123°11'11.21""E"	Philippine National Railways - Bicol Commuter Line
+San Antonio Station	Non-operational			Philippine National Railways - Bicol Commuter Line
+Meycatmon Station	Non-operational			Philippine National Railways - Bicol Commuter Line
+"San Jose, Camarines Sur Station"	Non-operational			Philippine National Railways - Bicol Commuter Line
+Pili Station	To be reactivated			Philippine National Railways - Bicol Commuter Line
+"Agdangan, Camarines Sur Station"	Non-operational			Philippine National Railways - Bicol Commuter Line
+Baao Station	Non-operational	"13°27'22.77""N"	"123°22'5.29""E"	Philippine National Railways - Bicol Commuter Line
+Iriga Station	Non-operational	"13°25'10.75""N"	"123°24'34.48""E"	Philippine National Railways - Bicol Commuter Line
+Pacifico Station	Non-operational			Philippine National Railways - Bicol Commuter Line
+Lourdes Station	Non-operational			Philippine National Railways - Bicol Commuter Line
+Lourdes Young Station	Non-operational			Philippine National Railways - Bicol Commuter Line
+Sagrada Station	Non-operational			Philippine National Railways - Bicol Commuter Line
+Bato Station	Non-operational			Philippine National Railways - Bicol Commuter Line
+Matacon Station	Non-operational			Philippine National Railways - Bicol Commuter Line
+Santicon Station	Non-operational			Philippine National Railways - Bicol Commuter Line
+Apad Station	Non-operational			Philippine National Railways - Bicol Commuter Line
+Polangui Station	Non-operational	"13°17'17.05""N"	"123°29'33.15""E"	Philippine National Railways - Bicol Commuter Line
+Oas Station	Non-operational			Philippine National Railways - Bicol Commuter Line
+Ligao Station	Non-operational	"13°14'33.29""N"	"123°32'28.52""E"	Philippine National Railways - Bicol Commuter Line
+Inascan Station	Non-operational			Philippine National Railways - Bicol Commuter Line
+Guinobatan Station	Non-operational			Philippine National Railways - Bicol Commuter Line
+Travesia Station	Non-operational			Philippine National Railways - Bicol Commuter Line
+Camalig Station	Non-operational			Philippine National Railways - Bicol Commuter Line
+Daraga Station	Non-operational	"13° 9'2.20""N"	"123°42'59.21""E"	Philippine National Railways - Bicol Commuter Line
+Legaspi Station	Non-operational	"13° 9'5.73""N"	"123°45'7.27""E"	Philippine National Railways - Bicol Commuter Line
