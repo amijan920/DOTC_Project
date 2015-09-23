@@ -1108,7 +1108,7 @@ function ready() {
 		return;
 	}
 	
-	if(view !== "export"){
+	if(view !== "export" && view !== "port_vis"){
 		compileTemplates();
 
 		mapUI = new MapUI(ports, images, infos);

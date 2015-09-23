@@ -1,0 +1,850 @@
+<html>
+<head>
+<link rel="stylesheet" href="bootstrap.css" />
+
+<script>
+preProcess();
+function preProcess() {
+	filipino = [[],[],[],[]];
+	foreign = [[],[],[],[]];
+	foreign[3].push( "(Not to be USE)Cabignayan, Abra de Ilog, Occ. Mindoro");
+	foreign[3].push( "(Not to be USE)Corquera, Romblon");
+	foreign[3].push( "(Not to be USE)Diapitan, Aurora Quezon");
+	foreign[3].push( "(Not to be USE)Dipolog");
+	foreign[3].push( "(Not to be USE)Manila Gas Corp.");
+	foreign[3].push( "(Not to be USE)Pagbilao");
+	foreign[3].push( "(Not to be USE)RD - General Santos City");
+	foreign[3].push( "(Not to be USE)Southern Islands Oil Mill - Ozamis");
+	foreign[3].push( "(Not to be USED) Cagayan de Oro Terminal Port");
+	foreign[3].push( "(Not to be USED) Himamaylan Port");
+	foreign[3].push( "(Not to be Use)Dapitan");
+	foreign[3].push( "(Not to be Use)Sindangan");
+	foreign[3].push( "(Not to be Used) Chevron - Bauan");
+	foreign[3].push( "(Not to be Used) Mapun");
+	foreign[3].push( "(Not to be Used)Davao (Sasa)");
+	filipino[2].push( "1590-EC Pier");
+	foreign[3].push( "A3 Una Mining Corp - Sta. Cruz, Zambales");
+	foreign[3].push( "AARHUS");
+	filipino[1].push( "AES Masinloc Power Partners Co., Ltd.");
+	filipino[0].push( "AJMR Wharf");
+	filipino[1].push( "AJMR Wharf 2");
+	foreign[3].push( "ANHUI");
+	foreign[3].push( "ANTIQUE");
+	filipino[1].push( "APFC Terminal, Dapdap");
+	foreign[3].push( "ASH-SHARIQAH/SHARJAH");
+	foreign[3].push( "AUCKLAND");
+	foreign[3].push( "Abulog, Cagayan");
+	foreign[3].push( "Abuyog, Leyte");
+	filipino[1].push( "Agata Mining Ventures Inc.");
+	foreign[3].push( "Ajuy");
+	foreign[3].push( "Albay, Philippines");
+	filipino[1].push( "Albuera");
+	filipino[2].push( "Algimar-Masbate (MAP 2000)");
+	foreign[3].push( "Allen Port and  Harbor Inc./ St. Bernard");
+	foreign[3].push( "Almagro, Samar");
+	foreign[3].push( "Alpha/PSEI Terminal, Dapdap");
+	foreign[3].push( "Any port in Algeria");
+	foreign[3].push( "Any port in Australia");
+	foreign[3].push( "Any port in Bangladesh");
+	foreign[3].push( "Any port in Brunei Darussalam");
+	foreign[3].push( "Any port in Cambodia");
+	foreign[3].push( "Any port in Canada");
+	foreign[3].push( "Any port in China");
+	foreign[3].push( "Any port in Democratic People<s Republic of Korea");
+	foreign[3].push( "Any port in Ecuador");
+	foreign[3].push( "Any port in Federal States of Micronesia");
+	foreign[3].push( "Any port in Gambia");
+	foreign[3].push( "Any port in Guam");
+	foreign[3].push( "Any port in Hong Kong");
+	foreign[3].push( "Any port in India");
+	foreign[3].push( "Any port in Indonesia");
+	foreign[3].push( "Any port in Islamic Republic of Iran");
+	foreign[3].push( "Any port in Japan");
+	foreign[3].push( "Any port in Kuwait");
+	foreign[3].push( "Any port in Malaysia");
+	foreign[3].push( "Any port in New Caledonia");
+	foreign[3].push( "Any port in New Zealand");
+	foreign[3].push( "Any port in Palau");
+	foreign[3].push( "Any port in Papua New Guinea");
+	foreign[3].push( "Any port in Peru");
+	foreign[3].push( "Any port in Philippines");
+	foreign[3].push( "Any port in Qatar");
+	foreign[3].push( "Any port in Republic of Korea");
+	foreign[3].push( "Any port in Russian Federation");
+	foreign[3].push( "Any port in Saudi Arabia");
+	foreign[3].push( "Any port in Singapore");
+	foreign[3].push( "Any port in Solomon Islands");
+	foreign[3].push( "Any port in South Africa");
+	foreign[3].push( "Any port in Spain");
+	foreign[3].push( "Any port in Taiwan, Province of China");
+	foreign[3].push( "Any port in Thailand");
+	foreign[3].push( "Any port in Ukraine");
+	foreign[3].push( "Any port in United Arab Emirates");
+	foreign[3].push( "Any port in United States");
+	foreign[3].push( "Any port in Vietnam");
+	filipino[1].push( "Aparri Government Wharf");
+	filipino[3].push( "Aras-Asan");
+	foreign[3].push( "Argao");
+	foreign[3].push( "Aroroy, Masbate");
+	filipino[2].push( "Arteche");
+	filipino[3].push( "Asia Pac Transport Co.");
+	filipino[3].push( "Asia Pacific Timber & Plywood Corp.");
+	foreign[3].push( "BALIKPAPAN");
+	filipino[1].push( "BANAGO, Bacolod");
+	foreign[3].push( "BANGKOK");
+	foreign[3].push( "BANJARMASIN");
+	foreign[3].push( "BARCELONA");
+	foreign[3].push( "BASECO Engineering Island Compound");
+	foreign[3].push( "BENGKULU");
+	foreign[3].push( "BINTULU");
+	foreign[3].push( "BITUNG");
+	foreign[3].push( "BOMBAY, INDIA");
+	foreign[3].push( "BONTANG");
+	foreign[3].push( "BOSTON");
+	foreign[3].push( "BREDCO 1, Bacolod");
+	filipino[0].push( "BREDCO 2, Bacolod");
+	foreign[3].push( "BRISBANE");
+	foreign[3].push( "BUSAN");
+	filipino[2].push( "Babatngon, Leyte");
+	foreign[3].push( "Bacolod");
+	foreign[3].push( "Bacong Beach");
+	foreign[3].push( "Baganga, Davao Oriental");
+	foreign[3].push( "Bagongon, Samar");
+	foreign[3].push( "Bais Port");
+	foreign[3].push( "Balabac");
+	foreign[3].push( "Balamban");
+	foreign[3].push( "Balanacan");
+	foreign[3].push( "Balbagon");
+	filipino[1].push( "Balingoan");
+	filipino[1].push( "Balwharteco Terminal, Allen");
+	foreign[3].push( "Banago, Bacolod");
+	foreign[3].push( "Bantayan ");
+	filipino[3].push( "Barcelona Port Services Corp.");
+	foreign[3].push( "Barobo");
+	filipino[1].push( "Basak, Guihulngan, Negros Oriental");
+	filipino[1].push( "Basco - Batanes");
+	filipino[1].push( "Basilan");
+	foreign[3].push( "Basilisa");
+	foreign[3].push( "Bataan Shipyard and Engineering Co., Inc. (BASECO)");
+	foreign[3].push( "Bataan, Philippines");
+	foreign[3].push( "Batan");
+	foreign[3].push( "Batangas Bay Terminal Inc.");
+	filipino[0].push( "Batangas Pier");
+	filipino[1].push( "Batangas Port Project Phase 2");
+	filipino[1].push( "Bato");
+	foreign[3].push( "Batuan, Masbate");
+	foreign[3].push( "Bauan");
+	foreign[3].push( "Bauan International Port, Inc. (formerly AG & P Port Services  Co. of Batangas, Inc.)");
+	filipino[1].push( "Bay and River Operation");
+	filipino[0].push( "Baybay");
+	filipino[2].push( "Bengo Wharf");
+	filipino[1].push( "Benit Ferry Terminal");
+	foreign[3].push( "Benoni");
+	filipino[2].push( "Bescom Commodities Comp./Bicol Oil Mill");
+	filipino[3].push( "Bilbao, Batan");
+	foreign[3].push( "Biliran");
+	foreign[3].push( "Bionic - Ayungon");
+	foreign[3].push( "Biscom Private Port, Pulupandan");
+	foreign[3].push( "Bislig, Philippines");
+	foreign[3].push( "Bongao");
+	filipino[3].push( "Bontoc, Southern Leyte");
+	foreign[3].push( "Borongan");
+	filipino[1].push( "Botolan Anchorage");
+	filipino[1].push( "Brookes Point");
+	foreign[3].push( "Buenavista");
+	foreign[3].push( "Bula, Camarines Sur");
+	filipino[2].push( "Bulado, Guihulngan");
+	filipino[1].push( "Bulan");
+	foreign[3].push( "Burias");
+	filipino[1].push( "Butuan (Other Government Port)");
+	filipino[1].push( "Butuan Government Wharf");
+	foreign[3].push( "CABURAN");
+	foreign[3].push( "CADIZ");
+	filipino[1].push( "CAGDIANAO MINING CORP.");
+	foreign[3].push( "CAMIGUIN");
+	foreign[3].push( "CARGILL");
+	filipino[1].push( "CHEVRON");
+	foreign[3].push( "CHIBA, JAPAN");
+	foreign[3].push( "CHINHAE");
+	foreign[3].push( "CHIWAN,CHINA");
+	foreign[3].push( "Cabalagnan, Guimaras");
+	filipino[1].push( "Cabalian");
+	filipino[2].push( "Cabugao, Catanduanes");
+	filipino[3].push( "Cabugao, Ilocos Sur");
+	filipino[2].push( "Cadiz Private Ports");
+	filipino[1].push( "Cagayan Corn Products Corp.");
+	filipino[0].push( "Cagayan De Oro");
+	foreign[3].push( "Cagayan de Oro OGP");
+	foreign[3].push( "Cagayan de Oro Private Port");
+	foreign[3].push( "Cagayan, Philippines");
+	foreign[3].push( "Cagayancillo");
+	foreign[3].push( "Cagdianao");
+	filipino[0].push( "Calapan");
+	filipino[2].push( "Calbayog");
+	filipino[2].push( "Calpi, Masbate");
+	filipino[2].push( "Caltex (Phil.) Inc. - Palnab, Virac");
+	foreign[3].push( "Caltex (Phil.) Inc.-Calapan, Or. Mindoro");
+	foreign[3].push( "Caltex (Phils) Inc. - San Fernando, L.U.");
+	foreign[3].push( "Caltex (Phils), Inc.-Pandacan, Manila");
+	filipino[2].push( "Caltex (Phils.)  Inc.-Puerto Princesa");
+	foreign[3].push( "Caltex (Phils.), Inc. - Ormoc City");
+	foreign[3].push( "Candelaria Anchorage");
+	filipino[1].push( "Cantilan");
+	filipino[1].push( "Capinpin");
+	foreign[3].push( "Capoocan, Leyte");
+	filipino[2].push( "Capul Island");
+	filipino[2].push( "Caramoan, Camarines Sur");
+	filipino[1].push( "Carlos A. Gothong - Baloy");
+	foreign[3].push( "Carmen");
+	foreign[3].push( "Carrascal");
+	filipino[1].push( "Carrascal (PP)");
+	foreign[3].push( "Casiguran, Aurora");
+	filipino[1].push( "Castilla");
+	foreign[3].push( "Catagbacan");
+	foreign[3].push( "Cataingan, Masbate");
+	foreign[3].push( "Catanduanes, Philippines");
+	filipino[1].push( "Catarman Oil Mill, Inc.");
+	filipino[1].push( "Catbalogan");
+	foreign[3].push( "Caticlan");
+	filipino[1].push( "Cawayan, Masbate");
+	foreign[3].push( "Cawit");
+	filipino[0].push( "Cebu");
+	filipino[1].push( "Central Azucarera De Bais");
+	foreign[3].push( "Chevron - San Pascual");
+	filipino[2].push( "Chevron Jetty, Sasa");
+	filipino[2].push( "Clarin");
+	foreign[3].push( "Claver");
+	filipino[1].push( "Claver (PP)");
+	filipino[2].push( "Claveria, Masbate");
+	foreign[3].push( "Coron");
+	foreign[3].push( "Cotabato");
+	filipino[0].push( "Craft Haven, Davao");
+	foreign[3].push( "Culasi");
+	foreign[3].push( "Culasi - Panay Island, Culasi");
+	filipino[1].push( "Culion");
+	foreign[3].push( "Currimao");
+	foreign[3].push( "Cuyo");
+	foreign[3].push( "DALIAN");
+	foreign[3].push( "DAMPIER");
+	filipino[3].push( "DMCI Mining Corporation");
+	foreign[3].push( "DONGGUAN");
+	filipino[2].push( "Daan Banwa");
+	foreign[3].push( "Daima Shipping Corp.");
+	foreign[3].push( "Dalaguete");
+	foreign[3].push( "Danao");
+	filipino[1].push( "Dapa");
+	filipino[0].push( "Dapitan");
+	foreign[3].push( "Daram, Samar");
+	filipino[0].push( "Davao (Sasa)");
+	filipino[1].push( "Davao Bay Coconut Milling");
+	foreign[3].push( "Davao Oil Terminal Services Corp. (Formerly Oilink Mindanao Dist., Inc.)");
+	foreign[3].push( "Davao Shipyard Corp. - Davao");
+	foreign[3].push( "Davao Union Cement Corp.");
+	filipino[1].push( "Del Carmen");
+	filipino[2].push( "Del Monte Philippines, Inc.");
+	filipino[1].push( "Dinagat");
+	filipino[1].push( "Dipolog Coconut Oil Mills, Inc.");
+	foreign[3].push( "Distileria de Bago");
+	filipino[1].push( "Distileria de Bago - Pulupandan");
+	filipino[2].push( "Dr. Nap Masayon, Siquijor");
+	foreign[3].push( "Dulag, Leyte");
+	filipino[0].push( "Dumaguete");
+	foreign[3].push( "Dumaguete Coconut Mills, Inc. (DUCOMI)");
+	foreign[3].push( "Dumaguit");
+	foreign[3].push( "Dumangas");
+	filipino[2].push( "EON Petroleum Corporation");
+	foreign[3].push( "El Nido");
+	foreign[3].push( "Esperanza, Masbate");
+	foreign[3].push( "Estancia");
+	foreign[3].push( "FG Legazpi");
+	filipino[1].push( "Filminera, Aroroy, Masbate");
+	foreign[3].push( "Fishing Ground for All Ports in Philippines");
+	filipino[0].push( "Fort San Pedro - RC2");
+	foreign[3].push( "GALLE");
+	filipino[2].push( "GN Power");
+	foreign[3].push( "GUANGZHOU/KWANGCHOW");
+	filipino[3].push( "Galoc (oilfield)");
+	foreign[3].push( "Gamay");
+	filipino[2].push( "General Milling Corp. - Cagayan de Oro");
+	filipino[0].push( "General Santos");
+	filipino[1].push( "Getafe");
+	foreign[3].push( "Gingoog");
+	filipino[1].push( "Globe Coco Products Manufacturing Corp.");
+	foreign[3].push( "Golden Bay Grain Terminal Corporation");
+	foreign[3].push( "Gracia Port");
+	foreign[3].push( "Gracia, Tagoloan (Pie)");
+	filipino[1].push( "Grand Planters International Inc.");
+	foreign[3].push( "Grand Planters International Inc. (G.P.I.I)");
+	filipino[1].push( "Granexport Manufacturing Corp.");
+	foreign[3].push( "Granexport Manufacturing Corp. (formerly Iligan Bay Express Corp.)");
+	foreign[3].push( "Guimbal Port");
+	foreign[3].push( "Guiuan");
+	foreign[3].push( "HAIPHONG");
+	foreign[3].push( "HAKATA");
+	foreign[3].push( "HOCHIMINH");
+	foreign[3].push( "HOLCIM -  Bacnotan, La Union");
+	foreign[3].push( "HONGKONG");
+	filipino[2].push( "HRC Wharf - Madaum");
+	filipino[1].push( "Hilongos");
+	foreign[3].push( "Himmel Industries Inc.");
+	foreign[3].push( "Hinatuan");
+	filipino[1].push( "Hinatuan Mining Corp.");
+	filipino[1].push( "Hindang");
+	foreign[3].push( "Holcim - Sn. Rafael, Calaca, Bat.");
+	filipino[0].push( "Holcim Phils  - Cagayan de Oro");
+	filipino[1].push( "Holcim Phils. Wharf");
+	filipino[1].push( "Homonhon Island");
+	filipino[1].push( "Hyatt Terminal and Industries Corp.");
+	filipino[1].push( "INTERCO");
+	filipino[0].push( "Iligan");
+	filipino[1].push( "Iligan Cement Corp. ");
+	foreign[3].push( "Iloilo");
+	foreign[3].push( "Iloilo (Iloilo River/Lapuz Wharf) RC3");
+	foreign[3].push( "Iloilo (San Pedro) RC2");
+	foreign[3].push( "Iloilo Dock & Engg. Pier");
+	foreign[3].push( "Iloilo Fishing Port");
+	foreign[3].push( "Iloilo Jar Corp.");
+	filipino[1].push( "Iloilo River Wharf - RC3");
+	filipino[1].push( "Indophil");
+	filipino[1].push( "Insular Oil Corp. - Sasa Davao City");
+	filipino[1].push( "Interco Wharf - Davao");
+	foreign[3].push( "Interco Wharf - Mati");
+	foreign[3].push( "Ipil - Zamboanga");
+	filipino[1].push( "Isabel");
+	filipino[2].push( "Isla LPG Corporation");
+	foreign[3].push( "Isla Verde, Batangas");
+	foreign[3].push( "Itbayat  ");
+	foreign[3].push( "JAHRAN");
+	foreign[3].push( "JAKARTA");
+	foreign[3].push( "JEDDAH");
+	filipino[1].push( "Jagna");
+	foreign[3].push( "Jasaan, Misamis Oriental");
+	filipino[2].push( "Jimenez");
+	foreign[3].push( "Jolo");
+	foreign[3].push( "Jolo, Sulu (ARMM)");
+	foreign[3].push( "Jordan");
+	foreign[3].push( "Jubusan, Northern Samar");
+	foreign[3].push( "KAOHSIUNG");
+	foreign[3].push( "KAWASAKI");
+	foreign[3].push( "KEELUNG");
+	foreign[3].push( "KEPCO ILIJAN");
+	foreign[3].push( "KOBE");
+	foreign[3].push( "KOTA KINABALU");
+	filipino[2].push( "KTC Container Terminal Corp.");
+	foreign[3].push( "KUNAK");
+	foreign[3].push( "KUWAIT");
+	foreign[3].push( "Kalamansig");
+	filipino[1].push( "Kawit - Zamboanga City");
+	foreign[3].push( "Keppel Philippines Shipyard, Inc. (Formerly PNOC Dockyard and Engineering Corp.)");
+	foreign[3].push( "King B  ");
+	foreign[3].push( "Kiwalan Anchorage");
+	foreign[3].push( "Koror");
+	filipino[1].push( "Kudos Trucking Wharf");
+	foreign[3].push( "LAEM CHABANG");
+	foreign[3].push( "LAHAD DATU");
+	filipino[2].push( "LEGOIL Wharf 2");
+	filipino[1].push( "LGU Bataan/Herma Shipyard/Herma Port Terminal");
+	foreign[3].push( "LGU Bataan/Herma Shipyard/Herma Port Terminals, Inc.");
+	filipino[2].push( "LGU Port - Cadiz");
+	filipino[1].push( "LGU Port of Galas, Dipolog City");
+	foreign[3].push( "LIANYUNGANG,CHINA");
+	filipino[3].push( "LNL Archipelago Minerals Inc. (LNL)");
+	foreign[3].push( "LORENGAU");
+	foreign[3].push( "La Union, Philippines");
+	foreign[3].push( "Lambajon, Davao");
+	foreign[3].push( "Lamitan");
+	filipino[1].push( "Larena");
+	filipino[1].push( "Lazi");
+	filipino[1].push( "Lazi Bay Resources Dev Inc.(Simacolong)");
+	filipino[3].push( "Legaspi Oil Co.,Inc.-Davao(LEGOIL WHARF)");
+	filipino[3].push( "Legaspi Oil Company Corp.- Arimbay");
+	filipino[0].push( "Legazpi");
+	foreign[3].push( "Leyte, Philippines");
+	foreign[3].push( "Libjo");
+	filipino[1].push( "Libjo Mining Corp.");
+	foreign[3].push( "Lila");
+	foreign[3].push( "Liloan");
+	filipino[1].push( "Liloan Ferry Terminal");
+	filipino[1].push( "Liloy-Lamao");
+	filipino[1].push( "Limay");
+	foreign[3].push( "Lipata - Lipata, Antique");
+	filipino[1].push( "Lipata - Surigao City");
+	foreign[3].push( "Llorente");
+	foreign[3].push( "Loay");
+	filipino[0].push( "Loboc");
+	foreign[3].push( "Looc");
+	filipino[2].push( "Looc Lead Ores(PATIC )");
+	filipino[1].push( "Loreto");
+	foreign[3].push( "Loreto - Bilang-bilang, Surigao City");
+	filipino[3].push( "Lotao");
+	foreign[3].push( "Lucena, Talao-talao");
+	filipino[1].push( "Lucky Merchant Shipping Corp.");
+	foreign[3].push( "MACKAY");
+	foreign[3].push( "MACO");
+	foreign[3].push( "MANZANILLO");
+	filipino[1].push( "MARIVELES");
+	filipino[1].push( "MGC");
+	foreign[3].push( "MIRI");
+	foreign[3].push( "MUARA, BRUNEI");
+	filipino[1].push( "Maasin");
+	filipino[1].push( "Maayo Shipping Company (Matiao)");
+	foreign[3].push( "Mabila, Gen San");
+	foreign[3].push( "Mabini Terminal Development Inc.");
+	filipino[1].push( "Mabuhay Vinyl Corporation");
+	filipino[2].push( "Maco Wharf");
+	filipino[1].push( "Magui-noo");
+	foreign[3].push( "Malahog");
+	foreign[3].push( "Malalag");
+	foreign[3].push( "Malampaya");
+	foreign[3].push( "Malangas");
+	filipino[3].push( "Malimono");
+	filipino[1].push( "Malobago, Rapu-rapu");
+	foreign[3].push( "Maluso");
+	foreign[3].push( "Mamsar Enterprises");
+	foreign[3].push( "Mandaue");
+	filipino[2].push( "Manila International Container Terminal");
+	foreign[3].push( "Manila, Philippines");
+	foreign[3].push( "Marapara, Bacolod");
+	filipino[1].push( "Margosatubig");
+	foreign[3].push( "Maribojoc");
+	foreign[3].push( "Marinduque Mining and Industrial Corporation");
+	filipino[1].push( "Marine Slipway");
+	foreign[3].push( "Maripipi");
+	foreign[3].push( "Mariveles");
+	foreign[3].push( "Mariveles Anchorage");
+	filipino[1].push( "Masao (Other Government Port)");
+	filipino[1].push( "Masao Government Wharf");
+	filipino[0].push( "Masbate");
+	filipino[2].push( "Masinloc");
+	foreign[3].push( "Mati");
+	filipino[1].push( "Matnog");
+	foreign[3].push( "Mayon Docks");
+	foreign[3].push( "Milagrosa, Muelle Loney");
+	foreign[3].push( "Mindanao Container Terminal");
+	foreign[3].push( "Mindanao Terminal & Brkg.  Services (Formerly Maritime Co. of the Phils.)");
+	foreign[3].push( "Mindoro, Philippines");
+	foreign[3].push( "Minsamis Oriental Land Dev<t Corp.");
+	foreign[3].push( "Mirant Pagbilao Corp. (Hopewell Power (Phils.) Corporation) ");
+	foreign[3].push( "Misamis Occidental, Philippines");
+	foreign[3].push( "Misamis Oriental, Philippines");
+	foreign[3].push( "Monreal, Masbate");
+	foreign[3].push( "NAGOYA, JAPAN");
+	foreign[3].push( "NAKHDODKA");
+	foreign[3].push( "NANJING");
+	foreign[3].push( "NANSHA");
+	foreign[3].push( "NANTONG");
+	foreign[3].push( "NAPOCOR - General Santos City");
+	foreign[3].push( "NEW ORLEANS");
+	filipino[1].push( "NFH Fishing Enterprises");
+	filipino[3].push( "NICUA Corporation");
+	foreign[3].push( "NINGBO");
+	filipino[1].push( "Nabilid, Roxas");
+	foreign[3].push( "Naha");
+	foreign[3].push( "Narra");
+	filipino[0].push( "Nasipit");
+	foreign[3].push( "Nasugbu");
+	foreign[3].push( "National Power Corporation (Limay)");
+	filipino[1].push( "Naval");
+	foreign[3].push( "Navotas, Philippines");
+	foreign[3].push( "Negros Occidental, Philippines");
+	foreign[3].push( "Negros Oriental, Philippines");
+	filipino[2].push( "Negros Petroleum Corporation");
+	filipino[1].push( "New Davao Oil Mill (NDOM)");
+	foreign[3].push( "New Washington");
+	foreign[3].push( "Nonoc - Surigao City");
+	foreign[3].push( "North Harbor");
+	foreign[3].push( "North Quadrangle Container Services Inc.");
+	foreign[3].push( "O/P - AUSTRALIA,E.CO");
+	foreign[3].push( "O/P - MALAYSIA, SABA");
+	foreign[3].push( "O/P-INDON.,JAVA, NES");
+	foreign[3].push( "O/P-USA,PAC.COAST &");
+	foreign[3].push( "OSAKA, JAPAN");
+	filipino[1].push( "Oilink");
+	foreign[3].push( "Omnico Resources, Inc - Badoc, Ilocos N");
+	filipino[1].push( "Omnico Resources, Inc - Badoc, Ilocos Norte");
+	foreign[3].push( "Opol");
+	foreign[3].push( "Opon");
+	foreign[3].push( "Oras Eastern Samar");
+	filipino[0].push( "Ormoc");
+	filipino[1].push( "Ormoc Beaching Area, Ipil");
+	foreign[3].push( "Ormoc Sugar Co., Inc.");
+	filipino[0].push( "Ozamiz");
+	filipino[0].push( "PACINTER");
+	foreign[3].push( "PANACAN");
+	foreign[3].push( "PANAMA CITY");
+	foreign[3].push( "PASIR GUDANG");
+	foreign[3].push( "PGMC - Platinum Group Metals Corp.");
+	foreign[3].push( "PICMW (Drydocking), Jasaan");
+	filipino[3].push( "PICOP Resources, Inc.");
+	filipino[1].push( "PILMICO Foods Corporation");
+	filipino[2].push( "PNOC Alternative Fuels Corp. (P.A.F.C)");
+	filipino[3].push( "PNOC Coal Corp. - Malangas");
+	foreign[3].push( "PORT HEDLAND");
+	foreign[3].push( "PORT MORESBY");
+	foreign[3].push( "PORTLAND");
+	foreign[3].push( "PUSAN");
+	filipino[1].push( "Paco Beach - Beaching");
+	foreign[3].push( "Padang, Legazpi");
+	foreign[3].push( "Padre Burgos");
+	foreign[3].push( "Pagadian");
+	foreign[3].push( "Pagsanghan, Samar");
+	foreign[3].push( "Palawan, Philippines");
+	filipino[1].push( "Palompon");
+	filipino[1].push( "Pasacao");
+	filipino[1].push( "Pasar");
+	foreign[3].push( "Pasig");
+	filipino[2].push( "Petro de Oro");
+	filipino[0].push( "Petron Bataan Refinery");
+	foreign[3].push( "Petron Corp. - Brgy. Obrero, Iloilo City");
+	foreign[3].push( "Petron Corporation");
+	foreign[3].push( "Petron Corporation - Aparri, Cagayan");
+	foreign[3].push( "Petron Corporation - General Santos");
+	foreign[3].push( "Petron Corporation - Pandacan, Manila");
+	foreign[3].push( "Petron Corporation - Rosario,  Cavite");
+	foreign[3].push( "Petron Corporation - Sasa, Davao City");
+	filipino[1].push( "Petron Corporation - Zamboanga City");
+	filipino[2].push( "Petron Corporation-Bo. Maunlad");
+	foreign[3].push( "Petron Corporation-Bo. Ugong,Pasig");
+	filipino[2].push( "Petron Corporation-Hinobaan, Negros Occ.");
+	filipino[2].push( "Petron Corporation-Iligan City");
+	foreign[3].push( "Petron Corporation-Iloilo City");
+	foreign[3].push( "Petron Corporation-Mainaga, Mabini");
+	foreign[3].push( "Petron Corporation-Tacloban");
+	filipino[2].push( "Petron Jetty - Bo. Pampanga");
+	foreign[3].push( "Petron Tacloban");
+	filipino[2].push( "Petron, Ormoc");
+	filipino[2].push( "Petron, Tacloban");
+	foreign[3].push( "Petron, Tagoloan");
+	filipino[2].push( "Petronas Energy Philippines, Inc.");
+	foreign[3].push( "Petrophil - Iloilo City");
+	foreign[3].push( "Phil. Sinter Corp.");
+	filipino[1].push( "Philippine Bulk Corporation, Pulupandan");
+	filipino[1].push( "Philippine International Devt. Inc.");
+	foreign[3].push( "Philippine Iron Construction & Marine Works, Inc. (PICMW)");
+	filipino[1].push( "Philippine Mining Service Corporation");
+	filipino[1].push( "Philphos");
+	foreign[3].push( "Phoenix");
+	filipino[1].push( "Phoenix Jetty - Bo. Pampanga");
+	foreign[3].push( "Phoenix Petroleum  ");
+	filipino[1].push( "Pier 02");
+	filipino[3].push( "Pier 03");
+	filipino[1].push( "Pier 04");
+	filipino[3].push( "Pier 05");
+	filipino[1].push( "Pier 06");
+	filipino[1].push( "Pier 08");
+	filipino[1].push( "Pier 10");
+	filipino[1].push( "Pier 12");
+	filipino[1].push( "Pier 14");
+	filipino[3].push( "Pier 15");
+	filipino[1].push( "Pier 16");
+	foreign[3].push( "Pilar Port");
+	foreign[3].push( "Pilipinas Kao, Inc.");
+	filipino[1].push( "Pilipinas Kao, Inc. (PKI)");
+	filipino[2].push( "Pilipinas Shell - Pulang Bato, Masbate");
+	filipino[1].push( "Pilipinas Shell Petrol.Corp.-Cabadbaran");
+	filipino[2].push( "Pilipinas Shell Petroleum - Pasacao");
+	filipino[2].push( "Pilipinas Shell Petroleum Corp.-Bacolod");
+	foreign[3].push( "Pilipinas Shell Petroleum Corp.-Cabadbaran");
+	foreign[3].push( "Pilipinas Shell Petroleum Corp.-Poro Pt.SFO, L.U.");
+	foreign[3].push( "Pilipinas Shell Petroleum Corp.-Tabangao");
+	foreign[3].push( "Pilipinas Shell Petroleum Corp.-Tagbilaran");
+	filipino[2].push( "Pilipinas Shell Petroleum Corp.-Tuminobo");
+	foreign[3].push( "Pilipinas Shell, Inc.-Cagayan de Oro");
+	filipino[1].push( "Pilipinas Shell-Sasa,Davao(SHELL JETTY)");
+	filipino[1].push( "Pingag");
+	filipino[1].push( "Pioduran");
+	filipino[1].push( "Plaridel");
+	filipino[3].push( "Platinum Group Metals Inc. - Palawan");
+	foreign[3].push( "Poblacion, Bulalacao, Or. Mindoro");
+	foreign[3].push( "Poctoy (Odiongan)");
+	foreign[3].push( "Polambato");
+	foreign[3].push( "Polloc");
+	foreign[3].push( "Port of Berong, Quezon");
+	filipino[2].push( "Port of Guadalupe");
+	foreign[3].push( "Port of Naic");
+	filipino[1].push( "Port of Punang, Sofronio Espanola");
+	filipino[2].push( "Port of San Vicente, Bajo,Oroquieta City");
+	foreign[3].push( "Port of Sibunag");
+	foreign[3].push( "President Garcia");
+	filipino[2].push( "Pryce Gas, Albuera");
+	filipino[2].push( "Pryce Gases, Inc-Brgy. Astorga Sta Cruz");
+	filipino[2].push( "Pryce Gases, Inc. - Talisayan, Zamboanga");
+	foreign[3].push( "Pryce Gases, Inc. NC - Bo. Barrido, Ajuy");
+	filipino[2].push( "Pryce Gases, Inc.(PGI)");
+	filipino[0].push( "Puerto Princesa");
+	filipino[1].push( "Pulupandan");
+	filipino[1].push( "Punta");
+	foreign[3].push( "Quezon, Philippines");
+	filipino[2].push( "Quinapundan Port");
+	foreign[3].push( "R-II Builders/Harbour Centre");
+	foreign[3].push( "RAS TANURA");
+	foreign[3].push( "RFII Shipyard - Bawing, Gen San");
+	filipino[1].push( "RI Chemicals Inc. (RIChem)");
+	foreign[3].push( "ROTTERDAM");
+	foreign[3].push( "Racahe Marginal Wharf, Inc.");
+	foreign[3].push( "Rapu-Rapu");
+	foreign[3].push( "Rayong");
+	filipino[1].push( "Recodo");
+	foreign[3].push( "Rio Tuba Nickel Mining Corp.");
+	foreign[3].push( "Romblon");
+	foreign[3].push( "Roxas - Roxas, Palawan");
+	foreign[3].push( "SAMARINDA");
+	foreign[3].push( "SAN FRANCISCO, US");
+	foreign[3].push( "SAN LORENZO");
+	foreign[3].push( "SANDAKAN,SABAH");
+	foreign[3].push( "SASEBO, NAGASAKI");
+	foreign[3].push( "SENBOKU");
+	foreign[3].push( "SFI");
+	foreign[3].push( "SHANGHAI");
+	foreign[3].push( "SHANTOU");
+	foreign[3].push( "SHEKOU");
+	filipino[2].push( "SHELL JETTY 2");
+	foreign[3].push( "SHENZHEN");
+	foreign[3].push( "SIBU");
+	foreign[3].push( "SINGAPORE");
+	foreign[3].push( "SIRAWAI");
+	foreign[3].push( "SITANGKAI");
+	filipino[1].push( "SMC SHIPPING & LIGHTERAGE Corp - Sn FDO");
+	filipino[1].push( "SMC Shipping and Lighterage Corp.");
+	filipino[1].push( "SR Metals Inc.-La Fraternidad");
+	foreign[3].push( "STA. ANA");
+	foreign[3].push( "SUBANIPA");
+	foreign[3].push( "SURABAYA, INDONESIA");
+	foreign[3].push( "Sagay");
+	filipino[2].push( "Salomague Port");
+	filipino[2].push( "Salvacion");
+	filipino[1].push( "Samar Coco Mftg. Corp.");
+	foreign[3].push( "Samboan");
+	foreign[3].push( "San Agustin");
+	filipino[1].push( "San Andres");
+	filipino[2].push( "San Antonio");
+	filipino[0].push( "San Carlos");
+	foreign[3].push( "San Carlos Milling Corporation");
+	foreign[3].push( "San Fernando");
+	foreign[3].push( "San Fernando, Masbate");
+	filipino[1].push( "San Isidro");
+	foreign[3].push( "San Jacinto, Masbate");
+	foreign[3].push( "San Jose Antique");
+	filipino[1].push( "San Jose Carangian");
+	filipino[1].push( "San Jose Dinagat Is. Surigao Del Norte");
+	foreign[3].push( "San Jose, Northern Samar");
+	foreign[3].push( "San Jose, Occ. Mindoro");
+	filipino[1].push( "San Miguel Corp. - Cagayan de Oro");
+	foreign[3].push( "San Miguel Corp. - Numancia, Aklan");
+	filipino[1].push( "San Miguel Corp. - Sitio Bading, Butuan");
+	foreign[3].push( "San Miguel Corporation (Iligan Coconut Oil Mill)");
+	filipino[1].push( "San Miguel Corporation - Baliwasan");
+	filipino[2].push( "San Pascual, Masbate");
+	foreign[3].push( "San Vicente - Northern Samar");
+	filipino[2].push( "Sangali");
+	foreign[3].push( "Sarangani, Davao");
+	foreign[3].push( "Sariaya, Philippines");
+	filipino[0].push( "Seafront Shipyard");
+	filipino[2].push( "Seaoil Jetty");
+	foreign[3].push( "Semirara");
+	foreign[3].push( "Semirara Culasi Antique");
+	filipino[3].push( "Shangfil Mining and Trading Corp. (SMTC)");
+	foreign[3].push( "Shell Co. Of The Phils.-Dumaguete");
+	filipino[2].push( "Shell LPG Depot - Rabon, Rosario, L. U.");
+	filipino[2].push( "Shell, Anibong");
+	filipino[1].push( "Shemberg");
+	foreign[3].push( "Si-it - Siaton, Negros Oriental");
+	foreign[3].push( "Siasi");
+	foreign[3].push( "Sibulan");
+	foreign[3].push( "Siera, Samar");
+	filipino[1].push( "Sindangan");
+	foreign[3].push( "Siocon (Dapitan)");
+	filipino[2].push( "Sipalay");
+	filipino[1].push( "Siquijor");
+	filipino[1].push( "Socorro");
+	filipino[1].push( "Sogod");
+	filipino[2].push( "Soiltech Beaching Area");
+	filipino[1].push( "Sorsogon");
+	foreign[3].push( "South Harbor");
+	filipino[3].push( "South Harbor Anchorage");
+	foreign[3].push( "Sta. Ana Davao - Anchorage");
+	filipino[2].push( "Sta. Monica");
+	foreign[3].push( "Sto. Niño, Samar");
+	foreign[3].push( "Sua, Matnog, Sorsogon");
+	foreign[3].push( "Sual");
+	foreign[3].push( "Subic");
+	filipino[1].push( "Sula, Bacacay, Albay");
+	filipino[2].push( "Sum-ag Port Terminal");
+	foreign[3].push( "Suntrak Corp.");
+	foreign[3].push( "Surigao, Philippines");
+	filipino[1].push( "TADECO");
+	foreign[3].push( "TAICHUNG");
+	foreign[3].push( "TAMPICO, TAM");
+	foreign[3].push( "TANJUNG PELEPAS");
+	foreign[3].push( "TAWAU,SABAH");
+	foreign[3].push( "TBA Agri DevCorp/Bialong Ind Corp-Kiamba");
+	filipino[1].push( "THPL-Taganito High Pressured Acid Leach");
+	foreign[3].push( "TIENTSIN/TIANJIN");
+	foreign[3].push( "TMO Puerto Galera");
+	foreign[3].push( "TOKYO");
+	filipino[0].push( "Tabaco");
+	foreign[3].push( "Tabuelan");
+	filipino[0].push( "Tacloban");
+	foreign[3].push( "Tacloban Oil Mill, Inc. - Brgy. Opong, Tolosa, Leyte");
+	filipino[1].push( "Tacloban Oil Mill,Inc.-Brgy.Opong,Tolosa");
+	foreign[3].push( "Taganak");
+	filipino[1].push( "Taganito Mining Industrial Corp.");
+	foreign[3].push( "Tagapulan, Samar");
+	filipino[0].push( "Tagbilaran");
+	foreign[3].push( "Talalora, Samar");
+	filipino[1].push( "Talibon");
+	filipino[2].push( "Talisayan");
+	filipino[2].push( "Tambisan");
+	filipino[2].push( "Tandayag");
+	foreign[3].push( "Tangil Port");
+	filipino[1].push( "Tapal");
+	foreign[3].push( "Tawi-tawi");
+	foreign[3].push( "Taytay");
+	filipino[1].push( "Terminal Facilities & Serv.Inc.(TEFASCO)");
+	foreign[3].push( "Terminal Port of Lubang");
+	foreign[3].push( "Terminal Port of Roxas");
+	foreign[3].push( "Terminal Port of San Jose");
+	filipino[1].push( "Therma South Inc., Wharf");
+	filipino[1].push( "Third Millennium Oil Mill, Inc.");
+	filipino[1].push( "Timber Exports Inc.");
+	foreign[3].push( "Tokuyama");
+	foreign[3].push( "Toledo");
+	foreign[3].push( "Tolosa");
+	foreign[3].push( "Toril - Anchorage");
+	filipino[3].push( "Tubajon");
+	foreign[3].push( "Tubay");
+	foreign[3].push( "Tubbataha");
+	filipino[0].push( "Tubigon");
+	filipino[2].push( "Tubod");
+	foreign[3].push( "Tukuran");
+	filipino[1].push( "Ubay");
+	foreign[3].push( "Ulsan");
+	filipino[2].push( "United Robina Sugar Mill.Corp(URSUMCO)");
+	foreign[3].push( "VANCOUVER");
+	foreign[3].push( "VANIMO");
+	foreign[3].push( "VICT, Ho Chi Minh City");
+	filipino[0].push( "Verano Port, Surigao");
+	foreign[3].push( "Villaba");
+	filipino[1].push( "Virac");
+	filipino[2].push( "Visayan Oil Mill");
+	foreign[3].push( "WAKAYAMA");
+	foreign[3].push( "WEEBIN/PHIDCO");
+	foreign[3].push( "WELLINGTON");
+	filipino[1].push( "WILMAR (SIOM), Roxas");
+	foreign[3].push( "Wilmar Edible Oils Phils. Inc. (Pier 1)");
+	foreign[3].push( "XIAMEN");
+	foreign[3].push( "XINGANG");
+	foreign[3].push( "YANTAI");
+	foreign[3].push( "YANTIAN");
+	foreign[3].push( "ZHANGJIAGANG");
+	foreign[3].push( "ZHANJIANG");
+	foreign[3].push( "ZHONGSHAN");
+	filipino[0].push( "Zamboanga");
+}
+function typeChange() {
+	var type = document.getElementById("type").value;
+    document.getElementById("cluster").value = "ac";
+    clusterChange();
+}
+function clusterChange() {
+	var type = document.getElementById("type").value;
+	var cluster = document.getElementById("cluster").value;
+    table = "<table class='table table-striped table-responsive'>";
+
+    if (cluster=="ac") {
+    	table += "<tr><th>Busiest Ports</th><th>Active Ports</th><th>Inactive Ports In</th><th>Inactive Ports Out</th></tr><tr>";
+    	addCluster(0, type);
+    	addCluster(3, type);
+    	addCluster(2, type);
+    	addCluster(1, type);
+    }
+    else if (cluster=="c1") {
+    	table += "<tr><th>Busiest Ports</th></tr><tr>";
+    	addCluster(0, type);
+    }
+    else if (cluster=="c2") {
+    	table += "<tr><th>Active Ports</th></tr><tr>";
+    	addCluster(1, type);
+    }
+    else if (cluster=="c3") {
+    	table += "<tr><th>Inactive Ports In</th></tr><tr>";
+    	addCluster(2, type);
+    }
+    else if (cluster=="c4") {
+    	table += "<tr><th>Inactive Ports Out</th></tr><tr>";
+    	addCluster(3, type);
+    }
+
+    table += "</tr></table>"
+    document.getElementById("clustering").innerHTML = table;
+}
+function addCluster (clusterNum, type) {
+	//Safety check, but supposedly unnecessary
+	if (clusterNum>=filipino.length) return;
+
+	temp = "<ul class='list-group'>";
+	for (i=0; i<filipino[clusterNum].length; i++) {
+		temp += "<li class='list-group-item'>" + filipino[clusterNum][i] + "</li>";
+	}
+	if (type=="av") {
+		for (i=0; i<foreign[clusterNum].length; i++) {
+			temp += "<li class='list-group-item'>" + foreign[clusterNum][i] + "</li>";
+    	}
+	}
+	temp += "</ul>";
+	table += "<td style=\"vertical-align:top\">" + temp + "</td>";
+}
+
+</script>
+
+<style>
+table {
+	text-transform: capitalize;
+}
+
+th {
+	text-align: center;
+}
+</style>
+
+</head>
+
+
+<body>
+<div class="container">
+	<div class="col-md-12">
+		<p id="dropdown">
+			<div class="form-group">
+				<select class="form-control" id="type" onchange="typeChange()">
+					<!-- To be added if ports are added
+					<option value="aa">Show All</option>
+					-->
+					<option value="av">All Ports</option>
+					<option value="pv">Philippine Ports</option>
+					<!-- Add when needed; But not important
+					<option value="ap">All Ports</option>
+					<option value="pp">Philippine Ports</option>
+					-->
+				</select>
+			</div>
+			<div class="form-group">
+				<select class="form-control"  id="cluster" onchange="clusterChange()">
+					<option value="ac">Show All</option>
+					<option value="c1">Busiest Ports</option>
+					<option value="c2">Active Ports</option>
+					<option value="c3">Inactive Ports In</option>
+					<option value="c4">Inactive Ports Out</option>
+				</select>
+			</div>
+		</p>
+		<p id="clustering"></p>
+	</div>
+</div>
+
+</body>
+
+<script>
+typeChange();
+</script>
+
+</html>
