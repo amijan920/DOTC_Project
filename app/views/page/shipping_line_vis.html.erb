@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>Shipping Line Routes</title>
+    <style>
+		html, body {
+			height: 100%;
+			margin: 0;
+		}
+
+		#map {
+			min-height: 100%; 
+		}
+
+		#toggle, #note {
+		    background-color: #151515;
+		    border-radius: 5px;
+		    color: white;
+		    padding: 0.5em;
+		    font-family: sans-serif;
+		    font-size: smaller;
+		}
+
+		#toggle {
+		    position: absolute;
+		    bottom: 1em;
+		    right: 1em;
+		    cursor: pointer;
+		}
+
+		#note {
+		    position: absolute;
+		    bottom: 1em;
+		    left: 1em;
+		}
+    </style>
+
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <style>
+    	.navbar {
+    		padding: 15px;
+    	}
+
+    	select, option{
+    		text-transform: capitalize;
+    	}
+    </style>
+    <script>
+    	var shipLines = {};
+
+    	function shipChange(){
+			var shippingLine = document.getElementById("shippingLines").value;
+			if(showingLines){
+				showingLines = false; 
+				showLines(paths, false, map);
+			}
+			paths=createLines(shipLines[shippingLine]);
+
+			if(!!shipLines[shippingLine][0]) 
+				map.setCenter(new google.maps.LatLng(shipLines[shippingLine][0][0].H,shipLines[shippingLine][0][0].L));
+			else
+				map.setCenter(new google.maps.LatLng(shipLines[shippingLine][1][0].H,shipLines[shippingLine][1][0].L));
+			map.setZoom(8);
+
+			toggleLines();
+    	}
+
+    	function initR(markerIconOp, map){
+			var Ubay = new google.maps.LatLng(10.061784,124.472502);
+			var markerUbay = new google.maps.Marker({ position: Ubay, icon: markerIconOp, map: map });
+			var infoUbay = new google.maps.InfoWindow({ content: 'Ubay' });
+			google.maps.event.addListener(markerUbay, 'click', function() { infoUbay.open(map,markerUbay); });
+
+			var Hilongos = new google.maps.LatLng(10.131539,124.841165);
+			var markerHilongos = new google.maps.Marker({ position: Hilongos, icon: markerIconOp, map: map });
+			var infoHilongos = new google.maps.InfoWindow({ content: 'Hilongos' });
+			google.maps.event.addListener(markerHilongos, 'click', function() { infoHilongos.open(map,markerHilongos); });
+
+			var BatangasPier = new google.maps.LatLng(13.754209,121.043188);
+			var markerBatangasPier = new google.maps.Marker({ position: BatangasPier, icon: markerIconOp, map: map });
+			var infoBatangasPier = new google.maps.InfoWindow({ content: 'Batangas Pier' });
+			google.maps.event.addListener(markerBatangasPier, 'click', function() { infoBatangasPier.open(map,markerBatangasPier); });
+
+			var CagayanDeOro = new google.maps.LatLng(8.4542363,124.6318977);
+			var markerCagayanDeOro = new google.maps.Marker({ position: CagayanDeOro, icon: markerIconOp, map: map });
+			var infoCagayanDeOro = new google.maps.InfoWindow({ content: 'Cagayan De Oro' });
+			google.maps.event.addListener(markerCagayanDeOro, 'click', function() { infoCagayanDeOro.open(map,markerCagayanDeOro); });
+
+			var TMOPuertoGalera = new google.maps.LatLng(13.5018907,120.95412);
+			var markerTMOPuertoGalera = new google.maps.Marker({ position: TMOPuertoGalera, icon: markerIconOp, map: map });
+			var infoTMOPuertoGalera = new google.maps.InfoWindow({ content: 'TMO Puerto Galera' });
+			google.maps.event.addListener(markerTMOPuertoGalera, 'click', function() { infoTMOPuertoGalera.open(map,markerTMOPuertoGalera); });
+
+			var Siquijor = new google.maps.LatLng(9.2180135,123.5123413);
+			var markerSiquijor = new google.maps.Marker({ position: Siquijor, icon: markerIconOp, map: map });
+			var infoSiquijor = new google.maps.InfoWindow({ content: 'Siquijor' });
+			google.maps.event.addListener(markerSiquijor, 'click', function() { infoSiquijor.open(map,markerSiquijor); });
+
+			var Dumaguete = new google.maps.LatLng(9.417057,123.303251);
+			var markerDumaguete = new google.maps.Marker({ position: Dumaguete, icon: markerIconOp, map: map });
+			var infoDumaguete = new google.maps.InfoWindow({ content: 'Dumaguete' });
+			google.maps.event.addListener(markerDumaguete, 'click', function() { infoDumaguete.open(map,markerDumaguete); });
+
+			var Larena = new google.maps.LatLng(9.648829,123.846712);
+			var markerLarena = new google.maps.Marker({ position: Larena, icon: markerIconOp, map: map });
+			var infoLarena = new google.maps.InfoWindow({ content: 'Larena' });
+			google.maps.event.addListener(markerLarena, 'click', function() { infoLarena.open(map,markerLarena); });
+
+			var PresidentGarcia = new google.maps.LatLng(15.178952,120.518301);
+			var markerPresidentGarcia = new google.maps.Marker({ position: PresidentGarcia, icon: markerIconOp, map: map });
+			var infoPresidentGarcia = new google.maps.InfoWindow({ content: 'President Garcia' });
+			google.maps.event.addListener(markerPresidentGarcia, 'click', function() { infoPresidentGarcia.open(map,markerPresidentGarcia); });
+
+			var Cebu = new google.maps.LatLng(10.311616,123.923101);
+			var markerCebu = new google.maps.Marker({ position: Cebu, icon: markerIconOp, map: map });
+			var infoCebu = new google.maps.InfoWindow({ content: 'Cebu' });
+			google.maps.event.addListener(markerCebu, 'click', function() { infoCebu.open(map,markerCebu); });
+
+			var Masbate = new google.maps.LatLng(12.513402,123.396474);
+			var markerMasbate = new google.maps.Marker({ position: Masbate, icon: markerIconOp, map: map });
+			var infoMasbate = new google.maps.InfoWindow({ content: 'Masbate' });
+			google.maps.event.addListener(markerMasbate, 'click', function() { infoMasbate.open(map,markerMasbate); });
+
+			var FortSanPedroRC2 = new google.maps.LatLng(10.2925060,123.9058230);
+			var markerFortSanPedroRC2 = new google.maps.Marker({ position: FortSanPedroRC2, icon: markerIconOp, map: map });
+			var infoFortSanPedroRC2 = new google.maps.InfoWindow({ content: 'Fort San Pedro - RC2' });
+			google.maps.event.addListener(markerFortSanPedroRC2, 'click', function() { infoFortSanPedroRC2.open(map,markerFortSanPedroRC2); });
+
+			var Mandaue = new google.maps.LatLng(10.302237,124.018484);
+			var markerMandaue = new google.maps.Marker({ position: Mandaue, icon: markerIconOp, map: map });
+			var infoMandaue = new google.maps.InfoWindow({ content: 'Mandaue' });
+			google.maps.event.addListener(markerMandaue, 'click', function() { infoMandaue.open(map,markerMandaue); });
+
+			var Tagbilaran = new google.maps.LatLng(9.6729480,123.8730022);
+			var markerTagbilaran = new google.maps.Marker({ position: Tagbilaran, icon: markerIconOp, map: map });
+			var infoTagbilaran = new google.maps.InfoWindow({ content: 'Tagbilaran' });
+			google.maps.event.addListener(markerTagbilaran, 'click', function() { infoTagbilaran.open(map,markerTagbilaran); });
+
+			var Argao = new google.maps.LatLng(9.648829,123.846712);
+			var markerArgao = new google.maps.Marker({ position: Argao, icon: markerIconOp, map: map });
+			var infoArgao = new google.maps.InfoWindow({ content: 'Argao' });
+			google.maps.event.addListener(markerArgao, 'click', function() { infoArgao.open(map,markerArgao); });
+
+			var Ormoc = new google.maps.LatLng(11.248955,125.000593);
+			var markerOrmoc = new google.maps.Marker({ position: Ormoc, icon: markerIconOp, map: map });
+			var infoOrmoc = new google.maps.InfoWindow({ content: 'Ormoc' });
+			google.maps.event.addListener(markerOrmoc, 'click', function() { infoOrmoc.open(map,markerOrmoc); });
+
+			var Baybay = new google.maps.LatLng(10.675076,124.796365);
+			var markerBaybay = new google.maps.Marker({ position: Baybay, icon: markerIconOp, map: map });
+			var infoBaybay = new google.maps.InfoWindow({ content: 'Baybay' });
+			google.maps.event.addListener(markerBaybay, 'click', function() { infoBaybay.open(map,markerBaybay); });
+
+			var OrmocBeachingAreaIpil = new google.maps.LatLng(6.922222,122.059444);
+			var markerOrmocBeachingAreaIpil = new google.maps.Marker({ position: OrmocBeachingAreaIpil, icon: markerIconOp, map: map });
+			var infoOrmocBeachingAreaIpil = new google.maps.InfoWindow({ content: 'Ormoc Beaching Area, Ipil' });
+			google.maps.event.addListener(markerOrmocBeachingAreaIpil, 'click', function() { infoOrmocBeachingAreaIpil.open(map,markerOrmocBeachingAreaIpil); });
+
+			var MindanaoContainerTerminal = new google.maps.LatLng(8.52565,124.751278);
+			var markerMindanaoContainerTerminal = new google.maps.Marker({ position: MindanaoContainerTerminal, icon: markerIconOp, map: map });
+			var infoMindanaoContainerTerminal = new google.maps.InfoWindow({ content: 'Mindanao Container Terminal' });
+			google.maps.event.addListener(markerMindanaoContainerTerminal, 'click', function() { infoMindanaoContainerTerminal.open(map,markerMindanaoContainerTerminal); });
+
+			var CagayanPhilippines = new google.maps.LatLng(9.648829,123.846712);
+			var markerCagayanPhilippines = new google.maps.Marker({ position: CagayanPhilippines, icon: markerIconOp, map: map });
+			var infoCagayanPhilippines = new google.maps.InfoWindow({ content: 'Cagayan, Philippines' });
+			google.maps.event.addListener(markerCagayanPhilippines, 'click', function() { infoCagayanPhilippines.open(map,markerCagayanPhilippines); });
+
+			var Pier12 = new google.maps.LatLng(14.607178,120.960754);
+			var markerPier12 = new google.maps.Marker({ position: Pier12, icon: markerIconOp, map: map });
+			var infoPier12 = new google.maps.InfoWindow({ content: 'Pier 12' });
+			google.maps.event.addListener(markerPier12, 'click', function() { infoPier12.open(map,markerPier12); });
+
+			var Bato = new google.maps.LatLng(10.326994,124.784303);
+			var markerBato = new google.maps.Marker({ position: Bato, icon: markerIconOp, map: map });
+			var infoBato = new google.maps.InfoWindow({ content: 'Bato' });
+			google.maps.event.addListener(markerBato, 'click', function() { infoBato.open(map,markerBato); });
+
+			var AroroyMasbate = new google.maps.LatLng(12.513402,123.396474);
+			var markerAroroyMasbate = new google.maps.Marker({ position: AroroyMasbate, icon: markerIconOp, map: map });
+			var infoAroroyMasbate = new google.maps.InfoWindow({ content: 'Aroroy, Masbate' });
+			google.maps.event.addListener(markerAroroyMasbate, 'click', function() { infoAroroyMasbate.open(map,markerAroroyMasbate); });
+
+			var ManilaPhilippines = new google.maps.LatLng(9.648829,123.846712);
+			var markerManilaPhilippines = new google.maps.Marker({ position: ManilaPhilippines, icon: markerIconOp, map: map });
+			var infoManilaPhilippines = new google.maps.InfoWindow({ content: 'Manila, Philippines' });
+			google.maps.event.addListener(markerManilaPhilippines, 'click', function() { infoManilaPhilippines.open(map,markerManilaPhilippines); });
+
+			var Subic = new google.maps.LatLng(14.877603,120.222874);
+			var markerSubic = new google.maps.Marker({ position: Subic, icon: markerIconOp, map: map });
+			var infoSubic = new google.maps.InfoWindow({ content: 'Subic' });
+			google.maps.event.addListener(markerSubic, 'click', function() { infoSubic.open(map,markerSubic); });
+
+			var Calapan = new google.maps.LatLng(13.42736,121.194437);
+			var markerCalapan = new google.maps.Marker({ position: Calapan, icon: markerIconOp, map: map });
+			var infoCalapan = new google.maps.InfoWindow({ content: 'Calapan' });
+			google.maps.event.addListener(markerCalapan, 'click', function() { infoCalapan.open(map,markerCalapan); });
+
+			var Iloilo = new google.maps.LatLng(10.832417,122.493111);
+			var markerIloilo = new google.maps.Marker({ position: Iloilo, icon: markerIconOp, map: map });
+			var infoIloilo = new google.maps.InfoWindow({ content: 'Iloilo' });
+			google.maps.event.addListener(markerIloilo, 'click', function() { infoIloilo.open(map,markerIloilo); });
+
+			var SanJacintoMasbate = new google.maps.LatLng(12.513402,123.396474);
+			var markerSanJacintoMasbate = new google.maps.Marker({ position: SanJacintoMasbate, icon: markerIconOp, map: map });
+			var infoSanJacintoMasbate = new google.maps.InfoWindow({ content: 'San Jacinto, Masbate' });
+			google.maps.event.addListener(markerSanJacintoMasbate, 'click', function() { infoSanJacintoMasbate.open(map,markerSanJacintoMasbate); });
+
+			var SanFernandoMasbate = new google.maps.LatLng(12.513402,123.396474);
+			var markerSanFernandoMasbate = new google.maps.Marker({ position: SanFernandoMasbate, icon: markerIconOp, map: map });
+			var infoSanFernandoMasbate = new google.maps.InfoWindow({ content: 'San Fernando, Masbate' });
+			google.maps.event.addListener(markerSanFernandoMasbate, 'click', function() { infoSanFernandoMasbate.open(map,markerSanFernandoMasbate); });
+
+			var Virac = new google.maps.LatLng(13.581525,124.234514);
+			var markerVirac = new google.maps.Marker({ position: Virac, icon: markerIconOp, map: map });
+			var infoVirac = new google.maps.InfoWindow({ content: 'Virac' });
+			google.maps.event.addListener(markerVirac, 'click', function() { infoVirac.open(map,markerVirac); });
+
+			var Tabaco = new google.maps.LatLng(13.351526,123.729922);
+			var markerTabaco = new google.maps.Marker({ position: Tabaco, icon: markerIconOp, map: map });
+			var infoTabaco = new google.maps.InfoWindow({ content: 'Tabaco' });
+			google.maps.event.addListener(markerTabaco, 'click', function() { infoTabaco.open(map,markerTabaco); });
+
+			var Coron = new google.maps.LatLng(11.9917,120.187469);
+			var markerCoron = new google.maps.Marker({ position: Coron, icon: markerIconOp, map: map });
+			var infoCoron = new google.maps.InfoWindow({ content: 'Coron' });
+			google.maps.event.addListener(markerCoron, 'click', function() { infoCoron.open(map,markerCoron); });
+
+			var Dumangas = new google.maps.LatLng(10.83162,122.493693);
+			var markerDumangas = new google.maps.Marker({ position: Dumangas, icon: markerIconOp, map: map });
+			var infoDumangas = new google.maps.InfoWindow({ content: 'Dumangas' });
+			google.maps.event.addListener(markerDumangas, 'click', function() { infoDumangas.open(map,markerDumangas); });
+
+			var Balbagon = new google.maps.LatLng(11.5833333,123.28);
+			var markerBalbagon = new google.maps.Marker({ position: Balbagon, icon: markerIconOp, map: map });
+			var infoBalbagon = new google.maps.InfoWindow({ content: 'Balbagon' });
+			google.maps.event.addListener(markerBalbagon, 'click', function() { infoBalbagon.open(map,markerBalbagon); });
+
+			var Jagna = new google.maps.LatLng(9.64945,124.366264);
+			var markerJagna = new google.maps.Marker({ position: Jagna, icon: markerIconOp, map: map });
+			var infoJagna = new google.maps.InfoWindow({ content: 'Jagna' });
+			google.maps.event.addListener(markerJagna, 'click', function() { infoJagna.open(map,markerJagna); });
+
+			var Dapitan = new google.maps.LatLng(8.601024,123.34303);
+			var markerDapitan = new google.maps.Marker({ position: Dapitan, icon: markerIconOp, map: map });
+			var infoDapitan = new google.maps.InfoWindow({ content: 'Dapitan' });
+			google.maps.event.addListener(markerDapitan, 'click', function() { infoDapitan.open(map,markerDapitan); });
+
+			var Benoni = new google.maps.LatLng(9.139322,124.793929);
+			var markerBenoni = new google.maps.Marker({ position: Benoni, icon: markerIconOp, map: map });
+			var infoBenoni = new google.maps.InfoWindow({ content: 'Benoni' });
+			google.maps.event.addListener(markerBenoni, 'click', function() { infoBenoni.open(map,markerBenoni); });
+
+			var Palompon = new google.maps.LatLng(11.165367,123.807739);
+			var markerPalompon = new google.maps.Marker({ position: Palompon, icon: markerIconOp, map: map });
+			var infoPalompon = new google.maps.InfoWindow({ content: 'Palompon' });
+			google.maps.event.addListener(markerPalompon, 'click', function() { infoPalompon.open(map,markerPalompon); });
+
+			var PoctoyOdiongan = new google.maps.LatLng(12.417709,121.988648);
+			var markerPoctoyOdiongan = new google.maps.Marker({ position: PoctoyOdiongan, icon: markerIconOp, map: map });
+			var infoPoctoyOdiongan = new google.maps.InfoWindow({ content: 'Poctoy (Odiongan)' });
+			google.maps.event.addListener(markerPoctoyOdiongan, 'click', function() { infoPoctoyOdiongan.open(map,markerPoctoyOdiongan); });
+
+			var Caticlan = new google.maps.LatLng(11.938738,121.951718);
+			var markerCaticlan = new google.maps.Marker({ position: Caticlan, icon: markerIconOp, map: map });
+			var infoCaticlan = new google.maps.InfoWindow({ content: 'Caticlan' });
+			google.maps.event.addListener(markerCaticlan, 'click', function() { infoCaticlan.open(map,markerCaticlan); });
+
+			var Romblon = new google.maps.LatLng(12.578128,122.269008);
+			var markerRomblon = new google.maps.Marker({ position: Romblon, icon: markerIconOp, map: map });
+			var infoRomblon = new google.maps.InfoWindow({ content: 'Romblon' });
+			google.maps.event.addListener(markerRomblon, 'click', function() { infoRomblon.open(map,markerRomblon); });
+
+			var Kalamansig = new google.maps.LatLng(6.663862,124.812557);
+			var markerKalamansig = new google.maps.Marker({ position: Kalamansig, icon: markerIconOp, map: map });
+			var infoKalamansig = new google.maps.InfoWindow({ content: 'Kalamansig' });
+			google.maps.event.addListener(markerKalamansig, 'click', function() { infoKalamansig.open(map,markerKalamansig); });
+
+			var Semirara = new google.maps.LatLng(12.053651,121.356941);
+			var markerSemirara = new google.maps.Marker({ position: Semirara, icon: markerIconOp, map: map });
+			var infoSemirara = new google.maps.InfoWindow({ content: 'Semirara' });
+			google.maps.event.addListener(markerSemirara, 'click', function() { infoSemirara.open(map,markerSemirara); });
+
+			var Jolo = new google.maps.LatLng(6.056509999999999,120.9994617);
+			var markerJolo = new google.maps.Marker({ position: Jolo, icon: markerIconOp, map: map });
+			var infoJolo = new google.maps.InfoWindow({ content: 'Jolo' });
+			google.maps.event.addListener(markerJolo, 'click', function() { infoJolo.open(map,markerJolo); });
+
+			var Zamboanga = new google.maps.LatLng(7.070996,122.211882);
+			var markerZamboanga = new google.maps.Marker({ position: Zamboanga, icon: markerIconOp, map: map });
+			var infoZamboanga = new google.maps.InfoWindow({ content: 'Zamboanga' });
+			google.maps.event.addListener(markerZamboanga, 'click', function() { infoZamboanga.open(map,markerZamboanga); });
+
+			var Tubay = new google.maps.LatLng(9.781788,125.500347);
+			var markerTubay = new google.maps.Marker({ position: Tubay, icon: markerIconOp, map: map });
+			var infoTubay = new google.maps.InfoWindow({ content: 'Tubay' });
+			google.maps.event.addListener(markerTubay, 'click', function() { infoTubay.open(map,markerTubay); });
+
+			var Nasipit = new google.maps.LatLng(8.951426,125.478821);
+			var markerNasipit = new google.maps.Marker({ position: Nasipit, icon: markerIconOp, map: map });
+			var infoNasipit = new google.maps.InfoWindow({ content: 'Nasipit' });
+			google.maps.event.addListener(markerNasipit, 'click', function() { infoNasipit.open(map,markerNasipit); });
+
+			var Matnog = new google.maps.LatLng(12.584213,124.086065);
+			var markerMatnog = new google.maps.Marker({ position: Matnog, icon: markerIconOp, map: map });
+			var infoMatnog = new google.maps.InfoWindow({ content: 'Matnog' });
+			google.maps.event.addListener(markerMatnog, 'click', function() { infoMatnog.open(map,markerMatnog); });
+
+			var VeranoPortSurigao = new google.maps.LatLng(9.781788,125.500347);
+			var markerVeranoPortSurigao = new google.maps.Marker({ position: VeranoPortSurigao, icon: markerIconOp, map: map });
+			var infoVeranoPortSurigao = new google.maps.InfoWindow({ content: 'Verano Port, Surigao' });
+			google.maps.event.addListener(markerVeranoPortSurigao, 'click', function() { infoVeranoPortSurigao.open(map,markerVeranoPortSurigao); });
+
+			var Dapa = new google.maps.LatLng(9.7449,126.033241);
+			var markerDapa = new google.maps.Marker({ position: Dapa, icon: markerIconOp, map: map });
+			var infoDapa = new google.maps.InfoWindow({ content: 'Dapa' });
+			google.maps.event.addListener(markerDapa, 'click', function() { infoDapa.open(map,markerDapa); });
+
+			var SanJoseOccMindoro = new google.maps.LatLng(12.593226,121.530488);
+			var markerSanJoseOccMindoro = new google.maps.Marker({ position: SanJoseOccMindoro, icon: markerIconOp, map: map });
+			var infoSanJoseOccMindoro = new google.maps.InfoWindow({ content: 'San Jose, Occ. Mindoro' });
+			google.maps.event.addListener(markerSanJoseOccMindoro, 'click', function() { infoSanJoseOccMindoro.open(map,markerSanJoseOccMindoro); });
+
+			var PuertoPrincesa = new google.maps.LatLng(9.742211,118.728177);
+			var markerPuertoPrincesa = new google.maps.Marker({ position: PuertoPrincesa, icon: markerIconOp, map: map });
+			var infoPuertoPrincesa = new google.maps.InfoWindow({ content: 'Puerto Princesa' });
+			google.maps.event.addListener(markerPuertoPrincesa, 'click', function() { infoPuertoPrincesa.open(map,markerPuertoPrincesa); });
+
+			var Pier16 = new google.maps.LatLng(14.620565,120.965965);
+			var markerPier16 = new google.maps.Marker({ position: Pier16, icon: markerIconOp, map: map });
+			var infoPier16 = new google.maps.InfoWindow({ content: 'Pier 16' });
+			google.maps.event.addListener(markerPier16, 'click', function() { infoPier16.open(map,markerPier16); });
+
+			var IloiloIloiloRiverLapuzWharfRC3 = new google.maps.LatLng(10.7023702,122.5833023);
+			var markerIloiloIloiloRiverLapuzWharfRC3 = new google.maps.Marker({ position: IloiloIloiloRiverLapuzWharfRC3, icon: markerIconOp, map: map });
+			var infoIloiloIloiloRiverLapuzWharfRC3 = new google.maps.InfoWindow({ content: 'Iloilo (Iloilo River/Lapuz Wharf) RC3' });
+			google.maps.event.addListener(markerIloiloIloiloRiverLapuzWharfRC3, 'click', function() { infoIloiloIloiloRiverLapuzWharfRC3.open(map,markerIloiloIloiloRiverLapuzWharfRC3); });
+
+			var Limay = new google.maps.LatLng(14.513954,120.61127);
+			var markerLimay = new google.maps.Marker({ position: Limay, icon: markerIconOp, map: map });
+			var infoLimay = new google.maps.InfoWindow({ content: 'Limay' });
+			google.maps.event.addListener(markerLimay, 'click', function() { infoLimay.open(map,markerLimay); });
+
+			var Mariveles = new google.maps.LatLng(14.437101,120.487903);
+			var markerMariveles = new google.maps.Marker({ position: Mariveles, icon: markerIconOp, map: map });
+			var infoMariveles = new google.maps.InfoWindow({ content: 'Mariveles' });
+			google.maps.event.addListener(markerMariveles, 'click', function() { infoMariveles.open(map,markerMariveles); });
+
+			var Basilan = new google.maps.LatLng(6.709887,121.974903);
+			var markerBasilan = new google.maps.Marker({ position: Basilan, icon: markerIconOp, map: map });
+			var infoBasilan = new google.maps.InfoWindow({ content: 'Basilan' });
+			google.maps.event.addListener(markerBasilan, 'click', function() { infoBasilan.open(map,markerBasilan); });
+
+			var Lamitan = new google.maps.LatLng(6.674196,122.158772);
+			var markerLamitan = new google.maps.Marker({ position: Lamitan, icon: markerIconOp, map: map });
+			var infoLamitan = new google.maps.InfoWindow({ content: 'Lamitan' });
+			google.maps.event.addListener(markerLamitan, 'click', function() { infoLamitan.open(map,markerLamitan); });
+
+			var Bongao = new google.maps.LatLng(5.034203,119.774135);
+			var markerBongao = new google.maps.Marker({ position: Bongao, icon: markerIconOp, map: map });
+			var infoBongao = new google.maps.InfoWindow({ content: 'Bongao' });
+			google.maps.event.addListener(markerBongao, 'click', function() { infoBongao.open(map,markerBongao); });
+
+			var Tubigon = new google.maps.LatLng(9.956174,123.957843);
+			var markerTubigon = new google.maps.Marker({ position: Tubigon, icon: markerIconOp, map: map });
+			var infoTubigon = new google.maps.InfoWindow({ content: 'Tubigon' });
+			google.maps.event.addListener(markerTubigon, 'click', function() { infoTubigon.open(map,markerTubigon); });
+
+			var IloiloSanPedroRC2 = new google.maps.LatLng(10.6903204,122.5821833);
+			var markerIloiloSanPedroRC2 = new google.maps.Marker({ position: IloiloSanPedroRC2, icon: markerIconOp, map: map });
+			var infoIloiloSanPedroRC2 = new google.maps.InfoWindow({ content: 'Iloilo (San Pedro) RC2' });
+			google.maps.event.addListener(markerIloiloSanPedroRC2, 'click', function() { infoIloiloSanPedroRC2.open(map,markerIloiloSanPedroRC2); });
+
+			var Toledo = new google.maps.LatLng(10.378302,123.633881);
+			var markerToledo = new google.maps.Marker({ position: Toledo, icon: markerIconOp, map: map });
+			var infoToledo = new google.maps.InfoWindow({ content: 'Toledo' });
+			google.maps.event.addListener(markerToledo, 'click', function() { infoToledo.open(map,markerToledo); });
+
+			var SanCarlos = new google.maps.LatLng(10.4837342,123.4128956);
+			var markerSanCarlos = new google.maps.Marker({ position: SanCarlos, icon: markerIconOp, map: map });
+			var infoSanCarlos = new google.maps.InfoWindow({ content: 'San Carlos' });
+			google.maps.event.addListener(markerSanCarlos, 'click', function() { infoSanCarlos.open(map,markerSanCarlos); });
+
+			var Ozamiz = new google.maps.LatLng(8.140035,123.845054);
+			var markerOzamiz = new google.maps.Marker({ position: Ozamiz, icon: markerIconOp, map: map });
+			var infoOzamiz = new google.maps.InfoWindow({ content: 'Ozamiz' });
+			google.maps.event.addListener(markerOzamiz, 'click', function() { infoOzamiz.open(map,markerOzamiz); });
+
+			var Iligan = new google.maps.LatLng(8.232781,124.233235);
+			var markerIligan = new google.maps.Marker({ position: Iligan, icon: markerIconOp, map: map });
+			var infoIligan = new google.maps.InfoWindow({ content: 'Iligan' });
+			google.maps.event.addListener(markerIligan, 'click', function() { infoIligan.open(map,markerIligan); });
+
+			var RapuRapu = new google.maps.LatLng(13.2407755,124.041865);
+			var markerRapuRapu = new google.maps.Marker({ position: RapuRapu, icon: markerIconOp, map: map });
+			var infoRapuRapu = new google.maps.InfoWindow({ content: 'Rapu-Rapu' });
+			google.maps.event.addListener(markerRapuRapu, 'click', function() { infoRapuRapu.open(map,markerRapuRapu); });
+
+			var Legazpi = new google.maps.LatLng(13.145804,123.756322);
+			var markerLegazpi = new google.maps.Marker({ position: Legazpi, icon: markerIconOp, map: map });
+			var infoLegazpi = new google.maps.InfoWindow({ content: 'Legazpi' });
+			google.maps.event.addListener(markerLegazpi, 'click', function() { infoLegazpi.open(map,markerLegazpi); });
+
+			var LGUPortofGalasDipologCity = new google.maps.LatLng(8.559718,123.328829);
+			var markerLGUPortofGalasDipologCity = new google.maps.Marker({ position: LGUPortofGalasDipologCity, icon: markerIconOp, map: map });
+			var infoLGUPortofGalasDipologCity = new google.maps.InfoWindow({ content: 'LGU Port of Galas, Dipolog City' });
+			google.maps.event.addListener(markerLGUPortofGalasDipologCity, 'click', function() { infoLGUPortofGalasDipologCity.open(map,markerLGUPortofGalasDipologCity); });
+
+			var RIIBuildersHarbourCentre = new google.maps.LatLng(14.632205,120.948909);
+			var markerRIIBuildersHarbourCentre = new google.maps.Marker({ position: RIIBuildersHarbourCentre, icon: markerIconOp, map: map });
+			var infoRIIBuildersHarbourCentre = new google.maps.InfoWindow({ content: 'R-II Builders/Harbour Centre' });
+			google.maps.event.addListener(markerRIIBuildersHarbourCentre, 'click', function() { infoRIIBuildersHarbourCentre.open(map,markerRIIBuildersHarbourCentre); });
+
+			var PetronBataanRefinery = new google.maps.LatLng(14.528643,120.599853);
+			var markerPetronBataanRefinery = new google.maps.Marker({ position: PetronBataanRefinery, icon: markerIconOp, map: map });
+			var infoPetronBataanRefinery = new google.maps.InfoWindow({ content: 'Petron Bataan Refinery' });
+			google.maps.event.addListener(markerPetronBataanRefinery, 'click', function() { infoPetronBataanRefinery.open(map,markerPetronBataanRefinery); });
+
+			var SanAgustin = new google.maps.LatLng(16.61957,120.288922);
+			var markerSanAgustin = new google.maps.Marker({ position: SanAgustin, icon: markerIconOp, map: map });
+			var infoSanAgustin = new google.maps.InfoWindow({ content: 'San Agustin' });
+			google.maps.event.addListener(markerSanAgustin, 'click', function() { infoSanAgustin.open(map,markerSanAgustin); });
+
+			var ChevronJettySasa = new google.maps.LatLng(7.125701,125.661876);
+			var markerChevronJettySasa = new google.maps.Marker({ position: ChevronJettySasa, icon: markerIconOp, map: map });
+			var infoChevronJettySasa = new google.maps.InfoWindow({ content: 'Chevron Jetty, Sasa' });
+			google.maps.event.addListener(markerChevronJettySasa, 'click', function() { infoChevronJettySasa.open(map,markerChevronJettySasa); });
+
+			var Culasi = new google.maps.LatLng(11.610084,122.71549);
+			var markerCulasi = new google.maps.Marker({ position: Culasi, icon: markerIconOp, map: map });
+			var infoCulasi = new google.maps.InfoWindow({ content: 'Culasi' });
+			google.maps.event.addListener(markerCulasi, 'click', function() { infoCulasi.open(map,markerCulasi); });
+
+			var Pasacao = new google.maps.LatLng(13.505152,123.041089);
+			var markerPasacao = new google.maps.Marker({ position: Pasacao, icon: markerIconOp, map: map });
+			var infoPasacao = new google.maps.InfoWindow({ content: 'Pasacao' });
+			google.maps.event.addListener(markerPasacao, 'click', function() { infoPasacao.open(map,markerPasacao); });
+
+			var Bacolod = new google.maps.LatLng(10.684255,122.938836);
+			var markerBacolod = new google.maps.Marker({ position: Bacolod, icon: markerIconOp, map: map });
+			var infoBacolod = new google.maps.InfoWindow({ content: 'Bacolod' });
+			google.maps.event.addListener(markerBacolod, 'click', function() { infoBacolod.open(map,markerBacolod); });
+
+			var Cuyo = new google.maps.LatLng(10.85514,121.007753);
+			var markerCuyo = new google.maps.Marker({ position: Cuyo, icon: markerIconOp, map: map });
+			var infoCuyo = new google.maps.InfoWindow({ content: 'Cuyo' });
+			google.maps.event.addListener(markerCuyo, 'click', function() { infoCuyo.open(map,markerCuyo); });
+
+			var MilagrosaMuelleLoney = new google.maps.LatLng(10.6986047,122.5759731);
+			var markerMilagrosaMuelleLoney = new google.maps.Marker({ position: MilagrosaMuelleLoney, icon: markerIconOp, map: map });
+			var infoMilagrosaMuelleLoney = new google.maps.InfoWindow({ content: 'Milagrosa, Muelle Loney' });
+			google.maps.event.addListener(markerMilagrosaMuelleLoney, 'click', function() { infoMilagrosaMuelleLoney.open(map,markerMilagrosaMuelleLoney); });
+
+			var Samboan = new google.maps.LatLng(9.5043588,123.3373916);
+			var markerSamboan = new google.maps.Marker({ position: Samboan, icon: markerIconOp, map: map });
+			var infoSamboan = new google.maps.InfoWindow({ content: 'Samboan' });
+			google.maps.event.addListener(markerSamboan, 'click', function() { infoSamboan.open(map,markerSamboan); });
+
+			var TADECO = new google.maps.LatLng(7.39789,125.578757);
+			var markerTADECO = new google.maps.Marker({ position: TADECO, icon: markerIconOp, map: map });
+			var infoTADECO = new google.maps.InfoWindow({ content: 'TADECO' });
+			google.maps.event.addListener(markerTADECO, 'click', function() { infoTADECO.open(map,markerTADECO); });
+
+			var SouthHarbor = new google.maps.LatLng(14.586267,120.972946);
+			var markerSouthHarbor = new google.maps.Marker({ position: SouthHarbor, icon: markerIconOp, map: map });
+			var infoSouthHarbor = new google.maps.InfoWindow({ content: 'South Harbor' });
+			google.maps.event.addListener(markerSouthHarbor, 'click', function() { infoSouthHarbor.open(map,markerSouthHarbor); });
+
+			var Catbalogan = new google.maps.LatLng(11.248955,125.000593);
+			var markerCatbalogan = new google.maps.Marker({ position: Catbalogan, icon: markerIconOp, map: map });
+			var infoCatbalogan = new google.maps.InfoWindow({ content: 'Catbalogan' });
+			google.maps.event.addListener(markerCatbalogan, 'click', function() { infoCatbalogan.open(map,markerCatbalogan); });
+
+			var Naval = new google.maps.LatLng(11.559858,124.391741);
+			var markerNaval = new google.maps.Marker({ position: Naval, icon: markerIconOp, map: map });
+			var infoNaval = new google.maps.InfoWindow({ content: 'Naval' });
+			google.maps.event.addListener(markerNaval, 'click', function() { infoNaval.open(map,markerNaval); });
+
+			// var LipataSurigaoCity = new google.maps.LatLng(9.7571312,125.5137674);
+			// var markerLipataSurigaoCity = new google.maps.Marker({ position: LipataSurigaoCity, icon: markerIconOp, map: map });
+			// var infoLipataSurigaoCity = new google.maps.InfoWindow({ content: 'Lipata - Surigao City' });
+			// google.maps.event.addListener(markerLipataSurigaoCity, 'click', function() { infoLipataSurigaoCity.open(map,markerLipataSurigaoCity); });
+
+			var Loboc = new google.maps.LatLng(9.648829,123.846712);
+			var markerLoboc = new google.maps.Marker({ position: Loboc, icon: markerIconOp, map: map });
+			var infoLoboc = new google.maps.InfoWindow({ content: 'Loboc' });
+			google.maps.event.addListener(markerLoboc, 'click', function() { infoLoboc.open(map,markerLoboc); });
+
+			var Talibon = new google.maps.LatLng(10.302237,124.018484);
+			var markerTalibon = new google.maps.Marker({ position: Talibon, icon: markerIconOp, map: map });
+			var infoTalibon = new google.maps.InfoWindow({ content: 'Talibon' });
+			google.maps.event.addListener(markerTalibon, 'click', function() { infoTalibon.open(map,markerTalibon); });
+
+			var TimberExportsInc = new google.maps.LatLng(14.588202,121.065361);
+			var markerTimberExportsInc = new google.maps.Marker({ position: TimberExportsInc, icon: markerIconOp, map: map });
+			var infoTimberExportsInc = new google.maps.InfoWindow({ content: 'Timber Exports Inc.' });
+			google.maps.event.addListener(markerTimberExportsInc, 'click', function() { infoTimberExportsInc.open(map,markerTimberExportsInc); });
+
+			var Getafe = new google.maps.LatLng(10.310054,124.024936);
+			var markerGetafe = new google.maps.Marker({ position: Getafe, icon: markerIconOp, map: map });
+			var infoGetafe = new google.maps.InfoWindow({ content: 'Getafe' });
+			google.maps.event.addListener(markerGetafe, 'click', function() { infoGetafe.open(map,markerGetafe); });
+
+			var Punta = new google.maps.LatLng(13.764431,121.050352);
+			var markerPunta = new google.maps.Marker({ position: Punta, icon: markerIconOp, map: map });
+			var infoPunta = new google.maps.InfoWindow({ content: 'Punta' });
+			google.maps.event.addListener(markerPunta, 'click', function() { infoPunta.open(map,markerPunta); });
+
+			var Tambisan = new google.maps.LatLng(11.949119,121.947438);
+			var markerTambisan = new google.maps.Marker({ position: Tambisan, icon: markerIconOp, map: map });
+			var infoTambisan = new google.maps.InfoWindow({ content: 'Tambisan' });
+			google.maps.event.addListener(markerTambisan, 'click', function() { infoTambisan.open(map,markerTambisan); });
+
+			var IloiloRiverWharfRC3 = new google.maps.LatLng(10.6971821,122.5787205);
+			var markerIloiloRiverWharfRC3 = new google.maps.Marker({ position: IloiloRiverWharfRC3, icon: markerIconOp, map: map });
+			var infoIloiloRiverWharfRC3 = new google.maps.InfoWindow({ content: 'Iloilo River Wharf - RC3' });
+			google.maps.event.addListener(markerIloiloRiverWharfRC3, 'click', function() { infoIloiloRiverWharfRC3.open(map,markerIloiloRiverWharfRC3); });
+
+			var PhilSinterCorp = new google.maps.LatLng(8.573298,124.764347);
+			var markerPhilSinterCorp = new google.maps.Marker({ position: PhilSinterCorp, icon: markerIconOp, map: map });
+			var infoPhilSinterCorp = new google.maps.InfoWindow({ content: 'Phil. Sinter Corp.' });
+			google.maps.event.addListener(markerPhilSinterCorp, 'click', function() { infoPhilSinterCorp.open(map,markerPhilSinterCorp); });
+
+			var Culion = new google.maps.LatLng(12.19164,120.10267);
+			var markerCulion = new google.maps.Marker({ position: Culion, icon: markerIconOp, map: map });
+			var infoCulion = new google.maps.InfoWindow({ content: 'Culion' });
+			google.maps.event.addListener(markerCulion, 'click', function() { infoCulion.open(map,markerCulion); });
+
+			var BREDCO2Bacolod = new google.maps.LatLng(10.684255,122.938836);
+			var markerBREDCO2Bacolod = new google.maps.Marker({ position: BREDCO2Bacolod, icon: markerIconOp, map: map });
+			var infoBREDCO2Bacolod = new google.maps.InfoWindow({ content: 'BREDCO 2, Bacolod' });
+			google.maps.event.addListener(markerBREDCO2Bacolod, 'click', function() { infoBREDCO2Bacolod.open(map,markerBREDCO2Bacolod); });
+
+			var MirantPagbilaoCorpHopewellPowerPhilsCorporation = new google.maps.LatLng(14.58523,121.061297);
+			var markerMirantPagbilaoCorpHopewellPowerPhilsCorporation = new google.maps.Marker({ position: MirantPagbilaoCorpHopewellPowerPhilsCorporation, icon: markerIconOp, map: map });
+			var infoMirantPagbilaoCorpHopewellPowerPhilsCorporation = new google.maps.InfoWindow({ content: 'Mirant Pagbilao Corp. (Hopewell Power (Phils.) Corporation)' });
+			google.maps.event.addListener(markerMirantPagbilaoCorpHopewellPowerPhilsCorporation, 'click', function() { infoMirantPagbilaoCorpHopewellPowerPhilsCorporation.open(map,markerMirantPagbilaoCorpHopewellPowerPhilsCorporation); });
+
+			var BalwhartecoTerminalAllen = new google.maps.LatLng(12.4956610,124.2833090);
+			var markerBalwhartecoTerminalAllen = new google.maps.Marker({ position: BalwhartecoTerminalAllen, icon: markerIconOp, map: map });
+			var infoBalwhartecoTerminalAllen = new google.maps.InfoWindow({ content: 'Balicuatro Wharfage And Terminal Corporation, Allen' });
+			google.maps.event.addListener(markerBalwhartecoTerminalAllen, 'click', function() { infoBalwhartecoTerminalAllen.open(map,markerBalwhartecoTerminalAllen); });
+
+			var Bulan = new google.maps.LatLng(12.584213,124.086065);
+			var markerBulan = new google.maps.Marker({ position: Bulan, icon: markerIconOp, map: map });
+			var infoBulan = new google.maps.InfoWindow({ content: 'Bulan' });
+			google.maps.event.addListener(markerBulan, 'click', function() { infoBulan.open(map,markerBulan); });
+
+			var Balingoan = new google.maps.LatLng(9.005548,124.845897);
+			var markerBalingoan = new google.maps.Marker({ position: Balingoan, icon: markerIconOp, map: map });
+			var infoBalingoan = new google.maps.InfoWindow({ content: 'Balingoan' });
+			google.maps.event.addListener(markerBalingoan, 'click', function() { infoBalingoan.open(map,markerBalingoan); });
+
+			var FilmineraAroroyMasbate = new google.maps.LatLng(12.513402,123.396474);
+			var markerFilmineraAroroyMasbate = new google.maps.Marker({ position: FilmineraAroroyMasbate, icon: markerIconOp, map: map });
+			var infoFilmineraAroroyMasbate = new google.maps.InfoWindow({ content: 'Filminera, Aroroy, Masbate' });
+			google.maps.event.addListener(markerFilmineraAroroyMasbate, 'click', function() { infoFilmineraAroroyMasbate.open(map,markerFilmineraAroroyMasbate); });
+
+			var MabuhayVinylCorporation = new google.maps.LatLng(8.191495,124.187238);
+			var markerMabuhayVinylCorporation = new google.maps.Marker({ position: MabuhayVinylCorporation, icon: markerIconOp, map: map });
+			var infoMabuhayVinylCorporation = new google.maps.InfoWindow({ content: 'Mabuhay Vinyl Corporation' });
+			google.maps.event.addListener(markerMabuhayVinylCorporation, 'click', function() { infoMabuhayVinylCorporation.open(map,markerMabuhayVinylCorporation); });
+
+			var MGC = new google.maps.LatLng(14.551653,121.058055);
+			var markerMGC = new google.maps.Marker({ position: MGC, icon: markerIconOp, map: map });
+			var infoMGC = new google.maps.InfoWindow({ content: 'MGC' });
+			google.maps.event.addListener(markerMGC, 'click', function() { infoMGC.open(map,markerMGC); });
+
+			var SMCShippingandLighterageCorp = new google.maps.LatLng(14.580548,121.062317);
+			var markerSMCShippingandLighterageCorp = new google.maps.Marker({ position: SMCShippingandLighterageCorp, icon: markerIconOp, map: map });
+			var infoSMCShippingandLighterageCorp = new google.maps.InfoWindow({ content: 'SMC Shipping and Lighterage Corp.' });
+			google.maps.event.addListener(markerSMCShippingandLighterageCorp, 'click', function() { infoSMCShippingandLighterageCorp.open(map,markerSMCShippingandLighterageCorp); });
+
+			var MARIVELES = new google.maps.LatLng(14.437101,120.487903);
+			var markerMARIVELES = new google.maps.Marker({ position: MARIVELES, icon: markerIconOp, map: map });
+			var infoMARIVELES = new google.maps.InfoWindow({ content: 'MARIVELES' });
+			google.maps.event.addListener(markerMARIVELES, 'click', function() { infoMARIVELES.open(map,markerMARIVELES); });
+
+			// var PNOCAlternativeFuelsCorpPAFC = new google.maps.LatLng(14.553867,121.056085);
+			// var markerPNOCAlternativeFuelsCorpPAFC = new google.maps.Marker({ position: PNOCAlternativeFuelsCorpPAFC, icon: markerIconOp, map: map });
+			// var infoPNOCAlternativeFuelsCorpPAFC = new google.maps.InfoWindow({ content: 'PNOC Alternative Fuels Corp. (P.A.F.C)' });
+			// google.maps.event.addListener(markerPNOCAlternativeFuelsCorpPAFC, 'click', function() { infoPNOCAlternativeFuelsCorpPAFC.open(map,markerPNOCAlternativeFuelsCorpPAFC); });
+
+			var AESMasinlocPowerPartnersCoLtd = new google.maps.LatLng(14.513398,121.040974);
+			var markerAESMasinlocPowerPartnersCoLtd = new google.maps.Marker({ position: AESMasinlocPowerPartnersCoLtd, icon: markerIconOp, map: map });
+			var infoAESMasinlocPowerPartnersCoLtd = new google.maps.InfoWindow({ content: 'AES Masinloc Power Partners Co., Ltd.' });
+			google.maps.event.addListener(markerAESMasinlocPowerPartnersCoLtd, 'click', function() { infoAESMasinlocPowerPartnersCoLtd.open(map,markerAESMasinlocPowerPartnersCoLtd); });
+
+			var CalpiMasbate = new google.maps.LatLng(12.513402,123.396474);
+			var markerCalpiMasbate = new google.maps.Marker({ position: CalpiMasbate, icon: markerIconOp, map: map });
+			var infoCalpiMasbate = new google.maps.InfoWindow({ content: 'Calpi, Masbate' });
+			google.maps.event.addListener(markerCalpiMasbate, 'click', function() { infoCalpiMasbate.open(map,markerCalpiMasbate); });
+
+			var DaanBanwa = new google.maps.LatLng(10.8999025,123.0665917);
+			var markerDaanBanwa = new google.maps.Marker({ position: DaanBanwa, icon: markerIconOp, map: map });
+			var infoDaanBanwa = new google.maps.InfoWindow({ content: 'Daan Banwa' });
+			google.maps.event.addListener(markerDaanBanwa, 'click', function() { infoDaanBanwa.open(map,markerDaanBanwa); });
+
+			var MaayoShippingCompanyMatiao = new google.maps.LatLng(9.342585,123.290669);
+			var markerMaayoShippingCompanyMatiao = new google.maps.Marker({ position: MaayoShippingCompanyMatiao, icon: markerIconOp, map: map });
+			var infoMaayoShippingCompanyMatiao = new google.maps.InfoWindow({ content: 'Maayo Shipping Company (Matiao)' });
+			google.maps.event.addListener(markerMaayoShippingCompanyMatiao, 'click', function() { infoMaayoShippingCompanyMatiao.open(map,markerMaayoShippingCompanyMatiao); });
+
+			var BayandRiverOperation = new google.maps.LatLng(14.587752,120.972153);
+			var markerBayandRiverOperation = new google.maps.Marker({ position: BayandRiverOperation, icon: markerIconOp, map: map });
+			var infoBayandRiverOperation = new google.maps.InfoWindow({ content: 'Bay and River Operation' });
+			google.maps.event.addListener(markerBayandRiverOperation, 'click', function() { infoBayandRiverOperation.open(map,markerBayandRiverOperation); });
+
+			var BascoBatanes = new google.maps.LatLng(20.447362,121.966641);
+			var markerBascoBatanes = new google.maps.Marker({ position: BascoBatanes, icon: markerIconOp, map: map });
+			var infoBascoBatanes = new google.maps.InfoWindow({ content: 'Basco - Batanes' });
+			google.maps.event.addListener(markerBascoBatanes, 'click', function() { infoBascoBatanes.open(map,markerBascoBatanes); });
+
+			var PhilippineMiningServiceCorporation = new google.maps.LatLng(9.618268,124.302135);
+			var markerPhilippineMiningServiceCorporation = new google.maps.Marker({ position: PhilippineMiningServiceCorporation, icon: markerIconOp, map: map });
+			var infoPhilippineMiningServiceCorporation = new google.maps.InfoWindow({ content: 'Philippine Mining Service Corporation' });
+			google.maps.event.addListener(markerPhilippineMiningServiceCorporation, 'click', function() { infoPhilippineMiningServiceCorporation.open(map,markerPhilippineMiningServiceCorporation); });
+
+			var CadizPrivatePorts = new google.maps.LatLng(10.702379,122.939962);
+			var markerCadizPrivatePorts = new google.maps.Marker({ position: CadizPrivatePorts, icon: markerIconOp, map: map });
+			var infoCadizPrivatePorts = new google.maps.InfoWindow({ content: 'Cadiz Private Ports' });
+			google.maps.event.addListener(markerCadizPrivatePorts, 'click', function() { infoCadizPrivatePorts.open(map,markerCadizPrivatePorts); });
+
+			var MonrealMasbate = new google.maps.LatLng(12.513402,123.396474);
+			var markerMonrealMasbate = new google.maps.Marker({ position: MonrealMasbate, icon: markerIconOp, map: map });
+			var infoMonrealMasbate = new google.maps.InfoWindow({ content: 'Monreal, Masbate' });
+			google.maps.event.addListener(markerMonrealMasbate, 'click', function() { infoMonrealMasbate.open(map,markerMonrealMasbate); });
+
+			var SanVicenteNorthernSamar = new google.maps.LatLng(12.504558,124.284352);
+			var markerSanVicenteNorthernSamar = new google.maps.Marker({ position: SanVicenteNorthernSamar, icon: markerIconOp, map: map });
+			var infoSanVicenteNorthernSamar = new google.maps.InfoWindow({ content: 'San Vicente - Northern Samar' });
+			google.maps.event.addListener(markerSanVicenteNorthernSamar, 'click', function() { infoSanVicenteNorthernSamar.open(map,markerSanVicenteNorthernSamar); });
+
+			var SanAndres = new google.maps.LatLng(13.505152,123.041089);
+			var markerSanAndres = new google.maps.Marker({ position: SanAndres, icon: markerIconOp, map: map });
+			var infoSanAndres = new google.maps.InfoWindow({ content: 'San Andres' });
+			google.maps.event.addListener(markerSanAndres, 'click', function() { infoSanAndres.open(map,markerSanAndres); });
+
+			var Polambato = new google.maps.LatLng(11.0651395,123.9922066);
+			var markerPolambato = new google.maps.Marker({ position: Polambato, icon: markerIconOp, map: map });
+			var infoPolambato = new google.maps.InfoWindow({ content: 'Polambato' });
+			google.maps.event.addListener(markerPolambato, 'click', function() { infoPolambato.open(map,markerPolambato); });
+
+			var Itbayat = new google.maps.LatLng(20.447362,121.966641);
+			var markerItbayat = new google.maps.Marker({ position: Itbayat, icon: markerIconOp, map: map });
+			var infoItbayat = new google.maps.InfoWindow({ content: 'Itbayat  ' });
+			google.maps.event.addListener(markerItbayat, 'click', function() { infoItbayat.open(map,markerItbayat); });
+
+			var PilarPort = new google.maps.LatLng(9.992953,125.673466);
+			var markerPilarPort = new google.maps.Marker({ position: PilarPort, icon: markerIconOp, map: map });
+			var infoPilarPort = new google.maps.InfoWindow({ content: 'Pilar Port' });
+			google.maps.event.addListener(markerPilarPort, 'click', function() { infoPilarPort.open(map,markerPilarPort); });
+
+			var PetronCorporationBoUgongPasig = new google.maps.LatLng(14.572494,121.058904);
+			var markerPetronCorporationBoUgongPasig = new google.maps.Marker({ position: PetronCorporationBoUgongPasig, icon: markerIconOp, map: map });
+			var infoPetronCorporationBoUgongPasig = new google.maps.InfoWindow({ content: 'Petron Corporation-Bo. Ugong,Pasig' });
+			google.maps.event.addListener(markerPetronCorporationBoUgongPasig, 'click', function() { infoPetronCorporationBoUgongPasig.open(map,markerPetronCorporationBoUgongPasig); });
+
+			var Pioduran = new google.maps.LatLng(13.028864,123.443356);
+			var markerPioduran = new google.maps.Marker({ position: Pioduran, icon: markerIconOp, map: map });
+			var infoPioduran = new google.maps.InfoWindow({ content: 'Pioduran' });
+			google.maps.event.addListener(markerPioduran, 'click', function() { infoPioduran.open(map,markerPioduran); });
+
+			var BREDCO2Bacolod = new google.maps.LatLng(10.684255,122.938836);
+			var markerBREDCO2Bacolod = new google.maps.Marker({ position: BREDCO2Bacolod, icon: markerIconOp, map: map });
+			var infoBREDCO2Bacolod = new google.maps.InfoWindow({ content: 'BREDCO 2, Bacolod' });
+			google.maps.event.addListener(markerBREDCO2Bacolod, 'click', function() { infoBREDCO2Bacolod.open(map,markerBREDCO2Bacolod); });
+
+			var DaimaShippingCorp = new google.maps.LatLng(8.139584,123.845521);
+			var markerDaimaShippingCorp = new google.maps.Marker({ position: DaimaShippingCorp, icon: markerIconOp, map: map });
+			var infoDaimaShippingCorp = new google.maps.InfoWindow({ content: 'Daima Shipping Corp.' });
+			google.maps.event.addListener(markerDaimaShippingCorp, 'click', function() { infoDaimaShippingCorp.open(map,markerDaimaShippingCorp); });
+
+			// var BenitFerryTerminal = new google.maps.LatLng(40.776666,-74.010627);
+			// var markerBenitFerryTerminal = new google.maps.Marker({ position: BenitFerryTerminal, icon: markerIconOp, map: map });
+			// var infoBenitFerryTerminal = new google.maps.InfoWindow({ content: 'Benit Ferry Terminal' });
+			// google.maps.event.addListener(markerBenitFerryTerminal, 'click', function() { infoBenitFerryTerminal.open(map,markerBenitFerryTerminal); });
+
+			// var Tokuyama = new google.maps.LatLng(33.477181,131.732654);
+			// var markerTokuyama = new google.maps.Marker({ position: Tokuyama, icon: markerIconOp, map: map });
+			// var infoTokuyama = new google.maps.InfoWindow({ content: 'Tokuyama' });
+			// google.maps.event.addListener(markerTokuyama, 'click', function() { infoTokuyama.open(map,markerTokuyama); });
+
+			// var ThermaSouthIncWharf = new google.maps.LatLng(36.960561,-122.020625);
+			// var markerThermaSouthIncWharf = new google.maps.Marker({ position: ThermaSouthIncWharf, icon: markerIconOp, map: map });
+			// var infoThermaSouthIncWharf = new google.maps.InfoWindow({ content: 'Therma South Inc., Wharf' });
+			// google.maps.event.addListener(markerThermaSouthIncWharf, 'click', function() { infoThermaSouthIncWharf.open(map,markerThermaSouthIncWharf); });
+
+			// var BengoWharf = new google.maps.LatLng(29.915696,-90.120648);
+			// var markerBengoWharf = new google.maps.Marker({ position: BengoWharf, icon: markerIconOp, map: map });
+			// var infoBengoWharf = new google.maps.InfoWindow({ content: 'Bengo Wharf' });
+			// google.maps.event.addListener(markerBengoWharf, 'click', function() { infoBengoWharf.open(map,markerBengoWharf); });
+
+			// var MarineSlipway = new google.maps.LatLng(44.072442,-69.182874);
+			// var markerMarineSlipway = new google.maps.Marker({ position: MarineSlipway, icon: markerIconOp, map: map });
+			// var infoMarineSlipway = new google.maps.InfoWindow({ content: 'Marine Slipway' });
+			// google.maps.event.addListener(markerMarineSlipway, 'click', function() { infoMarineSlipway.open(map,markerMarineSlipway); });
+
+
+			var R=[];
+			R[0]=[Cebu,Dumaguete];
+			R[1]=[Cebu,FortSanPedroRC2];
+			R[2]=[Cebu,Hilongos];
+			R[3]=[BatangasPier,FilmineraAroroyMasbate];
+			R[4]=[Cebu,Ormoc];
+			R[5]=[Ozamiz,Iligan];
+			R[6]=[Cebu,CagayanDeOro];
+			R[7]=[Cebu,VeranoPortSurigao];
+			R[8]=[DaimaShippingCorp,BayandRiverOperation];
+			R[9]=[Dumaguete,Siquijor];
+			R[10]=[Bato,Ubay];
+			R[11]=[Caticlan,BatangasPier];
+			// R[12]=[Cebu,MarineSlipway];
+			R[13]=[RapuRapu,Legazpi];
+			// R[14]=[BenitFerryTerminal,LipataSurigaoCity];
+			R[15]=[SanVicenteNorthernSamar,Bulan];
+			R[16]=[Masbate,Pier12];
+			R[17]=[BatangasPier,ChevronJettySasa];
+			R[18]=[Cebu,Baybay];
+			// R[19]=[Tokuyama,PNOCAlternativeFuelsCorpPAFC];
+			R[20]=[Cebu,Getafe];
+			R[21]=[ManilaPhilippines,FilmineraAroroyMasbate];
+			R[22]=[Tagbilaran,Cebu];
+			R[23]=[Cebu,Loboc];
+			R[24]=[SanJoseOccMindoro,PuertoPrincesa];
+			R[25]=[Tabaco,SanAndres];
+			R[26]=[Larena,Dumaguete];
+			R[27]=[Cebu,LGUPortofGalasDipologCity];
+			R[28]=[PresidentGarcia,Ubay];
+			R[29]=[Cebu,Ubay];
+			R[30]=[SanAgustin,BatangasPier];
+			R[31]=[Tubay,Nasipit];
+			R[32]=[Calapan,BatangasPier];
+			R[33]=[Cebu,BREDCO2Bacolod];
+			R[34]=[Cebu,MabuhayVinylCorporation];
+			R[35]=[Cebu,Tagbilaran];
+			R[36]=[ManilaPhilippines,PetronBataanRefinery];
+			R[37]=[Cebu,Pier16];
+			R[38]=[Siquijor,Larena];
+			R[39]=[Dumaguete,Larena];
+			R[40]=[Cebu,Masbate];
+			R[41]=[TimberExportsInc,Semirara];
+			R[42]=[OrmocBeachingAreaIpil,Cebu];
+			R[43]=[Polambato,Palompon];
+			R[44]=[BatangasPier,Calapan];
+			R[45]=[Cebu,Tubigon];
+			R[46]=[Tubigon,Cebu];
+			// R[47]=[Cebu,BengoWharf];
+			R[48]=[ManilaPhilippines,MGC];
+			R[49]=[SanAndres,Tabaco];
+			R[50]=[Palompon,Cebu];
+			R[51]=[PoctoyOdiongan,BatangasPier];
+			R[52]=[Iligan,Ozamiz];
+			R[53]=[Cebu,Dapitan];
+			R[54]=[PetronBataanRefinery,BatangasPier];
+			R[55]=[AroroyMasbate,Masbate];
+			R[56]=[Ormoc,Cebu];
+			R[57]=[BREDCO2Bacolod,IloiloSanPedroRC2];
+			R[58]=[MindanaoContainerTerminal,CagayanDeOro];
+			R[59]=[VeranoPortSurigao,Dapa];
+			R[60]=[RIIBuildersHarbourCentre,PetronBataanRefinery];
+			R[61]=[Zamboanga,Jolo];
+			R[62]=[PhilippineMiningServiceCorporation,Ubay];
+			R[63]=[Jagna,Balbagon];
+			R[64]=[IloiloIloiloRiverLapuzWharfRC3,IloiloRiverWharfRC3];
+			R[65]=[Hilongos,Ubay];
+			R[66]=[OrmocBeachingAreaIpil,Naval];
+			R[67]=[Jolo,Zamboanga];
+			R[68]=[Getafe,Cebu];
+			R[69]=[MilagrosaMuelleLoney,PuertoPrincesa];
+			R[70]=[Balbagon,Jagna];
+			R[71]=[TMOPuertoGalera,BatangasPier];
+			R[72]=[PilarPort,Masbate];
+			R[73]=[ManilaPhilippines,MARIVELES];
+			R[74]=[Dapitan,Dumaguete];
+			R[75]=[Siquijor,Dumaguete];
+			R[76]=[Tagbilaran,Argao];
+			R[77]=[BatangasPier,PoctoyOdiongan];
+			R[78]=[Catbalogan,OrmocBeachingAreaIpil];
+			R[79]=[BatangasPier,SMCShippingandLighterageCorp];
+			R[80]=[Subic,AESMasinlocPowerPartnersCoLtd];
+			R[81]=[Ubay,Hilongos];
+			R[82]=[BatangasPier,BREDCO2Bacolod];
+			R[83]=[Kalamansig,TimberExportsInc];
+			R[84]=[Iloilo,PuertoPrincesa];
+			R[85]=[Argao,Tagbilaran];
+			R[86]=[Mandaue,Tagbilaran];
+			R[87]=[Itbayat,BascoBatanes];
+			R[88]=[BatangasPier,MirantPagbilaoCorpHopewellPowerPhilsCorporation];
+			R[89]=[IloiloSanPedroRC2,BREDCO2Bacolod];
+			R[90]=[Virac,Tabaco];
+			R[91]=[Romblon,BatangasPier];
+			R[92]=[Dumaguete,Dapitan];
+			R[93]=[Bongao,Zamboanga];
+			R[94]=[Baybay,Cebu];
+			R[95]=[Ubay,Bato];
+			R[96]=[SouthHarbor,Limay];
+			R[97]=[Ormoc,CalpiMasbate];
+			R[98]=[BatangasPier,CagayanDeOro];
+			R[99]=[PhilippineMiningServiceCorporation,PhilSinterCorp];
+			R[100]=[BatangasPier,Pasacao];
+			R[101]=[Bacolod,IloiloRiverWharfRC3];
+			R[102]=[BREDCO2Bacolod,Iloilo];
+			R[103]=[Pioduran,Masbate];
+			R[104]=[Cebu,OrmocBeachingAreaIpil];
+			R[105]=[Cebu,Ozamiz];
+			R[106]=[BalwhartecoTerminalAllen,Matnog];
+			R[107]=[Cebu,Punta];
+			R[108]=[Zamboanga,Basilan];
+			R[109]=[SanFernandoMasbate,Bulan];
+			R[110]=[FortSanPedroRC2,Cebu];
+			R[111]=[Mandaue,Punta];
+			R[112]=[Cuyo,PuertoPrincesa];
+			R[113]=[OrmocBeachingAreaIpil,Catbalogan];
+			R[114]=[PetronCorporationBoUgongPasig,PetronBataanRefinery];
+			R[115]=[Bato,MaayoShippingCompanyMatiao];
+			R[116]=[Cebu,Pier12];
+			R[118]=[Cebu,Palompon];
+			R[119]=[Ozamiz,Cebu];
+			R[120]=[Subic,FilmineraAroroyMasbate];
+			R[121]=[Toledo,SanCarlos];
+			R[122]=[Matnog,BalwhartecoTerminalAllen];
+			R[123]=[Limay,Mariveles];
+			R[124]=[Basilan,Zamboanga];
+			R[125]=[Iloilo,BREDCO2Bacolod];
+			R[126]=[Limay,Limay];
+			R[127]=[Lamitan,Zamboanga];
+			R[128]=[Samboan,Dapitan];
+			R[129]=[Dumangas,BREDCO2Bacolod];
+			R[130]=[Coron,Culion];
+			R[131]=[Benoni,Balingoan];
+			R[132]=[Culasi,DaanBanwa];
+			R[133]=[MonrealMasbate,Bulan];
+			R[134]=[BatangasPier,TMOPuertoGalera];
+			R[135]=[Cebu,Talibon];
+			R[136]=[PhilippineMiningServiceCorporation,CagayanPhilippines];
+			R[137]=[SanJacintoMasbate,Bulan];
+			R[138]=[Dumaguete,Cebu];
+			R[139]=[BatangasPier,Romblon];
+			R[140]=[Siquijor,Tambisan];
+			// R[12]=[SanJacintoMasbate,Bulan];
+			// R[14]=[Dumaguete,Cebu];
+			// R[19]=[BatangasPier,Romblon];
+			// R[47]=[Siquijor,Tambisan];
+
+			shipLines.mirbenpmendoza=[];
+			shipLines.mirbenpmendoza[0]=[Ubay,Hilongos];
+			shipLines.mirbenpmendoza[1]=[Hilongos,Ubay];
+			shipLines.taoshippingcorporation=[];
+			shipLines.taoshippingcorporation[0]=[BatangasPier,CagayanDeOro];
+			shipLines.ilaganshippingline=[];
+			shipLines.ilaganshippingline[0]=[TMOPuertoGalera,BatangasPier];
+			shipLines.glshippinglines=[];
+			shipLines.glshippinglines[0]=[Siquijor,Larena];
+			shipLines.glshippinglines[1]=[Siquijor,Dumaguete];
+			shipLines.glshippinglines[2]=[Siquijor,Tambisan];
+			shipLines.superdiamondshippinglinesinc=[];
+			shipLines.superdiamondshippinglinesinc[0]=[TMOPuertoGalera,BatangasPier];
+			shipLines.victorianacuysona=[];
+			shipLines.victorianacuysona[0]=[PhilippineMiningServiceCorporation,Ubay];
+			shipLines.victorianacuysona[1]=[PresidentGarcia,Ubay];
+			shipLines.unilinkshippingcorporation=[];
+			// shipLines.unilinkshippingcorporation[0]=[Cebu,BengoWharf];
+			shipLines.unilinkshippingcorporation[1]=[Cebu,FortSanPedroRC2];
+			shipLines.unilinkshippingcorporation[2]=[Cebu,Masbate];
+			shipLines.mandaueshippingandlighteragecorporation=[];
+			shipLines.mandaueshippingandlighteragecorporation[0]=[Argao,Tagbilaran];
+			shipLines.mandaueshippingandlighteragecorporation[1]=[Mandaue,Tagbilaran];
+			shipLines.robleshippinginc=[];
+			shipLines.robleshippinginc[0]=[Cebu,OrmocBeachingAreaIpil];
+			shipLines.robleshippinginc[1]=[Cebu,Hilongos];
+			shipLines.robleshippinginc[2]=[OrmocBeachingAreaIpil,Cebu];
+			shipLines.robleshippinginc[3]=[Cebu,Ormoc];
+			shipLines.robleshippinginc[4]=[Cebu,Baybay];
+			shipLines.robleshippinginc[5]=[Baybay,Cebu];
+			shipLines.harborstarshippingservicesinc=[];
+			shipLines.harborstarshippingservicesinc[0]=[PhilippineMiningServiceCorporation,PhilSinterCorp];
+			shipLines.harborstarshippingservicesinc[1]=[MindanaoContainerTerminal,CagayanDeOro];
+			shipLines.harborstarshippingservicesinc[2]=[PhilippineMiningServiceCorporation,CagayanPhilippines];
+			shipLines.philippinespanasiacarriercorporation=[];
+			shipLines.philippinespanasiacarriercorporation[0]=[Cebu,Pier12];
+			shipLines.nerieobligado=[];
+			shipLines.nerieobligado[0]=[Bato,Ubay];
+			shipLines.nerieobligado[1]=[Ubay,Bato];
+			shipLines.corazonchavez=[];
+			shipLines.corazonchavez[0]=[Tagbilaran,Argao];
+			// shipLines.corazonchavez[1]=[FishingGroundforAllPortsinPhilippines,Tagbilaran];
+			shipLines.leightoncontractorsphilsinc=[];
+			shipLines.leightoncontractorsphilsinc[0]=[ManilaPhilippines,FilmineraAroroyMasbate];
+			shipLines.leightoncontractorsphilsinc[1]=[BatangasPier,FilmineraAroroyMasbate];
+			shipLines.leightoncontractorsphilsinc[2]=[AroroyMasbate,Masbate];
+			shipLines.batangasbaycarriersinc=[];
+			shipLines.batangasbaycarriersinc[0]=[ManilaPhilippines,FilmineraAroroyMasbate];
+			shipLines.batangasbaycarriersinc[1]=[BatangasPier,FilmineraAroroyMasbate];
+			shipLines.batangasbaycarriersinc[2]=[Subic,FilmineraAroroyMasbate];
+			shipLines.starliteferriesinc=[];
+			shipLines.starliteferriesinc[0]=[Calapan,BatangasPier];
+			shipLines.starliteferriesinc[1]=[BatangasPier,Calapan];
+			shipLines.mandaueshippinglines=[];
+			shipLines.mandaueshippinglines[0]=[Cebu,Ubay];
+			shipLines.trisolidmoversservicesincorporated=[];
+			shipLines.trisolidmoversservicesincorporated[0]=[ManilaPhilippines,MGC];
+			shipLines.oceanfastferriesinc=[];
+			shipLines.oceanfastferriesinc[0]=[Tagbilaran,Cebu];
+			shipLines.oceanfastferriesinc[1]=[Calapan,BatangasPier];
+			shipLines.oceanfastferriesinc[2]=[Cebu,Tagbilaran];
+			shipLines.oceanfastferriesinc[3]=[BREDCO2Bacolod,Iloilo];
+			shipLines.oceanfastferriesinc[4]=[Cebu,Ormoc];
+			shipLines.oceanfastferriesinc[5]=[BatangasPier,Calapan];
+			shipLines.oceanfastferriesinc[6]=[Ormoc,Cebu];
+			shipLines.bicolandialinesinc=[];
+			shipLines.bicolandialinesinc[0]=[SanFernandoMasbate,Bulan];
+			shipLines.bicolandialinesinc[1]=[MonrealMasbate,Bulan];
+			shipLines.bicolandialinesinc[2]=[SanVicenteNorthernSamar,Bulan];
+			shipLines.bicolandialinesinc[3]=[SanJacintoMasbate,Bulan];
+			shipLines.bicolandialinesinc[4]=[Virac,Tabaco];
+			shipLines.sannicholaslinesinc=[];
+			shipLines.sannicholaslinesinc[0]=[Coron,Culion];
+			shipLines.montenegroshippinglinesinc=[];
+			shipLines.montenegroshippinglinesinc[0]=[Dumangas,BREDCO2Bacolod];
+			shipLines.montenegroshippinglinesinc[1]=[Dumaguete,Larena];
+			shipLines.thesupercatfastferrycorp=[];
+			shipLines.thesupercatfastferrycorp[0]=[Iloilo,BREDCO2Bacolod];
+			shipLines.thesupercatfastferrycorp[1]=[Cebu,Tagbilaran];
+			shipLines.thesupercatfastferrycorp[2]=[Cebu,Ormoc];
+			shipLines.islandshippingcorp=[];
+			shipLines.islandshippingcorp[0]=[Cebu,Talibon];
+			// shipLines.wallemphilippinesshippinginc=[];
+			// shipLines.wallemphilippinesshippinginc[0]=[Tokuyama,PNOCAlternativeFuelsCorpPAFC];
+			shipLines.diveindustriesphilsinc=[];
+			shipLines.diveindustriesphilsinc[0]=[ManilaPhilippines,MARIVELES];
+			shipLines.asianmarinetransportcorporation=[];
+			shipLines.asianmarinetransportcorporation[0]=[Jagna,Balbagon];
+			shipLines.asianmarinetransportcorporation[1]=[Benoni,Balingoan];
+			shipLines.asianmarinetransportcorporation[2]=[Calapan,BatangasPier];
+			shipLines.asianmarinetransportcorporation[3]=[Dapitan,Dumaguete];
+			shipLines.asianmarinetransportcorporation[4]=[Polambato,Palompon];
+			shipLines.asianmarinetransportcorporation[5]=[Dumaguete,Dapitan];
+			shipLines.asianmarinetransportcorporation[6]=[Dumaguete,Cebu];
+			shipLines.asianmarinetransportcorporation[7]=[Balbagon,Jagna];
+			shipLines.twogogroupinc=[];
+			shipLines.twogogroupinc[0]=[Caticlan,BatangasPier];
+			shipLines.twogogroupinc[1]=[PoctoyOdiongan,BatangasPier];
+			shipLines.twogogroupinc[2]=[Cebu,Tagbilaran];
+			shipLines.twogogroupinc[3]=[Cebu,Ormoc];
+			shipLines.twogogroupinc[4]=[BatangasPier,Romblon];
+			shipLines.tingguantradingcorporation=[];
+			shipLines.tingguantradingcorporation[0]=[Cebu,Palompon];
+			shipLines.conbrosshippingcorp=[];
+			shipLines.conbrosshippingcorp[0]=[Kalamansig,TimberExportsInc];
+			shipLines.conbrosshippingcorp[1]=[TimberExportsInc,Semirara];
+			shipLines.singshippinglinesinc=[];
+			shipLines.singshippinglinesinc[0]=[Jolo,Zamboanga];
+			shipLines.majesticshippingcorporation=[];
+			shipLines.majesticshippingcorporation[0]=[Tubay,Nasipit];
+			shipLines.marinaferriesinc=[];
+			shipLines.marinaferriesinc[0]=[Matnog,BalwhartecoTerminalAllen];
+			shipLines.marinaferriesinc[1]=[BalwhartecoTerminalAllen,Matnog];
+			shipLines.marinaferriesinc[2]=[Romblon,BatangasPier];
+			shipLines.marinaferriesinc[3]=[Calapan,BatangasPier];
+			shipLines.marinaferriesinc[4]=[VeranoPortSurigao,Dapa];
+			shipLines.marinaferriesinc[5]=[Dapitan,Dumaguete];
+			shipLines.marinaferriesinc[6]=[PoctoyOdiongan,BatangasPier];
+			shipLines.marinaferriesinc[7]=[BatangasPier,PoctoyOdiongan];
+			shipLines.marinaferriesinc[8]=[Dumaguete,Dapitan];
+			shipLines.marinaferriesinc[9]=[BatangasPier,Calapan];
+			shipLines.marinaferriesinc[10]=[BatangasPier,Romblon];
+			shipLines.munticarloseafreightinc=[];
+			shipLines.munticarloseafreightinc[0]=[SanJoseOccMindoro,PuertoPrincesa];
+			shipLines.silverstreaktransportcorporation=[];
+			shipLines.silverstreaktransportcorporation[0]=[Masbate,Pier12];
+			shipLines.norbertobcabanero=[];
+			shipLines.norbertobcabanero[0]=[Cebu,Getafe];
+			shipLines.nmccontainerlinesinc=[];
+			shipLines.nmccontainerlinesinc[0]=[Cebu,Pier16];
+			// shipLines.nmccontainerlinesinc[1]=[Cebu,MarineSlipway];
+			shipLines.ffcruzshipping=[];
+			shipLines.ffcruzshipping[0]=[IloiloIloiloRiverLapuzWharfRC3,IloiloRiverWharfRC3];
+			shipLines.cokaliongshippinglinesinc=[];
+			shipLines.cokaliongshippinglinesinc[0]=[Cebu,FortSanPedroRC2];
+			shipLines.cokaliongshippinglinesinc[1]=[Palompon,Cebu];
+			shipLines.cokaliongshippinglinesinc[2]=[FortSanPedroRC2,Cebu];
+			shipLines.cokaliongshippinglinesinc[3]=[Cebu,Palompon];
+			shipLines.sanmiguelcorporation=[];
+			shipLines.sanmiguelcorporation[0]=[Limay,Mariveles];
+			shipLines.sanmiguelcorporation[1]=[Limay,Limay];
+			shipLines.sanmiguelcorporation[2]=[Itbayat,BascoBatanes];
+			shipLines.alesonshippinglinesinc=[];
+			shipLines.alesonshippinglinesinc[0]=[Zamboanga,Jolo];
+			shipLines.alesonshippinglinesinc[1]=[Zamboanga,Basilan];
+			shipLines.alesonshippinglinesinc[2]=[Basilan,Zamboanga];
+			shipLines.alesonshippinglinesinc[3]=[Jolo,Zamboanga];
+			shipLines.alesonshippinglinesinc[4]=[Dapitan,Dumaguete];
+			shipLines.alesonshippinglinesinc[5]=[Siquijor,Dumaguete];
+			shipLines.alesonshippinglinesinc[6]=[Bongao,Zamboanga];
+			shipLines.alesonshippinglinesinc[7]=[Lamitan,Zamboanga];
+			shipLines.alesonshippinglinesinc[8]=[Cebu,Tubigon];
+			shipLines.starliteferryinc=[];
+			shipLines.starliteferryinc[0]=[BatangasPier,Calapan];
+			shipLines.srnfastseacraftsinc=[];
+			shipLines.srnfastseacraftsinc[0]=[Tagbilaran,Cebu];
+			shipLines.srnfastseacraftsinc[1]=[BREDCO2Bacolod,IloiloSanPedroRC2];
+			shipLines.srnfastseacraftsinc[2]=[Basilan,Zamboanga];
+			shipLines.srnfastseacraftsinc[3]=[Jolo,Zamboanga];
+			shipLines.srnfastseacraftsinc[4]=[Iloilo,BREDCO2Bacolod];
+			shipLines.srnfastseacraftsinc[5]=[Cebu,Tagbilaran];
+			shipLines.srnfastseacraftsinc[6]=[Cebu,Ormoc];
+			shipLines.srnfastseacraftsinc[7]=[Ormoc,Cebu];
+			shipLines.liteshippingcorporation=[];
+			shipLines.liteshippingcorporation[0]=[Cebu,Tagbilaran];
+			shipLines.liteshippingcorporation[1]=[Cebu,Ormoc];
+			shipLines.liteshippingcorporation[2]=[Cebu,Tubigon];
+			shipLines.liteshippingcorporation[3]=[Toledo,SanCarlos];
+			shipLines.katrafarshippinglines=[];
+			shipLines.katrafarshippinglines[0]=[Jolo,Zamboanga];
+			shipLines.daimashippingcorporation=[];
+			shipLines.daimashippingcorporation[0]=[DaimaShippingCorp,BayandRiverOperation];
+			shipLines.fktshippingagency=[];
+			shipLines.fktshippingagency[0]=[Cebu,Ozamiz];
+			shipLines.fktshippingagency[1]=[Cebu,Dumaguete];
+			shipLines.fktshippingagency[2]=[Iligan,Ozamiz];
+			shipLines.fktshippingagency[3]=[Dumaguete,Cebu];
+			shipLines.fktshippingagency[4]=[Ozamiz,Iligan];
+			shipLines.fktshippingagency[5]=[Ozamiz,Cebu];
+			shipLines.ernestosocobossr=[];
+			shipLines.ernestosocobossr[0]=[Cebu,Getafe];
+			shipLines.larcenashippinglines=[];
+			shipLines.larcenashippinglines[0]=[RapuRapu,Legazpi];
+			shipLines.medalliontransport=[];
+			shipLines.medalliontransport[0]=[Bato,Ubay];
+			shipLines.medalliontransport[1]=[Cebu,LGUPortofGalasDipologCity];
+			shipLines.medalliontransport[2]=[Cebu,Palompon];
+			shipLines.medalliontransport[3]=[Cebu,Dapitan];
+			shipLines.medalliontransport[4]=[Ubay,Bato];
+			shipLines.smcshippingandlighteragecorporation=[];
+			shipLines.smcshippingandlighteragecorporation[0]=[PetronCorporationBoUgongPasig,PetronBataanRefinery];
+			shipLines.smcshippingandlighteragecorporation[1]=[RIIBuildersHarbourCentre,PetronBataanRefinery];
+			shipLines.smcshippingandlighteragecorporation[2]=[ManilaPhilippines,PetronBataanRefinery];
+			shipLines.jnshippinglinescorporation=[];
+			shipLines.jnshippinglinescorporation[0]=[Cebu,Ubay];
+			shipLines.f3intermarinetransportcorp=[];
+			shipLines.f3intermarinetransportcorp[0]=[Tubay,Nasipit];
+			shipLines.csgaferrycorporation=[];
+			shipLines.csgaferrycorporation[0]=[BatangasPier,PoctoyOdiongan];
+			shipLines.csgaferrycorporation[1]=[SanAgustin,BatangasPier];
+			shipLines.reginashippinglinesinc=[];
+			shipLines.reginashippinglinesinc[0]=[SanAndres,Tabaco];
+			shipLines.reginashippinglinesinc[1]=[Tabaco,SanAndres];
+			shipLines.nykfiljapanshippingcorp=[];
+			shipLines.nykfiljapanshippingcorp[0]=[BatangasPier,ChevronJettySasa];
+			shipLines.prudentialshippingagencyservicesinc=[];
+			shipLines.prudentialshippingagencyservicesinc[0]=[BatangasPier,Calapan];
+			shipLines.bestashippinglines=[];
+			shipLines.bestashippinglines[0]=[BatangasPier,Calapan];
+			shipLines.bestashippinglinesinc=[];
+			shipLines.bestashippinglinesinc[0]=[Calapan,BatangasPier];
+			shipLines.masudamarinecorporation=[];
+			shipLines.masudamarinecorporation[0]=[BatangasPier,SMCShippingandLighterageCorp];
+			shipLines.transasiasouthlandshipping=[];
+			shipLines.transasiasouthlandshipping[0]=[Cebu,Ozamiz];
+			shipLines.transasiasouthlandshipping[1]=[Cebu,CagayanDeOro];
+			shipLines.seatechtransportinc=[];
+			shipLines.seatechtransportinc[0]=[BatangasPier,BREDCO2Bacolod];
+			shipLines.williammichaelshippingcorp=[];
+			shipLines.williammichaelshippingcorp[0]=[Cebu,MabuhayVinylCorporation];
+			shipLines.transasiashippinglinesincorporation=[];
+			shipLines.transasiashippinglinesincorporation[0]=[Cebu,Ozamiz];
+			shipLines.transasiashippinglinesincorporation[1]=[Cebu,FortSanPedroRC2];
+			shipLines.skylineshipping=[];
+			shipLines.skylineshipping[0]=[Culasi,DaanBanwa];
+			shipLines.hanslymerchandising=[];
+			shipLines.hanslymerchandising[0]=[Jolo,Zamboanga];
+			shipLines.oceancoastshippingcorporation=[];
+			shipLines.oceancoastshippingcorporation[0]=[PetronBataanRefinery,BatangasPier];
+			shipLines.oceancoastshippingcorporation[1]=[ManilaPhilippines,PetronBataanRefinery];
+			shipLines.thesupercatfastferrycorporation=[];
+			shipLines.thesupercatfastferrycorporation[0]=[BatangasPier,Calapan];
+			// shipLines.marsunshipping=[];
+			// shipLines.marsunshipping[0]=[Tokuyama,PNOCAlternativeFuelsCorpPAFC];
+			shipLines.dimcshippinginc=[];
+			shipLines.dimcshippinginc[0]=[Siquijor,Larena];
+			shipLines.dimcshippinginc[1]=[Siquijor,Dumaguete];
+			shipLines.agarinteodulon=[];
+			shipLines.agarinteodulon[0]=[RapuRapu,Legazpi];
+			shipLines.ibnerizamshippinglinesinc=[];
+			shipLines.ibnerizamshippinglinesinc[0]=[Zamboanga,Jolo];
+			shipLines.ibnerizamshippinglinesinc[1]=[Zamboanga,Basilan];
+			shipLines.ibnerizamshippinglinesinc[2]=[Jolo,Zamboanga];
+			shipLines.seatechtransportinc=[];
+			shipLines.seatechtransportinc[0]=[BatangasPier,Pasacao];
+			shipLines.bctshippinglinesinc=[];
+			shipLines.bctshippinglinesinc[0]=[VeranoPortSurigao,Dapa];
+			shipLines.seahighwaycarrierinc=[];
+			shipLines.seahighwaycarrierinc[0]=[Cebu,Tubigon];
+			shipLines.fathersonshippinglines=[];
+			shipLines.fathersonshippinglines[0]=[TMOPuertoGalera,BatangasPier];
+			shipLines.sucreenterprisescorporation=[];
+			shipLines.sucreenterprisescorporation[0]=[Bato,MaayoShippingCompanyMatiao];
+			shipLines.aquarealshippinglines=[];
+			shipLines.aquarealshippinglines[0]=[BatangasPier,TMOPuertoGalera];
+			shipLines.philstoneshippingagency=[];
+			shipLines.philstoneshippingagency[0]=[Benoni,Balingoan];
+			shipLines.enternameofcustomer=[];
+			shipLines.enternameofcustomer[0]=[Tagbilaran,Cebu];
+			shipLines.enternameofcustomer[1]=[Tubigon,Cebu];
+			shipLines.enternameofcustomer[2]=[ManilaPhilippines,MGC];
+			shipLines.enternameofcustomer[3]=[Calapan,BatangasPier];
+			shipLines.enternameofcustomer[4]=[Cebu,BREDCO2Bacolod];
+			shipLines.enternameofcustomer[5]=[Cebu,Tagbilaran];
+			shipLines.enternameofcustomer[6]=[Getafe,Cebu];
+			shipLines.enternameofcustomer[7]=[TMOPuertoGalera,BatangasPier];
+			shipLines.enternameofcustomer[8]=[Romblon,BatangasPier];
+			shipLines.enternameofcustomer[9]=[BatangasPier,Calapan];
+			shipLines.enternameofcustomer[10]=[Cebu,Tubigon];
+			shipLines.enternameofcustomer[11]=[Cebu,Getafe];
+			shipLines.enternameofcustomer[12]=[SanAgustin,BatangasPier];
+			shipLines.johncleashippinglines=[];
+			shipLines.johncleashippinglines[0]=[Itbayat,BascoBatanes];
+			shipLines.tristarmegalinkcorporation=[];
+			shipLines.tristarmegalinkcorporation[0]=[Dumangas,BREDCO2Bacolod];
+			shipLines.greatseapluscorporation=[];
+			shipLines.greatseapluscorporation[0]=[Iloilo,BREDCO2Bacolod];
+			shipLines.greatseapluscorporation[1]=[Bacolod,IloiloRiverWharfRC3];
+			shipLines.greatseapluscorporation[2]=[IloiloSanPedroRC2,BREDCO2Bacolod];
+			shipLines.cebubargetugincorporated=[];
+			shipLines.cebubargetugincorporated[0]=[Cebu,VeranoPortSurigao];
+			shipLines.casianoobligado=[];
+			shipLines.casianoobligado[0]=[Bato,Ubay];
+			shipLines.casianoobligado[1]=[Ubay,Bato];
+			shipLines.milagrosajshippingcorporation=[];
+			shipLines.milagrosajshippingcorporation[0]=[Cuyo,PuertoPrincesa];
+			shipLines.milagrosajshippingcorporation[1]=[MilagrosaMuelleLoney,PuertoPrincesa];
+			shipLines.sunlineshippingcorporation=[];
+			shipLines.sunlineshippingcorporation[0]=[Samboan,Dapitan];
+			shipLines.sunlineshippingcorporation[1]=[Cebu,Tubigon];
+			shipLines.macbuilders=[];
+			shipLines.macbuilders[0]=[Cebu,Punta];
+			shipLines.macbuilders[1]=[Mandaue,Punta];
+			shipLines.reynaldomcruz=[];
+			shipLines.reynaldomcruz[0]=[Ubay,Bato];
+			shipLines.malayantowageandsalvagecorporation=[];
+			shipLines.malayantowageandsalvagecorporation[0]=[Subic,AESMasinlocPowerPartnersCoLtd];
+			shipLines.malayantowageandsalvagecorporation[1]=[SouthHarbor,Limay];
+			shipLines.malayantowageandsalvagecorporation[2]=[RapuRapu,Legazpi];
+			shipLines.malayantowageandsalvagecorporation[3]=[BatangasPier,MirantPagbilaoCorpHopewellPowerPhilsCorporation];
+			shipLines.concretesolutioninc=[];
+			shipLines.concretesolutioninc[0]=[Ormoc,CalpiMasbate];
+			shipLines.concretesolutioninc[1]=[OrmocBeachingAreaIpil,Naval];
+			shipLines.concretesolutioninc[2]=[OrmocBeachingAreaIpil,Catbalogan];
+			shipLines.concretesolutioninc[3]=[Catbalogan,OrmocBeachingAreaIpil];
+			shipLines.archipelagophilippineferriescorporation=[];
+			shipLines.archipelagophilippineferriescorporation[0]=[Calapan,BatangasPier];
+			shipLines.archipelagophilippineferriescorporation[1]=[BatangasPier,Calapan];
+			shipLines.minoloshippinglines=[];
+			shipLines.minoloshippinglines[0]=[TMOPuertoGalera,BatangasPier];
+			shipLines.montenegroshippinglinesinc=[];
+			shipLines.montenegroshippinglinesinc[0]=[Calapan,BatangasPier];
+			shipLines.montenegroshippinglinesinc[1]=[Larena,Dumaguete];
+			shipLines.montenegroshippinglinesinc[2]=[Iloilo,PuertoPrincesa];
+			shipLines.montenegroshippinglinesinc[3]=[Pioduran,Masbate];
+			shipLines.montenegroshippinglinesinc[4]=[Dumangas,BREDCO2Bacolod];
+			shipLines.montenegroshippinglinesinc[5]=[Dumaguete,Siquijor];
+			shipLines.montenegroshippinglinesinc[6]=[Romblon,BatangasPier];
+			shipLines.montenegroshippinglinesinc[7]=[PilarPort,Masbate];
+			// shipLines.montenegroshippinglinesinc[8]=[BenitFerryTerminal,LipataSurigaoCity];
+			shipLines.montenegroshippinglinesinc[9]=[Cuyo,PuertoPrincesa];
+			shipLines.montenegroshippinglinesinc[10]=[BatangasPier,PoctoyOdiongan];
+			shipLines.montenegroshippinglinesinc[11]=[Dumaguete,Dapitan];
+			shipLines.montenegroshippinglinesinc[12]=[BatangasPier,Calapan];
+			shipLines.montenegroshippinglinesinc[13]=[Toledo,SanCarlos];
+			shipLines.everlinesinc=[];
+			shipLines.everlinesinc[0]=[Zamboanga,Jolo];
+			shipLines.everlinesinc[1]=[Jolo,Zamboanga];
+			shipLines.apocementcorporation=[];
+			shipLines.apocementcorporation[0]=[Cebu,Loboc];
+			shipLines.ninajanecargopassengerservice=[];
+			shipLines.ninajanecargopassengerservice[0]=[Cebu,Getafe];
+			shipLines.challengeofpassionshippinglines=[];
+			shipLines.challengeofpassionshippinglines[0]=[TMOPuertoGalera,BatangasPier];
+
+			shipLines.R = R;
+
+			shipLines.mirbenpmendoza[4]=[Ubay,Hilongos];
+			shipLines.mirbenpmendoza[5]=[Hilongos,Ubay];
+			shipLines.taoshippingcorporation[1]=[CagayanDeOro,BatangasPier];
+			shipLines.ilaganshippingline[1]=[BatangasPier,TMOPuertoGalera];
+			shipLines.glshippinglines[6]=[Dumaguete,Siquijor];
+			shipLines.glshippinglines[7]=[Larena,Siquijor];
+			shipLines.glshippinglines[8]=[Tambisan,Siquijor];
+			shipLines.superdiamondshippinglinesinc[1]=[BatangasPier,TMOPuertoGalera];
+			shipLines.victorianacuysona[4]=[Ubay,PhilippineMiningServiceCorporation];
+			shipLines.victorianacuysona[5]=[Ubay,PresidentGarcia];
+			// shipLines.unilinkshippingcorporation[3]=[BengoWharf,Cebu];
+			shipLines.unilinkshippingcorporation[4]=[FortSanPedroRC2,Cebu];
+			shipLines.unilinkshippingcorporation[5]=[Masbate,Cebu];
+			shipLines.mandaueshippingandlighteragecorporation[2]=[Tagbilaran,Mandaue];
+			shipLines.mandaueshippingandlighteragecorporation[3]=[Tagbilaran,Argao];
+			shipLines.robleshippinginc[11]=[OrmocBeachingAreaIpil,Cebu];
+			shipLines.robleshippinginc[12]=[Hilongos,Cebu];
+			shipLines.robleshippinginc[13]=[Baybay,Cebu];
+			shipLines.robleshippinginc[14]=[Ormoc,Cebu];
+			shipLines.harborstarshippingservicesinc[3]=[PhilSinterCorp,PhilippineMiningServiceCorporation];
+			shipLines.harborstarshippingservicesinc[4]=[CagayanPhilippines,PhilippineMiningServiceCorporation];
+			shipLines.harborstarshippingservicesinc[5]=[CagayanDeOro,MindanaoContainerTerminal];
+			shipLines.philippinespanasiacarriercorporation[1]=[Pier12,Cebu];
+			shipLines.nerieobligado[3]=[Bato,Ubay];
+			shipLines.nerieobligado[4]=[Ubay,Bato];
+			// shipLines.corazonchavez[2]=[Tagbilaran,FishingGroundforAllPortsinPhilippines];
+			shipLines.corazonchavez[3]=[Argao,Tagbilaran];
+			shipLines.leightoncontractorsphilsinc[3]=[FilmineraAroroyMasbate,ManilaPhilippines];
+			shipLines.leightoncontractorsphilsinc[4]=[FilmineraAroroyMasbate,BatangasPier];
+			shipLines.leightoncontractorsphilsinc[5]=[Masbate,AroroyMasbate];
+			shipLines.batangasbaycarriersinc[3]=[FilmineraAroroyMasbate,ManilaPhilippines];
+			shipLines.batangasbaycarriersinc[4]=[FilmineraAroroyMasbate,BatangasPier];
+			shipLines.batangasbaycarriersinc[5]=[FilmineraAroroyMasbate,Subic];
+			shipLines.starliteferriesinc[5]=[Calapan,BatangasPier];
+			shipLines.starliteferriesinc[6]=[BatangasPier,Calapan];
+			shipLines.mandaueshippinglines[1]=[Ubay,Cebu];
+			shipLines.trisolidmoversservicesincorporated[1]=[MGC,ManilaPhilippines];
+			shipLines.oceanfastferriesinc[19]=[Tagbilaran,Cebu];
+			shipLines.oceanfastferriesinc[20]=[Calapan,BatangasPier];
+			shipLines.oceanfastferriesinc[21]=[Iloilo,BREDCO2Bacolod];
+			shipLines.oceanfastferriesinc[22]=[BatangasPier,Calapan];
+			shipLines.oceanfastferriesinc[23]=[Ormoc,Cebu];
+			shipLines.bicolandialinesinc[8]=[Bulan,SanVicenteNorthernSamar];
+			shipLines.bicolandialinesinc[9]=[Bulan,MonrealMasbate];
+			shipLines.bicolandialinesinc[10]=[Bulan,SanFernandoMasbate];
+			shipLines.bicolandialinesinc[11]=[Tabaco,Virac];
+			shipLines.bicolandialinesinc[12]=[Bulan,SanJacintoMasbate];
+			shipLines.sannicholaslinesinc[1]=[Culion,Coron];
+			shipLines.montenegroshippinglinesinc[2]=[BREDCO2Bacolod,Dumangas];
+			shipLines.montenegroshippinglinesinc[3]=[Larena,Dumaguete];
+			shipLines.thesupercatfastferrycorp[4]=[Tagbilaran,Cebu];
+			shipLines.thesupercatfastferrycorp[5]=[BREDCO2Bacolod,Iloilo];
+			shipLines.thesupercatfastferrycorp[6]=[Ormoc,Cebu];
+			shipLines.islandshippingcorp[1]=[Talibon,Cebu];
+			// shipLines.wallemphilippinesshippinginc[1]=[PNOCAlternativeFuelsCorpPAFC,Tokuyama];
+			shipLines.diveindustriesphilsinc[1]=[MARIVELES,ManilaPhilippines];
+			shipLines.asianmarinetransportcorporation[9]=[Cebu,Dumaguete];
+			shipLines.asianmarinetransportcorporation[10]=[Jagna,Balbagon];
+			shipLines.asianmarinetransportcorporation[11]=[Balingoan,Benoni];
+			shipLines.asianmarinetransportcorporation[12]=[Dapitan,Dumaguete];
+			shipLines.asianmarinetransportcorporation[13]=[Dumaguete,Dapitan];
+			shipLines.asianmarinetransportcorporation[14]=[BatangasPier,Calapan];
+			shipLines.asianmarinetransportcorporation[15]=[Palompon,Polambato];
+			shipLines.asianmarinetransportcorporation[16]=[Balbagon,Jagna];
+			shipLines.twogogroupinc[7]=[Tagbilaran,Cebu];
+			shipLines.twogogroupinc[8]=[Romblon,BatangasPier];
+			shipLines.twogogroupinc[9]=[BatangasPier,PoctoyOdiongan];
+			shipLines.twogogroupinc[10]=[BatangasPier,Caticlan];
+			shipLines.twogogroupinc[11]=[Ormoc,Cebu];
+			shipLines.tingguantradingcorporation[1]=[Palompon,Cebu];
+			shipLines.conbrosshippingcorp[3]=[TimberExportsInc,Kalamansig];
+			shipLines.conbrosshippingcorp[4]=[Semirara,TimberExportsInc];
+			shipLines.singshippinglinesinc[1]=[Zamboanga,Jolo];
+			shipLines.majesticshippingcorporation[1]=[Nasipit,Tubay];
+			shipLines.marinaferriesinc[14]=[Matnog,BalwhartecoTerminalAllen];
+			shipLines.marinaferriesinc[15]=[Dapa,VeranoPortSurigao];
+			shipLines.marinaferriesinc[16]=[BalwhartecoTerminalAllen,Matnog];
+			shipLines.marinaferriesinc[17]=[Calapan,BatangasPier];
+			shipLines.marinaferriesinc[18]=[PoctoyOdiongan,BatangasPier];
+			shipLines.marinaferriesinc[19]=[Dapitan,Dumaguete];
+			shipLines.marinaferriesinc[20]=[Dumaguete,Dapitan];
+			shipLines.marinaferriesinc[21]=[BatangasPier,PoctoyOdiongan];
+			shipLines.munticarloseafreightinc[1]=[PuertoPrincesa,SanJoseOccMindoro];
+			shipLines.silverstreaktransportcorporation[1]=[Pier12,Masbate];
+			shipLines.norbertobcabanero[5]=[Getafe,Cebu];
+			shipLines.nmccontainerlinesinc[2]=[Pier16,Cebu];
+			// shipLines.nmccontainerlinesinc[3]=[MarineSlipway,Cebu];
+			shipLines.ffcruzshipping[1]=[IloiloRiverWharfRC3,IloiloIloiloRiverLapuzWharfRC3];
+			shipLines.cokaliongshippinglinesinc[13]=[Palompon,Cebu];
+			shipLines.sanmiguelcorporation[4]=[BascoBatanes,Itbayat];
+			shipLines.sanmiguelcorporation[5]=[Limay,Limay];
+			shipLines.sanmiguelcorporation[6]=[Mariveles,Limay];
+			shipLines.alesonshippinglinesinc[14]=[Zamboanga,Jolo];
+			shipLines.alesonshippinglinesinc[15]=[Tubigon,Cebu];
+			shipLines.alesonshippinglinesinc[16]=[Dumaguete,Siquijor];
+			shipLines.alesonshippinglinesinc[17]=[Zamboanga,Basilan];
+			shipLines.alesonshippinglinesinc[18]=[Basilan,Zamboanga];
+			shipLines.alesonshippinglinesinc[19]=[Jolo,Zamboanga];
+			shipLines.alesonshippinglinesinc[20]=[Dumaguete,Dapitan];
+			shipLines.alesonshippinglinesinc[21]=[Zamboanga,Bongao];
+			shipLines.alesonshippinglinesinc[22]=[Zamboanga,Lamitan];
+			shipLines.starliteferryinc[1]=[Calapan,BatangasPier];
+			shipLines.srnfastseacraftsinc[20]=[Zamboanga,Jolo];
+			shipLines.srnfastseacraftsinc[21]=[Tagbilaran,Cebu];
+			shipLines.srnfastseacraftsinc[22]=[Zamboanga,Basilan];
+			shipLines.srnfastseacraftsinc[23]=[BREDCO2Bacolod,Iloilo];
+			shipLines.srnfastseacraftsinc[24]=[IloiloSanPedroRC2,BREDCO2Bacolod];
+			shipLines.srnfastseacraftsinc[25]=[Ormoc,Cebu];
+			shipLines.liteshippingcorporation[6]=[Tagbilaran,Cebu];
+			shipLines.liteshippingcorporation[7]=[SanCarlos,Toledo];
+			shipLines.liteshippingcorporation[8]=[Tubigon,Cebu];
+			shipLines.liteshippingcorporation[9]=[Ormoc,Cebu];
+			shipLines.katrafarshippinglines[1]=[Zamboanga,Jolo];
+			shipLines.daimashippingcorporation[4]=[BayandRiverOperation,DaimaShippingCorp];
+			shipLines.fktshippingagency[10]=[Cebu,Ozamiz];
+			shipLines.fktshippingagency[11]=[Ozamiz,Ozamiz];
+			shipLines.ernestosocobossr[6]=[Getafe,Cebu];
+			shipLines.larcenashippinglines[1]=[Legazpi,RapuRapu];
+			shipLines.medalliontransport[5]=[Dapitan,Cebu];
+			shipLines.medalliontransport[6]=[Bato,Ubay];
+			shipLines.medalliontransport[7]=[LGUPortofGalasDipologCity,Cebu];
+			shipLines.medalliontransport[8]=[Palompon,Cebu];
+			shipLines.medalliontransport[9]=[Ubay,Bato];
+			shipLines.smcshippingandlighteragecorporation[3]=[PetronBataanRefinery,RIIBuildersHarbourCentre];
+			shipLines.smcshippingandlighteragecorporation[4]=[PetronBataanRefinery,ManilaPhilippines];
+			shipLines.smcshippingandlighteragecorporation[5]=[PetronBataanRefinery,PetronCorporationBoUgongPasig];
+			shipLines.jnshippinglinescorporation[2]=[Ubay,Cebu];
+			shipLines.f3intermarinetransportcorp[1]=[Nasipit,Tubay];
+			shipLines.csgaferrycorporation[2]=[PoctoyOdiongan,BatangasPier];
+			shipLines.csgaferrycorporation[3]=[BatangasPier,SanAgustin];
+			shipLines.reginashippinglinesinc[2]=[SanAndres,Tabaco];
+			shipLines.reginashippinglinesinc[3]=[Tabaco,SanAndres];
+			shipLines.nykfiljapanshippingcorp[1]=[ChevronJettySasa,BatangasPier];
+			shipLines.prudentialshippingagencyservicesinc[1]=[Calapan,BatangasPier];
+			shipLines.bestashippinglines[1]=[Calapan,BatangasPier];
+			shipLines.bestashippinglinesinc[1]=[BatangasPier,Calapan];
+			shipLines.masudamarinecorporation[2]=[SMCShippingandLighterageCorp,BatangasPier];
+			shipLines.transasiasouthlandshipping[2]=[CagayanDeOro,Cebu];
+			shipLines.transasiasouthlandshipping[3]=[Ozamiz,Cebu];
+			shipLines.seatechtransportinc[1]=[BREDCO2Bacolod,BatangasPier];
+			shipLines.williammichaelshippingcorp[1]=[MabuhayVinylCorporation,Cebu];
+			shipLines.transasiashippinglinesincorporation[2]=[FortSanPedroRC2,Cebu];
+			shipLines.transasiashippinglinesincorporation[3]=[Ozamiz,Cebu];
+			shipLines.skylineshipping[1]=[DaanBanwa,Culasi];
+			shipLines.hanslymerchandising[1]=[Zamboanga,Jolo];
+			shipLines.oceancoastshippingcorporation[2]=[BatangasPier,PetronBataanRefinery];
+			shipLines.oceancoastshippingcorporation[3]=[PetronBataanRefinery,ManilaPhilippines];
+			shipLines.thesupercatfastferrycorporation[2]=[Calapan,BatangasPier];
+			// shipLines.marsunshipping[1]=[PNOCAlternativeFuelsCorpPAFC,Tokuyama];
+			shipLines.dimcshippinginc[2]=[Dumaguete,Siquijor];
+			shipLines.dimcshippinginc[3]=[Larena,Siquijor];
+			shipLines.agarinteodulon[1]=[Legazpi,RapuRapu];
+			shipLines.ibnerizamshippinglinesinc[3]=[Zamboanga,Jolo];
+			shipLines.ibnerizamshippinglinesinc[4]=[Basilan,Zamboanga];
+			shipLines.ibnerizamshippinglinesinc[5]=[Jolo,Zamboanga];
+			shipLines.seatechtransportinc[1]=[Pasacao,BatangasPier];
+			shipLines.bctshippinglinesinc[1]=[Dapa,VeranoPortSurigao];
+			shipLines.seahighwaycarrierinc[2]=[Tubigon,Cebu];
+			shipLines.fathersonshippinglines[6]=[BatangasPier,TMOPuertoGalera];
+			shipLines.sucreenterprisescorporation[1]=[MaayoShippingCompanyMatiao,Bato];
+			shipLines.aquarealshippinglines[1]=[TMOPuertoGalera,BatangasPier];
+			shipLines.philstoneshippingagency[2]=[Balingoan,Benoni];
+			shipLines.enternameofcustomer[26]=[Tagbilaran,Cebu];
+			shipLines.enternameofcustomer[27]=[BREDCO2Bacolod,Cebu];
+			shipLines.enternameofcustomer[28]=[Tubigon,Cebu];
+			shipLines.enternameofcustomer[29]=[Calapan,BatangasPier];
+			shipLines.enternameofcustomer[30]=[BatangasPier,TMOPuertoGalera];
+			shipLines.enternameofcustomer[31]=[MGC,ManilaPhilippines];
+			shipLines.enternameofcustomer[32]=[Getafe,Cebu];
+			shipLines.enternameofcustomer[33]=[BatangasPier,SanAgustin];
+			shipLines.enternameofcustomer[34]=[BatangasPier,Calapan];
+			shipLines.enternameofcustomer[35]=[BatangasPier,Romblon];
+			shipLines.johncleashippinglines[1]=[BascoBatanes,Itbayat];
+			shipLines.tristarmegalinkcorporation[4]=[BREDCO2Bacolod,Dumangas];
+			shipLines.greatseapluscorporation[3]=[BREDCO2Bacolod,IloiloSanPedroRC2];
+			shipLines.greatseapluscorporation[4]=[BREDCO2Bacolod,Iloilo];
+			shipLines.greatseapluscorporation[5]=[IloiloRiverWharfRC3,Bacolod];
+			shipLines.cebubargetugincorporated[1]=[VeranoPortSurigao,Cebu];
+			shipLines.casianoobligado[2]=[Bato,Ubay];
+			shipLines.casianoobligado[3]=[Ubay,Bato];
+			shipLines.milagrosajshippingcorporation[4]=[PuertoPrincesa,Cuyo];
+			shipLines.milagrosajshippingcorporation[5]=[PuertoPrincesa,MilagrosaMuelleLoney];
+			shipLines.sunlineshippingcorporation[2]=[Tubigon,Cebu];
+			shipLines.sunlineshippingcorporation[3]=[Dapitan,Samboan];
+			shipLines.macbuilders[2]=[Punta,Mandaue];
+			shipLines.macbuilders[3]=[Punta,Cebu];
+			shipLines.reynaldomcruz[2]=[Bato,Ubay];
+			shipLines.malayantowageandsalvagecorporation[4]=[Legazpi,RapuRapu];
+			shipLines.malayantowageandsalvagecorporation[5]=[MirantPagbilaoCorpHopewellPowerPhilsCorporation,BatangasPier];
+			shipLines.malayantowageandsalvagecorporation[6]=[AESMasinlocPowerPartnersCoLtd,Subic];
+			shipLines.malayantowageandsalvagecorporation[7]=[Limay,SouthHarbor];
+			shipLines.concretesolutioninc[4]=[CalpiMasbate,Ormoc];
+			shipLines.concretesolutioninc[5]=[Naval,OrmocBeachingAreaIpil];
+			shipLines.archipelagophilippineferriescorporation[2]=[Calapan,BatangasPier];
+			shipLines.archipelagophilippineferriescorporation[3]=[BatangasPier,Calapan];
+			shipLines.minoloshippinglines[6]=[BatangasPier,TMOPuertoGalera];
+			shipLines.montenegroshippinglinesinc[26]=[Calapan,BatangasPier];
+			shipLines.montenegroshippinglinesinc[27]=[Masbate,Pioduran];
+			shipLines.montenegroshippinglinesinc[28]=[PuertoPrincesa,Cuyo];
+			shipLines.montenegroshippinglinesinc[29]=[PoctoyOdiongan,BatangasPier];
+			shipLines.montenegroshippinglinesinc[30]=[SanCarlos,Toledo];
+			shipLines.montenegroshippinglinesinc[31]=[BREDCO2Bacolod,Dumangas];
+			shipLines.montenegroshippinglinesinc[32]=[Dumaguete,Larena];
+			shipLines.montenegroshippinglinesinc[33]=[Masbate,PilarPort];
+			// shipLines.montenegroshippinglinesinc[34]=[LipataSurigaoCity,BenitFerryTerminal];
+			shipLines.montenegroshippinglinesinc[35]=[Dapitan,Dumaguete];
+			shipLines.montenegroshippinglinesinc[36]=[PuertoPrincesa,Iloilo];
+			shipLines.montenegroshippinglinesinc[37]=[Siquijor,Dumaguete];
+			shipLines.montenegroshippinglinesinc[38]=[BatangasPier,Calapan];
+			shipLines.montenegroshippinglinesinc[39]=[BatangasPier,Romblon];
+			shipLines.everlinesinc[2]=[Zamboanga,Jolo];
+			shipLines.everlinesinc[3]=[Jolo,Zamboanga];
+			shipLines.apocementcorporation[1]=[Loboc,Cebu];
+			shipLines.ninajanecargopassengerservice[1]=[Getafe,Cebu];
+			shipLines.challengeofpassionshippinglines[1]=[BatangasPier,TMOPuertoGalera];
+
+			return R;
+		}
+
+    	var R;
+		var paths;
+		var map;
+
+		function initialize() {
+			var mapCanvas = document.getElementById('map');
+			var styles = [
+						{
+						  stylers: [
+						  	{ hue: "FFFFE3"},
+						    { saturation: -90 }
+						  ]
+						}
+					];
+
+			var mapOptions = {
+			  center: new google.maps.LatLng(12,120.6217543),
+			  zoom: 6,
+			  mapTypeId: google.maps.MapTypeId.ROADMAP
+			}
+			map = new google.maps.Map(mapCanvas, mapOptions)
+
+					map.setOptions({styles: styles});
+
+			var markerIconOp = {
+			      path: google.maps.SymbolPath.CIRCLE,
+			      scale: 2,
+			      strokeWeight: 4,
+			      strokeColor: "#D23439"
+			      // strokeColor: "#4D91AD"
+			    };
+
+			R=initR(markerIconOp, map);
+			paths=createLines(R);
+		}
+		google.maps.event.addDomListener(window, 'load', initialize);
+
+		var showingLines = false;
+		function toggleLines(){
+			showingLines = !showingLines;
+			showLines(paths, showingLines, map);
+		}
+
+		function createLines(R){
+			var paths = [];
+			for (i = 0; i < R.length; i++) { 
+				if(!R[i]) continue;
+			     var path = new google.maps.Polyline({
+							  path:R[i],
+							  strokeColor:"#D23439",
+							  strokeOpacity:0.3,
+							  strokeWeight:2,
+							  geodesic: true
+							});
+			     paths.push(path);
+			}
+			return paths;
+		};
+
+		function showLines(paths, on, map){
+			for (i = 0; i < paths.length; i++)
+				paths[i].setMap(on ? map : null);
+		};
+    </script>
+  </head>
+
+  <body>
+  	<nav class="navbar navbar-default navbar-fixed-top">
+		<select id="shippingLines" class="form-control" onchange="shipChange()">
+			<option value="R">View All</option>
+			<option value="mirbenpmendoza">mirben p. mendoza</option>
+			<option value="taoshippingcorporation">tao shipping corporation</option>
+			<option value="ilaganshippingline">ilagan shipping line</option>
+			<option value="glshippinglines">gl shipping lines</option>
+			<option value="superdiamondshippinglinesinc">super diamond shipping lines, inc.</option>
+			<option value="victorianacuysona">victoriana cuysona</option>
+			<option value="unilinkshippingcorporation">unilink shipping corporation</option>
+			<option value="mandaueshippingandlighteragecorporation">mandaue shipping and lighterage corporation</option>
+			<option value="robleshippinginc">roble shipping inc.</option>
+			<option value="harborstarshippingservicesinc">harbor star shipping services inc.</option>
+			<option value="philippinespanasiacarriercorporation">philippine span asia carrier corporation</option>
+			<option value="nerieobligado">neri e. obligado</option>
+			<option value="corazonchavez">corazon chavez</option>
+			<option value="leightoncontractorsphilsinc">leighton contractors (phils.) inc.</option>
+			<option value="batangasbaycarriersinc">batangas bay carriers inc</option>
+			<option value="starliteferriesinc">starlite ferries, inc.</option>
+			<option value="mandaueshippinglines">mandaue shipping lines</option>
+			<option value="trisolidmoversservicesincorporated">trisolid movers services incorporated</option>
+			<option value="oceanfastferriesinc">ocean fast ferries inc.</option>
+			<option value="bicolandialinesinc">bicolandia lines inc.</option>
+			<option value="sannicholaslinesinc">san nicholas lines, inc.</option>
+			<option value="montenegroshippinglinesinc">montenegro shipping lines inc.</option>
+			<option value="thesupercatfastferrycorp">the supercat fastferry corp.</option>
+			<option value="islandshippingcorp">island shipping corp.</option>
+			<!-- <option value="wallemphilippinesshippinginc">wallem philippines shipping, inc.</option> -->
+			<option value="diveindustriesphilsinc">dive industries phils. inc.</option>
+			<option value="asianmarinetransportcorporation">asian marine transport corporation</option>
+			<option value="twogogroupinc">2go group, inc.</option>
+			<option value="tingguantradingcorporation">ting guan trading corporation</option>
+			<option value="conbrosshippingcorp">conbros shipping corp.</option>
+			<option value="singshippinglinesinc">sing shipping lines inc.</option>
+			<option value="majesticshippingcorporation">majestic shipping corporation</option>
+			<option value="marinaferriesinc">marina ferries inc.</option>
+			<option value="munticarloseafreightinc">munti carlo seafreight, inc.</option>
+			<option value="silverstreaktransportcorporation">silverstreak transport corporation</option>
+			<option value="norbertobcabanero">norberto b. cabanero</option>
+			<option value="nmccontainerlinesinc">nmc container lines, inc.</option>
+			<option value="ffcruzshipping">ff cruz shipping</option>
+			<option value="cokaliongshippinglinesinc">cokaliong shipping lines, inc.</option>
+			<option value="sanmiguelcorporation">san miguel corporation</option>
+			<option value="alesonshippinglinesinc">aleson shipping lines inc.</option>
+			<option value="starliteferryinc">starlite ferry, inc.</option>
+			<option value="srnfastseacraftsinc">srn fast seacrafts inc.</option>
+			<option value="liteshippingcorporation">lite shipping corporation</option>
+			<option value="katrafarshippinglines">katrafar shipping lines</option>
+			<option value="daimashippingcorporation">daima shipping corporation</option>
+			<option value="fktshippingagency">fkt shipping agency</option>
+			<option value="ernestosocobossr">ernesto socobos sr.</option>
+			<option value="larcenashippinglines">larcena shipping lines</option>
+			<option value="medalliontransport">medallion transport</option>
+			<option value="smcshippingandlighteragecorporation">smc shipping and lighterage corporation</option>
+			<option value="jnshippinglinescorporation">j & n shipping lines corporation</option>
+			<option value="f3intermarinetransportcorp">f3 intermarine transport corp.</option>
+			<option value="csgaferrycorporation">csga ferry corporation</option>
+			<option value="reginashippinglinesinc">regina shipping lines inc.</option>
+			<option value="nykfiljapanshippingcorp">nyk-filjapan shipping corp.</option>
+			<option value="prudentialshippingagencyservicesinc">prudential shipping agency services inc.</option>
+			<option value="bestashippinglines">besta shipping lines</option>
+			<option value="bestashippinglinesinc">besta shipping lines, inc.</option>
+			<option value="masudamarinecorporation">masuda marine corporation</option>
+			<option value="transasiasouthlandshipping">trans-asia southland shipping</option>
+			<option value="seatechtransportinc">sea-tech transport inc.</option>
+			<option value="williammichaelshippingcorp">william michael shipping corp.</option>
+			<option value="transasiashippinglinesincorporation">trans-asia shipping lines, incorporation</option>
+			<option value="skylineshipping">skyline shipping</option>
+			<option value="hanslymerchandising">hansly merchandising</option>
+			<option value="oceancoastshippingcorporation">ocean coast shipping corporation</option>
+			<option value="thesupercatfastferrycorporation">the supercat fast ferry corporation</option>
+			<option value="marsunshipping">marsun shipping</option>
+			<option value="dimcshippinginc">dimc shipping inc</option>
+			<option value="agarinteodulon">agarin, teodulo n.</option>
+			<option value="ibnerizamshippinglinesinc">ibnerizam shipping lines inc.</option>
+			<option value="seatechtransportinc">seatech transport inc.</option>
+			<option value="bctshippinglinesinc">bct shipping lines, inc.</option>
+			<option value="seahighwaycarrierinc">sea highway carrier inc.</option>
+			<option value="fathersonshippinglines">father & son shipping lines</option>
+			<option value="sucreenterprisescorporation">sucre enterprises corporation</option>
+			<option value="aquarealshippinglines">aqua real shipping lines</option>
+			<option value="philstoneshippingagency">philstone shipping agency</option>
+			<option value="enternameofcustomer">enter name of customer</option>
+			<option value="johncleashippinglines">johnclea shipping lines</option>
+			<option value="tristarmegalinkcorporation">tri-star megalink corporation</option>
+			<option value="greatseapluscorporation">greatsea plus corporation</option>
+			<option value="cebubargetugincorporated">cebu barge & tug incorporated</option>
+			<option value="casianoobligado">casiano obligado</option>
+			<option value="milagrosajshippingcorporation">milagrosa-j shipping corporation</option>
+			<option value="sunlineshippingcorporation">sunline shipping corporation</option>
+			<option value="macbuilders">mac builders</option>
+			<option value="reynaldomcruz">reynaldo m. cruz</option>
+			<option value="malayantowageandsalvagecorporation">malayan towage and salvage corporation</option>
+			<option value="concretesolutioninc">concrete solution inc.</option>
+			<option value="archipelagophilippineferriescorporation">archipelago philippine ferries corporation</option>
+			<option value="minoloshippinglines">minolo shipping lines</option>
+			<option value="montenegroshippinglinesinc">montenegro shipping lines, inc.</option>
+			<option value="everlinesinc">ever lines inc.</option>
+			<option value="apocementcorporation">apo cement corporation</option>
+			<option value="ninajanecargopassengerservice">nina jane cargo passenger service</option>
+			<option value="challengeofpassionshippinglines">challenge of passion shipping lines</option>
+		</select>
+  	</nav>
+    <div id="map"></div>
+    <div id="note">The connections shown here are limited to trips/itineraries with little to no anomalies.</div>
+    <div id="toggle" onclick="toggleLines()">Click to toggle connections</div>
+  </body>
+</html>

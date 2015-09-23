@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get 'opentransport/ppa/portclusters' => 'page#portClusters'
   get 'opentransport/ppa/vesselclusters' => 'page#vesselClusters'
   get 'opentransport/ppa/visualization' => 'page#port_visualizer'
-  get 'opentransport/ppa/routes' => 'page#routes'
+  get 'opentransport/ppa/shippinglines' => 'page#shipping_line_vis'
 
   devise_for :admins
   get  'opentransport/admin' => 'admin#list_ports'
