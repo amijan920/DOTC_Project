@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 
   devise_for :admins
   get  'opentransport/admin' => 'admin#list_ports'
+  get  'opentransport/admin/config' => 'admin#config'
 
   get  'opentransport/admin/exportData', :action => 'export_data', :controller => 'admin', :as => :export_data
   get  'opentransport/admin/listPorts', :action => 'list_ports', :controller => 'admin', :as => :list_ports
