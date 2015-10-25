@@ -542,6 +542,12 @@ var MapDisplay = (function() {
 		this.currentPath = null;
 		this.trains = [];
 		var pts = [];
+		//Light Rail Transit Line 1
+		var colors = [];
+		colors.push("#2EF503");
+		colors.push("#6304A1");
+		colors.push("#D10228");
+		colors.push("#704927");
 		pts.push(convert(14,39,26.94,121,1,16.28));
         pts.push(convert(14,39,27.42,121,1,12.93));
         pts.push(convert(14,39,27.44,121,1,12.70));
@@ -850,12 +856,14 @@ var MapDisplay = (function() {
         pts.push(convert(14,32,6.57,120,59,56.65));
         pts.push(convert(14,32,4.81,120,59,55.31));
         pts.push(convert(14,32,3.24,120,59,54.03));
-	    this.trains.push(createPath(pts,"#FFFF00"));
+	    this.trains.push(createPath(pts,colors[0]));
+	    //Light Rail Transit Line 2 - West Extension
 	    pts.splice(0,pts.length);
 	    pts.push(convert(14,36,12.84,120,57,40.82));
         pts.push(convert(14,36,9.55,120,58,3.35));
         pts.push(convert(14,36,22.54,120,58,20.41));
-	    this.trains.push(createPath(pts,"#FF00FF"));
+	    this.trains.push(createPath(pts,colors[1]));
+	    //Light Rail Transit Line 2
 	    pts.splice(0,pts.length);
 	    pts.push(convert(14,36,12.54,120,59,0.75));
         pts.push(convert(14,36,12.21,120,59,2.82));
@@ -1132,7 +1140,8 @@ var MapDisplay = (function() {
         pts.push(convert(14,37,7.20,121,5,32.10));
         pts.push(convert(14,37,8.82,121,5,40.09));
         pts.push(convert(14,37,12.13,121,5,55.73));
-	    this.trains.push(createPath(pts,"#FF0000"));
+	    this.trains.push(createPath(pts,colors[1]));
+	    //Light Rail Transit Line 2 (East Extension)
 	    pts.splice(0,pts.length);
 	    pts.push(convert(14,37,13.41,121,6,2.67));
         pts.push(convert(14,37,15.53,121,6,11.91));
@@ -1140,7 +1149,8 @@ var MapDisplay = (function() {
         pts.push(convert(14,37,22.36,121,6,44.41));
         pts.push(convert(14,37,25.66,121,6,60.00));
         pts.push(convert(14,37,28.85,121,7,14.87));
-	    this.trains.push(createPath(pts,"#00FF00"));
+	    this.trains.push(createPath(pts,colors[1]));
+	    //Metro Rail Transit Line 3
 	    pts.splice(0,pts.length);
 	    pts.push(convert(14,39,7.78,121,1,56.44));
         pts.push(convert(14,38,58.62,121,2,2.32));
@@ -1345,7 +1355,7 @@ var MapDisplay = (function() {
         pts.push(convert(14,32,17.27,121,0,22.64));
         pts.push(convert(14,32,16.15,121,0,13.25));
         pts.push(convert(14,32,15.32,121,0,6.28));
-	    this.trains.push(createPath(pts,"#0000FF"));
+	    this.trains.push(createPath(pts,colors[2]));
 	    pts.splice(0,pts.length);
 	    //PNR NORTHBOUND
 	    pts.push(convert(14,37,19.36,120,58,29.73));
@@ -1418,7 +1428,7 @@ var MapDisplay = (function() {
 		pts.push(convert(14,41,30.76,120,57,55.77));
 		pts.push(convert(14,41,32.19,120,57,55.33));
 		pts.push(convert(14,41,33.85,120,57,54.85));
-	    this.trains.push(createPath(pts,"#336699"));
+	    this.trains.push(createPath(pts,colors[3]));
 	    pts.splice(0,pts.length);
 	    //PNR SOUTBOUND
 	    pts.push(convert(14,36,40.80,120,58,23.19));
@@ -1997,7 +2007,7 @@ var MapDisplay = (function() {
 		pts.push(convert(14,10,32.35,121,14,53.66));
 		pts.push(convert(14,10,24.71,121,14,59.40));
 		pts.push(convert(14,10,16.32,121,15,5.63));
-	    this.trains.push(createPath(pts,"#336699"));
+	    this.trains.push(createPath(pts,colors[3]));
 	 //    pts.splice(0,pts.length);
 		// pts.push(convert(14,4,8.99,121,19,16.01));
 		// pts.push(convert(13,55,32.85,121,25,30.71));
