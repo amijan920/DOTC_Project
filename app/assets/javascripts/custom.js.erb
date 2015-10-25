@@ -87,7 +87,6 @@ var MapUI = (function() {
 
 		this.originPort = null;
 		this.destinationPort = null;
-
 		$("#view-routes").click((function(_this) {
 			return function(e) {
 				_this.setOriginPort(null);
@@ -538,9 +537,321 @@ var MapUI = (function() {
 // map display
 var MapDisplay = (function() {
 	function MapDisplay(ports, mapUI) {
-	  this.ports = ports;
-	  this.mapUI = mapUI;
-	  this.currentPath = null;
+		this.ports = ports;
+		this.mapUI = mapUI;
+		this.currentPath = null;
+		this.trains = [];
+		var pts = [];
+		pts.push(convert(14,39,26.94,121,1,16.28));
+        pts.push(convert(14,39,27.42,121,1,12.93));
+        pts.push(convert(14,39,27.44,121,1,12.70));
+        pts.push(convert(14,39,27.45,121,1,12.46));
+        pts.push(convert(14,39,27.45,121,1,12.23));
+        pts.push(convert(14,39,27.45,121,1,11.94));
+        pts.push(convert(14,39,27.46,121,1,11.33));
+        pts.push(convert(14,39,27.42,121,1,8.32));
+        pts.push(convert(14,39,27.33,121,1,3.06));
+        pts.push(convert(14,39,27.23,121,0,55.60));
+        pts.push(convert(14,39,27.15,121,0,50.96));
+        pts.push(convert(14,39,27.09,121,0,47.12));
+        pts.push(convert(14,39,27.04,121,0,42.99));
+        pts.push(convert(14,39,26.94,121,0,36.85));
+        pts.push(convert(14,39,26.84,121,0,30.05));
+        pts.push(convert(14,39,26.83,121,0,29.71));
+        pts.push(convert(14,39,26.84,121,0,29.36));
+        pts.push(convert(14,39,26.78,121,0,24.45));
+        pts.push(convert(14,39,26.65,121,0,18.79));
+        pts.push(convert(14,39,26.68,121,0,13.23));
+        pts.push(convert(14,39,26.52,121,0,8.02));
+        pts.push(convert(14,39,26.43,121,0,2.79));
+        pts.push(convert(14,39,26.36,120,59,57.86));
+        pts.push(convert(14,39,26.28,120,59,52.14));
+        pts.push(convert(14,39,26.17,120,59,44.67));
+        pts.push(convert(14,39,26.06,120,59,37.62));
+        pts.push(convert(14,39,25.93,120,59,28.89));
+        pts.push(convert(14,39,25.82,120,59,20.79));
+        pts.push(convert(14,39,25.67,120,59,10.68));
+        pts.push(convert(14,39,25.59,120,59,6.97));
+        pts.push(convert(14,39,25.58,120,59,6.68));
+        pts.push(convert(14,39,25.57,120,59,6.48));
+        pts.push(convert(14,39,25.54,120,59,6.30));
+        pts.push(convert(14,39,25.51,120,59,6.06));
+        pts.push(convert(14,39,25.48,120,59,5.84));
+        pts.push(convert(14,39,25.45,120,59,5.67));
+        pts.push(convert(14,39,25.40,120,59,5.42));
+        pts.push(convert(14,39,25.32,120,59,5.17));
+        pts.push(convert(14,39,25.25,120,59,4.98));
+        pts.push(convert(14,39,25.17,120,59,4.74));
+        pts.push(convert(14,39,25.08,120,59,4.51));
+        pts.push(convert(14,39,24.98,120,59,4.30));
+        pts.push(convert(14,39,24.88,120,59,4.14));
+        pts.push(convert(14,39,24.77,120,59,3.94));
+        pts.push(convert(14,39,24.64,120,59,3.77));
+        pts.push(convert(14,39,24.49,120,59,3.56));
+        pts.push(convert(14,39,24.31,120,59,3.36));
+        pts.push(convert(14,39,24.14,120,59,3.20));
+        pts.push(convert(14,39,23.97,120,59,3.05));
+        pts.push(convert(14,39,23.80,120,59,2.93));
+        pts.push(convert(14,39,23.60,120,59,2.81));
+        pts.push(convert(14,39,23.39,120,59,2.70));
+        pts.push(convert(14,39,23.21,120,59,2.61));
+        pts.push(convert(14,39,23.01,120,59,2.53));
+        pts.push(convert(14,39,22.80,120,59,2.46));
+        pts.push(convert(14,39,22.58,120,59,2.40));
+        pts.push(convert(14,39,22.28,120,59,2.34));
+        pts.push(convert(14,39,21.98,120,59,2.30));
+        pts.push(convert(14,39,21.65,120,59,2.27));
+        pts.push(convert(14,39,21.26,120,59,2.26));
+        pts.push(convert(14,39,17.74,120,59,2.11));
+        pts.push(convert(14,39,15.60,120,59,2.06));
+        pts.push(convert(14,39,10.81,120,59,1.88));
+        pts.push(convert(14,39,5.18,120,59,1.67));
+        pts.push(convert(14,38,58.86,120,59,1.46));
+        pts.push(convert(14,38,51.39,120,59,1.22));
+        pts.push(convert(14,38,42.77,120,59,0.94));
+        pts.push(convert(14,38,39.54,120,59,0.85));
+        pts.push(convert(14,38,35.98,120,59,0.74));
+        pts.push(convert(14,38,30.02,120,59,0.54));
+        pts.push(convert(14,38,23.99,120,59,0.37));
+        pts.push(convert(14,38,19.96,120,59,0.20));
+        pts.push(convert(14,38,19.57,120,59,0.17));
+        pts.push(convert(14,38,19.18,120,59,0.12));
+        pts.push(convert(14,38,18.83,120,59,0.07));
+        pts.push(convert(14,38,18.43,120,59,0.00));
+        pts.push(convert(14,38,17.98,120,58,59.91));
+        pts.push(convert(14,38,17.47,120,58,59.78));
+        pts.push(convert(14,38,16.93,120,58,59.62));
+        pts.push(convert(14,38,16.40,120,58,59.44));
+        pts.push(convert(14,38,15.93,120,58,59.26));
+        pts.push(convert(14,38,15.40,120,58,59.03));
+        pts.push(convert(14,38,14.69,120,58,58.70));
+        pts.push(convert(14,38,11.37,120,58,57.21));
+        pts.push(convert(14,38,9.40,120,58,56.26));
+        pts.push(convert(14,38,6.27,120,58,54.74));
+        pts.push(convert(14,38,2.59,120,58,52.99));
+        pts.push(convert(14,37,58.84,120,58,51.25));
+        pts.push(convert(14,37,58.02,120,58,50.89));
+        pts.push(convert(14,37,57.74,120,58,50.79));
+        pts.push(convert(14,37,57.46,120,58,50.69));
+        pts.push(convert(14,37,57.19,120,58,50.62));
+        pts.push(convert(14,37,56.95,120,58,50.57));
+        pts.push(convert(14,37,56.73,120,58,50.53));
+        pts.push(convert(14,37,56.44,120,58,50.49));
+        pts.push(convert(14,37,56.19,120,58,50.46));
+        pts.push(convert(14,37,55.93,120,58,50.44));
+        pts.push(convert(14,37,55.61,120,58,50.44));
+        pts.push(convert(14,37,55.30,120,58,50.45));
+        pts.push(convert(14,37,55.02,120,58,50.46));
+        pts.push(convert(14,37,54.70,120,58,50.50));
+        pts.push(convert(14,37,54.33,120,58,50.56));
+        pts.push(convert(14,37,54.00,120,58,50.64));
+        pts.push(convert(14,37,53.71,120,58,50.72));
+        pts.push(convert(14,37,53.45,120,58,50.81));
+        pts.push(convert(14,37,53.17,120,58,50.92));
+        pts.push(convert(14,37,52.84,120,58,51.06));
+        pts.push(convert(14,37,52.58,120,58,51.19));
+        pts.push(convert(14,37,52.36,120,58,51.31));
+        pts.push(convert(14,37,52.14,120,58,51.45));
+        pts.push(convert(14,37,51.94,120,58,51.58));
+        pts.push(convert(14,37,51.69,120,58,51.74));
+        pts.push(convert(14,37,50.31,120,58,53.03));
+        pts.push(convert(14,37,48.83,120,58,54.34));
+        pts.push(convert(14,37,46.14,120,58,56.87));
+        pts.push(convert(14,37,45.44,120,58,57.49));
+        pts.push(convert(14,37,45.18,120,58,57.70));
+        pts.push(convert(14,37,44.99,120,58,57.84));
+        pts.push(convert(14,37,44.82,120,58,57.96));
+        pts.push(convert(14,37,44.64,120,58,58.08));
+        pts.push(convert(14,37,44.46,120,58,58.20));
+        pts.push(convert(14,37,44.27,120,58,58.30));
+        pts.push(convert(14,37,44.10,120,58,58.39));
+        pts.push(convert(14,37,43.90,120,58,58.48));
+        pts.push(convert(14,37,43.72,120,58,58.56));
+        pts.push(convert(14,37,43.52,120,58,58.64));
+        pts.push(convert(14,37,43.31,120,58,58.71));
+        pts.push(convert(14,37,43.11,120,58,58.79));
+        pts.push(convert(14,37,42.88,120,58,58.85));
+        pts.push(convert(14,37,42.63,120,58,58.92));
+        pts.push(convert(14,37,42.42,120,58,58.96));
+        pts.push(convert(14,37,42.13,120,58,59.01));
+        pts.push(convert(14,37,41.79,120,58,59.05));
+        pts.push(convert(14,37,41.49,120,58,59.06));
+        pts.push(convert(14,37,38.34,120,58,59.00));
+        pts.push(convert(14,37,34.51,120,58,58.87));
+        pts.push(convert(14,37,30.79,120,58,58.76));
+        pts.push(convert(14,37,27.03,120,58,58.64));
+        pts.push(convert(14,37,23.71,120,58,58.55));
+        pts.push(convert(14,37,21.39,120,58,58.49));
+        pts.push(convert(14,37,17.29,120,58,58.34));
+        pts.push(convert(14,37,13.52,120,58,58.24));
+        pts.push(convert(14,37,9.71,120,58,58.15));
+        pts.push(convert(14,37,6.00,120,58,58.09));
+        pts.push(convert(14,37,2.22,120,58,57.95));
+        pts.push(convert(14,36,59.89,120,58,57.90));
+        pts.push(convert(14,36,56.08,120,58,57.76));
+        pts.push(convert(14,36,52.39,120,58,57.66));
+        pts.push(convert(14,36,48.70,120,58,57.55));
+        pts.push(convert(14,36,45.47,120,58,57.38));
+        pts.push(convert(14,36,41.79,120,58,57.08));
+        pts.push(convert(14,36,40.47,120,58,56.99));
+        pts.push(convert(14,36,36.62,120,58,56.70));
+        pts.push(convert(14,36,33.13,120,58,56.42));
+        pts.push(convert(14,36,29.58,120,58,56.16));
+        pts.push(convert(14,36,25.90,120,58,55.87));
+        pts.push(convert(14,36,22.39,120,58,55.59));
+        pts.push(convert(14,36,19.16,120,58,55.34));
+        pts.push(convert(14,36,16.07,120,58,55.15));
+        pts.push(convert(14,36,13.59,120,58,55.01));
+        pts.push(convert(14,36,12.97,120,58,54.97));
+        pts.push(convert(14,36,9.35,120,58,54.82));
+        pts.push(convert(14,36,8.76,120,58,54.76));
+        pts.push(convert(14,36,8.31,120,58,54.71));
+        pts.push(convert(14,36,5.01,120,58,54.19));
+        pts.push(convert(14,36,1.43,120,58,53.61));
+        pts.push(convert(14,35,58.56,120,58,53.16));
+        pts.push(convert(14,35,56.25,120,58,52.74));
+        pts.push(convert(14,35,54.80,120,58,52.51));
+        pts.push(convert(14,35,54.61,120,58,52.46));
+        pts.push(convert(14,35,54.41,120,58,52.40));
+        pts.push(convert(14,35,54.09,120,58,52.28));
+        pts.push(convert(14,35,53.78,120,58,52.15));
+        pts.push(convert(14,35,52.27,120,58,51.48));
+        pts.push(convert(14,35,52.10,120,58,51.41));
+        pts.push(convert(14,35,51.86,120,58,51.32));
+        pts.push(convert(14,35,51.54,120,58,51.22));
+        pts.push(convert(14,35,51.18,120,58,51.12));
+        pts.push(convert(14,35,50.71,120,58,51.01));
+        pts.push(convert(14,35,50.34,120,58,50.97));
+        pts.push(convert(14,35,46.90,120,58,50.68));
+        pts.push(convert(14,35,45.64,120,58,50.60));
+        pts.push(convert(14,35,45.19,120,58,50.60));
+        pts.push(convert(14,35,44.92,120,58,50.62));
+        pts.push(convert(14,35,44.67,120,58,50.64));
+        pts.push(convert(14,35,44.37,120,58,50.68));
+        pts.push(convert(14,35,44.09,120,58,50.74));
+        pts.push(convert(14,35,43.83,120,58,50.80));
+        pts.push(convert(14,35,43.54,120,58,50.87));
+        pts.push(convert(14,35,43.22,120,58,50.98));
+        pts.push(convert(14,35,39.36,120,58,52.17));
+        pts.push(convert(14,35,35.76,120,58,53.27));
+        pts.push(convert(14,35,33.82,120,58,53.85));
+        pts.push(convert(14,35,31.09,120,58,54.66));
+        pts.push(convert(14,35,30.63,120,58,54.78));
+        pts.push(convert(14,35,30.18,120,58,54.86));
+        pts.push(convert(14,35,29.64,120,58,54.93));
+        pts.push(convert(14,35,28.98,120,58,54.98));
+        pts.push(convert(14,35,25.26,120,58,55.20));
+        pts.push(convert(14,35,24.96,120,58,55.23));
+        pts.push(convert(14,35,21.69,120,58,55.72));
+        pts.push(convert(14,35,21.13,120,58,55.79));
+        pts.push(convert(14,35,20.62,120,58,55.84));
+        pts.push(convert(14,35,20.20,120,58,55.88));
+        pts.push(convert(14,35,19.93,120,58,55.90));
+        pts.push(convert(14,35,19.68,120,58,55.92));
+        pts.push(convert(14,35,19.39,120,58,55.90));
+        pts.push(convert(14,35,18.83,120,58,55.85));
+        pts.push(convert(14,35,17.29,120,58,55.58));
+        pts.push(convert(14,35,16.30,120,58,55.37));
+        pts.push(convert(14,35,15.83,120,58,55.29));
+        pts.push(convert(14,35,15.48,120,58,55.26));
+        pts.push(convert(14,35,15.20,120,58,55.25));
+        pts.push(convert(14,35,14.93,120,58,55.26));
+        pts.push(convert(14,35,14.70,120,58,55.27));
+        pts.push(convert(14,35,14.49,120,58,55.29));
+        pts.push(convert(14,35,14.26,120,58,55.32));
+        pts.push(convert(14,35,13.98,120,58,55.37));
+        pts.push(convert(14,35,13.70,120,58,55.43));
+        pts.push(convert(14,35,13.42,120,58,55.50));
+        pts.push(convert(14,35,13.07,120,58,55.62));
+        pts.push(convert(14,35,12.70,120,58,55.76));
+        pts.push(convert(14,35,12.34,120,58,55.93));
+        pts.push(convert(14,35,11.81,120,58,56.25));
+        pts.push(convert(14,35,10.17,120,58,57.30));
+        pts.push(convert(14,35,9.13,120,58,57.91));
+        pts.push(convert(14,35,5.69,120,58,59.78));
+        pts.push(convert(14,35,2.28,120,59,1.70));
+        pts.push(convert(14,34,59.27,120,59,3.39));
+        pts.push(convert(14,34,56.53,120,59,4.99));
+        pts.push(convert(14,34,53.33,120,59,6.77));
+        pts.push(convert(14,34,49.89,120,59,8.69));
+        pts.push(convert(14,34,46.27,120,59,10.74));
+        pts.push(convert(14,34,41.84,120,59,13.27));
+        pts.push(convert(14,34,38.13,120,59,15.45));
+        pts.push(convert(14,34,35.60,120,59,16.96));
+        pts.push(convert(14,34,31.45,120,59,19.30));
+        pts.push(convert(14,34,27.95,120,59,21.32));
+        pts.push(convert(14,34,24.24,120,59,23.35));
+        pts.push(convert(14,34,20.50,120,59,25.46));
+        pts.push(convert(14,34,17.05,120,59,27.42));
+        pts.push(convert(14,34,14.71,120,59,28.74));
+        pts.push(convert(14,34,13.07,120,59,29.75));
+        pts.push(convert(14,34,11.19,120,59,30.57));
+        pts.push(convert(14,34,7.95,120,59,32.05));
+        pts.push(convert(14,34,4.64,120,59,33.55));
+        pts.push(convert(14,34,1.25,120,59,35.12));
+        pts.push(convert(14,33,58.16,120,59,36.59));
+        pts.push(convert(14,33,55.01,120,59,38.06));
+        pts.push(convert(14,33,51.91,120,59,39.51));
+        pts.push(convert(14,33,48.39,120,59,41.12));
+        pts.push(convert(14,33,45.25,120,59,42.60));
+        pts.push(convert(14,33,44.89,120,59,42.75));
+        pts.push(convert(14,33,44.55,120,59,42.85));
+        pts.push(convert(14,33,44.17,120,59,42.96));
+        pts.push(convert(14,33,42.79,120,59,43.30));
+        pts.push(convert(14,33,41.34,120,59,43.64));
+        pts.push(convert(14,33,38.00,120,59,44.40));
+        pts.push(convert(14,33,34.52,120,59,45.18));
+        pts.push(convert(14,33,31.05,120,59,45.99));
+        pts.push(convert(14,33,27.52,120,59,46.79));
+        pts.push(convert(14,33,23.76,120,59,47.66));
+        pts.push(convert(14,33,20.27,120,59,48.46));
+        pts.push(convert(14,33,16.83,120,59,49.24));
+        pts.push(convert(14,33,15.47,120,59,49.54));
+        pts.push(convert(14,33,11.37,120,59,50.50));
+        pts.push(convert(14,33,7.96,120,59,51.28));
+        pts.push(convert(14,33,4.50,120,59,52.08));
+        pts.push(convert(14,33,0.91,120,59,52.90));
+        pts.push(convert(14,32,56.22,120,59,53.97));
+        pts.push(convert(14,32,53.79,120,59,54.53));
+        pts.push(convert(14,32,51.66,120,59,55.01));
+        pts.push(convert(14,32,48.72,120,59,55.69));
+        pts.push(convert(14,32,45.51,120,59,56.45));
+        pts.push(convert(14,32,42.82,120,59,57.06));
+        pts.push(convert(14,32,39.33,120,59,57.86));
+        pts.push(convert(14,32,37.37,120,59,58.30));
+        pts.push(convert(14,32,33.94,120,59,59.09));
+        pts.push(convert(14,32,30.80,120,59,59.81));
+        pts.push(convert(14,32,27.49,121,0,0.57));
+        pts.push(convert(14,32,24.07,121,0,1.35));
+        pts.push(convert(14,32,21.49,121,0,1.95));
+        pts.push(convert(14,32,19.42,121,0,2.42));
+        pts.push(convert(14,32,17.66,121,0,2.69));
+        pts.push(convert(14,32,17.30,121,0,2.71));
+        pts.push(convert(14,32,17.01,121,0,2.71));
+        pts.push(convert(14,32,16.72,121,0,2.70));
+        pts.push(convert(14,32,16.42,121,0,2.67));
+        pts.push(convert(14,32,16.17,121,0,2.64));
+        pts.push(convert(14,32,15.94,121,0,2.61));
+        pts.push(convert(14,32,15.61,121,0,2.55));
+        pts.push(convert(14,32,15.28,121,0,2.48));
+        pts.push(convert(14,32,14.97,121,0,2.40));
+        pts.push(convert(14,32,14.65,121,0,2.30));
+        pts.push(convert(14,32,14.36,121,0,2.20));
+        pts.push(convert(14,32,14.08,121,0,2.09));
+        pts.push(convert(14,32,13.78,121,0,1.96));
+        pts.push(convert(14,32,13.40,121,0,1.78));
+        pts.push(convert(14,32,13.12,121,0,1.63));
+        pts.push(convert(14,32,12.90,121,0,1.51));
+        pts.push(convert(14,32,12.57,121,0,1.30));
+        pts.push(convert(14,32,12.15,121,0,1.02));
+        pts.push(convert(14,32,11.65,121,0,0.64));
+        pts.push(convert(14,32,10.11,120,59,59.43));
+        pts.push(convert(14,32,8.39,120,59,58.06));
+        pts.push(convert(14,32,6.57,120,59,56.65));
+        pts.push(convert(14,32,4.81,120,59,55.31));
+        pts.push(convert(14,32,3.24,120,59,54.03));
+	    this.trains.push(createPath(pts,"#FFFF00"));
+	    pts.splice(0,pts.length);
 
 		var mapOptions = {
 	    center: { lat: 13, lng: 118},
@@ -614,6 +925,23 @@ var MapDisplay = (function() {
 	  // mapUI.setActivePort(233);
 	}
 
+	function convert(deg1, min1, sec1, deg2 ,min2, sec2){
+		var lt = deg1+(min1/60)+(sec1/3600);
+		var ln = deg2+(min2/60)+(sec2/3600);
+		var ret = new google.maps.LatLng(lt,ln);
+		// console.log(ret.lat()+" "+ret.lng());
+		return ret;
+	}
+
+	function createPath(pts,cl){
+		var ret = new google.maps.Polyline({
+	    	path: pts,
+	    	strokeColor: cl,
+	    	strokeOpacity: 0.8,
+	      	strokeWeight: 5.5
+	    });
+	    return ret;
+	}
 	MapDisplay.prototype.panToMarker = function(id) {
 		for(var i = 0; i < this.portMarkers.length; i++) {
 			if(this.portMarkers[i].data_id == id) {
@@ -657,7 +985,11 @@ var MapDisplay = (function() {
 				this.portMarkers[i].data_hidden = true;
 			}
 		}
-
+		if(id==4){
+			for(var i=0; i<this.trains.length; i++){
+				this.trains[i].setMap(null);
+			}
+		}
 		$(".filter-image[data-category="+id+"]").toggleClass("gray", true);
 	}
 
@@ -684,8 +1016,12 @@ var MapDisplay = (function() {
 				this.portMarkers[i].data_hidden = false;
 			}
 		}
-
-
+		if(id==4){
+			console.log("lol");
+			for(var i=0; i<this.trains.length; i++){
+				this.trains[i].setMap(this.map);
+			}
+		}
 		$(".filter-image[data-category="+id+"]").toggleClass("gray", false);
 	}
 
