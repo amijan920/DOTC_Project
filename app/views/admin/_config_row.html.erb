@@ -2,8 +2,8 @@
 	<div class="col-md-12 col-md-offset-0 col-xs-10 col-xs-offset-1 well-light">
 		<div class="col-md-6">
 			<div class="form-group">
-				<label>Heading Name</label>
-				<input id="last-conf-field" class="form-control" type="text" placeholder="What are you looking for?" required></input>
+				<%= label_tag(:label_heading, "Heading Name") %>
+				<%= text_field_tag(:heading, "", :name => "heading[]", :id => "last-conf-field", :class => "form-control") %>
 			</div>
 			<ul>
 				<li>
@@ -16,15 +16,21 @@
 		</div>
 		<div class="col-md-6">
 			<div class="form-group">
-				<label>Type</label>
-				<select class="form-control">
-					<option selected style="display:none;">What kind of data is it?</option>
-					<option value="text">Text</option>
-					<option value="number">Number</option>
-					<option value="date">Date</option>
-					<option value="time">Time</option>
-					<option value="place">Place</option>
-				</select>
+				<%= label_tag(:label_type, "Type") %>
+				<%= select_tag(:type, options_for_select(
+					[
+						['What kind of data is it?', '', { 'style' => 'display: none'}],
+						['Text', 'text'],
+						['Number', 'number'],
+						['Date', 'date'],
+						['Time', 'time'],
+						['Place', 'place']
+					], 
+					''
+				), 
+				 :class => 'form-control',
+				 :name => 'type[]'
+				) %>
 			</div>
 		</div>
 		<!-- <div class="col-md-4">

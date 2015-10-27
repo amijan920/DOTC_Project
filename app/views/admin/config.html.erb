@@ -1,6 +1,5 @@
 <%= render "admin/admin_navbar" %>
 <script>
-console.log("heyyo")
 	var view = "config";
 
 	function addRow(){
@@ -9,12 +8,12 @@ console.log("heyyo")
 		$('#config-fields').append('<%=j render partial: 'admin/config_row' %>');
 		$('#last-conf-field').on('change', function(){ addRow(); });
 
-		$(".syn-btn").off('click');
-		$(".syn-btn").on('click', function(event){
+		$(".syn-btn").last().on('click', function(event){
 			event.preventDefault();
 			var src = $(event.target);
+			var ind = $(".syn-btn").index(src);
 
-			$("<li><div class=\"form-group\"><input class=\"form-control\" type=\"text\"></input></div></li>").insertBefore(src);
+			$('<li><div class="form-group"><input class="form-control" name="syn['+ind+'][]" type="text" value=""></div></li>').insertBefore(src);
 		});
 	}
 
@@ -35,12 +34,12 @@ console.log("heyyo")
 </style>
 
 <div id="contents" class="container">
-	<form>
+<%= form_tag(submit_config_path, method: "post") do %>
 	<div class="row">
 		<div class="col-md-12 col-md-offset-0 col-xs-10 col-xs-offset-1 well">
 			<div class="form-group">
-				<label>Enter the webpage's URL:</label>
-				<input class="form-control" type="url" required></input>
+				<%= label_tag(:label_url, "Enter the webpage's URL:") %>
+				<%= url_field_tag(:url, "", :class => "form-control", :required => true) %>
 			</div>
 		</div>
 	</div>
@@ -58,15 +57,14 @@ console.log("heyyo")
 			</div>
 		</div>
 	</div>
+
 	<div class="row">
 		<div class="col-md-12 col-md-offset-0 col-xs-10 col-xs-offset-1 rem-padding">
 			<div class="form-group">
-				<button type="submit" class="btn btn-primary btn-lg pull-right">
-					Submit
-				</button>
+				<%= submit_tag("Submit", :id => "submit", :class => "btn btn-primary btn-lg pull-right") %>
 			</div>
 		</div>
 	</div>
-</form>
+<% end %>
 </div>
 <br />
