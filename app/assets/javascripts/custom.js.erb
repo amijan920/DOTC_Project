@@ -284,7 +284,14 @@ var MapUI = (function() {
 
 	  // $("#panel-title").html(port.name);
 	  $("#name-container .bold").html(port.name);
-	  $("#name-container #description.small-desc").html(port.description.replace(/(?:\r\n|\r|\n)/g, '<br />'));
+
+	  var descCont = $("#name-container #description.small-desc");
+	  descCont.empty();
+	  if(!!port.description) descCont.html(port.description.replace(/(?:\r\n|\r|\n)/g, '<br />'));
+
+	  var subCont = $("#name-container #subtype.small-desc");
+	  subCont.empty();
+	  if(!!port.subtype) subCont.html(port.subtype.replace(/(?:\r\n|\r|\n)/g, '<br />'));
 
 	  // if(port.category_id == 2)
 	  	$("#view-routes").show();
@@ -2654,7 +2661,25 @@ function ready() {
 	
     $(function () {
 	  $('[data-toggle="tooltip"]').tooltip()
+	  addCategoryPopovers();
 	});
+}
+
+function addCategoryPopovers(){
+  $('[data-toggle="popover"]').popover()
+
+  // @pois.where("category_id == ?", "approve")
+  // Poi.category_id=4uniq.pluck(:description)
+  // $("#popoverExampleTwo").popover({
+  //       html : true, 
+  //       content: function() {
+  //         return $('#popoverExampleTwoHiddenContent').html();
+  //       },
+  //       title: function() {
+  //         return $('#popoverExampleTwoHiddenTitle').html();
+  //       }
+  //   });
+
 }
 
 $(document).ready(ready)

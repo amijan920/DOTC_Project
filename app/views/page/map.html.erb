@@ -25,6 +25,8 @@
 					</div>
 					<div id="description" class="small-desc">
 					</div>
+					<div id="subtype" class="small-desc">
+					</div>
 				</div>
 				<div id="view-routes" class="col-xs-3">
 					<div style="width:20px;height:20px;margin-left:auto;margin-right:auto">
@@ -50,9 +52,18 @@
 		<% if category.id == 5%>
 			<% next %> 
 		<% end %> 
+
+		<script>
+
+		// <% Poi.where("category_id == ?", category.id).uniq.pluck(:subtype).each do |sub| %>
+		// 	<%= sub %> 
+		// <% end %>
+
+		</script>
+
 		<% if @category_count[category.id] > 0%>
 			<div class="filter-button active">
-				<image class="image-responsive filter-image" src="<%= @category_filters[category.id] %>" data-category="<%= category.id %>" title="<%= category.name%>">
+				<image class="image-responsive filter-image" src="<%= @category_filters[category.id] %>" data-category="<%= category.id %>" title="<%= category.name%>" data-toggle="popover" data-placement="left" data-container="body" data-html="true" data-content="<input type='text'></input>">
 			</div>
 		<% end %>
 	<% end %>
@@ -71,6 +82,7 @@
 		<h1>{{name}}</h1>
 		<div class="content">
 			{{description}}
+			{{subtype}}
 		</div>
 	</div>
 </script>

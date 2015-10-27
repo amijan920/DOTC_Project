@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150704013216) do
+ActiveRecord::Schema.define(version: 20151027145956) do
 
   create_table "admins", force: true do |t|
     t.string   "email",              default: "", null: false
@@ -69,6 +69,7 @@ ActiveRecord::Schema.define(version: 20150704013216) do
     t.string   "lon_dir"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "subtype"
   end
 
   add_index "pois", ["category_id"], name: "index_pois_on_category_id"
