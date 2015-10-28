@@ -60,7 +60,7 @@ class AdminController < ApplicationController
 		#Category.create(name:\"Rail Station\", image:\"railstation.png\"); 
 
 		#Sea Ports")
-
+		s = ""
 		@admins = Admin.all()
 		@admins.each{
 			|adm|
