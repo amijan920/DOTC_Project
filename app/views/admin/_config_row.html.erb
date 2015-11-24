@@ -5,7 +5,7 @@
 				<%= label_tag(:label_heading, "Heading Name") %>
 				<%= text_field_tag(:heading, "", :name => "heading[]", :id => "last-conf-field", :class => "form-control") %>
 			</div>
-			<ul>
+			<ul class="no-indent-ul">
 				<li>
 					<button type="button" class="btn btn-default btn-block syn-btn">
 						<span class="glyphicon glyphicon-plus"></span> Add Synonym
@@ -19,12 +19,19 @@
 				<%= label_tag(:label_type, "Type") %>
 				<%= select_tag(:type, options_for_select(
 					[
-						['What kind of data is it?', '', { 'style' => 'display: none'}],
-						['Text', 'text'],
-						['Number', 'number'],
-						['Date', 'date'],
-						['Time', 'time'],
-						['Place', 'place']
+						['', '', { 'style' => 'display: none'}],
+						['Currency', 'CURRENCY'],
+						['Date', 'DATE'],
+						['Day', 'DAY'],
+						['Fraction', 'FRACTION'],
+						['Location', 'LOCATION'],
+						['Number', 'NUMBER'],
+						['Organization', 'ORGANIZATION'],
+						['Percent', 'PERCENT'],
+						['Person', 'PERSON'],
+						['Place', 'PLACE'],
+						['Text', 'TEXT'],
+						['Time', 'TIME']
 					], 
 					''
 				), 

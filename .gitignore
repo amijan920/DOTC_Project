@@ -14,3 +14,9 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+/toExpand.html
+/toParse.html
+/original.html
+
+/.DS_Store
