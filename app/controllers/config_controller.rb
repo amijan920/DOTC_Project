@@ -1,25 +1,53 @@
 class ConfigController < ApplicationController
 
 	def submit_config
+		puts params
+		
 		clean_params params
 		call = create_py_call 'thesis.py', params
-		system call
+		
+		puts call
+		puts `#{call}`
 
 		render :nothing => true
 	end
 
-	# If heading is empty, remove corresponding entries
-	# TODO: If empty heading has synonyms, make that the heading instead; keep entry
-	# TODO: Should check if may special characters sa mga values!
 	def clean_params(params)
+		# Ensure that there are no special characters (delimiters)
+		# Remove extra whitespace
+		unless params[:heading].nil?
+			params[:heading].each { |h| 
+				h.strip!
+				h.gsub!(/[,.;]/, '') 
+			} 
+		end
+		unless params[:type].nil?
+			params[:type].each { |t| 
+				t.strip! 
+				t.gsub!(/[,.;]/, '') 
+			} 
+		end
+		unless params[:syn].nil?
+			params[:syn].each{ |k,v| 
+				v.each { |s| 
+					s.strip!
+					s.gsub!(/[,.;]/, '')
+				} 
+			} 
+		end
+		
+		# If heading is empty, remove corresponding entries, unless empty heading has synonyms
+		# In which case keep entry and make that the heading instead
 		i = 0
 		while i < params[:heading].length do
-			if params[:heading][i].strip.empty?
-				if not params[:syn].nil? and params[:syn].key?(i)
-					params[:syn].delete_at(i)
+			if params[:heading][i].empty?
+				if not params[:syn].nil? and params[:syn].key?(i.to_s)
+					params[:heading][i] = params[:syn][i.to_s][0]
+					params[:syn][i.to_s].delete_at(0)
+				else
+					params[:type].delete_at(i)
+					params[:heading].delete_at(i)
 				end
-				params[:type].delete_at(i)
-				params[:heading].delete_at(i)
 			else 
 				i = i + 1
 			end
