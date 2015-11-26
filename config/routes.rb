@@ -25,8 +25,9 @@ Rails.application.routes.draw do
   get  'opentransport/admin/showPort/new', :action => 'show_port', :controller => 'admin', :as => :create_new_port
   post 'opentransport/admin/savePort', :action => 'save_port', :controller => 'admin', :as => :save_port
   post 'opentransport/admin/destroyPort', :action => 'destroy_port', :controller => 'admin', :as => :destroy_port
-  post  'opentransport/admin/config/submitConfig', :action => 'submit_config', :controller => 'config', :as => :submit_config
   
+  post  'opentransport/admin/config/submitConfig', :action => 'submit_config', :controller => 'config', :as => :submit_config
+
   get  'opentransport/admin/listRoutes', :action => 'list_routes', :controller => 'admin', :as => :list_routes
   get  'opentransport/admin/showRoute(/:id)', :action => 'show_route', :controller => 'admin', :id => /[0-9]+/i, :as => :show_route
   get  'opentransport/admin/showRoute/new', :action => 'show_route', :controller => 'admin', :as => :create_new_route

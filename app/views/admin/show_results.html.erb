@@ -1,0 +1,17 @@
+<div id="contents" class="container">
+	<table class='table table-striped table-responsive'>
+		<% @lines.each_with_index do |line,i| %>
+			<tr>
+			<% if i==0 %>
+				<% line.split(/\t/).each do |term| %>
+					<th><%= term %></th>
+				<% end %>
+			<% else %>
+				<% line.split(/\t/).each do |term| %>
+					<td><%= term %></td>
+				<% end %>
+			<% end %>
+			</tr>
+		<% end %>
+	</table>
+</div>

@@ -1,4 +1,6 @@
 class ConfigController < ApplicationController
+	def show_results
+	end
 
 	def submit_config
 		puts params
@@ -7,9 +9,10 @@ class ConfigController < ApplicationController
 		call = create_py_call 'thesis.py', params
 		
 		puts call
-		puts `#{call}`
+		output = `#{call}`
 
-		render :nothing => true
+		@lines = output.split(/\n/)
+		render 'admin/show_results'
 	end
 
 	def clean_params(params)
