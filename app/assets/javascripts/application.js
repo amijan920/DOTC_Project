@@ -22,4 +22,5 @@
 //= require typeahead
 //= require turbolinks
 //= require jquery.onepage-scroll
+//= require bootstrap-tokenfield
 //= require_tree .

@@ -25,7 +25,7 @@ body {
 }
 
 #contents {
-	margin-top:66px;
+	margin-top:80px;
 }
 
 #navbar li a.active {
@@ -178,10 +178,10 @@ body {
 	overflow-y:auto;
 }
 
-.table > tbody > tr > th {
+/*.table > tbody > tr > th {
 	color:#FFFFFF;
 	background:#046380;
-}
+}*/
 
 .td-button {
 	width: 100%;

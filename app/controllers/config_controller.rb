@@ -6,16 +6,18 @@ class ConfigController < ApplicationController
 		puts params
 		
 		clean_params params
-		call = create_py_call 'thesis.py', params
+		call_scripts 'thesis.py', params
 		
-		puts call
-		output = `#{call}`
-
-		@lines = output.split(/\n/)
 		render 'admin/show_results'
 	end
 
 	def clean_params(params)
+		urlsplt = params[:url].split(',')
+		urlsplt.each{ |u|
+			# TODO: Check if URLs are valid
+		}
+		params[:url] = urlsplt
+
 		# Ensure that there are no special characters (delimiters)
 		# Remove extra whitespace
 		unless params[:heading].nil?
@@ -32,18 +34,27 @@ class ConfigController < ApplicationController
 		end
 		unless params[:syn].nil?
 			params[:syn].each{ |k,v| 
-				v.each { |s| 
-					s.strip!
-					s.gsub!(/[,.;]/, '')
-				} 
+				if v.empty?
+					params[:syn].delete(k)
+				else
+					vsplt = v.split(',')
+					vsplt.each { |s| 
+						s.strip!
+						s.gsub!(/[,.;]/, '')
+					} 
+					params[:syn][k] = vsplt
+				end
 			} 
 		end
+
+		puts "cleaned: "
+		puts params
 		
 		# If heading is empty, remove corresponding entries, unless empty heading has synonyms
 		# In which case keep entry and make that the heading instead
 		i = 0
 		while i < params[:heading].length do
-			if params[:heading][i].empty?
+			if not params[:heading][i].nil? and params[:heading][i].empty?
 				if not params[:syn].nil? and params[:syn].key?(i.to_s)
 					params[:heading][i] = params[:syn][i.to_s][0]
 					params[:syn][i.to_s].delete_at(0)
@@ -56,10 +67,24 @@ class ConfigController < ApplicationController
 			end
 		end
 	end
+	
+	def call_scripts(script_filename, params)
+		@tables = Hash.new
+		config_py_call = create_py_call params
 
-	def create_py_call(script_filename, params)
-		pythoncall = "python " + script_filename + " -u \"" + params[:url] + "\""
+		params[:url].each_with_index{ |u, i|
+			pythoncall = "python " + script_filename + " -u \"" + u + "\""
+			pythoncall = pythoncall + config_py_call
+			
+			output = `#{pythoncall}`
+			@tables[i] = Hash.new
+			@tables[i][:lines] = output.split(/\n/)
+			@tables[i][:url] = u
+		}
+	end
 
+	def create_py_call(params)
+		pythoncall = ""
 		unless params[:heading].nil? or params[:heading].empty?
 			# Add keywords
 			pythoncall = pythoncall + " -k \""

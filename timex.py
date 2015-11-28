@@ -45,7 +45,8 @@ regDate2 = re.compile(monthabbr, re.IGNORECASE)
 regDate3 = re.compile(week_day, re.IGNORECASE)
 regDate4 = re.compile(rel_day, re.IGNORECASE)
 
-regTime = re.compile(r"\d{1,2}:\d{2}")
+regTime1 = re.compile("(\d{1,2})(:(\d{2}))?\s*((A\.?M\.?)|(P\.?M\.?))?$", re.IGNORECASE)
+regTime2 = re.compile("(\d{2})(\d{2})H$")
 
 def isDay(text):
     if regDate3.search(text) is not None:
@@ -64,7 +65,21 @@ def isDate(text):
     return False
 
 def isTime(text):
-    return regTime.match(text) is not None
+    m = regTime1.match(text)
+    if m:
+        hr = float(m.group(1))
+        mn = float(m.group(3)) if m.group(3) else 0
+        if hr >= 0 and hr <= 24 and mn >=0 and mn <=59:
+            return True
+    
+    m = regTime2.match(text)
+    if m:
+        hr = float(m.group(1))
+        mn = float(m.group(2))
+
+        if hr >= 0 and hr <= 24 and mn >=0 and mn <=59:
+            return True
+    return False
 
 def tag(text):
 
@@ -378,19 +393,30 @@ def ground(tagged_text, base_date):
 def demo():
     import nltk
     text = "this Thursday"
-    print tag('2015-09-23T20:10:12+00:00')
-    print isDate('2015-W39')
-    print isDate('209')
-    print isDate('this December')
-    print isDate('Thursday')
-    print isDate('Thursday')
-    print isDate('December')
-    print isDate('15 December')
-    print isDate('Dec')
-    print isDate('Dec3')
-    print isTime('Dec3')
-    print isTime('1:00')
-    print isTime(':00')
+    # print tag('2015-09-23T20:10:12+00:00')
+    # print isDate('2015-W39')
+    # print isDate('209')
+    # print isDate('this December')
+    # print isDate('Thursday')
+    # print isDate('Thursday')
+    # print isDate('December')
+    # print isDate('15 December')
+    # print isDate('Dec')
+    # print isDate('Dec3')
+    # print isTime('Dec3')
+    # print isTime('1:00')
+    # print isTime(':00')
+    print isTime('10:00')
+    print isTime('10:00 AM')
+    print isTime('10 AM')
+    print isTime('10:00 p.m.')
+    print isTime('49:50')
+    print isTime('at 10:00 a.m.')
+    print isTime('10:00 a')
+    print isTime('10:00 AM AM')
+    print isTime('at 10:00 a.m.')
+    print isTime('1000H')
+    print isTime('4950H')
 
 if __name__ == '__main__':
     demo()

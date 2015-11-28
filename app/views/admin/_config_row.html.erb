@@ -2,21 +2,20 @@
 	<div class="col-md-12 col-md-offset-0 col-xs-10 col-xs-offset-1 well-light">
 		<div class="col-md-6">
 			<div class="form-group">
-				<%= label_tag(:label_heading, "Heading Name") %>
+				<%= label_tag(:label_heading, "Add a keyword:") %>
 				<%= text_field_tag(:heading, "", :name => "heading[]", :id => "last-conf-field", :class => "form-control") %>
 			</div>
-			<ul class="no-indent-ul">
+			<!-- <ul class="no-indent-ul">
 				<li>
 					<button type="button" class="btn btn-default btn-block syn-btn">
 						<span class="glyphicon glyphicon-plus"></span> Add Synonym
 					</button>
 				</li>
-			</ul>
-			
+			</ul> -->
 		</div>
 		<div class="col-md-6">
 			<div class="form-group">
-				<%= label_tag(:label_type, "Type") %>
+				<%= label_tag(:label_type, "What kind of data is it?") %>
 				<%= select_tag(:type, options_for_select(
 					[
 						['', '', { 'style' => 'display: none'}],
@@ -40,11 +39,9 @@
 				) %>
 			</div>
 		</div>
-		<!-- <div class="col-md-4">
-			<div class="form-group">
-				<label>Example/Format</label>
-				<input class="form-control" type="text" placeholder="What does it look like?" disabled></input>
-			</div>
-		</div> -->
+		<div class="col-md-12">
+			<%= label_tag(:label_syn, "Enter words that are similar in meaning (separate with commas):") %>
+			<%= text_field_tag(:url, "", :class => "form-control input-lg tokenfield-syn") %>
+		</div>
 	</div>
 </div>
