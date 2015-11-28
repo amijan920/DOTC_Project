@@ -12,6 +12,9 @@
 		var name = 'syn['+($tokenfields.size()-1)+']';
 
 		$tokenfields.last().attr('name', name);
+		$tokenfields.last().tokenfield({
+		  delimiter: [',', ';']
+		});
 	}
 
 	function escapeRegExp(str) {
@@ -70,8 +73,5 @@
 <script>
 $('#tokenfield-url').tokenfield({
   delimiter: [',', ' ', ';']
-})
-$('.tokenfield-syn').tokenfield({
-  delimiter: [',', ';']
 })
 </script>

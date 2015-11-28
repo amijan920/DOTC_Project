@@ -1,4 +1,13 @@
 class ConfigController < ApplicationController
+	require 'uri'
+
+	# def valid?(uri)
+	#   !!URI.parse(uri)
+	#   uri.kind_of?(URI::HTTP)
+	# rescue URI::InvalidURIError
+	#   false
+	# end
+
 	def show_results
 	end
 
@@ -12,9 +21,15 @@ class ConfigController < ApplicationController
 	end
 
 	def clean_params(params)
+		urlregex = /^#{URI::regexp(%w(http https))}$/;
 		urlsplt = params[:url].split(',')
 		urlsplt.each{ |u|
-			# TODO: Check if URLs are valid
+			u.strip!
+			unless u.match(urlregex)
+			# unless valid?(u)
+				urlsplt.delete(u)
+				puts "invalid"
+			end
 		}
 		params[:url] = urlsplt
 
