@@ -15,8 +15,13 @@ class ConfigController < ApplicationController
 		puts params
 		
 		clean_params params
-		call_scripts 'thesis.py', params
 		
+		call_scripts 'thesis.py', params
+		# output = `python test.py`
+		# @tables = Hash.new
+		# @tables[0] = Hash.new
+		# @tables[0][:lines] = output
+
 		render 'admin/show_results'
 	end
 
@@ -74,8 +79,10 @@ class ConfigController < ApplicationController
 					params[:heading][i] = params[:syn][i.to_s][0]
 					params[:syn][i.to_s].delete_at(0)
 				else
-					params[:type].delete_at(i)
-					params[:heading].delete_at(i)
+					unless params[:type].nil? or params[:type].empty?
+						params[:type].delete_at(i)
+						params[:heading].delete_at(i)
+					end
 				end
 			else 
 				i = i + 1
@@ -91,7 +98,13 @@ class ConfigController < ApplicationController
 			pythoncall = "python " + script_filename + " -u \"" + u + "\""
 			pythoncall = pythoncall + config_py_call
 			
+			puts pythoncall
+
 			output = `#{pythoncall}`
+
+			puts "OUTPUT"
+			puts output
+			
 			@tables[i] = Hash.new
 			@tables[i][:lines] = output.split(/\n/)
 			@tables[i][:url] = u

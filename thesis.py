@@ -1,5 +1,10 @@
-#python thesis.py --url http://travel.2go.com.ph/Schedules/schedules.asp -k "Date;Time;Day;Pier;Date;Time;Day;Pier" -s "Adlaw,Araw;Oras;;;;;Adlaw sa Simana;Port,Daungan sa Barko" -t ";;;;;;;"
+#python thesis.py --url "http://travel.2go.com.ph/Schedules/schedules.asp" -k "Date;Time;Day;Pier;Date;Time;Day;Pier" -s "Adlaw,Araw;Oras;;;;;Adlaw sa Simana;Port,Daungan sa Barko" -t ";;;;;;;"
 #python thesis.py --url "https://www.cebupacificair.com/Flight%20Schedule%20Docs/Domestic%20Flight%20Schedule%20(10%2022%2015).pdf" -k "Flight;Effectivity;Frequency;Departure;Arrival;Flight;Effectivity;Frequency;Departure;Arrival"
+#python thesis.py --url "http://mmdatraffic.interaksyon.com/line-view-edsa.php" -k "EDSA;SOUTHBOUND;NORTHBOUND"
+#python thesis.py --url "http://www.w3fire.com/web/sulpicio/schedule.htm" -k "DEPARTURE;DEPARTURE;DEPARTURE;ARRIVAL;ARRIVAL;ARRIVAL"
+#python thesis.py --url "http://www.romblonshippinglines.com/schedule/" -k "MANILA;5:00 PM;TUESDAY;ROMBLON;5:00 AM;WEDNESDAY"
+#python thesis.py --url "http://schedule.ph/search?date=30-09-2015&from=Cebu+City&to=Ormoc" -k "08:00 AM;Cebu City Pier 4;Ormoc;4h;Cebu Ferries"
+#python thesis.py --url "http://www.flyseair.com/timetable/" -k "FLT NO.;Frequency;ETD;ETA;A/C"
 
 import sys
 sys.path.append('lang')
@@ -20,17 +25,66 @@ from lxml.html.clean import clean_html
 
 class Node:
 	content = None
+	content_type = set([])
 	depth = -1
 	first_order = -1
 	last_order = -1
-	parent = None
-	def __init__ (self, node_content, node_depth, node_first, node_last):
+	parent = -1
+	prev_sibling = -1
+	next_sibling = -1
+	first_child = -1
+	def __init__ (self, node_content, node_type, node_depth, node_first, node_last, node_parent, node_prev, node_next, node_child):
 		self.content = node_content
+		self.content_type = node_type
 		self.depth = node_depth
 		self.first_order = node_first
 		self.last_order = node_last
-	def set_parent (self, node_parent):
 		self.parent = node_parent
+		self.prev_sibling = node_prev
+		self.next_sibling = node_next
+		self.first_child = node_child
+
+
+tree_nodes = []
+user_keywords = []
+user_keyword_synonyms = []
+user_keyword_types = []
+possible_formats = []
+type_names = ["DATE", "TIME", "DAY", "NUMBER", "TEXT", "PERCENT", "FRACTION", "CURRENCY", "ORGANIZATION", "LOCATION", "PERSON"]
+important_tags = ['td', 'tr', 'th', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'div', 'a', 'ul', 'li', 'blockquote', 'span', 'dl', 'dt', 'dd', 'article', 'section']
+
+
+def create_node (tag, depth, first, last, parent, prev, next, child):
+	if tag==None:
+		return -1
+	if tag.name==None:
+		return -1
+	current_node = Node (tag, getTypes(tag.text.encode("utf8")), depth, first, last, parent, prev, next, child)
+	tree_nodes.append(current_node)
+	current_index = len(tree_nodes)-1
+	try:
+		first_number = 0
+		first_child = True
+		prev_child = -1
+		for child in tag.children:
+			temp_index = create_node (child, depth+1, first_number, 0, current_index, -1, -1, -1)
+			if first_child:
+				tree_nodes[current_index].first_child = temp_index
+				first_child = False
+			if prev_child!=-1 and temp_index!=-1:
+				tree_nodes[prev_child].next_sibling = temp_index
+				tree_nodes[temp_index].prev_sibling = prev_child
+				while prev_child!=-1:
+					tree_nodes[prev_child].last_order = tree_nodes[prev_child].last_order + 1
+					prev_child = tree_nodes[prev_child].prev_sibling
+			if temp_index!=-1:
+				prev_child = temp_index
+				first_number = first_number + 1
+	except AttributeError:
+		return -1
+	return current_index
+
+
 
 def get_next (current):
 	try:
@@ -44,32 +98,6 @@ def get_next (current):
 				return current.parent.nextSibling
 	return None
 
-
-tree_nodes = []
-
-
-def create_node (tag, depth, first, last, parent):
-	if tag==None:
-		return
-	current_node = Node (tag, depth, first, last)
-	current_node.parent = parent
-	tree_nodes.append(current_node)
-	try:
-		first_number = 0
-		last_number = -1
-		for child in tag.children:
-			last_number = last_number + 1
-		for child in tag.children:
-			create_node (child, depth+1, first_number, last_number, current_node)
-			first_number = first_number + 1
-			last_number = last_number - 1
-	except AttributeError:
-		return
-
-
-user_keywords = []
-user_keyword_synonyms = []
-user_keyword_types = []
 
 
 def parse_arguments():
@@ -91,15 +119,16 @@ def parse_arguments():
 		global user_keywords
 		index = 0
 		while index < len(temp_keywords):
-			user_keywords.append(temp_keywords[index])
-			synonyms = getSynonyms(temp_keywords[index])
-			if len(temp_synonyms) > 0:
-				cur_keyword_synonyms = temp_synonyms[index].split(",")
-				for given_synonym in cur_keyword_synonyms:
-					synonyms.extend(getSynonyms(given_synonym))
-			global user_keyword_synonyms
-			user_keyword_synonyms.append(synonyms)
-			#later on, check if type is "" before using
+			if temp_keywords[index]!="":
+				user_keywords.append(temp_keywords[index])
+				synonyms = getSynonyms(temp_keywords[index])
+				if len(temp_synonyms) > 0:
+					if temp_synonyms[index]!="":
+						cur_keyword_synonyms = temp_synonyms[index].split(",")
+						for given_synonym in cur_keyword_synonyms:
+							synonyms.extend(getSynonyms(given_synonym))
+				global user_keyword_synonyms
+				user_keyword_synonyms.append(synonyms)
 			if len(temp_types) > 0:
 				user_keyword_types.append(temp_types[index])
 			index = index + 1
@@ -204,47 +233,296 @@ def expand_tables():
 	f.close()
 
 
-def get_possible_formats(soup):
-	possible_formats = []
+def find_similar_formats (base_format):
+	if len(base_format) < 1:
+		return
+	#factor in important tags
+	similar_formats = []
+	for node in range (len(tree_nodes)):
+		if node==base_format[0]:
+			continue
+		if tree_nodes[node].content.name != tree_nodes[base_format[0]].content.name:
+			continue
+		current_format = [node]
+		current_index = node
+		valid_format = True
+		index = 1
+		while index < len(base_format):
+			lower = []
+			higher = []
+			current_position = current_index
+			if tree_nodes[base_format[index]].depth >= tree_nodes[base_format[index-1]].depth:
+				temp_index = base_format[index]
+				higher_index = base_format[index-1]
+			else:
+				temp_index = base_format[index-1]
+				higher_index = base_format[index]
 
-	for table in soup.findAll('table'):
-		curFormat = []
-		row = table.find('tr')
-		for column in row.findChildren():
-			curFormat.append(column.name)
-		possible_formats.append(curFormat)
+			lower.append(temp_index)
+			while tree_nodes[temp_index].depth != tree_nodes[higher_index].depth:
+				temp_index = tree_nodes[temp_index].parent
+				lower.append(temp_index)
+			while temp_index != higher_index:
+				temp_index = tree_nodes[temp_index].parent
+				lower.append(temp_index)
+				higher_index = tree_nodes[higher_index].parent
+				higher.append(higher_index)
 
-	tree_tags = []
-	for tag in soup.findChildren():
-		tree_tags.append(tag.name)
-
-	# Not consecutive, depth/first/last order
-	for start in range (0, len(tree_tags)):
-		similar_areas = soup.findAll(tree_tags[start])
-		for end in range (start, len(tree_tags)):
-			range_possibility = 0
-			for candidate_area in similar_areas:
-				candidate_format = []
-				for candidate_tag in candidate_area.findChildren():
-					candidate_format.append(candidate_tag.name)
-				if len(candidate_format) < end-start+1:
-					continue
-				candidate_okay = True
-				for cur_index in range (start, end+1):
-					if candidate_format[cur_index-start]!=tree_tags[cur_index]:
-						candidate_okay = False
-						break
-				if candidate_okay == True:
-					range_possibility = range_possibility + 1
-				if range_possibility > 1:
+			if tree_nodes[base_format[index]].parent == tree_nodes[base_format[index-1]].parent:
+				if tree_nodes[base_format[index]].first_order > tree_nodes[base_format[index-1]].first_order:
+					diff = tree_nodes[base_format[index]].first_order - tree_nodes[base_format[index-1]].first_order
+					while diff > 0:
+						current_position = tree_nodes[current_position].next_sibling
+						if current_position==-1:
+							valid_format = False
+							break
+						diff = diff - 1
+				else:
+					diff = tree_nodes[base_format[index-1]].first_order - tree_nodes[base_format[index]].first_order
+					while diff > 0:
+						current_position = tree_nodes[current_position].prev_sibling
+						if current_position==-1:
+							valid_format = False
+							break
+						diff = diff -1
+				if valid_format==False:
 					break
-			if range_possibility > 1:
-				candidate = []
-				for index in range (start, end+1):
-					candidate.append(tree_tags[index])
-				if candidate not in possible_formats:
-					possible_formats.append(candidate)
-	return possible_formats
+			elif tree_nodes[base_format[index]].depth >= tree_nodes[base_format[index-1]].depth:
+				for repeat in range (len(higher)):
+					current_position = tree_nodes[current_position].parent
+					if current_position==-1:
+						valid_format = False
+						break
+				for down in range (1,len(lower)):
+					bottom = lower[len(lower)-(down+1)]
+					current_position = tree_nodes[current_position].first_child
+					if current_position==-1:
+						valid_format = False
+						break
+					for sibling in range (tree_nodes[bottom].first_order):
+						current_position = tree_nodes[current_position].next_sibling
+						if current_position==-1:
+							valid_format = False
+							break
+					if valid_format==False:
+						break
+				if valid_format==False:
+					break
+				if tree_nodes[current_position].content.name != tree_nodes[base_format[index]].content.name:
+					valid_format = False
+					break
+			else:
+				for repeat in range (len(lower)):
+					current_position = tree_nodes[current_position].parent
+					if current_position==-1:
+						valid_format = False
+						break
+				for down in range (1,len(higher)):
+					bottom = higher[len(higher)-(down+1)]
+					current_position = tree_nodes[current_position].first_child
+					if current_position==-1:
+						valid_format = False
+						break
+					for sibling in range (tree_nodes[bottom].first_order):
+						current_position = tree_nodes[current_position].next_sibling
+						if current_position==-1:
+							valid_format = False
+							break
+					if valid_format==False:
+						break
+				if valid_format==False:
+					break
+				if tree_nodes[current_position].content.name != tree_nodes[base_format[index]].content.name:
+					valid_format = False
+					break
+
+			current_format.append(current_position)
+			current_index = current_position
+			index = index + 1
+		if valid_format:
+			similar_formats.append(current_format)
+	return similar_formats
+
+
+max_occurrences = 0
+
+def is_format_possible (candidate_format):
+	global possible_formats
+	already_possible = (len(possible_formats) > 0)
+	for format in possible_formats:
+		#CURRENTLY: assuming equal length, not accounting for important tags
+		already_possible = True
+		if len(format)!=len(candidate_format):
+			already_possible = False
+			continue
+		if tree_nodes[format[0]].content.name!=tree_nodes[candidate_format[0]].content.name:
+			already_possible = False
+			continue
+		for node_index in range (1, len(format)):
+			format_node = tree_nodes[format[node_index]]
+			candidate_node = tree_nodes[candidate_format[node_index]]
+			if format_node.content.name != candidate_node.content.name:
+				already_possible = False
+				break
+			if format_node.depth-tree_nodes[format[node_index-1]].depth != candidate_node.depth-tree_nodes[candidate_format[node_index-1]].depth:
+				already_possible = False
+				break
+			if format_node.first_order-tree_nodes[format[node_index-1]].first_order != candidate_node.first_order-tree_nodes[candidate_format[node_index-1]].first_order and format_node.last_order-tree_nodes[format[node_index-1]].last_order != candidate_node.last_order-tree_nodes[candidate_format[node_index-1]].last_order:
+				already_possible = False
+				break
+		if already_possible:
+			break
+	if already_possible:
+		return
+
+	global max_occurrences
+	number_of_similar_formats = len(find_similar_formats(candidate_format))
+	#CURRENTLY: Assuming table rows repeat
+	if number_of_similar_formats > 1:
+		possible_formats.append(candidate_format)
+	if number_of_similar_formats > max_occurrences:
+		max_occurrences = number_of_similar_formats
+
+
+def find_possible_formats ():
+	third_size = len(tree_nodes) / 3
+
+	formats = []
+	for index in range (len(tree_nodes)):
+		formats.append([index])
+		is_format_possible([index])
+
+	while len(formats)>0:
+		form = formats[0]
+		if len(form)>=third_size:
+			continue
+		if tree_nodes[form[len(form)-1]].next_sibling != -1:
+			sibling_format = []
+			sibling_format.extend(form)
+			sibling_format.append(tree_nodes[form[len(form)-1]].next_sibling)
+			is_format_possible(sibling_format)
+			if len(sibling_format)<third_size:
+				formats.append(sibling_format)
+		if tree_nodes[form[len(form)-1]].first_child != -1:
+			child_format = []
+			child_format.extend(form)
+			child_format.append(tree_nodes[form[len(form)-1]].first_child)
+			is_format_possible(child_format)
+			if len(child_format)<third_size:
+				formats.append(child_format)
+		formats.remove(form)
+
+
+
+def scrape (format):
+	rows = [format]
+	similars = find_similar_formats(format)
+	rows.extend (similars)
+	return rows
+
+
+data_types = []
+cur_data_types = []
+
+
+def score(format):
+	output = scrape(format)
+	if len(output)<1:
+		return 0
+
+	current_score = 0.0
+	current_score += (len(output) / float(max_occurrences))
+	row_length = len(output[0])
+
+	keywords_not_found = []
+	for keyword in user_keyword_synonyms:
+		keywords_not_found.extend(keyword)
+	number_of_keywords = len(keywords_not_found)
+	if number_of_keywords > 0:
+		keywords_found = 0.0
+		for row in output:
+			for column in row:
+				for word in keywords_not_found:
+					if word.lower() in tree_nodes[column].content.text.lower():
+						keywords_found = keywords_found + 1.0
+						keywords_not_found.remove(word)
+						break
+		current_score += (keywords_found / number_of_keywords)
+
+	temporary_score = 0.0
+	global cur_data_types
+	cur_data_types = []
+	global type_names
+	ind = 0
+	while ind < row_length:
+		types = [0] * len(type_names)
+		for row in output:
+			current_type = tree_nodes[row[ind]].content_type
+			type_index = 0
+			while type_index < len(type_names):
+				if type_names[type_index] in current_type:
+					types[type_index] = types[type_index] + 1
+				type_index = type_index + 1
+		maximum_type = 0
+		maximum_index = 0
+		temp_index = 0
+		while temp_index < len(type_names):
+			if types[temp_index] > maximum_type:
+				maximum_type = types[temp_index]
+				maximum_index = temp_index
+			temp_index = temp_index + 1
+		temporary_score += (float(maximum_type) / len(output))
+		cur_data_types.append(type_names[maximum_index])
+		ind = ind + 1
+	current_score += (temporary_score / float(row_length))
+
+	types_not_found = []
+	types_not_found.extend(user_keyword_types)
+	types_found = 0.0
+	number_of_types = len(types_not_found)
+	if number_of_types > 0:
+		for the_type in cur_data_types:
+			if the_type in types_not_found:
+				types_found = types_found + 1.0
+				types_not_found.remove(the_type)
+		current_score += (types_found / number_of_types)
+
+
+	return current_score
+
+
+def output_data (rows,dammit):
+	data_type_output = ""
+	header_output = ""
+	for a_type in data_types:
+		if data_type_output == "":
+			data_type_output += a_type
+			header_output += "Header"
+		else:
+			data_type_output += "\t" + a_type
+			header_output += "\tHeader"
+	print data_type_output
+	print header_output
+
+	for row in rows:
+		output = ""
+		if len(row)<len(data_types):
+			continue
+		matching = True
+		column_index = 0
+		while column_index < len(row):
+			cur_type = tree_nodes[row[column_index]].content_type
+			if data_types[column_index] not in cur_type:
+				matching = False
+				break
+			if output=="":
+				output += tree_nodes[row[column_index]].content.text.strip()
+			else:
+				output += "\t" + tree_nodes[row[column_index]].content.text.strip()
+			column_index = column_index + 1
+		if matching==True:
+			print output.encode(dammit.original_encoding)
+
 
 
 def main():
@@ -259,183 +537,39 @@ def main():
 	html = UnicodeDammit.detwingle(asString)
 	soup = BeautifulSoup(html.decode("utf8"),"lxml")
 
-	create_node (soup, 0, 0, 0, None)
+	create_node (soup, 0, 0, 0, -1, -1, -1, -1)
+	global tree_nodes
+	#for blah in range (100):
+	#	tree_nodes.append(Node(soup,set(["Text"]),0,0,0,0,0,0,0))
+	#print len(tree_nodes)
 
 	#3. Find possible formats
-	possible_formats = get_possible_formats(soup)
+	find_possible_formats()
 
 	#4. Score possible formats
-	#format = get_most_likely_format(soup,possible_formats)
-
-	#5. Extract matching content
-	#rows = scrape (soup, format)
-
-	#6. Return all extracted data entries
-	#dammit = UnicodeDammit(str(soup))
-	#output_data(rows,dammit)
-
-
-main()
-print user_keywords
-print user_keyword_synonyms
-
-
-
-
-
-headers = []
-cur_data_types = []
-data_types = []
-
-
-
-
-
-
-
-
-
-
-
-
-def score(soup,format):
-	output = scrape(soup, format)
-	#print output
-
-	current_score = 0
-	#current_score = len(output)
-	ind = 1
-	maximum_row = 0
-	#This is penalty for different row sizes
-	while ind < len(output):
-		prev = len(output[ind-1])
-		cur = len(output[ind])
-
-		if prev > maximum_row:
-			maximum_row = prev
-		if cur > maximum_row:
-			maximum_row = cur
-
-		if prev < cur:
-			current_score = current_score - (cur-prev)
-		else:
-			current_score = current_score - (prev-cur)
-		ind = ind + 1
-	current_score = current_score + len(output)
-
-	#Number of headers in the format
-
-	global cur_data_types
-	cur_data_types = []
-	type_names = ["DATE", "TIME", "ORGANIZATION", "LOCATION", "PERSON", "MONEY", "NUMBER", "TEXT", "DAY"]
-	ind = 0
-	while ind < maximum_row:
-		types = [0] * len(type_names)
-		for row in output:
-			if ind < len(row):
-				try:
-					current_type = getTypes(row[ind].encode("utf8"))
-					type_index = 0
-					while type_index < len(type_names):
-						if type_names[type_index] in current_type:
-							types[type_index] = types[type_index] + 1
-						type_index = type_index + 1
-				except UnicodeDecodeError:
-					#print "Found Non-UTF8 Characters"
-					continue
-		maximum_type = 0
-		maximum_index = 0
-		temp_index = 0
-		while temp_index < len(type_names):
-			if types[temp_index] > maximum_type:
-				maximum_type = types[temp_index]
-				maximum_index = temp_index
-			temp_index = temp_index + 1
-		current_score = current_score + maximum_type
-		cur_data_types.append(type_names[maximum_index])
-		ind = ind + 1
-
-	return current_score
-
-
-
-def get_most_likely_format (soup,formats):
-	current_max = score(soup,formats[0])
-	current_ind = 0
-	ind = 1
-	while ind < len(formats):
-		temp = score(soup,formats[ind])
-		if temp > current_max:
-			current_max = temp
-			current_ind = ind
+	highest_score = -1
+	format = None
+	for candidate in possible_formats:
+		temp_score = score(candidate)
+		if temp_score > highest_score:
+			highest_score = temp_score
+			format = candidate
 			global data_types
 			global cur_data_types
 			data_types = []
-			for types in cur_data_types:
-				data_types.append(types)
-		ind = ind + 1
-	#print formats[current_ind]
-	return formats[current_ind]
+			data_types.extend(cur_data_types)
+		da_format = ""
+		for index in candidate:
+			da_format += str(tree_nodes[index].content.name) + " "
+
+	#5. Extract matching content
+	rows = scrape (format)
+
+	#6. Return all extracted data entries
+	dammit = UnicodeDammit(str(soup))
+	output_data(rows,dammit)
 
 
+main()
 
 
-
-
-def scrape (soup, format):
-	#Scrape data based on given format
-
-	important = ['td', 'tr', 'th', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'div', 'a', 'ul', 'li', 'blockquote', 'hr']
-	rows = []
-
-	for row in soup.findAll(format[0]):
-		ind = 1
-		found_row = True
-		data = []
-
-		#Counter-check data-type
-		current = get_next(row)
-		while (ind < len(format)) and (current!=None):
-			if current.name!=format[ind]:
-				if current.name not in important:
-					current = get_next(current)
-					continue
-				if format[ind] not in important:
-					ind = ind + 1
-					continue
-				else:
-					found_row = False
-					break
-			else:
-				data.append(current.text)
-				ind = ind + 1
-				current = get_next(current)
-
-		if len(data)==0 or len(data)<len(format)-2 or len(data)>len(format)+2:
-			found_row = False
-		if found_row==True:
-			rows.append(data)
-
-	return rows
-
-
-def output_data (rows,dammit):
-	#Output data
-	#print dammit.original_encoding
-	for row in rows:
-		#print row
-		output = ""
-		matching = True
-		column_index = 0
-		while column_index < len(row):
-			cur_type = getTypes(row[column_index].encode("utf8"))
-			if data_types[column_index] not in cur_type:
-				matching = False
-				break
-			if output=="":
-				output += row[column_index].strip()
-			else:
-				output += "," + row[column_index].strip()
-			column_index = column_index + 1
-		if matching==True:
-			print output.encode(dammit.original_encoding)

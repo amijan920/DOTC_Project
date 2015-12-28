@@ -1,7 +1,8 @@
 # coding: utf-8
 
 from nltk.tag import StanfordNERTagger as StNER
-import timex
+from dateutil.parser import parse
+import timex as timex
 import re
 
 stTagger3 = StNER('english.all.3class.distsim.crf.ser.gz') 
@@ -18,17 +19,20 @@ currSet = set(['CURRENCY'])
 # Input: String we need to find the types of
 
 # Returns list of types from {DATE, TIME, DAY,
-# ORGANIZATION, LOCATION, PERSON, TEXT (NON-NUMBERS), 
+# ORGANIZATION, LOCATION, PERSON, TEXT, 
 # NUMBER (includes fractions), PERCENT (includes fractions), FRACTION, CURRENCY}
 
 # If ISO datetime format, will only return DATE
+# If ORGANIZATION, LOCATION, PERSON, also TEXT
 
 def getTypes(word):
 	word = word.strip()
 	tags = set()
 
-	word_nospace = word.replace(' ', '')
-	word_nospace = word_nospace.replace('\t', '')
+	if word == '':
+		return tags
+
+	word_nospace = word.replace('\s', '')
 
 	# Account for spaces in percentages, numbers, fractions
 	if isPercent(word_nospace):
@@ -40,47 +44,39 @@ def getTypes(word):
 	elif isCurrency(word_nospace):
 		return currSet
 
-	wordlist = word.split()
-	tagged3 = stTagger3.tag(wordlist)
+	if isNumber(word):
+		tags |= numSet
+	elif isPercent(word):
+		tags |= perSet
+	elif isFraction(word):
+		tags |= fracSet
+		tags |= perSet
+		tags |= numSet
+	elif isCurrency(word):
+		tags |= currSet
+	elif isTime(word):
+		tags |= timeSet
+	elif isDay(word):
+		tags |= daySet
+	elif isDate(word):
+		tags |= dateSet
+	else:
+		tags |= txtSet
 
-	for i, w in enumerate(wordlist):
-		if timex.isDay(w):
-			tags |= daySet
-			continue
+		wordlist = word.split()
+		tagged3 = stTagger3.tag(wordlist)
 
-		if isNumber(w):
-			tags |= numSet
-			continue
-		elif isPercent(w):
-			tags |= perSet
-			continue
-		elif isFraction(w):
-			tags |= fracSet
-			tags |= perSet
-			tags |= numSet
-			continue
-		elif isCurrency(w):
-			tags |= currSet
-			continue
-		else:
-			tags |= txtSet
-
-		tags |= set([t for t in [tagged3[i][1]] if t != 'O'])
-		
-		if timex.isTime(w):
-			tags |= timeSet
-
-		if timex.isDate(w):
-			tags |= dateSet
-
+		for i, w in enumerate(wordlist):
+			tags |= set([t for t in [tagged3[i][1]] if t != 'O'])
+	
 	return tags
 
 # Does not include fractions
 def isNumber(text):	
-    try:
-        float(text)
-        return True
-    except ValueError:
+	try:
+		float(text)
+		return True
+	except ValueError:
 		return False
 
 # Does not include fractions
@@ -117,4 +113,57 @@ def isCurrency(text):
 		if text.startswith(sym):
 			return isNumber(text[len(sym):])
 
+	return False
+
+day = "((monday|tuesday|wednesday|thursday|friday|saturday|sunday)[^a-zA-Z]*)+"
+day_abbr = "((mon|tues|wed|thurs|fri|sat|sun|tue|thu)[^a-zA-Z]*)+"
+day_init = "((m|t|w|th|f|sa|su)[^a-zA-Z]*)+"
+
+regDay1 = re.compile(day+"$", re.IGNORECASE)
+regDay2 = re.compile(day_abbr+"$", re.IGNORECASE)
+regDay3 = re.compile(day_init+"$", re.IGNORECASE)
+
+# "Monday,Tuesday","MWF", or even just "M" are considered type 'DAY'
+def isDay(text):
+	if regDay1.match(text) is not None:
+		return True
+	if regDay2.match(text) is not None:
+		return True
+	if regDay3.match(text) is not None:
+		return True
+	return False
+
+def isDate(text):
+	try: 
+		parse(text)
+
+		# Removed because isNumber and isTime checking occurs before isDate checking anyway
+		# if isNumber(text) or isTime(text):
+		# 	return False
+
+		return True
+	except ValueError:
+		if "TIMEX" in timex.tag(text):
+			return True
+		return False
+
+regTime1 = re.compile("(\d{1,2})(:(\d{2}))?\s*((A\.?M\.?)|(P\.?M\.?))?$", re.IGNORECASE)
+regTime2 = re.compile("(\d{2})(\d{2})H$")
+
+def isTime(text):
+	# print text
+	m = regTime1.match(text)
+	if m:
+		hr = float(m.group(1))
+		mn = float(m.group(3)) if m.group(3) else 0
+		if hr >= 0 and hr <= 24 and mn >=0 and mn <=59:
+			return True
+	
+	m = regTime2.match(text)
+	if m:
+		hr = float(m.group(1))
+		mn = float(m.group(2))
+
+		if hr >= 0 and hr <= 24 and mn >=0 and mn <=59:
+			return True
 	return False

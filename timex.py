@@ -24,7 +24,6 @@ day = "(monday|tuesday|wednesday|thursday|friday|saturday|sunday)"
 week_day = "(monday|tuesday|wednesday|thursday|friday|saturday|sunday)"
 month = "(january|february|march|april|may|june|july|august|september| \
           october|november|december)"
-monthabbr = r"\b(jan|feb|mar|apr|may|jun|jul|aug|sep|sept|oct|nov|dec)\b"
 dmy = "(year|day|week|month)"
 rel_day = "(today|yesterday|tomorrow|tonight|tonite)"
 exp1 = "(before|after|earlier|later|ago)"
@@ -39,47 +38,6 @@ reg2 = re.compile(regxp2, re.IGNORECASE)
 reg3 = re.compile(rel_day, re.IGNORECASE)
 reg4 = re.compile(iso)
 reg5 = re.compile(year)
-
-regDate1 = re.compile(month, re.IGNORECASE)
-regDate2 = re.compile(monthabbr, re.IGNORECASE)
-regDate3 = re.compile(week_day, re.IGNORECASE)
-regDate4 = re.compile(rel_day, re.IGNORECASE)
-
-regTime1 = re.compile("(\d{1,2})(:(\d{2}))?\s*((A\.?M\.?)|(P\.?M\.?))?$", re.IGNORECASE)
-regTime2 = re.compile("(\d{2})(\d{2})H$")
-
-def isDay(text):
-    if regDate3.search(text) is not None:
-        return True
-    return False
-
-def isDate(text):
-    if regDate1.search(text) is not None:
-        return True
-    if regDate2.search(text) is not None:
-        return True
-    if regDate4.search(text) is not None:
-        return True
-    if "TIMEX" in tag(text):
-        return True
-    return False
-
-def isTime(text):
-    m = regTime1.match(text)
-    if m:
-        hr = float(m.group(1))
-        mn = float(m.group(3)) if m.group(3) else 0
-        if hr >= 0 and hr <= 24 and mn >=0 and mn <=59:
-            return True
-    
-    m = regTime2.match(text)
-    if m:
-        hr = float(m.group(1))
-        mn = float(m.group(2))
-
-        if hr >= 0 and hr <= 24 and mn >=0 and mn <=59:
-            return True
-    return False
 
 def tag(text):
 
@@ -392,31 +350,8 @@ def ground(tagged_text, base_date):
 
 def demo():
     import nltk
-    text = "this Thursday"
-    # print tag('2015-09-23T20:10:12+00:00')
-    # print isDate('2015-W39')
-    # print isDate('209')
-    # print isDate('this December')
-    # print isDate('Thursday')
-    # print isDate('Thursday')
-    # print isDate('December')
-    # print isDate('15 December')
-    # print isDate('Dec')
-    # print isDate('Dec3')
-    # print isTime('Dec3')
-    # print isTime('1:00')
-    # print isTime(':00')
-    print isTime('10:00')
-    print isTime('10:00 AM')
-    print isTime('10 AM')
-    print isTime('10:00 p.m.')
-    print isTime('49:50')
-    print isTime('at 10:00 a.m.')
-    print isTime('10:00 a')
-    print isTime('10:00 AM AM')
-    print isTime('at 10:00 a.m.')
-    print isTime('1000H')
-    print isTime('4950H')
+    text = nltk.corpus.abc.raw('rural.txt')[:10000]
+    print tag(text)
 
 if __name__ == '__main__':
     demo()
