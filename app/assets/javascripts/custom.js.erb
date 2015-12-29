@@ -2668,6 +2668,21 @@ function ready() {
 function addCategoryPopovers(){
   $('[data-toggle="popover"]').popover()
 
+  $('.filter-button').on('click', function(e){
+  	var $target = $(e.target);
+  	if(!$target.hasClass('gray'))
+  		$target.popover('show');
+  	else
+  		$target.popover('hide');
+  });
+
+  $(document.body).on('click', function(e){
+  	var $target = $(e.target);
+
+  	if(!$target.hasClass('filter-image'))
+  		$('.filter-image').popover('hide');
+  });
+
   // @pois.where("category_id == ?", "approve")
   // Poi.category_id=4uniq.pluck(:description)
   // $("#popoverExampleTwo").popover({

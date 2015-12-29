@@ -53,17 +53,9 @@
 			<% next %> 
 		<% end %> 
 
-		<script>
-
-		// <% Poi.where("category_id == ?", category.id).uniq.pluck(:subtype).each do |sub| %>
-		// 	<%= sub %> 
-		// <% end %>
-
-		</script>
-
 		<% if @category_count[category.id] > 0%>
 			<div class="filter-button active">
-				<image class="image-responsive filter-image" src="<%= @category_filters[category.id] %>" data-category="<%= category.id %>" title="<%= category.name%>" data-toggle="popover" data-placement="left" data-container="body" data-html="true" data-content="<input type='text'></input>">
+				<image class="image-responsive filter-image" src="<%= @category_filters[category.id] %>" data-category="<%= category.id %>" title="<%= category.name%>" data-toggle="popover" data-trigger="manual" data-placement="left" data-container="body" data-html="true" data-content="<% Poi.where("category_id == ?", category.id).order(:subtype).uniq.pluck(:subtype).each do |sub| %><% if sub.nil? or sub.blank? %><% next %><% end %><div class='checkbox category-checkbox'><label><input type='checkbox'><%= sub %></label></div><% end %>">
 			</div>
 		<% end %>
 	<% end %>
