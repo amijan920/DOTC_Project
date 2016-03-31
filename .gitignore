@@ -14,6 +14,6 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-"DOTC_Project\db\seeds.rb" 
-"db/seeds.rb" 
-"seeds.rb" 
+
+# Ignore seed file (currently contains password, need to work around this)
+db/seeds.rb
