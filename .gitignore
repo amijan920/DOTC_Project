@@ -17,3 +17,5 @@
 
 # Ignore seed file (currently contains password, need to work around this)
 db/seeds.rb
+public/assets/seeds.rb
+*/seeds.rb
