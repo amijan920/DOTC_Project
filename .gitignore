@@ -19,3 +19,7 @@
 db/seeds.rb
 public/assets/seeds.rb
 */seeds.rb
+
+# IGNORE USELESS .DS_STORE
+.DS_Store
+*/.DS_Store
