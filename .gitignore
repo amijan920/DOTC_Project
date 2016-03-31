@@ -14,3 +14,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# IGNORE USELESS .DS_STORE
+.DS_Store
+*/.DS_Store
